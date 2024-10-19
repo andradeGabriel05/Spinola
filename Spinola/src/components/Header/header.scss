@@ -1,0 +1,80 @@
+@import "../../styles/global.scss";
+
+header {
+  background-color: $bg-blue-primary;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  .container_header {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left_side {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .header_links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .right_side {
+    display: flex;
+    align-items: center;
+
+    .user {
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 30px;
+      }
+
+      .register {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        &:hover {
+          background-color: #f8f9fa;
+        }
+        margin: 0;
+      }
+    }
+  }
+}
