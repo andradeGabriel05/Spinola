@@ -1,13 +1,15 @@
 import "./header.scss";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header>
-      {/* ironic */}
-      <div className="container_header"> 
+      <div className="container_header">
         <div className="left_side">
           <div className="logo">
-            <h1>Spinola</h1>
+            <Link to="/">
+              <h1>Spinola</h1>
+            </Link>
           </div>
           <div className="header_links">
             <ul>

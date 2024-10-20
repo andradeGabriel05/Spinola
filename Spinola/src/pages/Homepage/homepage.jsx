@@ -1,4 +1,5 @@
 import "./homepage.scss";
+import { Link } from "react-router-dom";
 
 export default function homepage() {
   return (
@@ -21,13 +22,15 @@ export default function homepage() {
       <section className="homepage_main">
         <div className="homepage_main_content">
           <div className="left_side">
-            <div className="card1">
-              <div className="image_card"></div>
-              <div className="text">
-                <p>Collection</p>
-                <h2>Première Leçon</h2>
+            <Link to="/premiere-lecon" className="wrapper-message-user-home">
+              <div className="card1">
+                <div className="image_card"></div>
+                <div className="text">
+                  <p>Collection</p>
+                  <h2>Première Leçon</h2>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="right_side">
             <div className="card2">
@@ -125,6 +128,7 @@ export default function homepage() {
                     <h4>Coffee Break Languages</h4>
                   </div>
                 </div>
+
                 <div className="media_box musique_box2">
                   <div className="video_text">
                     <p>

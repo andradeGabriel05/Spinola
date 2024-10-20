@@ -1,9 +1,17 @@
-$bg-blue-primary: #182E52;
+$bg-blue-primary: #182e52;
 $bg-inherit: #000;
-$bg-blue-secondary: #1F3A6D;
-$bg-red-primary: #A8484C;
+$bg-blue-secondary: #1f3a6d;
+$bg-red-primary: #CA2F0A;
 
 @mixin wm-centered {
-    max-width: 1350px;
-    margin: 0 auto;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
 }

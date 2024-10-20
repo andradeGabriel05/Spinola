@@ -1,0 +1,65 @@
+@import "../../styles/global.scss";
+
+.container_premiere_lecon {
+  background-color: $bg-red-primary;
+  display: flex;
+  position: relative;
+  .wrapper_welcome {
+    height: 64vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include wm-centered;
+
+    .image_welcome {
+      background-image: url("src/assets/vectors/premiere-lecon-main-2.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 62%;
+      position: absolute;
+      height: 100%;
+      right: 0;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 400px;
+      z-index: 3;
+      a {
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        color: black;
+        width: 30%;
+      }
+    }
+  }
+}
+
+.lessons {
+    h1 {
+        margin-bottom: 20px;
+    }
+
+  .chapters {
+    @include wm-centered;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .lessons_content {
+      display: flex;
+      align-items: center;
+      background-color: #f1f1f1;
+      border: solid 1px #d4d4d4;
+      padding: 20px;
+    }
+
+    .lesson_icon {
+      display: flex;
+      margin-right: 20px;
+    }
+  }
+}
