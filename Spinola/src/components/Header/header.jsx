@@ -8,7 +8,7 @@ export default function Header() {
         <div className="left_side">
           <div className="logo">
             <Link to="/">
-              <h1>Spinola</h1>
+              <h1>Spínola</h1>
             </Link>
           </div>
           <div className="header_links">
