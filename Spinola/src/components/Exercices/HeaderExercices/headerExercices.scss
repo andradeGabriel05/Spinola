@@ -1,0 +1,54 @@
+@use "/src/styles/global.scss" as *;
+
+.top-title-progress {
+  background-color: transparent;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  @include wm-centered;
+
+  .right {
+    display: flex;
+    align-items: center;
+    a {
+      display: flex;
+    }
+    svg {
+      width: 24px;
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  h1 {
+    font-size: 24px;
+  }
+
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+
+    .progress-bar-fill {
+      background-color: #182e52;
+      height: 10px;
+      transition: width 5.3s ease;
+      border-radius: 8px;
+    }
+
+    .progress-bar-text {
+      margin-left: 10px;
+      font-size: 14px;
+      color: #000;
+    }
+  }
+}
