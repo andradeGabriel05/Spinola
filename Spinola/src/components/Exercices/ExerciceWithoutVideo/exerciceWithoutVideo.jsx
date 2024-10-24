@@ -1,45 +1,43 @@
-import "./videoBoolExercices.scss";
+import "./exerciceWithoutVideo.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
-export default function VideoBoolExercices({
+export default function ExerciceWithoutVideo({
   answer_1,
   answer_2,
-  title,
-  correctAnswer,
+  answer_3,
+  answer_4,
   question,
   nextExercise,
 }) {
-  function verifyAnswer(answer, buttonId) {
+  function verifyAnswer(buttonId, answer) {
     const element = document.getElementById(buttonId);
 
-    console.log(correctAnswer);
-    if (answer === correctAnswer) {
+    if (answer === "correct") {
       element.style.backgroundColor = "green";
     } else {
       element.style.backgroundColor = "#CA2F0A";
     }
+
+    footerExercicePage.style.display = "flex";
+
+    // Desabilitar todos os botões
     document.getElementById("answer1").disabled = true;
     document.getElementById("answer2").disabled = true;
-    footerExercicePage.style.display = "flex";
+    document.getElementById("answer3").disabled = true;
+    document.getElementById("answer4").disabled = true;
   }
+
   return (
     <>
-      <div className="exercice_text page_exercice_text">
-        <p>{title}</p>
-      </div>
-      <div className="improvised_text">
-        <p>{question}</p>
-      </div>
-
       <div className="page_exercice_text input_type_exercice">
         <div
           className="buttons_anwser"
           id="buttonsAnwserId"
-          style={{ marginTop: "10px", width: "100%" }}
+          style={{ marginTop: "10px", width: "100%", display: "block" }}
         >
           <button
             className="exercice_button"
             id="answer1"
-            onClick={() => verifyAnswer(answer_1, "answer1")}
+            onClick={() => verifyAnswer("answer1", "correct")}
             style={{ width: "100%" }}
           >
             {answer_1}
@@ -47,10 +45,26 @@ export default function VideoBoolExercices({
           <button
             className="exercice_button"
             id="answer2"
-            onClick={() => verifyAnswer(answer_2, "answer2")}
+            onClick={() => verifyAnswer("answer2", "wrong")}
             style={{ width: "100%" }}
           >
             {answer_2}
+          </button>
+          <button
+            className="exercice_button"
+            id="answer3"
+            onClick={() => verifyAnswer("answer3", "wrong")}
+            style={{ width: "100%" }}
+          >
+            {answer_3}
+          </button>
+          <button
+            className="exercice_button"
+            id="answer4"
+            onClick={() => verifyAnswer("answer4", "wrong")}
+            style={{ width: "100%" }}
+          >
+            {answer_4}
           </button>
         </div>
       </div>

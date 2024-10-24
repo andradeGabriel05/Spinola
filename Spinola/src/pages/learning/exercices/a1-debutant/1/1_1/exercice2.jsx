@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import HeaderExercices from "../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoExercices from "../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
-import "./exercice.scss";
+import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import "../exercice.scss";
+
 
 export default function Exercice2() {
   return (
@@ -18,7 +18,8 @@ export default function Exercice2() {
       <VideoInputExercices
         answer_1="Bonjour"
         answer_2="Bonjore"
-        nextExercise={"/learning/exercices/premiere-lessons/1/exercice3"}
+        correctAnswer="Bonjour"
+        nextExercise={"/learning/exercices/premiere-lessons/1/1_1/exercice3"}
       />
     </div>
   );

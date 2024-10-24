@@ -1,7 +1,8 @@
-import HeaderExercices from "../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoExercices from "../../../../../components/Exercices/VideoExercices/videoExercices";
-import FooterExercices from "../../../../../components/Exercices/FooterExercices/footerExercices";
-import "./exercice.scss";
+import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import "../exercice.scss";
+
 
 export default function Exercice5() {
   return (
@@ -20,7 +21,7 @@ export default function Exercice5() {
           <p>Goodbye!</p>
         </div>
       </div>
-      <FooterExercices nextExercise={"/learning/exercices/premiere-lessons/1/exercice6"}/>
+      <FooterExercices nextExercise={"/learning/exercices/premiere-lessons/1/1_1/exercice6"}/>
     </div>
   );
 }

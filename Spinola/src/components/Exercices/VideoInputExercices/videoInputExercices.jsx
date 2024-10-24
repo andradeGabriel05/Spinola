@@ -6,33 +6,23 @@ export default function VideoInputExercices({
   answer_2,
   sentenceText1,
   sentenceText2,
+  correctAnswer,
   nextExercise,
 }) {
-  function verifyAnswer(answer) {
-    if (answer === "correct") {
-      const element = document.getElementById("answer1");
-      const target = document.getElementById("exerciceResonseId");
-      target.appendChild(element);
+  function verifyAnswer(buttonId, answer) {
+    const element = document.getElementById(buttonId);
+    const target = document.getElementById("exerciceResonseId");
+    target.appendChild(element);
 
+    if (answer === correctAnswer) {
       element.style.backgroundColor = "green";
-      footerExercicePage.style.display = "flex";
-
-      const element2 = document.getElementById("answer2");
-      element.disabled = true;
-      element2.disabled = true;
     } else {
-      const element = document.getElementById("answer2");
-      const target = document.getElementById("exerciceResonseId");
-
-      target.appendChild(element);
-
-      footerExercicePage.style.display = "flex";
       element.style.backgroundColor = "#CA2F0A";
-      const element2 = document.getElementById("answer1");
-      footerExercicePage.style.display = "flex";
-      element.disabled = true;
-      element2.disabled = true;
     }
+
+    document.getElementById("answer1").disabled = true;
+    document.getElementById("answer2").disabled = true;
+    footerExercicePage.style.display = "flex";
   }
   return (
     <>
@@ -50,14 +40,14 @@ export default function VideoInputExercices({
           <button
             className="exercice_button"
             id="answer1"
-            onClick={() => verifyAnswer("correct")}
+            onClick={() => verifyAnswer("answer1", answer_1 )}
           >
             {answer_1}
           </button>
           <button
             className="exercice_button"
             id="answer2"
-            onClick={() => verifyAnswer("wrong")}
+            onClick={() => verifyAnswer("answer2", answer_2 )}
           >
             {answer_2}
           </button>

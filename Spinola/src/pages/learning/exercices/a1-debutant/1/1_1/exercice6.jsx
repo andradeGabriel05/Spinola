@@ -1,8 +1,7 @@
-import HeaderExercices from "../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoExercices from "../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
-import VideoBoolExercices from "../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
-import "./exercice.scss";
+import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
+import "../exercice.scss";
 
 export default function Exercice6() {
   return (
@@ -19,6 +18,7 @@ export default function Exercice6() {
         answer_1="True"
         answer_2="False"
         title="Au revoir!"
+        correctAnswer="True"
         question='"Au revoir" means "goodbye"'
         nextExercise={"/premiere-lecon"}
       />

@@ -1,7 +1,7 @@
-import HeaderExercices from "../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoExercices from "../../../../../components/Exercices/VideoExercices/videoExercices";
-import FooterExercices from "../../../../../components/Exercices/FooterExercices/footerExercices";
-import "./exercice.scss";
+import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import "../exercice.scss";
 
 export default function Exercice3() {
   return (
@@ -21,7 +21,7 @@ export default function Exercice3() {
         </div>
       </div>
       <FooterExercices
-        nextExercise={"/learning/exercices/premiere-lessons/1/exercice4"}
+        nextExercise={"/learning/exercices/premiere-lessons/1/1_1/exercice4"}
       />
     </div>
   );

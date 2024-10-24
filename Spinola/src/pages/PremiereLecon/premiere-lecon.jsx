@@ -35,12 +35,13 @@ export default function PremiereLecon() {
               title="1.1 Bonjour!"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
               img="https://picsum.photos/200/300?random=1"
-              to="/learning/exercices/premiere-lessons/1/exercice1"
+              to="/learning/exercices/premiere-lessons/1/1_1/exercice1"
             />
             <Lessonbox
               title="1.2 La politesse"
               img="https://picsum.photos/200/300?random=2"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
+              to="/learning/exercices/premiere-lessons/1/1_2/exercice1"
             />
             <Lessonbox
               title="1.3 Comment allez-vous?"

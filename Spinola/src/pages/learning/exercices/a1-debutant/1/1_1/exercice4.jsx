@@ -1,7 +1,8 @@
-import HeaderExercices from "../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoExercices from "../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
-import "./exercice.scss";
+import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import "../exercice.scss";
+
 
 export default function Exercice4() {
   return (
@@ -19,7 +20,8 @@ export default function Exercice4() {
         answer_2="mappelle"
         sentenceText1="Je"
         sentenceText2="Sophie"
-        nextExercise={"/learning/exercices/premiere-lessons/1/exercice5"}
+        correctAnswer="m'appelle"
+        nextExercise={"/learning/exercices/premiere-lessons/1/1_1/exercice5"}
       />
     </div>
   );
