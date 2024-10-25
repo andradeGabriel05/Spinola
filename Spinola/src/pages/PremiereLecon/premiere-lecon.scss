@@ -39,11 +39,6 @@
 }
 
 .lessons {
-  .chapters {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
   h1 {
     margin-bottom: 20px;
   }

@@ -3,7 +3,7 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import "../exercice.scss";
 
-export default function Exercice6() {
+export default function Exercice9() {
   return (
     <div className="container_execice">
       <HeaderExercices progressExercice="100%" />
