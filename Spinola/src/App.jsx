@@ -1,6 +1,7 @@
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Homepage from "./pages/Homepage/homepage";
+import DownloadBooks from "./pages/DownloadBooks/downloadBooks";
 
 import Exercice1 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice1";
 import Exercice2 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice2";
@@ -29,6 +30,7 @@ import Exercice7_1_3 from "./pages/learning/exercices/a1-debutant/1/1_3/exercice
 
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
+import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="premiere-lecon" element={<PremiereLecon />} />
+        <Route path="download-books" element={<DownloadBooks />} />
+        <Route path="music-learning" element={<LearnWithMusic />} />
         <Route
           path="/learning/exercices/premiere-lessons/1/1_1/exercice1"
           element={<Exercice1 />}

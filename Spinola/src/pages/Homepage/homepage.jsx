@@ -71,7 +71,9 @@ export default function homepage() {
                   recusandae nobis non, nihil explicabo pariatur illo enim nam
                   tenetur officia facere expedita?
                 </p>
-                <a href="#">Voir plus de cours</a>
+                <Link to="/download-books">
+                  <button>Voir plus de cours</button>
+                </Link>
               </div>
               <div className="image"></div>
             </div>

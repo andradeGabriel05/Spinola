@@ -10,8 +10,7 @@ header {
 
   .container_header {
     width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
+    @include wm-centered;
     display: flex;
     justify-content: space-between;
   }

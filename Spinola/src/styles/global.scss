@@ -7,6 +7,12 @@ $bg-red-primary: #CA2F0A;
 @mixin wm-centered {
   max-width: 1350px;
   margin: 0 auto;
+
+  @media(max-width: 1366px) {
+    max-width: 1250px;
+    margin: 0 auto;
+      
+  }
 }
 
 a {
