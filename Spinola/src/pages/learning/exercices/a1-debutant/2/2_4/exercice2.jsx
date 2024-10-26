@@ -4,23 +4,23 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import "../exercice.scss";
 
 
-export default function Exercice7() {
+export default function Exercice2() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="77.77%" />
+      <HeaderExercices progressExercice="28.57%" />
 
       <div className="exercice_title page_exercice_text">
         <p>Complete the sentence.</p>
       </div>
 
-      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/343b53a0-71fa-4ec3-9c4a-d6e89cf0f523_small.mp4" />
+      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/550302dd-3320-4941-adee-2330a5f4c943_small.mp4" />
 
       <VideoInputExercices
-        answer_1="bien"
-        answer_2="rien"
-        sentenceText1="De"
-        correctAnswer="rien"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_2/exercice8"}
+        answer_1="Ka"
+        answer_2="Ça"
+        sentenceText2="va ?"
+        correctAnswer="Ça"
+        nextExercise={"/learning/exercices/premiere-lessons/1/1_4/exercice3"}
       />
     </div>
   );

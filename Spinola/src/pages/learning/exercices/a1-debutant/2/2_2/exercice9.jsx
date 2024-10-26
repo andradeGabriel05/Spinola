@@ -3,24 +3,24 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import "../exercice.scss";
 
-export default function Exercice2() {
+export default function Exercice9() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="22.22%" />
+      <HeaderExercices progressExercice="100%" />
 
       <div className="exercice_title page_exercice_text">
         <p>True or false?</p>
       </div>
 
-      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/186db240-bcb6-49ff-9aa6-0d1bb1a88e4e_small.mp4" />
+      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/2b1dbefc-1b50-428c-a699-d26cae7061f3_small.mp4" />
 
       <VideoBoolExercices
         answer_1="True"
         answer_2="False"
-        title="S'il vous plaît"
+        title="Pardon!"
         correctAnswer="True"
-        question={`"s'il vous plaît" means "please"`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_2/exercice3"}
+        question={`"Pardon" means "sorry".`}
+        nextExercise={"/premiere-lecon"}
       />
     </div>
   );

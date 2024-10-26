@@ -32,71 +32,76 @@ export default function PremiereLecon() {
           <div className="lesson_wrapper">
             <h1>Chapter 1: Introductions</h1>
             <Lessonbox
-              title="1.1 Bonjour!"
+              title="Bonjour!"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
               img="https://picsum.photos/200/300?random=1"
               to="/learning/exercices/premiere-lessons/1/1_1/exercice1"
             />
             <Lessonbox
-              title="1.2 La politesse"
+              title="La politesse"
               img="https://picsum.photos/200/300?random=2"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
               to="/learning/exercices/premiere-lessons/1/1_2/exercice1"
             />
             <Lessonbox
-              title="1.3 Comment allez-vous?"
+              title="Comment allez-vous?"
               img="https://picsum.photos/200/300?random=3"
               description="Exercice : Dire comment vous allez au travail ou à votre logement."
               to="/learning/exercices/premiere-lessons/1/1_3/exercice1"
             />
             <Lessonbox
-              title="1.4 Exprimer votre émotion."
+              title="Exprimer votre émotion."
               img="https://picsum.photos/200/300?random=4"
               description="Exercice : Utiliser des phrases de déclaration pour exprimer votre émotion."
+              to="/learning/exercices/premiere-lessons/1/1_4/exercice1"
             />
           </div>
           <div className="lesson_wrapper">
             <h1>Chapter 2: Essentials</h1>
             <Lessonbox
-              title="2.1 Informel salutations"
+              title="Informel salutations"
               img="https://picsum.photos/200/300?random=5"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
+              to="/learning/exercices/premiere-lessons/2/2_1/exercice1"
             />
             <Lessonbox
-              title="2.2 La politesse"
+              title="La politesse"
               img="https://picsum.photos/200/300?random=6"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
+              to="/learning/exercices/premiere-lessons/2/2_2/exercice1"
             />
             <Lessonbox
-              title="2.3 Comment allez-vous?"
+              title="Comment allez-vous?"
               img="https://picsum.photos/200/300?random=7"
               description="Exercice : Dire comment vous allez au travail ou à votre logement."
+              to="/learning/exercices/premiere-lessons/2/2_3/exercice1"
             />
             <Lessonbox
-              title="2.4 Écouter une conversation simple."
+              title="Écouter une conversation simple."
               img="https://picsum.photos/200/300?random=8"
               description="Exercice : Écouter une conversation simple et comprendre les éléments de base."
+              to="/learning/exercices/premiere-lessons/2/2_4/exercice1"
             />
           </div>
           <div className="lesson_wrapper">
             <h1>Chapter 3: Essentials</h1>
             <Lessonbox
-              title="1.1 Bonjour et bienvenue"
+              title="Bonjour et bienvenue"
               img="https://picsum.photos/200/300?random=9"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
             />
             <Lessonbox
-              title="1.2 Votre nationalité"
+              title="Votre nationalité"
               img="https://picsum.photos/200/300?random=10"
               description="Exercice : Dire votre nationalité et faire la différence entre le masculin et le féminin dans les prénoms et les nationalités."
             />
             <Lessonbox
-              title="1.3 Comment allez-vous?"
+              title="Comment allez-vous?"
               img="https://picsum.photos/200/300?random=11"
               description="Exercice : Dire comment vous allez au travail ou à votre logement."
             />
             <Lessonbox
-              title="1.4 Écouter une conversation simple."
+              title="Écouter une conversation simple."
               img="https://picsum.photos/200/300?random=12"
               description="Exercice : Écouter une conversation simple et comprendre les éléments de base."
             />
@@ -104,22 +109,22 @@ export default function PremiereLecon() {
           <div className="lesson_wrapper">
             <h1>Chapter 4: Essentials</h1>
             <Lessonbox
-              title="1.1 Bonjour et bienvenue"
+              title="Bonjour et bienvenue"
               img="https://picsum.photos/200/300?random=13"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
             />
             <Lessonbox
-              title="1.2 La politesse"
+              title="La politesse"
               img="https://picsum.photos/200/300?random=14"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
             />
             <Lessonbox
-              title="1.3 Comment allez-vous?"
+              title="Comment allez-vous?"
               img="https://picsum.photos/200/300?random=15"
               description="Exercice : Dire comment vous allez au travail ou à votre logement."
             />
             <Lessonbox
-              title="1.4 Exprimer votre émotion."
+              title="Exprimer votre émotion."
               img="https://picsum.photos/200/300?random=16"
               description="Exercice : Utiliser des phrases de déclaration pour exprimer votre émotion."
             />

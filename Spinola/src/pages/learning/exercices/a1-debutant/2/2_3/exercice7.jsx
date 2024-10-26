@@ -7,20 +7,21 @@ import "../exercice.scss";
 export default function Exercice7() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="77.77%" />
+      <HeaderExercices progressExercice="100%" />
 
       <div className="exercice_title page_exercice_text">
         <p>Complete the sentence.</p>
       </div>
 
-      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/343b53a0-71fa-4ec3-9c4a-d6e89cf0f523_small.mp4" />
+      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/0aa32cdc-b7e5-41b9-8844-815cdc56e618_small.mp4" />
 
       <VideoInputExercices
-        answer_1="bien"
-        answer_2="rien"
-        sentenceText1="De"
-        correctAnswer="rien"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_2/exercice8"}
+        answer_1="et vous"
+        answer_2="et yo"
+        sentenceText1="Bien merci"
+        sentenceText2="?"
+        correctAnswer="et vous"
+        nextExercise={"/premiere-lecon"}
       />
     </div>
   );

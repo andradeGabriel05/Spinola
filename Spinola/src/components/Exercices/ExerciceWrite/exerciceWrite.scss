@@ -1,0 +1,33 @@
+@use "/src/styles/global.scss" as *;
+
+.exercice-container {
+  display: flex;
+  justify-content: center;
+  .exercice-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .video-player-container {
+      margin: 10px;
+      height: 100%;
+      video {
+        width: 540px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+  }
+}
+.page_exercice_text {
+  text-align: center;
+  border-radius: 5px;
+  border-right: none;
+  border-left: none;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.footer_exercice {
+  width: 100%;
+}

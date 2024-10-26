@@ -7,7 +7,9 @@ export default function videoExercices({ videoSrc, miniature, audio }) {
           {miniature && miniature != "" ? (
             <div className="wrapper_image_audio">
               <img src={miniature} alt="Miniature" />
-              <audio src={audio} controls autoPlay={true} />
+              {audio && audio != "" ? (
+                <audio src={audio} controls autoPlay={true} />
+              ) : null}
             </div>
           ) : (
             <video controls autoPlay={true}>
