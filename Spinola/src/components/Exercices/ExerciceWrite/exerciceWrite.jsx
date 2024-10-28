@@ -1,6 +1,5 @@
 import "./exerciceWrite.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
-import { useEffect, useState } from "react";
 export default function VideoInputExercices({
   sentenceText1,
   sentenceText2,
@@ -8,17 +7,15 @@ export default function VideoInputExercices({
   nextExercise,
 }) {
   function verifyAnswer() {
-    const input = document.getElementById("userAnswerId").value;
-
+    const input = document.getElementById("userAnswerId").value.toLowerCase();
     if (input === correctAnswer) {
       document.getElementById("userAnswerId").style.backgroundColor = "green";
       document.getElementById("userAnswerId").style.color = "#fff";
-  
+
       document.getElementById("userAnswerId").disabled = true;
       footerExercicePage.style.display = "flex";
     }
-    console.log(input)
-
+    console.log(input);
   }
   return (
     <>
@@ -26,7 +23,7 @@ export default function VideoInputExercices({
         <div className="text_exercice_multivalued">
           <span>{sentenceText1}</span>
           <input
-            className="page_exercice_text exercice_resonse_span"
+            className="page_exercice_text exercice_resonse_span input_write"
             type="text"
             name=""
             id="userAnswerId"

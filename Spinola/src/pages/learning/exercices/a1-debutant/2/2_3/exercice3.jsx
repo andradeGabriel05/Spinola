@@ -14,23 +14,16 @@ export default function Exercice3() {
       </div>
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices
-          miniature="https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/315443ef-5776-43de-a0f3-673d7e3fd4c6.jpg@jpg"
-          audio="https://cdn.busuu.com/media/resized/audio/a1l3cavabienmercitf1661336705_1661336706.mp3"
-        />
+        <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/03bd6c72-fcbc-4431-b0c5-44dfc488432b_small.mp4" />
 
         <div className="exercice_text page_exercice_text">
-          <p>Ça va ? - Bien merci.</p>
+          <p>Je suis content.</p>
+          <p>I am happy. (masculine)</p>
         </div>
       </div>
 
-      
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="True"
-        question={`"Bien, merci" means "Fine, thanks."`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice4"}
+      <FooterExercices 
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice4"}
       />
     </div>
   );

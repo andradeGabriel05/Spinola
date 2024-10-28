@@ -41,8 +41,9 @@
     .progress-bar-fill {
       background-color: #182e52;
       height: 10px;
-      transition: width 5.3s ease;
+      transition: width 0.5s ease-in-out;
       border-radius: 8px;
+      
     }
 
     .progress-bar-text {

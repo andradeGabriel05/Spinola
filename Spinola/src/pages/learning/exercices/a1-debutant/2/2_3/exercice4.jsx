@@ -1,5 +1,6 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
+import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
 import "../exercice.scss";
@@ -9,17 +10,20 @@ export default function Exercice4() {
     <div className="container_execice">
       <HeaderExercices progressExercice="57.14%" />
 
-      <div className="exercice_title page_exercice_text">
-        <p>How can we reply to the question: "Ça va ?"</p>
+      <div className="wrapper_video_enunciate">
+        <VideoExercices miniature="https://cdn.busuu.com/media/resized/entity/1440/shutterstock_188106838011661531134_1661531134_1440.jpg" audio="https://cdn.busuu.com/media/resized/audio/a1l611661427689_1661427689.mp3" />
+
+        <div className="exercice_text page_exercice_text">
+          <p>Je suis content.</p>
+        </div>
       </div>
 
-      <ExerciceWithoutVideo
-        answer_1="De rien"
-        answer_2="Merci"
-        answer_3="Bien, merci"
-        answer_4="S'il vous plaît"
-        correctAnswer="Bien, merci"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice5"}
+      <VideoBoolExercices
+        answer_1="True"
+        answer_2="False"
+        question='"Je suis content" means "I am happy".'
+        correctAnswer="True"
+        nextExercise={"/learning/exercices/a1-debutant/2/2_3/exercice5"}
       />
     </div>
   );

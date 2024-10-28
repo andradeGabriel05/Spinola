@@ -1,26 +1,26 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
-
 
 export default function Exercice7() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="77.77%" />
+      <HeaderExercices progressExercice="77.77%" prevProgressExercice="66.66%"/>
 
       <div className="exercice_title page_exercice_text">
         <p>Complete the sentence.</p>
       </div>
 
-      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/343b53a0-71fa-4ec3-9c4a-d6e89cf0f523_small.mp4" />
+      <VideoExercices videoSrc="https://static.memrise.com/uploads/things/video/medium/1000091193_161125_1359_29.mp4#t=0.1" />
 
-      <VideoInputExercices
-        answer_1="bien"
-        answer_2="rien"
-        sentenceText1="De"
-        correctAnswer="rien"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_2/exercice8"}
+      <VideoBoolExercices
+        answer_1="True"
+        answer_2="False"
+        title="Trés bien"
+        correctAnswer="True"
+        question="Très bien means very well."
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_2/exercice8"}
       />
     </div>
   );

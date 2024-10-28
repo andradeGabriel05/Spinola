@@ -11,7 +11,7 @@ export default function Exercice5() {
       <HeaderExercices progressExercice="50%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>What is he saying?</p>
       </div>
 
       <div className="wrapper_video_enunciate">

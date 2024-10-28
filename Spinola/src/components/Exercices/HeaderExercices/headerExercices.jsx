@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import "./headerExercices.scss";
+import { useEffect, useState } from "react";
 
-export default function headerExercices({ progressExercice }) {
+export default function HeaderExercices({
+  progressExercice,
+  prevProgressExercice,
+}) {
+  const [currentProgressValue, setCurrentProgressValue] = useState(prevProgressExercice);
+  const [updateProgressValue, setupdateProgressValue] = useState(progressExercice);
+
+  useEffect(() => {
+    setCurrentProgressValue(prevProgressExercice);
+    console.log("Progress Exercice Updated: ", currentProgressValue); // Isso deve mostrar o valor atual
+    setCurrentProgressValue(updateProgressValue);
+
+    console.log("Progress Exercice Updated: ", currentProgressValue); // Isso deve mostrar o valor atual
+  }, [progressExercice]);
+
   return (
     <div className="top-title-progress">
       <div className="left">
@@ -19,7 +34,7 @@ export default function headerExercices({ progressExercice }) {
       <div className="progress-bar">
         <div
           className="progress-bar-fill"
-          style={{ width: progressExercice }}
+          style={{ width: currentProgressValue }}
         ></div>
       </div>
     </div>

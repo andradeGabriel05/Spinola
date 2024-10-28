@@ -1,5 +1,10 @@
 import "./videoExercices.scss";
-export default function videoExercices({ videoSrc, miniature, audio }) {
+export default function videoExercices({
+  videoSrc,
+  miniature,
+  audio,
+  position,
+}) {
   return (
     <div className="exercice-container">
       <div className="exercice-wrapper">
@@ -12,7 +17,7 @@ export default function videoExercices({ videoSrc, miniature, audio }) {
               ) : null}
             </div>
           ) : (
-            <video controls autoPlay={true}>
+            <video controls autoPlay={true} style={{ objectPosition: position }}>
               <source src={videoSrc} type="video/mp4" />
             </video>
           )}
