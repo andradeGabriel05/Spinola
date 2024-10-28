@@ -69,6 +69,8 @@ import Exercice9_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
 import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
+import Login from "./pages/auth/Login/login";
+import Register from "./pages/auth/Register/register";
 
 function App() {
   return (
@@ -91,6 +93,8 @@ function AppContent() {
         <Route path="premiere-lecon" element={<PremiereLecon />} />
         <Route path="download-books" element={<DownloadBooks />} />
         <Route path="music-learning" element={<LearnWithMusic />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route
           path="/learning/exercices/premiere-lessons/1/1_1/exercice1"
           element={<Exercice1 />}
