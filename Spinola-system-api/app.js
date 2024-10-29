@@ -8,6 +8,9 @@ const SERVER_PORT = 3300;
 app.use((request, response, next) => {
     response.header('Access-Control-Allow-Origin', '*');
     response.header('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept');
+    response.header("Access-Control-Allow-Credentials", "true");
+    response.header( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" );
+    
     next();
 });
 
@@ -46,11 +49,12 @@ app.post("/register-user", async (req, res) => {
         const sqlSearch = "SELECT * FROM user WHERE username = ?"
         const search_query = mysql.format(sqlSearch, [username])
 
-        const sqlInsert = "INSERT INTO user VALUES (0,?,?)"
-        const insert_query = mysql.format(sqlInsert, [username, password])
+        const sqlInsert = "INSERT INTO user VALUES (0,?, ?, ?)"
+        const insert_query = mysql.format(sqlInsert, [username, password, 0])
 
         await connection.query(search_query, async (err, result) => {
             if (err) throw (err)
+
             console.log("------> Search Results")
             console.log(result.length)
             if (result.length != 0) {
@@ -69,6 +73,24 @@ app.post("/register-user", async (req, res) => {
             }
         }) //end of connection.query()
     }) //end of db.getConnection()
+})
+
+app.put("/verify-exercice", async (req, res) => {
+    conn.getConnection(async (err, connection) => {
+        if (err) throw (err)
+
+        const exerciceUpdateValue = "UPDATE user SET exercices = exercices + 1 WHERE id = 1 ";
+        const update_query = mysql.format(exerciceUpdateValue)
+        await connection.query(update_query, (err, result) => {
+            if (err) throw (err)
+
+            connection.release()
+            if (err) throw (err)
+            console.log("--------> Exercice made")
+            console.log(result.insertId)
+            res.sendStatus(201)
+        })
+    })
 })
 
 app.get("/status", (request, response) => {
