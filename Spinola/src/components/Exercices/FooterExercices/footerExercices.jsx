@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
 import "./footerExercices.scss";
+import axios from "axios";
+// import { handleSubmit } from "../../../global/handleExercice";
 
-export default function FooterExercices({ nextExercise }) {
+export default function FooterExercices({ nextExercise, last }) {
+  async function handleExerciceResponse(event) {
+    event.preventDefault();
+    try {
+      await axios.put(`http://localhost:3300/verify-exercice`);
+      window.location.href = "/premiere-lecon"
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
   return (
     <div className="box-continue">
       <div className="wrapper_footer">
         <div className="bottom-next-exercice">
-          <Link to={nextExercise} rel="preload">
-            <button className="btn-continue">Continue</button>
-          </Link>
+          <form onSubmit={handleExerciceResponse}>
+            <button className="btn-continue" type="Submit">Continue</button>
+          </form>
         </div>
       </div>
     </div>

@@ -21,6 +21,7 @@ export default function Exercice6() {
         correctAnswer="True"
         question='"Au revoir" means "goodbye"'
         nextExercise={"/premiere-lecon"}
+        last={true}
       />
     </div>
   );

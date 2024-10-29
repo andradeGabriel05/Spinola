@@ -18,6 +18,7 @@ export default function Register() {
                 console.error("Error:", error);
             });
     }
+
     return (
         <form onSubmit={handleRegister}>
             <input type="text" name="username" id="usernameId" placeholder="username" />

@@ -7,6 +7,7 @@ export default function VideoBoolExercices({
   correctAnswer,
   question,
   nextExercise,
+  last,
 }) {
   function verifyAnswer(answer, buttonId) {
     const element = document.getElementById(buttonId);
@@ -60,7 +61,7 @@ export default function VideoBoolExercices({
         id="footerExercicePage"
         style={{ display: "none" }}
       >
-        <FooterExercices nextExercise={nextExercise} />
+        <FooterExercices nextExercise={nextExercise} last={last} />
       </div>
     </>
   );
