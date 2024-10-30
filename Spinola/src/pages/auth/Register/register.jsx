@@ -1,5 +1,6 @@
 import axios from "axios";
-
+import { Link } from "react-router-dom";
+import "../Register/register.scss"
 
 export default function Register() {
     function handleRegister(event) {
@@ -20,11 +21,20 @@ export default function Register() {
     }
 
     return (
-        <form onSubmit={handleRegister}>
-            <input type="text" name="username" id="usernameId" placeholder="username" />
-            <input type="text" name="password" id="passwordId" placeholder="password" />
-            <button type="submit">Submit</button>
-        </form>
+        <div className="container_register">
+            <Link to={"/"}><h1>Spínola</h1></Link>
+            <div className="register_form">
+                <form onSubmit={handleRegister}>
+                    <input type="text" name="username" id="usernameId" placeholder="username" />
+                    <input type="text" name="password" id="passwordId" placeholder="password" />
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div className="already_have_login">
+                    <Link to={"/login"}>Vous avez un account?</Link>
+                </div>
+            </div>
+        </div>
     )
 }
 
