@@ -20,8 +20,8 @@ const mysql = require('mysql');
 const conn = mysql.createPool(
     {
         host: "localhost",
-        user: "aluno",
-        password: "sptech",
+        user: "root",
+        password: "123456",
         database: "teste",
         port: 3306
     }

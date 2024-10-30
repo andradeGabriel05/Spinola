@@ -6,15 +6,13 @@ export default function BookCard({ cover, linkDownload, title, author }) {
     <div className="wrapper_book_card">
       <div className="card_book">
         <Link to={linkDownload}>
-        <img src={cover} alt={title} />
+          <img src={cover} alt={title} />
         </Link>
-
-          <p className="title">{title}</p>
-          <p>{author}</p>
       </div>
-      <Link to={linkDownload}>
-        <button>Telechargé livre</button>
-      </Link>
+      <div className="details_book">
+        <p>{author}</p>
+        <p className="title">{title}</p>
+      </div>
     </div>
   );
 }

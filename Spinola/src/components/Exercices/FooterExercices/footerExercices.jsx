@@ -6,11 +6,13 @@ import axios from "axios";
 export default function FooterExercices({ nextExercise, last }) {
   async function handleExerciceResponse(event) {
     event.preventDefault();
-    try {
-      await axios.put(`http://localhost:3300/verify-exercice`);
-      window.location.href = "/premiere-lecon"
-    } catch (error) {
-      console.error("Error:", error);
+    if (last) {
+      try {
+        await axios.put(`http://localhost:3300/verify-exercice`);
+        window.location.href = "/premiere-lecon";
+      } catch (error) {
+        console.error("Error:", error);
+      }
     }
   }
 
@@ -18,9 +20,19 @@ export default function FooterExercices({ nextExercise, last }) {
     <div className="box-continue">
       <div className="wrapper_footer">
         <div className="bottom-next-exercice">
-          <form onSubmit={handleExerciceResponse}>
-            <button className="btn-continue" type="Submit">Continue</button>
-          </form>
+          {last && last ? (
+            <form onSubmit={handleExerciceResponse}>
+              <button className="btn-continue" type="Submit">
+                Continue
+              </button>
+            </form>
+          ) : (
+            <Link to={nextExercise}>
+              <button className="btn-continue" type="Submit">
+                Continue
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
