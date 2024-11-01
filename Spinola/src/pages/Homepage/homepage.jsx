@@ -1,6 +1,7 @@
 import "./homepage.scss";
 import { Link } from "react-router-dom";
 import ActivatedButton from "../../components/ActivatedButton/activatedButton";
+import BookSection from "../../components/BookSection/bookSection";
 
 export default function homepage() {
   return (
@@ -92,6 +93,8 @@ export default function homepage() {
           <div className="division_border"></div>
         </div>
       </section>
+
+      <BookSection />
 
       <section className="media_section">
         <div className="media_container">

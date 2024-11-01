@@ -1,0 +1,89 @@
+@use "../../styles/global.scss" as *;
+
+
+.books_section {
+    .division_border_div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .division_border {
+            border-bottom: 3.5px solid #000;
+            margin: 40px 0;
+            transform: rotate(90deg);
+            width: 40px;
+        }
+    }
+
+    .books_container {
+        padding: 40px 0;
+        @include wm-centered;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .usilles-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1 {
+                    font-size: 2em;
+                    color: #333;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .wrapper-content {
+                display: flex;
+                justify-content: space-between;
+                height: 70vh;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    h1 {
+                        font-size: 2.5em;
+                        color: #333;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 1em;
+                        color: #333;
+                        width: 500px;
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        button {
+                            text-align: center;
+                            font-size: 14px;
+                            color: #fff;
+                            text-decoration: none;
+                            padding: 10px;
+                            width: 40%;
+                            border: none;
+                            background-color: #000;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+
+                .image {
+                    display: flex;
+                    justify-content: flex-end;
+                    background-image: url("src/assets/vectors/reading-book.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

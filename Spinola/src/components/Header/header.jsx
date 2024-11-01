@@ -30,9 +30,9 @@ export default function Header() {
         </div>
         <div className="right_side">
           <div className="user">
-            <a href="/login" className="login">
+            <Link to="/" className="login">
               Login
-            </a>
+            </Link>
             <a href="/register" className="register">
               Register
             </a>

@@ -1,6 +1,7 @@
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Homepage from "./pages/Homepage/homepage";
+import HomepageA2 from "./pages/HomepageA2/homepageA2";
 import DownloadBooks from "./pages/DownloadBooks/downloadBooks";
 
 import Exercice1 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice1";
@@ -90,6 +91,7 @@ function AppContent() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/a2" element={<HomepageA2 />} />
         <Route path="premiere-lecon" element={<PremiereLecon />} />
         <Route path="download-books" element={<DownloadBooks />} />
         <Route path="music-learning" element={<LearnWithMusic />} />
