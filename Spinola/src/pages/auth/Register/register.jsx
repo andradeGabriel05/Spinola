@@ -25,8 +25,9 @@ export default function Register() {
             <Link to={"/"}><h1>Spínola</h1></Link>
             <div className="register_form">
                 <form onSubmit={handleRegister}>
-                    <input type="text" name="username" id="usernameId" placeholder="username" />
-                    <input type="text" name="password" id="passwordId" placeholder="password" />
+                    <input type="text" name="email" id="emailId" placeholder="Email" />
+                    <input type="text" name="username" id="usernameId" placeholder="Username" />
+                    <input type="text" name="password" id="passwordId" placeholder="Password" />
                     <button type="submit">Submit</button>
                 </form>
 

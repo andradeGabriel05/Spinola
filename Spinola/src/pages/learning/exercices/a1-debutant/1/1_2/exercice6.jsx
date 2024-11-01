@@ -6,7 +6,7 @@ import "../exercice.scss";
 export default function Exercice6() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="66.66%" />
+      <HeaderExercices progressExercice="66.66%" prevProgressExercice="55.55%" />
 
       <div className="exercice_title page_exercice_text">
         <p>How can you respond when someone says "merci"?</p>

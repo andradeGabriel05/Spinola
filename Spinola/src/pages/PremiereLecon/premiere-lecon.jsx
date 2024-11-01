@@ -1,7 +1,7 @@
 import "./premiere-lecon.scss";
 import Lessonbox from "../../components/LessonBox/lessonbox";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 export default function PremiereLecon() {
   const location = useLocation();
@@ -21,7 +21,8 @@ export default function PremiereLecon() {
               courses... 500 exercices gratuits pour apprendre le français au
               niveau débutant à partir de vidéos.
             </span>
-            <a href="/">Commencer</a>
+
+            <Link to="/learning/exercices/premiere-lessons/1/1_1/exercice1">Commencer</Link>
           </div>
           <div rel="preload" className="image_welcome"></div>
         </div>

@@ -1,21 +1,30 @@
 import "./homepage.scss";
 import { Link } from "react-router-dom";
+import ActivatedButton from "../../components/ActivatedButton/activatedButton";
 
 export default function homepage() {
   return (
     <div className="container_homepage">
       <section className="container_homepage_navigation_levels">
         <div className="levels">
-          <button>A1 Débutant</button>
+          <ActivatedButton link="/">
+            A1 Débutant
+          </ActivatedButton >
         </div>
         <div className="levels">
-          <button>A2 Élémentaire</button>
+          <ActivatedButton link="/a2">
+            A2 Élémentaire
+          </ActivatedButton >
         </div>
         <div className="levels">
-          <button>B1 Intermédiaire</button>
+          <ActivatedButton link="/a3">
+            B1 Intermédiaire
+          </ActivatedButton >
         </div>
         <div className="levels">
-          <button>B2 Avancé</button>
+          <ActivatedButton link="/a4">
+            B2 Avancé
+          </ActivatedButton >
         </div>
       </section>
 

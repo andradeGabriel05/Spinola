@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import "./downloadBooks.scss";
 import React from "react";
 import BookCard from "../../components/Books/BookCard/bookCard";
 export default function DownloadBooks() {
   return (
     <div className="container_books">
+      {/* <div className="initial_image_books"> </div> */}
       <div className="input_search_books">
         <input type="text" placeholder="Search" />
       </div>

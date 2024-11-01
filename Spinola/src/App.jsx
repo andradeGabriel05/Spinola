@@ -83,11 +83,10 @@ function App() {
 function AppContent() {
   const location = useLocation();
   const isExercice = location.pathname.includes("/learning/exercices/");
-  const isAuth = location.pathname.includes("/pages/auth/");
 
   return (
     <div className="main-content">
-      {!isExercice || !isAuth && <Header />}
+      {!isExercice && <Header />}
 
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -340,7 +339,7 @@ function AppContent() {
         />
       </Routes>
 
-      {!isExercice || !isAuth && <Footer />}
+      {!isExercice && <Footer />}
     </div>
   );
 }

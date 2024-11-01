@@ -1,13 +1,16 @@
 @use "../../../styles/global.scss" as *;
 
+
+
 .container_register {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100vh;
+    @include wm-centered;
 
     .register_form {
-        width: 30%;
+        width: 50%;
 
         form {
             display: flex;
@@ -39,6 +42,7 @@
         .already_have_login {
             display: flex;
             justify-content: center;
+            text-align: center;
 
             a {
                 color: #000;

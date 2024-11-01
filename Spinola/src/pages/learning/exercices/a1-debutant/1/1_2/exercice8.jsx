@@ -6,7 +6,7 @@ import "../exercice.scss";
 export default function Exercice8() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="88.88%" />
+      <HeaderExercices progressExercice="88.88%" prevProgressExercice="77.77%"/>
 
       <div className="exercice_title page_exercice_text">
         <p>New word!</p>
