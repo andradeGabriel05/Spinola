@@ -22,7 +22,9 @@ export default function PremiereLecon() {
               niveau débutant à partir de vidéos.
             </span>
 
-            <Link to="/learning/exercices/premiere-lessons/1/1_1/exercice1">Commencer</Link>
+            <Link to="/learning/exercices/premiere-lessons/1/1_1/exercice1">
+              Commencer
+            </Link>
           </div>
           <div rel="preload" className="image_welcome"></div>
         </div>
@@ -35,7 +37,7 @@ export default function PremiereLecon() {
             <Lessonbox
               title="Bonjour!"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
-              img="https://picsum.photos/200/300?random=1"
+              img="https://images.stockcake.com/public/9/e/0/9e001c2d-f9ec-4fb6-a3e1-87e40a1847a7_medium/parisian-sunset-glory-stockcake.jpg"
               to="/learning/exercices/premiere-lessons/1/1_1/exercice1"
             />
             <Lessonbox

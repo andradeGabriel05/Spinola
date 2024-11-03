@@ -1,30 +1,30 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
+
 import "../exercice.scss";
 
-export default function Exercice1() {
+export default function Exercice2() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="14.28%" />
-
-      <div className="exercice_title page_exercice_text">
-        <p>New word!</p>
-      </div>
+      <HeaderExercices progressExercice="20%" prevProgressExercice="10%" />
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices videoSrc="https://static.memrise.com/uploads/items/videos/medium/86609__m__1528469383_normalized.mp4#t=0.1" position="top"/>
+        <VideoExercices miniature="https://cdn.busuu.com/media/resized/entity/1440/shutterstock_188106838011661531134_1661531134_1440.jpg" audio="https://cdn.busuu.com/media/resized/audio/a1l611661427689_1661427689.mp3" />
 
         <div className="exercice_text page_exercice_text">
-          <p>Oui</p>
-          <p>Yes</p>
+          <p>Je suis content.</p>
         </div>
       </div>
-      <FooterExercices
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice3"}
+
+      <VideoBoolExercices
+        answer_1="True"
+        answer_2="False"
+        question='"Je suis content" means "I am happy".'
+        correctAnswer="True"
+        nextExercise={"/learning/exercices/a1-debutant/2/2_3/exercice5"}
       />
     </div>
   );
 }
-
-// https://cdn.busuu.com/media-resources/video/mp4/03bd6c72-fcbc-4431-b0c5-44dfc488432b_small.mp4

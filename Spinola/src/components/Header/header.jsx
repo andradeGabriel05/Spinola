@@ -2,6 +2,9 @@ import "./header.scss";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const idUser = localStorage.getItem("user");
+  const username = localStorage.getItem("username");
+  console.log(username);
   return (
     <header>
       <div className="container_header">
@@ -29,14 +32,22 @@ export default function Header() {
           </div>
         </div>
         <div className="right_side">
-          <div className="user">
-            <Link to="/" className="login">
-              Login
-            </Link>
-            <a href="/register" className="register">
-              Register
-            </a>
-          </div>
+          {idUser ? (
+            <div className="user">
+              <Link to="/login" className="register">
+                {username}
+              </Link>
+            </div>
+          ) : (
+            <div className="user">
+              <Link to="/login" className="login">
+                Login
+              </Link>
+              <a href="/register" className="register">
+                Register
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </header>

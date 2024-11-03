@@ -25,12 +25,14 @@ export default function FooterExercices({ nextExercise, last }) {
               <button className="btn-continue" type="Submit">
                 Continue
               </button>
+              <input type="submit" hidden />
             </form>
           ) : (
             <Link to={nextExercise}>
               <button className="btn-continue" type="Submit">
                 Continue
               </button>
+              <input type="submit" hidden />
             </Link>
           )}
         </div>
