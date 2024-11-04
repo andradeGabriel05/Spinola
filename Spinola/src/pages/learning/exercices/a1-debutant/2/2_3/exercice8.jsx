@@ -1,32 +1,38 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
 export default function Exercice8() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="88.88%" prevProgressExercice="77.77%"/>
+      <HeaderExercices progressExercice="72.72%" prevProgressExercice="63.63" />
 
       <div className="exercice_title page_exercice_text">
-        <p>Choose the translation that matches what’s in the video</p>
+        <p>Complete the sentence.</p>
       </div>
-
       <div className="wrapper_video_enunciate">
         <VideoExercices
-          videoSrc="https://static.memrise.com/uploads/things/video/medium/1000091193_161125_1359_29.mp4#t=0.1"
-        />
-
-        <ExerciceWithoutVideo
-          answer_1="I'm good"
-          answer_2="Good morning"
-          answer_3="Very well"
-          answer_4="How are you?"
-          correctAnswer="Very well"
-          nextExercise="/learning/exercices/premiere-lessons/2/2_2/exercice9"
+          videoSrc={
+            "https://cdn.busuu.com/media-resources/video/mp4/08bad191-1113-48d2-a363-b16bd76d9090_small.mp4"
+          }
         />
       </div>
+
+      <div className="exercice_text page_exercice_text">
+        <p>I am happy, and he is happy too.</p>
+      </div>
+
+      <ExerciceWithoutVideo
+        answer_1="Je suis contente et il est content aussi."
+        answer_2="Je suit contente et il es content aussi."
+        answer_3={"Je suit contente et il est content aussi."}
+        answer_4={"Je suis contente et il es content aussi."}
+        correctAnswer="Je suis contente et il est content aussi."
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice9"}
+      />
     </div>
   );
 }

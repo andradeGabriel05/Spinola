@@ -10,7 +10,7 @@ export default function Exercice9() {
       <HeaderExercices progressExercice="90%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>👋 Bonjour or salut? 👋</p>
+        <p>👋 Enchantée 👋</p>
       </div>
 
       <ExplainWord

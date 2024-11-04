@@ -4,7 +4,6 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
 export default function Exercice6() {
   return (
@@ -16,21 +15,20 @@ export default function Exercice6() {
       </div>
 
       <VideoExercices
-        videoSrc="https://cdn.busuu.com/media-resources/video/mp4/f8501d4f-99ea-425d-953f-907b6579b7e2_small.mp4"
+        miniature="https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/315443ef-5776-43de-a0f3-673d7e3fd4c6.jpg@jpg"
+        audio="https://cdn.busuu.com/media/resized/audio/b30l3t_faudioonlineaudioconvertercom1660925565_1660925565.mp3"
       />
 
       <div className="exercice_text page_exercice_text">
         <p>Bonjour, ça va ? - Bien merci, et vous ?</p>
       </div>
 
-      <VideoInputExercices
-        answer_1="ravoir"
-        answer_2="revoir"
-        sentenceText1="Au"
-        sentenceText2=" ! — Au revoir !"
-        correctAnswer="revoir"
-        question={`"Et vous?" means "And you? (singular formal)".`}
-        nextExercise={"/premiere-lecon"}
+      <VideoBoolExercices
+        answer_1="True"
+        answer_2="False"
+        correctAnswer="True"
+        question={`"Et vous ?" means "And you? (singular formal)".`}
+        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice7"}
       />
     </div>
   );

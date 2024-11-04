@@ -9,7 +9,7 @@ export default function videoExercices({
     <div className="exercice-container">
       <div className="exercice-wrapper">
         <div className="video-player-container">
-          {miniature && miniature != "" ? (
+          {miniature && miniature != ""  ? (
             <div className="wrapper_image_audio">
               <img src={miniature} alt="Miniature" />
               {audio && audio != "" ? (

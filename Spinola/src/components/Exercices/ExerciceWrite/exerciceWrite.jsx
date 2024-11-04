@@ -1,6 +1,6 @@
 import "./exerciceWrite.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
-export default function VideoInputExercices({
+export default function ExerciceWrite({
   sentenceText1,
   sentenceText2,
   correctAnswer,
@@ -8,12 +8,13 @@ export default function VideoInputExercices({
 }) {
   function verifyAnswer() {
     const input = document.getElementById("userAnswerId").value.toLowerCase();
-    if (input === correctAnswer) {
+    if (input === correctAnswer.toLowerCase()) {
       document.getElementById("userAnswerId").style.backgroundColor = "green";
       document.getElementById("userAnswerId").style.color = "#fff";
 
       document.getElementById("userAnswerId").disabled = true;
       footerExercicePage.style.display = "flex";
+      console.log(true)
     }
     console.log(input);
   }

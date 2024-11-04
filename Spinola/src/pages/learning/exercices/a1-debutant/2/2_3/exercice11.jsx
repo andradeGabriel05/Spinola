@@ -3,32 +3,36 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
-export default function Exercice7() {
+export default function Exercice11() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="81.81%" prevProgressExercice="72.72"/>
+      <HeaderExercices progressExercice="100%" prevProgressExercice="90.90%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>Select the sentence you hear. </p>
       </div>
       <div className="wrapper_video_enunciate">
-        <VideoExercices
-          miniature={
-            "https://cdn.busuu.com/media/resized/entity/1440/shutterstock_166281927711661806250_1661806250_1440.jpg"
-          }
+        <VideoExercices miniature={" "}
           audio={
-            "https://cdn.busuu.com/media/resized/audio/a1l771661428130_1661428130.mp3"
+            "https://cdn.busuu.com/media/resized/audio/a1l741661505195_1661505195.mp3"
           }
         />
       </div>
 
       <ExerciceWrite
-        sentenceText1="Elle"
-        sentenceText2="fatiguée. Et je suis fatigué aussi."
-        correctAnswer="est"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice10"}
+        sentenceText1=""
+        sentenceText2="contente ?"
+        correctAnswer="Tu es"
+        nextExercise="/premiere-lecon"
       />
+
+      {/*     Elle est contente mais tu es fatigué !
+
+    She is happy but you are tired!
+
+In spoken French, we pronounce "elle est" like "el-è".  */}
     </div>
   );
 }

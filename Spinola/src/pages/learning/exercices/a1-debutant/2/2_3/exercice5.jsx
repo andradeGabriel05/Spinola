@@ -1,34 +1,32 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
-import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
-import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
-import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
+
+import "../exercice.scss";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
 export default function Exercice5() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="85.71%" />
+      <HeaderExercices progressExercice="45.45%" prevProgressExercice="36.36%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>Complete the sentence.</p>
+      </div>
+      <div className="wrapper_video_enunciate">
+        <VideoExercices videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/de7c8fc2-2eb8-42b3-96fa-e797b949f689_small.mp4"} />
+
       </div>
 
-      <VideoExercices
-        miniature="https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/315443ef-5776-43de-a0f3-673d7e3fd4c6.jpg@jpg"
-        audio="https://cdn.busuu.com/media/resized/audio/b30l3t_faudioonlineaudioconvertercom1660925565_1660925565.mp3"
-      />
-
-      <div className="exercice_text page_exercice_text">
-        <p>Bonjour, ça va ? - Bien merci, et vous ?</p>
-      </div>
-
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="True"
-        question={`"Et vous ?" means "And you? (singular formal)".`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice7"}
+      <VideoInputExercices
+        sentenceText1="Je "
+        sentenceText2="content"
+        answer_1="suis"
+        answer_2="suit"
+        correctAnswer="suis"
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice6"}
       />
     </div>
   );

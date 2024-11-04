@@ -26,7 +26,7 @@ export default function Exercice10() {
       <ExerciceWithoutVideo
         answer_1="Rachid dit 'enchantée'."
         answer_2="Rachid dit 'enchanté'."
-        answer_3="Mathilde dit 'enchantée'."
+        answer_3="Mathilde dit 'enchanté'."
         answer_4="Sophie dit 'enchanté'."
         correctAnswer="Rachid dit 'enchanté'."
         nextExercise={"/premiere-lecon"}

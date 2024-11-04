@@ -66,6 +66,8 @@ import Exercice6_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice
 import Exercice7_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice7";
 import Exercice8_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice8";
 import Exercice9_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice9";
+import Exercice10_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice10";
+import Exercice11_2_3 from "./pages/learning/exercices/a1-debutant/2/2_3/exercice11";
 
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
@@ -84,7 +86,9 @@ function App() {
 function AppContent() {
   const location = useLocation();
   const isExercice = location.pathname.includes("/learning/exercices/");
-  const isAuth = location.pathname.includes("/register") || location.pathname.includes("/login");
+  const isAuth =
+    location.pathname.includes("/register") ||
+    location.pathname.includes("/login");
 
   return (
     <div className="main-content">
@@ -260,10 +264,6 @@ function AppContent() {
           element={<Exercice10_2_1 />}
         />
 
-
-
-
-
         <Route
           path="/learning/exercices/premiere-lessons/2/2_2/exercice1"
           element={<Exercice1_2_2 />}
@@ -301,9 +301,6 @@ function AppContent() {
           element={<Exercice9_2_2 />}
         />
 
-
-
-
         <Route
           path="/learning/exercices/premiere-lessons/2/2_3/exercice1"
           element={<Exercice1_2_3 />}
@@ -339,6 +336,15 @@ function AppContent() {
         <Route
           path="/learning/exercices/premiere-lessons/2/2_3/exercice9"
           element={<Exercice9_2_3 />}
+        />
+        <Route
+          path="/learning/exercices/premiere-lessons/2/2_3/exercice10"
+          element={<Exercice10_2_3 />}
+        />
+
+<Route
+          path="/learning/exercices/premiere-lessons/2/2_3/exercice11"
+          element={<Exercice11_2_3 />}
         />
       </Routes>
 

@@ -35,7 +35,7 @@ export default function ExerciceWithoutVideo({
           style={{ marginTop: "10px", width: "100%", display: "block" }}
         >
           <button
-            className="exercice_button"
+            className="exercice_button multiple_buttons"
             id="answer1"
             onClick={() => verifyAnswer("answer1", answer_1)}
             style={{ width: "100%" }}
@@ -43,7 +43,7 @@ export default function ExerciceWithoutVideo({
             {answer_1}
           </button>
           <button
-            className="exercice_button"
+            className="exercice_button multiple_buttons"
             id="answer2"
             onClick={() => verifyAnswer("answer2", answer_2)}
             style={{ width: "100%" }}
@@ -51,7 +51,7 @@ export default function ExerciceWithoutVideo({
             {answer_2}
           </button>
           <button
-            className="exercice_button"
+            className="exercice_button multiple_buttons"
             id="answer3"
             onClick={() => verifyAnswer("answer3", answer_3)}
             style={{ width: "100%" }}
@@ -59,7 +59,7 @@ export default function ExerciceWithoutVideo({
             {answer_3}
           </button>
           <button
-            className="exercice_button"
+            className="exercice_button multiple_buttons"
             id="answer4"
             onClick={() => verifyAnswer("answer4", answer_4)}
             style={{ width: "100%" }}

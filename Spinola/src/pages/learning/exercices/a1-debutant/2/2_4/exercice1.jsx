@@ -1,27 +1,30 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
-
+import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 
 export default function Exercice1() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="28.57%" />
+      <HeaderExercices progressExercice="10%" prevProgressExercice="0%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>New word!</p>
       </div>
 
-      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/ce1755cf-170a-4792-8e0d-35cc0ce3affe_small.mp4" />
+      <div className="wrapper_video_enunciate">
+        <VideoExercices videoSrc="https://static.memrise.com/uploads/items/videos/medium/86613__f__1528458925.mp4#t=0.1" position="top" />
 
-      <VideoInputExercices
-        answer_1="Ka"
-        answer_2="Ça"
-        sentenceText1="Bonjour!"
-        sentenceText2="va ?"
-        correctAnswer="Ça"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_4/exercice2"}
+        <div className="exercice_text page_exercice_text">
+          <p>Comment tu t'appelle</p>
+          <p>What is your name?</p>
+          <p>(literal)How do you call yourself?</p>
+        </div>
+      </div>
+
+      <FooterExercices 
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice2"}
       />
     </div>
   );

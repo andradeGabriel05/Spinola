@@ -1,34 +1,27 @@
-import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
-import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
-import "../exercice.scss";
-import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
+import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import "../exercice.scss";
 
 export default function Exercice4() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="85.71%" />
+      <HeaderExercices progressExercice="36.36%" prevProgressExercice="27.27%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>singular forms of être</p>
       </div>
 
-      <VideoExercices
-        miniature="https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/315443ef-5776-43de-a0f3-673d7e3fd4c6.jpg@jpg"
-        audio="https://cdn.busuu.com/media/resized/audio/b30l3t_faudioonlineaudioconvertercom1660925565_1660925565.mp3"
-      />
-
+      <VideoExercices videoSrc="https://cdn.busuu.com/media/resized/video/mp4/small/singulier1661806716_1661806716.mp4" />
       <div className="exercice_text page_exercice_text">
-        <p>Bonjour, ça va ? - Bien merci, et vous ?</p>
+        <p>je suis - Je suis contente !</p>
+        <p>tu es - Tu es fatigué ?</p>
+        <p>il est / elle est - Il est impatient. </p>
       </div>
 
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="True"
-        question={`"Et vous ?" means "And you? (singular formal)".`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice7"}
+      <FooterExercices
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice5"}
       />
     </div>
   );

@@ -1,26 +1,29 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
-import "../exercice.scss";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import "../exercice.scss";
 
 export default function Exercice2() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="28.57%" />
+      <HeaderExercices progressExercice="20%" prevProgressExercice="10%" />
 
-      <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+      <div className="wrapper_video_enunciate">
+        <VideoExercices miniature="https://cdn.busuu.com/media/resized/entity/1440/shutterstock_188106838011661531134_1661531134_1440.jpg" audio="https://cdn.busuu.com/media/resized/audio/a1l611661427689_1661427689.mp3" />
+
+        <div className="exercice_text page_exercice_text">
+          <p>Je suis content.</p>
+        </div>
       </div>
 
-      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/550302dd-3320-4941-adee-2330a5f4c943_small.mp4" />
-
-      <VideoInputExercices
-        answer_1="Ka"
-        answer_2="Ça"
-        sentenceText2="va ?"
-        correctAnswer="Ça"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_4/exercice3"}
+      <VideoBoolExercices
+        answer_1="True"
+        answer_2="False"
+        question='"Je suis content" means "I am happy".'
+        correctAnswer="True"
+        nextExercise={"/learning/exercices/a1-debutant/2/2_3/exercice5"}
       />
     </div>
   );

@@ -1,29 +1,31 @@
+import ExplainWord from "../../../../../../components/Exercices/ExplainWord/explainWord";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
-
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
 
 export default function Exercice2() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="20%" prevProgressExercice="10%" />
+      <HeaderExercices progressExercice="18.18%" prevProgressExercice="9.09%" />
 
-      <div className="wrapper_video_enunciate">
-        <VideoExercices miniature="https://cdn.busuu.com/media/resized/entity/1440/shutterstock_188106838011661531134_1661531134_1440.jpg" audio="https://cdn.busuu.com/media/resized/audio/a1l611661427689_1661427689.mp3" />
-
-        <div className="exercice_text page_exercice_text">
-          <p>Je suis content.</p>
-        </div>
+      <div className="exercice_title page_exercice_text">
+        <p>Être - être fatigué, être contente </p>
       </div>
 
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        question='"Je suis content" means "I am happy".'
-        correctAnswer="True"
-        nextExercise={"/learning/exercices/a1-debutant/2/2_3/exercice5"}
+      <ExplainWord
+        text1={`'Être' means to be. It helps us talk about who we are or how we feel. `}
+        text2="It is an essential verb used to describe identity, existence, and describe emotions."
+        text3="Singular: je suis (I am), tu es (You are, informal), Il/elle/on est (He is/She is/we are),
+
+"
+        text4={`Plural: nous sommes (We are), vous êtes (You are, formal or plural), ils/elles sont (They are, masculine/feminine)`}
+        text5={`"on" is often used informally to mean "we" or to refer to people in general.`}
+      />
+
+      <FooterExercices
+        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice3"}
       />
     </div>
   );
