@@ -20,7 +20,7 @@ export default function Exercice4() {
         answer_2="a yous"
         sentenceText1="Bien, merci!"
         correctAnswer="et vous"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_4/exercice5"}
+        nextExercise={"/learning/exercices/first-lessons/1/1_4/exercice5"}
       />
     </div>
   );

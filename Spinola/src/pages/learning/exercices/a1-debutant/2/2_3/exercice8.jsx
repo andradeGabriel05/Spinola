@@ -31,7 +31,7 @@ export default function Exercice8() {
         answer_3={"Je suit contente et il est content aussi."}
         answer_4={"Je suis contente et il es content aussi."}
         correctAnswer="Je suis contente et il est content aussi."
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice9"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice9"}
       />
     </div>
   );

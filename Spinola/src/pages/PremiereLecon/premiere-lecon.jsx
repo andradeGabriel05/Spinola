@@ -22,7 +22,7 @@ export default function PremiereLecon() {
               niveau débutant à partir de vidéos.
             </span>
 
-            <Link to="/learning/exercices/premiere-lessons/1/1_1/exercice1">
+            <Link to="/learning/exercices/first-lessons/1/1_1/exercice1">
               Commencer
             </Link>
           </div>
@@ -38,25 +38,25 @@ export default function PremiereLecon() {
               title="Bonjour!"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
               img="https://images.stockcake.com/public/9/e/0/9e001c2d-f9ec-4fb6-a3e1-87e40a1847a7_medium/parisian-sunset-glory-stockcake.jpg"
-              to="/learning/exercices/premiere-lessons/1/1_1/exercice1"
+              to="/learning/exercices/first-lessons/1/1_1/exercice1"
             />
             <Lessonbox
               title="La politesse"
               img="https://picsum.photos/200/300?random=2"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
-              to="/learning/exercices/premiere-lessons/1/1_2/exercice1"
+              to="/learning/exercices/first-lessons/1/1_2/exercice1"
             />
             <Lessonbox
               title="Comment allez-vous?"
               img="https://picsum.photos/200/300?random=3"
               description="Exercice : Dire comment vous allez au travail ou à votre logement."
-              to="/learning/exercices/premiere-lessons/1/1_3/exercice1"
+              to="/learning/exercices/first-lessons/1/1_3/exercice1"
             />
             <Lessonbox
               title="Exprimer votre émotion."
               img="https://picsum.photos/200/300?random=4"
               description="Exercice : Utiliser des phrases de déclaration pour exprimer votre émotion."
-              to="/learning/exercices/premiere-lessons/1/1_4/exercice1"
+              to="/learning/exercices/first-lessons/1/1_4/exercice1"
             />
           </div>
           <div className="lesson_wrapper">
@@ -65,25 +65,25 @@ export default function PremiereLecon() {
               title="Informel salutations"
               img="https://picsum.photos/200/300?random=5"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
-              to="/learning/exercices/premiere-lessons/2/2_1/exercice1"
+              to="/learning/exercices/first-lessons/2/2_1/exercice1"
             />
             <Lessonbox
               title="La politesse"
               img="https://picsum.photos/200/300?random=6"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
-              to="/learning/exercices/premiere-lessons/2/2_2/exercice1"
+              to="/learning/exercices/first-lessons/2/2_2/exercice1"
             />
             <Lessonbox
-              title="Comment allez-vous?"
+              title="Être"
               img="https://picsum.photos/200/300?random=7"
-              description="Exercice : Dire comment vous allez au travail ou à votre logement."
-              to="/learning/exercices/premiere-lessons/2/2_3/exercice1"
+              description="Apprenez les bases du verbe être"
+              to="/learning/exercices/first-lessons/2/2_3/exercice1"
             />
             <Lessonbox
-              title="Écouter une conversation simple."
+              title="En pratiquant le verbe être"
               img="https://picsum.photos/200/300?random=8"
-              description="Exercice : Écouter une conversation simple et comprendre les éléments de base."
-              to="/learning/exercices/premiere-lessons/2/2_4/exercice1"
+              description='Pratiquez le verbe "être" en français avec des phrases simples.'
+              to="/learning/exercices/first-lessons/2/2_4/exercice1"
             />
           </div>
           <div className="lesson_wrapper">

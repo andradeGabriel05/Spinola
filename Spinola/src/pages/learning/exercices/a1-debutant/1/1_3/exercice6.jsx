@@ -28,7 +28,7 @@ export default function Exercice6() {
         answer_2="False"
         correctAnswer="True"
         question={`"Et vous ?" means "And you? (singular formal)".`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice7"}
+        nextExercise={"/learning/exercices/first-lessons/1/1_3/exercice7"}
       />
     </div>
   );

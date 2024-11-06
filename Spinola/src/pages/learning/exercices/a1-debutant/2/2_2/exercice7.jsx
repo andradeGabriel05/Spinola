@@ -20,7 +20,7 @@ export default function Exercice7() {
         title="Trés bien"
         correctAnswer="True"
         question="Très bien means very well."
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_2/exercice8"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_2/exercice8"}
       />
     </div>
   );

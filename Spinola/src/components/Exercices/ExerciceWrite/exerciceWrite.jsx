@@ -3,6 +3,7 @@ import FooterExercices from "../FooterExercices/footerExercices";
 export default function ExerciceWrite({
   sentenceText1,
   sentenceText2,
+
   correctAnswer,
   nextExercise,
 }) {
@@ -33,6 +34,7 @@ export default function ExerciceWrite({
           />
 
           <span>{sentenceText2}</span>
+
         </div>
       </div>
 

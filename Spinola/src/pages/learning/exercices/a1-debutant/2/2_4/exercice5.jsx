@@ -8,27 +8,24 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 export default function Exercice5() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="85.71%" />
+      <HeaderExercices progressExercice="100%" prevProgressExercice={"80%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>Select the sentence you hear. </p>
       </div>
 
       <VideoExercices
-        miniature="https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/315443ef-5776-43de-a0f3-673d7e3fd4c6.jpg@jpg"
-        audio="https://cdn.busuu.com/media/resized/audio/b30l3t_faudioonlineaudioconvertercom1660925565_1660925565.mp3"
+          miniature=" "
+          audio="https://cdn.busuu.com/media/resized/audio/a1l7101661524462_1661524462.mp3"
       />
 
-      <div className="exercice_text page_exercice_text">
-        <p>Bonjour, ça va ? - Bien merci, et vous ?</p>
-      </div>
-
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="True"
-        question={`"Et vous ?" means "And you? (singular formal)".`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice7"}
+      <ExerciceWithoutVideo
+        answer_1="Tu es impatiente aujourd'hui."
+        answer_2="Il est impatient aujourd'hui."
+        answer_3="Elle est impatiente aujourd'hui."
+        answer_4="Elle es impatiente aujourd'hui."
+        correctAnswer="Elle est impatiente aujourd'hui."
+        nextExercise="/learning/exercices/first-lessons/2/2_4/exercice6"
       />
     </div>
   );

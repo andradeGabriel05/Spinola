@@ -27,7 +27,7 @@ export default function Exercice7() {
         sentenceText1="Elle"
         sentenceText2="fatiguée. Et je suis fatigué aussi."
         correctAnswer="est"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice10"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice10"}
       />
     </div>
   );

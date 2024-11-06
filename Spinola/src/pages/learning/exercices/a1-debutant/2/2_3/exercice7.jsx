@@ -20,7 +20,7 @@ export default function Exercice7() {
         answer_1="est"
         answer_2="es"
         correctAnswer="est"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice8"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice8"}
       />
     </div>
   );

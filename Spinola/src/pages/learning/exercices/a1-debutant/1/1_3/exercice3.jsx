@@ -30,7 +30,7 @@ export default function Exercice3() {
         answer_2="False"
         correctAnswer="True"
         question={`"Bien, merci" means "Fine, thanks."`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_3/exercice4"}
+        nextExercise={"/learning/exercices/first-lessons/1/1_3/exercice4"}
       />
     </div>
   );

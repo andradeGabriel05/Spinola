@@ -27,7 +27,7 @@ export default function Exercice3() {
         answer_3="Saying goodbye"
         answer_4="Asking her name"
         correctAnswer="How she is doing"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_4/exercice4"}
+        nextExercise={"/learning/exercices/first-lessons/1/1_4/exercice4"}
       />
     </div>
   );

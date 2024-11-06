@@ -18,7 +18,7 @@ export default function Exercice6() {
       answer_3="Bonjour"
       correctAnswer="De rien"
       answer_4="S'il vous plaît"
-      nextExercise={"/learning/exercices/premiere-lessons/1/1_2/exercice7"}
+      nextExercise={"/learning/exercices/first-lessons/1/1_2/exercice7"}
       />
     </div>
   );

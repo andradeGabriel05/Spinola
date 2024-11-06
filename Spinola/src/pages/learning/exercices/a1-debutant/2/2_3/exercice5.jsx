@@ -26,7 +26,7 @@ export default function Exercice5() {
         answer_1="suis"
         answer_2="suit"
         correctAnswer="suis"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice6"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice6"}
       />
     </div>
   );

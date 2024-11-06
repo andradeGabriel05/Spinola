@@ -1,40 +1,20 @@
 import "./homepageA2.scss";
 import { Link } from "react-router-dom";
 import ActivatedButton from "../../components/ActivatedButton/activatedButton";
+import NavigationLevels from "../../components/NavigationLevels/navigationLevels";
 import BookSection from "../../components/BookSection/bookSection";
 export default function homepageA2() {
     return (
 
         <div className="container_homepage">
-            <section className="container_homepage_navigation_levels">
-                <div className="levels">
-                    <ActivatedButton link="/">
-                        A1 Débutant
-                    </ActivatedButton >
-                </div>
-                <div className="levels">
-                    <ActivatedButton link="/a2">
-                        A2 Élémentaire
-                    </ActivatedButton >
-                </div>
-                <div className="levels">
-                    <ActivatedButton link="/a3">
-                        B1 Intermédiaire
-                    </ActivatedButton >
-                </div>
-                <div className="levels">
-                    <ActivatedButton link="/a4">
-                        B2 Avancé
-                    </ActivatedButton >
-                </div>
-            </section>
+            <NavigationLevels />
 
             <section className="homepage_main">
                 <div className="homepage_main_content">
                     <div className="left_side">
                         <Link to="/premiere-lecon" className="wrapper-message-user-home">
                             <div className="card1">
-                                <div className="image_card"></div>
+                                <div className="image_card image_card_background_a2"></div>
                                 <div className="text">
                                     <p>Collection</p>
                                     <h2>Second time</h2>

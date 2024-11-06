@@ -22,7 +22,7 @@ export default function Exercice1() {
         <p>to be</p>
       </div>
 
-      <FooterExercices nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice2"} />
+      <FooterExercices nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice2"} />
     </div>
   );
 }

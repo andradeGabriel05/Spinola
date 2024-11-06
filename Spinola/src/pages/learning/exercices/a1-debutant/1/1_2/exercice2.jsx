@@ -20,7 +20,7 @@ export default function Exercice2() {
         title="S'il vous plaît"
         correctAnswer="True"
         question={`"s'il vous plaît" means "please"`}
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_2/exercice3"}
+        nextExercise={"/learning/exercices/first-lessons/1/1_2/exercice3"}
       />
     </div>
   );

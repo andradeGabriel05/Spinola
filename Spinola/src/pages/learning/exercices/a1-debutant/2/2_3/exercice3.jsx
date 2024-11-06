@@ -25,7 +25,7 @@ export default function Exercice3() {
       {/* https://cdn.busuu.com/media/resized/audio/a1l681661427808_1661427808.mp3 */}
 
       <FooterExercices
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice4"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice4"}
       />
     </div>
   );

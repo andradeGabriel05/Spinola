@@ -23,7 +23,7 @@ export default function Exercice2() {
       </div>
 
       <FooterExercices 
-      nextExercise="/learning/exercices/premiere-lessons/2/2_2/exercice3"
+      nextExercise="/learning/exercices/first-lessons/2/2_2/exercice3"
       />
     </div>
   );

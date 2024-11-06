@@ -16,7 +16,7 @@ export default function Exercice1() {
 
       <ExerciceWrite
         correctAnswer="bonjour"
-        nextExercise="/learning/exercices/premiere-lessons/2/2_2/exercice2"
+        nextExercise="/learning/exercices/first-lessons/2/2_2/exercice2"
       />
     </div>
   );

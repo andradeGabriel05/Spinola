@@ -21,7 +21,7 @@ export default function Exercice1() {
         sentenceText1="Bonjour!"
         sentenceText2="va ?"
         correctAnswer="Ça"
-        nextExercise={"/learning/exercices/premiere-lessons/1/1_4/exercice2"}
+        nextExercise={"/learning/exercices/first-lessons/1/1_4/exercice2"}
       />
     </div>
   );

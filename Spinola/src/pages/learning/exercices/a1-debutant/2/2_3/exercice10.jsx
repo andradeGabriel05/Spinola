@@ -25,7 +25,7 @@ export default function Exercice7() {
         answer_3="Tout est contente ?"
         answer_4="Tout es contente ?"
         correctAnswer="Tu es content ?"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice11"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice11"}
       />
 
       {/*     Elle est contente mais tu es fatigué !

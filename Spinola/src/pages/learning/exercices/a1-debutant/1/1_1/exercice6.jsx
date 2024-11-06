@@ -6,7 +6,7 @@ import "../exercice.scss";
 export default function Exercice6() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="100%" prevProgressExercice="83.35%" />
+      <HeaderExercices progressExercice="75%" prevProgressExercice="62.5%" />
 
       <div className="exercice_title page_exercice_text">
         <p>Complete the sentence.</p>
@@ -20,8 +20,7 @@ export default function Exercice6() {
         title="Au revoir!"
         correctAnswer="True"
         question='"Au revoir" means "goodbye"'
-        nextExercise={"/premiere-lecon"}
-        last={true}
+        nextExercise={"/learning/exercices/first-lessons/1/1_1/exercice7"}
       />
     </div>
   );

@@ -22,7 +22,7 @@ export default function Exercice7() {
         answer_1="tu"
         answer_2="toi"
         correctAnswer="toi"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_1/exercice8"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_1/exercice8"}
       />
     </div>
   );

@@ -21,7 +21,7 @@ export default function Exercice5() {
       <ExerciceWrite 
       correctAnswer="Je m'appelle"
       sentenceText2="Rachid"
-      nextExercise={"/learning/exercices/premiere-lessons/2/2_1/exercice6"}
+      nextExercise={"/learning/exercices/first-lessons/2/2_1/exercice6"}
       />
 
 

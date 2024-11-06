@@ -1,33 +1,13 @@
 import "./homepage.scss";
 import { Link } from "react-router-dom";
 import ActivatedButton from "../../components/ActivatedButton/activatedButton";
+import NavigationLevels from "../../components/NavigationLevels/navigationLevels";
 import BookSection from "../../components/BookSection/bookSection";
 
 export default function homepage() {
   return (
     <div className="container_homepage">
-      <section className="container_homepage_navigation_levels">
-        <div className="levels">
-          <ActivatedButton link="/">
-            A1 Débutant
-          </ActivatedButton >
-        </div>
-        <div className="levels">
-          <ActivatedButton link="/a2">
-            A2 Élémentaire
-          </ActivatedButton >
-        </div>
-        <div className="levels">
-          <ActivatedButton link="/a3">
-            B1 Intermédiaire
-          </ActivatedButton >
-        </div>
-        <div className="levels">
-          <ActivatedButton link="/a4">
-            B2 Avancé
-          </ActivatedButton >
-        </div>
-      </section>
+      <NavigationLevels />
 
       <section className="homepage_main">
         <div className="homepage_main_content">

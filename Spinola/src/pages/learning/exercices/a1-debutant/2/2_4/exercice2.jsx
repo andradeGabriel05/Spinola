@@ -1,30 +1,34 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
-import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
+import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
 import "../exercice.scss";
 
 export default function Exercice2() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="20%" prevProgressExercice="10%" />
+      <HeaderExercices progressExercice="40%" prevProgressExercice="20%" />
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices miniature="https://cdn.busuu.com/media/resized/entity/1440/shutterstock_188106838011661531134_1661531134_1440.jpg" audio="https://cdn.busuu.com/media/resized/audio/a1l611661427689_1661427689.mp3" />
+        <VideoExercices
+          miniature="https://cdn.busuu.com/media/resized/entity/1440/shutterstock_166281927711661806250_1661806250_1440.jpg"
+          audio="https://cdn.busuu.com/media/resized/audio/a1l781661505021_1661505021.mp3"
+        />
 
-        <div className="exercice_text page_exercice_text">
-          <p>Je suis content.</p>
-        </div>
       </div>
 
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        question='"Je suis content" means "I am happy".'
-        correctAnswer="True"
-        nextExercise={"/learning/exercices/a1-debutant/2/2_3/exercice5"}
+      <ExerciceWrite
+        sentenceText1="Je "
+        sentenceText2="un peu fatiguée."
+        correctAnswer="suis"
+        nextExercise={"/learning/exercices/first-lessons/2/2_4/exercice3"}
       />
     </div>
   );
 }
+
+//     Je suis un peu fatiguée.
+
+// I'm a bit tired. 
+
+// "Je suis" (I am) is spelled with a silent final "-s".

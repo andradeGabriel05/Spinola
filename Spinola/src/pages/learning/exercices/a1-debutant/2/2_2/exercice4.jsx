@@ -21,7 +21,7 @@ export default function Exercice4() {
         text4='You can also use it to indicate that something is acceptable or to agree with a situation.'
       />
 
-      <FooterExercices nextExercise={"/learning/exercices/premiere-lessons/2/2_2/exercice5"} />
+      <FooterExercices nextExercise={"/learning/exercices/first-lessons/2/2_2/exercice5"} />
     </div>
   );
 }

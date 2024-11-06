@@ -20,7 +20,7 @@ export default function Exercice2() {
         answer_2="Salu"
         sentenceText2="!"
         correctAnswer="Salut"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_1/exercice3"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_1/exercice3"}
       />
     </div>
   );

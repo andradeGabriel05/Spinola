@@ -21,7 +21,7 @@ export default function Exercice8() {
       </div>
 
       <FooterExercices
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_1/exercice9"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_1/exercice9"}
       />
     </div>
   );

@@ -3,25 +3,25 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 
-export default function Exercice1() {
+export default function Exercice8() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="14.28%" />
+      <HeaderExercices progressExercice="100%" prevProgressExercice={"87.5%"}/>
 
       <div className="exercice_title page_exercice_text">
         <p>New word!</p>
       </div>
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices videoSrc="https://static.memrise.com/uploads/items/videos/medium/86608__m__1528464136_normalized.mp4#t=0.1" position="top"/>
+        <VideoExercices videoSrc="https://static.memrise.com/uploads/items/videos/medium/86609__m__1528469383_normalized.mp4#t=0.1" position="top"/>
 
         <div className="exercice_text page_exercice_text">
-          <p>Oui</p>
-          <p>Yes</p>
+          <p>Non</p>
+          <p>No</p>
         </div>
       </div>
       <FooterExercices
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice2"}
+        nextExercise={"/premiere-lecon"}
       />
     </div>
   );

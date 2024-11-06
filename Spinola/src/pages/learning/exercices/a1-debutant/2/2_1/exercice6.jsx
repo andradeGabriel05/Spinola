@@ -20,7 +20,7 @@ export default function Exercice6() {
         <p>And you? (singular, informal)</p>
       </div>
 
-      <FooterExercices nextExercise={"/learning/exercices/premiere-lessons/2/2_1/exercice7"} />
+      <FooterExercices nextExercise={"/learning/exercices/first-lessons/2/2_1/exercice7"} />
     </div>
   );
 }

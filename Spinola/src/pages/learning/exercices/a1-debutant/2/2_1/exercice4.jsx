@@ -25,7 +25,7 @@ export default function Exercice4() {
         answer_2="False"
         question='"Salut" means "hi".'
         correctAnswer="True"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_1/exercice5"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_1/exercice5"}
       />
     </div>
   );

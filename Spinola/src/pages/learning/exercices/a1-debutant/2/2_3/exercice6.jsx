@@ -26,7 +26,7 @@ export default function Exercice6() {
         answer_1="est"
         answer_2="es"
         correctAnswer="es"
-        nextExercise={"/learning/exercices/premiere-lessons/2/2_3/exercice7"}
+        nextExercise={"/learning/exercices/first-lessons/2/2_3/exercice7"}
       />
     </div>
   );

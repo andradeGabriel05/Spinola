@@ -22,7 +22,7 @@ export default function Exercice5() {
           answer_3="I'm good"
           answer_4="How are you?"
           correctAnswer="I'm good, and you?"
-          nextExercise="/learning/exercices/premiere-lessons/2/2_2/exercice6"
+          nextExercise="/learning/exercices/first-lessons/2/2_2/exercice6"
         />
       </div>
     </div>

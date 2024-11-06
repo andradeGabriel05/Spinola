@@ -24,7 +24,7 @@ export default function Exercice8() {
           answer_3="Very well"
           answer_4="How are you?"
           correctAnswer="Very well"
-          nextExercise="/learning/exercices/premiere-lessons/2/2_2/exercice9"
+          nextExercise="/learning/exercices/first-lessons/2/2_2/exercice9"
         />
       </div>
     </div>
