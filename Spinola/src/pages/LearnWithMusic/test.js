@@ -75,10 +75,23 @@ export function test(videoState, passedOnce) {
         console.log(time);
         lyricsPageId.innerHTML = "";
         const words = lista[Object.keys(lista)[0]].split(" ");
+        
         words.forEach((word) => {
-          const span = document.createElement("span");
-          span.textContent = word;
-          lyricsPageId.appendChild(span);
+          var willWrite = parseInt(Math.random() * 10 + 1)
+          console.log(willWrite)
+
+            const span = document.createElement("span");
+
+            if(willWrite < 9) {
+              span.textContent = word;
+              lyricsPageId.appendChild(span);
+              console.log(word)
+            } else {
+              span.textContent = "";
+              lyricsPageId.appendChild(span);
+              console.log(word)
+            }
+            
         });
       }, Object.keys(lista)[0]);
       timeoutIds.push(intervalId);
