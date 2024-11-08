@@ -1,0 +1,88 @@
+@use "/src/styles/global.scss" as *;
+
+.bigger_page {
+  height: 130vh;
+
+  .text_left {
+    text-align: left !important;
+  }
+}
+.container_execice {
+  position: relative;
+  .exercice_title {
+    color: #000;
+    p {
+      font-weight: bold;
+      font-size: 1.3em;
+      text-align: center;
+      margin: 20px 0;
+    }
+  }
+
+  .page_exercice_text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 540px;
+  }
+
+  .exercice_text {
+    background-color: #182e52;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: -18px;
+    p {
+      margin-top: 20px;
+    }
+  }
+
+  .input_type_exercice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text_exercice_multivalued {
+      display: flex;
+      color: #000;
+      align-items: flex-end;
+      .exercice_resonse_span {
+        margin: 20px 10px;
+        margin-bottom: 0;
+        width: 120px;
+        border: none;
+        border-bottom: dotted;
+        height: 30px;
+        border-color: #000;
+      }
+    }
+
+    .exercice_button {
+      font-size: 16px;
+      width: 100%;
+      padding: 5px;
+      background-color: $bg-blue-lighter;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .buttons_anwser {
+      display: flex;
+      flex: 1;
+      margin-top: 20px;
+      .exercice_button {
+        font-size: 16px;
+        padding: 16px;
+        margin: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: $bg-blue-primary;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        width: auto;
+      }
+    }
+  }
+}

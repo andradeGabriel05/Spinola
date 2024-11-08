@@ -28,7 +28,7 @@ export default function ExerciceWithoutVideo({
 
   return (
     <>
-      <div className="page_exercice_text input_type_exercice">
+      <div className="page_exercice_text input_type_exercice ">
         <div
           className="buttons_anwser"
           id="buttonsAnwserId"
@@ -58,14 +58,16 @@ export default function ExerciceWithoutVideo({
           >
             {answer_3}
           </button>
-          <button
-            className="exercice_button multiple_buttons"
-            id="answer4"
-            onClick={() => verifyAnswer("answer4", answer_4)}
-            style={{ width: "100%" }}
-          >
-            {answer_4}
-          </button>
+          {answer_4 && answer_4 !== "" && (
+            <button
+              className="exercice_button multiple_buttons"
+              id="answer4"
+              onClick={() => verifyAnswer("answer4", answer_4)}
+              style={{ width: "100%" }}
+            >
+              {answer_4}
+            </button>
+          )}
         </div>
       </div>
 

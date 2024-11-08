@@ -89,9 +89,10 @@ export default function PremiereLecon() {
           <div className="lesson_wrapper">
             <h1>Chapter 3: Essentials</h1>
             <Lessonbox
-              title="Bonjour et bienvenue"
+              title="Suite à une interaction de base"
               img="https://picsum.photos/200/300?random=9"
-              description="Exercice : Dire bonjour à une personne et lui parler de soi."
+              description="Améliorez vos compétences d'écoute en suivant une vidéo."
+              to="/learning/exercices/first-lessons/3/3_1/exercice1"
             />
             <Lessonbox
               title="Votre nationalité"

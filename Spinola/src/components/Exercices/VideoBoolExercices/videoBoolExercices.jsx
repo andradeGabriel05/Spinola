@@ -24,9 +24,12 @@ export default function VideoBoolExercices({
   }
   return (
     <>
-      <div className="exercice_text page_exercice_text">
-        <p>{title}</p>
-      </div>
+      {title && title !== "" && (
+        <div className="exercice_text page_exercice_text">
+          <p>{title}</p>
+        </div>
+      )}
+
       <div className="improvised_text">
         <p>{question}</p>
       </div>

@@ -1,4 +1,4 @@
-import "./videoBoolExercices.scss";
+import "./exerciceJustSound.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
 export default function ExerciceJustSound({
   answer_1,
