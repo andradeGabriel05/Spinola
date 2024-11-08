@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./footerExercices.scss";
 import axios from "axios";
+import { exerciceCounter } from "../../../global";
+import { useEffect, useState } from "react";
 // import { handleSubmit } from "../../../global/handleExercice";
 
 export default function FooterExercices({ nextExercise, last }) {
@@ -16,6 +18,15 @@ export default function FooterExercices({ nextExercise, last }) {
     }
   }
 
+  const [exerciceCounterOnclick, setExerciceCounterOnclick] = useState(0);
+
+  function handleExerciceCounter() {
+    setExerciceCounterOnclick(exerciceCounterOnclick + 1)
+    console.log(exerciceCounterOnclick)
+  }
+
+
+
   return (
     <div className="box-continue">
       <div className="wrapper_footer">
@@ -25,14 +36,12 @@ export default function FooterExercices({ nextExercise, last }) {
               <button className="btn-continue" type="Submit">
                 Continue
               </button>
-              <input type="submit" hidden />
             </form>
           ) : (
             <Link to={nextExercise}>
-              <button className="btn-continue" type="Submit">
+              <button className="btn-continue" onClick={handleExerciceCounter}>
                 Continue
               </button>
-              <input type="submit" hidden />
             </Link>
           )}
         </div>

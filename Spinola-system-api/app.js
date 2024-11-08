@@ -24,8 +24,8 @@ const mysql = require("mysql");
 
 const conn = mysql.createPool({
   host: "localhost",
-  user: "root",
-  password: "123456",
+  user: "aluno",
+  password: "sptech",
   database: "teste",
   port: 3306,
 });
@@ -115,10 +115,25 @@ app.put("/verify-exercice", async (req, res) => {
   });
 });
 
-app.get("/status", (request, response) => {
-  const status = {
-    Status: "Running",
-  };
+app.get("/verify-exercice/user?", (req, res) => {
+  const id = req.body.id;
+  const username = req.body.username;
 
-  response.send(status);
+  conn.getConnection(async (err, connection) => {
+    if (err) throw err;
+    const sql = "SELECT exercice_total FROM exercices WHERE id = ? AND username = ?";
+    const query = mysql.format(sql, [id, username]);
+    await connection.query(query, async (err, result) => {
+      connection.release();
+      if (err) throw err;
+      if (result.length == 0) {
+        console.log("------> User not found");
+        res.sendStatus(404);
+      } else {
+        console.log("--------> User found");
+        console.log(result);
+        res.json(result);
+      }
+    });
+  });
 });

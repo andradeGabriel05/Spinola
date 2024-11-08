@@ -1,10 +1,34 @@
 import "./header.scss";
 import { Link } from "react-router-dom";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const idUser = localStorage.getItem("user");
   const username = localStorage.getItem("username");
   console.log(username);
+
+  // const handleLogout = () => {
+  //   localStorage.removeItem("user");
+  //   localStorage.removeItem("username");
+  //   window.location.reload();
+  // };
+
+  const [language, setLanguage] = useState("english");
+  // const select_language = document.getElementById("select_language");
+  
+  useEffect(() => {
+    setLanguage(localStorage.getItem("language"));
+    console.log(language)
+    // setLanguage(select_language.value)
+  }, [language])
+
+  function handleLanguage() {
+    localStorage.setItem("language", selectLanguage.value);
+    console.log(language)
+    
+  }
+
   return (
     <header>
       <div className="container_header">
@@ -32,9 +56,16 @@ export default function Header() {
           </div>
         </div>
         <div className="right_side">
+          <div className="lang">
+            <select id="selectLanguage" name="selectLanguage" onChange={handleLanguage}>
+              <option value={"english"}>English</option>
+              <option value={"portuguese"}>Português</option>
+              <option value={"french"}>Français</option>
+            </select>
+          </div>
           {idUser ? (
             <div className="user">
-              <Link to="/login" className="register">
+              <Link to="/user" className="register">
                 {username}
               </Link>
             </div>

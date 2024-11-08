@@ -92,6 +92,7 @@ import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
 import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
 import Login from "./pages/auth/Login/login";
 import Register from "./pages/auth/Register/register";
+import User from "./pages/user/user";
 
 function App() {
   return (
@@ -107,10 +108,11 @@ function AppContent() {
   const isAuth =
     location.pathname.includes("/register") ||
     location.pathname.includes("/login");
+  const isUserPage = location.pathname.includes("/user");
 
   return (
     <div className="main-content">
-      {!isExercice && !isAuth && <Header />}
+      {!isExercice && !isAuth && !isUserPage && <Header />}
 
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -120,6 +122,7 @@ function AppContent() {
         <Route path="music-learning" element={<LearnWithMusic />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="user" element={<User />} />
         <Route
           path="/learning/exercices/first-lessons/1/1_1/exercice1"
           element={<Exercice1 />}
@@ -440,7 +443,7 @@ function AppContent() {
 
       </Routes>
 
-      {!isExercice && !isAuth && <Footer />}
+      {!isExercice && !isAuth && !isUserPage && <Footer />}
     </div>
   );
 }
