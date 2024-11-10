@@ -35,6 +35,9 @@ export default function ExplainWordWithAudio({
           />
           <audio id="audio2" src={audioSrc2}></audio>
         </div>
+
+      {textAudio3 && textAudio3 !== "" (
+
         <div className="audio_explain">
           <p>{textAudio3}</p>
           <FaVolumeUp
@@ -43,6 +46,8 @@ export default function ExplainWordWithAudio({
           />
           <audio id="audio3" src={audioSrc3}></audio>
         </div>
+      )}
+
       </div>
     </div>
   );

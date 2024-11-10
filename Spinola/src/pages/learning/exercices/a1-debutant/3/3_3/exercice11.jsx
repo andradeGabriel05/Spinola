@@ -6,25 +6,27 @@ import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
-export default function Exercice9() {
+export default function Exercice11() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="100%" prevProgressExercice={"88.88%"} />
+      <HeaderExercices
+        progressExercice="100%"
+        prevProgressExercice={"90.90%"}
+      />
 
       <div className="exercice_title page_exercice_text">
         <p>True or false?</p>
       </div>
 
-      <VideoExercices
-        miniature={" "}
-        audio="https://cdn.busuu.com/media/resized/audio/a1l8tf21662462405_1662462405.mp3"
-      />
-
-      <ExerciceWrite
-        sentenceText1="Salut, je m'appelle Sophie ! "
-        sentenceText2="!"
-        correctAnswer="enchantée"
-        nextExercise="/premiere-lecon"
+      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/b8bb4bb7-3cd6-40ee-b080-122cf03792bc_small.mp4" />
+      <div className="exercice_text page_exercice_text text_left">
+        <p>américain / américaine</p>
+        <p>American</p>
+        <p>(example)Tu es américain ?</p>
+        <p>Are you American?</p>
+      </div>
+      <FooterExercices
+        nextExercise={"/premiere-lecon"}
       />
     </div>
   );

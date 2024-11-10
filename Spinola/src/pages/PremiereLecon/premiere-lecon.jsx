@@ -98,6 +98,7 @@ export default function PremiereLecon() {
               title="Votre nationalité"
               img="https://picsum.photos/200/300?random=10"
               description="Exercice : Dire votre nationalité et faire la différence entre le masculin et le féminin dans les prénoms et les nationalités."
+              to="/learning/exercices/first-lessons/3/3_2/exercice1"
             />
             <Lessonbox
               title="Comment allez-vous?"

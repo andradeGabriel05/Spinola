@@ -9,22 +9,24 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 export default function Exercice9() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="100%" prevProgressExercice={"88.88%"} />
+      <HeaderExercices
+        progressExercice="81.81%"
+        prevProgressExercice={"72.72%"}
+      />
 
       <div className="exercice_title page_exercice_text">
         <p>True or false?</p>
       </div>
 
-      <VideoExercices
-        miniature={" "}
-        audio="https://cdn.busuu.com/media/resized/audio/a1l8tf21662462405_1662462405.mp3"
-      />
-
-      <ExerciceWrite
-        sentenceText1="Salut, je m'appelle Sophie ! "
-        sentenceText2="!"
-        correctAnswer="enchantée"
-        nextExercise="/premiere-lecon"
+      <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/e942ffa0-9bfd-4d18-9839-941d4c5e7e07_small.mp4" />
+      <div className="exercice_text page_exercice_text text_left">
+        <p>mexicain / mexicaine</p>
+        <p>Mexican</p>
+        <p>(example)Je suis mexicaine, et toi ?</p>
+        <p>I am Mexican, and you?</p>
+      </div>
+      <FooterExercices
+        nextExercise={"/learning/exercices/first-lessons/3/3_2/exercice10"}
       />
     </div>
   );

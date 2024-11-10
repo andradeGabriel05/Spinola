@@ -11,7 +11,7 @@ export default function Exercice3() {
       <HeaderExercices progressExercice="33.33%" prevProgressExercice={"22.22%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>👋 Bonjour or salut? 👋</p>
+        <p>What is he saying to Monia?</p>
       </div>
 
       <VideoExercices miniature={" "} audio="https://cdn.busuu.com/media/resized/audio/a1l841662459982_1662459982.mp3" />

@@ -87,6 +87,30 @@ import Exercice7_3_1 from "./pages/learning/exercices/a1-debutant/3/3_1/exercice
 import Exercice8_3_1 from "./pages/learning/exercices/a1-debutant/3/3_1/exercice8";
 import Exercice9_3_1 from "./pages/learning/exercices/a1-debutant/3/3_1/exercice9";
 
+import Exercice1_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice1";
+import Exercice2_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice2";
+import Exercice3_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice3";
+import Exercice4_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice4";
+import Exercice5_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice5";
+import Exercice6_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice6";
+import Exercice7_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice7";
+import Exercice8_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice8";
+import Exercice9_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice9";
+import Exercice10_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice10";
+import Exercice11_3_2 from "./pages/learning/exercices/a1-debutant/3/3_2/exercice11";
+
+import Exercice1_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice1";
+import Exercice2_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice2";
+import Exercice3_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice3";
+import Exercice4_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice4";
+import Exercice5_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice5";
+import Exercice6_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice6";
+import Exercice7_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice7";
+import Exercice8_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice8";
+import Exercice9_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice9";
+import Exercice10_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice10";
+import Exercice11_3_3 from "./pages/learning/exercices/a1-debutant/3/3_3/exercice11";
+
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
 import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
@@ -440,7 +464,95 @@ function AppContent() {
           element={<Exercice9_3_1 />}
         />
 
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice1"
+          element={<Exercice1_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice2"
+          element={<Exercice2_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice3"
+          element={<Exercice3_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice4"
+          element={<Exercice4_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice5"
+          element={<Exercice5_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice6"
+          element={<Exercice6_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice7"
+          element={<Exercice7_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice8"
+          element={<Exercice8_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice9"
+          element={<Exercice9_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice10"
+          element={<Exercice10_3_2 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_2/exercice11"
+          element={<Exercice11_3_2 />}
+        />
 
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice1"
+          element={<Exercice1_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice2"
+          element={<Exercice2_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice3"
+          element={<Exercice3_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice4"
+          element={<Exercice4_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice5"
+          element={<Exercice5_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice6"
+          element={<Exercice6_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice7"
+          element={<Exercice7_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice8"
+          element={<Exercice8_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice9"
+          element={<Exercice9_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice10"
+          element={<Exercice10_3_3 />}
+        />
+        <Route
+          path="/learning/exercices/first-lessons/3/3_3/exercice11"
+          element={<Exercice11_3_3 />}
+        />
       </Routes>
 
       {!isExercice && !isAuth && !isUserPage && <Footer />}
