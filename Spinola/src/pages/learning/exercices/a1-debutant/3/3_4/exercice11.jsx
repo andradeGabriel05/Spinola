@@ -1,16 +1,17 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 
-export default function Exercice7() {
+export default function Exercice11() {
   return (
     <div className="container_execice">
       <HeaderExercices
         progressExercice="100%"
-        prevProgressExercice={"85.71%"}
+        prevProgressExercice={"81.81%"}
       />
 
       <div className="exercice_title page_exercice_text">
@@ -18,18 +19,23 @@ export default function Exercice7() {
       </div>
 
       <VideoExercices
-        miniature={
-          "https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/7b81a128-a67f-4129-bbd0-5b9b051a5816.jpg@jpg"
-        }
+      miniature={" "}
         audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac81662474292_1662474292.mp3"
+          "https://cdn.busuu.com/media/resized/audio/a1l11ac31662477697_1662477697.mp3"
         }
       />
-      <ExerciceWrite
-        sentenceText1="Elle est "
-        sentenceText2="."
-        correctAnswer="americaine"
-        nextExercise={"/premiere-lecon"}
+
+      <VideoInputExercices
+        answer_1="sommes"
+        answer_2="est"
+        answer_3="sont"
+        answer_4="es"
+        sentenceText1="Nous"
+        sentenceText2="américaines mais elle "
+        sentenceText3="mexicaine."
+        correctAnswer="sommes"
+        correctAnswer2="est"
+        nextExercise="/premiere-lecon"
       />
     </div>
   );

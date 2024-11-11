@@ -1,7 +1,6 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
-import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 
@@ -9,27 +8,26 @@ export default function Exercice6() {
   return (
     <div className="container_execice">
       <HeaderExercices
-        progressExercice="85.71%"
-        prevProgressExercice={"71.42%"}
+        progressExercice="54.54%"
+        prevProgressExercice={"45.45%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the nationalities in the order you hear them. </p>
+        <p>New Word!</p>
       </div>
 
       <VideoExercices
-        miniature={" "}
-        audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac71662474246_1662474246.mp3"
+        videoSrc={
+          "https://cdn.busuu.com/media-resources/video/mp4/47e89f76-d20d-44d4-b70b-ded376d0d860_small.mp4"
         }
       />
+      <div className="exercice_text page_exercice_text text_left">
+        <p>anglais / anglaise</p>
+        <p> English</p>
+      </div>
 
-      <ExerciceWithoutVideo
-        answer_1="anglais / mexicain / américain"
-        answer_2="mexicain / américain / anglais"
-        answer_3="américain / anglaise / mexicain"
-        correctAnswer="américain / anglaise / mexicain"
-        nextExercise="/learning/exercices/first-lessons/3/3_3/exercice7"
+      <FooterExercices
+        nextExercise={"/learning/exercices/first-lessons/3/3_2/exercice7"}
       />
     </div>
   );

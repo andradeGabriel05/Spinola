@@ -1,16 +1,17 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 
-export default function Exercice7() {
+export default function Exercice10() {
   return (
     <div className="container_execice">
       <HeaderExercices
-        progressExercice="100%"
-        prevProgressExercice={"85.71%"}
+        progressExercice="90.90%"
+        prevProgressExercice={"81.81%"}
       />
 
       <div className="exercice_title page_exercice_text">
@@ -18,18 +19,20 @@ export default function Exercice7() {
       </div>
 
       <VideoExercices
-        miniature={
-          "https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/7b81a128-a67f-4129-bbd0-5b9b051a5816.jpg@jpg"
-        }
-        audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac81662474292_1662474292.mp3"
-        }
+        videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/aaef0d31-2eba-4d87-ac6c-62ef960681e6_small.mp4"}
       />
-      <ExerciceWrite
-        sentenceText1="Elle est "
-        sentenceText2="."
-        correctAnswer="americaine"
-        nextExercise={"/premiere-lecon"}
+
+      <VideoInputExercices
+        answer_1="vus"
+        answer_2="êtes"
+        answer_3="es"
+        answer_4="Vous"
+        sentenceText1=""
+        sentenceText2=" "
+        sentenceText3="fatigués ?"
+        correctAnswer="Vous"
+        correctAnswer2="êtes"
+        nextExercise="/learning/exercices/first-lessons/3/3_4/exercice11"
       />
     </div>
   );

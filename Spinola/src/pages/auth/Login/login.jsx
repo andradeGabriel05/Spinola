@@ -28,6 +28,7 @@ export default function Login() {
             <h1>Spínola</h1>
           </Link>
           <div className="register_form">
+            <h2 style={{ color: "#000" }}>Se connecter</h2>
             <form onSubmit={handleLogin}>
               <input
                 type="text"

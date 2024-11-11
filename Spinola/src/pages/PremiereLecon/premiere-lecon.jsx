@@ -95,20 +95,23 @@ export default function PremiereLecon() {
               to="/learning/exercices/first-lessons/3/3_1/exercice1"
             />
             <Lessonbox
-              title="Votre nationalité"
+              title="Les nationalités "
               img="https://picsum.photos/200/300?random=10"
-              description="Exercice : Dire votre nationalité et faire la différence entre le masculin et le féminin dans les prénoms et les nationalités."
+              description="Apprenez à dire votre nationalité et faire la différence entre le masculin et le féminin dans les prénoms et les nationalités."
               to="/learning/exercices/first-lessons/3/3_2/exercice1"
             />
             <Lessonbox
-              title="Comment allez-vous?"
+              title="Les nationalités: Approfondir les formes masculines et féminines"
               img="https://picsum.photos/200/300?random=11"
-              description="Exercice : Dire comment vous allez au travail ou à votre logement."
+              description="La distinction entre les formes masculines et féminines des nationalités et des prénoms."
+              to="/learning/exercices/first-lessons/3/3_3/exercice1"
             />
             <Lessonbox
-              title="Écouter une conversation simple."
+              title={`Le pluriel de "être"`}
               img="https://picsum.photos/200/300?random=12"
-              description="Exercice : Écouter une conversation simple et comprendre les éléments de base."
+              description="Apprenez à conjuguer le verbe 'être' au pluriel et à l'utiliser dans des phrases simples. "
+              to="/learning/exercices/first-lessons/3/3_4/exercice1"
+
             />
           </div>
           <div className="lesson_wrapper">

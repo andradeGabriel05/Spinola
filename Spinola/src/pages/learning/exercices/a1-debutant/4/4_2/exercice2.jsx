@@ -9,20 +9,22 @@ import "../exercice.scss";
 export default function Exercice2() {
   return (
     <div className="container_execice bigger_page">
-      <HeaderExercices progressExercice="28.57%" prevProgressExercice={"14.28%"} />
+      <HeaderExercices progressExercice="18.18%" prevProgressExercice={"9.09%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>What is she saying?</p>
+        <p>Tu es de quelle nationalité ? </p>
       </div>
 
-      <VideoExercices miniature={" "} audio={"https://cdn.busuu.com/media/resized/audio/a1l9ac31662474139_1662474139.mp3"} />
+      <VideoExercices miniature={"https://st.focusedcollection.com/8860618/i/650/focused_124364670-stock-photo-two-people-talking.jpg"} audio={"https://cdn.busuu.com/media/resized/audio/ltuesdequelnationalite_1604923381.mp3"} />
 
-      <ExerciceWithoutVideo 
-          answer_1="He is Mexican and she is American."
-          answer_2="He is American and she is Mexican."
-          answer_3="They are both Mexican."
-          correctAnswer="He is American and she is Mexican."
-          nextExercise="/learning/exercices/first-lessons/3/3_3/exercice3"
+      <VideoBoolExercices 
+        answer_1="true"
+        answer_2="false"
+        title="true"
+        correctAnswer="true"
+        question={`"Tu es de quelle nationalité ?" means: What nationality are you?`}
+        nextExercise="/learning/exercices/first-lessons/3/3_2/exercice3"
+      
       />
     </div>
   );

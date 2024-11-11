@@ -3,7 +3,7 @@ var time = 0;
 var currentTime = 0;
 const valoresAtuais = [];
 var currentVerseIndex = 0;
-
+var tempoAtual = 0
 export function test(videoState, passedOnce) {
   const lyricsData = {
     lyricsTimeVerse: [
@@ -16,17 +16,17 @@ export function test(videoState, passedOnce) {
       { 15034: "Je voudrais vous les dire" },
       { 19034: "Et je voudrais les vivre" },
       { 22567: "Je ne le ferai pas" },
-      { 26034: "Je veux, je ne peux pas" },
+      { 26034: "Je veux je ne peux pas" },
       { 30034: "Je suis seule à crever et je sais où vous êtes" },
       {
-        34534: "J'arrive, attendez-moi, nous allons nous connaître",
+        34534: "J'arrive attendez-moi nous allons nous connaître",
       },
       {
-        39034: "Préparez votre temps, pour vous j'ai tout le mien",
+        39034: "Préparez votre temps pour vous j'ai tout le mien",
       },
-      { 45034: "Je voudrais arriver, je reste, je me déteste" },
+      { 45034: "Je voudrais arriver je reste je me déteste" },
       { 52034: "Je n'arriverai pas" },
-      { 55034: "Je veux, je ne peux pas" },
+      { 55034: "Je veux je ne peux pas" },
       { 61034: "Je devrais vous parler" },
       { 64034: "Je devrais arriver" },
       { 67034: "Ou je devrais dormir" },
@@ -38,7 +38,7 @@ export function test(videoState, passedOnce) {
       },
       { 90034: "Mais si tu crois un jour que tu m'aimes" },
       { 94034: "Ne crois pas que tes souvenirs me gênent" },
-      { 99034: "Et cours, cours jusqu'à perdre haleine" },
+      { 99034: "Et cours cours jusqu'à perdre haleine" },
       { 104034: "Viens me retrouver" },
       { 109034: "Si tu crois un jour que tu m'aimes" },
       { 113034: "Et si ce jour-là tu as de la peine" },
@@ -69,32 +69,36 @@ export function test(videoState, passedOnce) {
     timeoutIds.length = 0;
     console.log("Pausou");
     console.log(time);
-    
+
+    //para pegar o tempo do pause
+    setValor(time);
     return time;
   }
 
   valoresAtuais.length = 0;
   let contador = 0;
 
-  console.log(passedOnce);
   lyricsData.lyricsTimeVerse.forEach((lista, index) => {
+    const originalKey = Object.keys(lista)[0];
+
+
     const intervalId = setTimeout(
       () => {
-        console.log(index);
-        var key
-        if (key != time && passedOnce) {
-          key = time;
-        } else {
-          key = Object.keys(lista)[0];
+        let key = originalKey;
+        if (passedOnce && time != undefined) {
+          time = Number(originalKey);
         }
-        console.log(key);
-        const verse = lista[key];
-        time = Number(key);
-        console.log(index);
+
+        const verse = lista[originalKey]; // Sempre usa a key original para pegar o verso
+        if (!verse) {
+          console.warn(`No verse found for key ${originalKey}`);
+          return;
+        }
+
+        time = Number(originalKey);
         lyricsPageId.innerHTML = "";
         const words = verse.split(" ");
 
-        // Colocar verso no span
         words.forEach((word) => {
           contador += 1;
           const chanceOfWrite = parseInt(Math.random() * 100 + 1);
@@ -105,38 +109,33 @@ export function test(videoState, passedOnce) {
 
           if (chanceOfWrite < 100) {
             input.value = word;
-            lyricsPageId.appendChild(input);
             input.disabled = true;
           } else {
             input.value = "";
-            lyricsPageId.appendChild(input);
           }
-          valoresAtuais.push(input.value);
-          console.log(valoresAtuais);
 
-          input.addEventListener("keydown", () => {
+          lyricsPageId.appendChild(input);
+          valoresAtuais.push(input.value);
+
+          input.addEventListener("keyup", () => {
             checkInputs();
           });
         });
 
-        // Verifica se há palavras vazias que precisam ser preenchidas
+        if (index + 1 < lyricsData.lyricsTimeVerse.length) {
+          const nextVerse = lyricsData.lyricsTimeVerse[index + 1];
+          time = Number(Object.keys(nextVerse)[0]);
+          console.log("Próximo tempo:", time);
+        }
+
         if (valoresAtuais.includes("")) {
           test("pause", true);
           return;
         }
-        // Se houver próximo verso, atualiza o tempo
-        if (index + 1 < lyricsData.lyricsTimeVerse.length) {
-          const nextVerse = lyricsData.lyricsTimeVerse[index + 1]; // Pega o próximo objeto do array
-          time = Number(Object.keys(nextVerse)[0]); // Pega o tempo do próximo verso
-          key = time;
-          console.log("Próximo tempo:", time);
-        }
 
-        console.log(time);
+        tempoAtual = passedOnce ? Number(originalKey) - time : Number(originalKey)
       },
-      passedOnce
-        ? Number(Object.keys(lista)[0]) - time
-        : Number(Object.keys(lista)[0])
+      passedOnce ? Number(originalKey) - time : Number(originalKey)
     );
     timeoutIds.push(intervalId);
   });
@@ -157,9 +156,20 @@ function checkInputs() {
   if (allCorrect) {
     console.log("foi!"); // Prossegue o tempo do texto
     console.log(time);
+    setValor(tempoAtual);
 
     test("playing", true);
   } else {
     console.log("não foi");
   }
+}
+
+let valorDeRetorno = 0;
+
+export function setValor(valor) {
+  valorDeRetorno = valor;
+}
+
+export function getValor() {
+  return valorDeRetorno;
 }

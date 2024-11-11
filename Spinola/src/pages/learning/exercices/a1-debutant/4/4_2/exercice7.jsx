@@ -9,27 +9,24 @@ export default function Exercice7() {
   return (
     <div className="container_execice">
       <HeaderExercices
-        progressExercice="100%"
-        prevProgressExercice={"85.71%"}
+        progressExercice="63.63%"
+        prevProgressExercice={"54.54%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>Hannah and Miles are a woman and a man from England. Select the correct nationality for them.</p>
       </div>
 
-      <VideoExercices
-        miniature={
-          "https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/7b81a128-a67f-4129-bbd0-5b9b051a5816.jpg@jpg"
-        }
-        audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac81662474292_1662474292.mp3"
-        }
-      />
-      <ExerciceWrite
-        sentenceText1="Elle est "
-        sentenceText2="."
-        correctAnswer="americaine"
-        nextExercise={"/premiere-lecon"}
+
+      <VideoInputExercices
+        answer_1="anglaise"
+        answer_2="anglais"
+        sentenceText1="Hannah est "
+        sentenceText2="et Miles est"
+        sentenceText3="."
+        correctAnswer="anglaise"
+        correctAnswer2="anglais"
+        nextExercise={"/learning/exercices/first-lessons/3/3_2/exercice8"}
       />
     </div>
   );

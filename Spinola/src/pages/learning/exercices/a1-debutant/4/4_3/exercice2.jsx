@@ -12,7 +12,7 @@ export default function Exercice2() {
       <HeaderExercices progressExercice="28.57%" prevProgressExercice={"14.28%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>What is she saying?</p>
+        <p>Tu es de quelle nationalité ? </p>
       </div>
 
       <VideoExercices miniature={" "} audio={"https://cdn.busuu.com/media/resized/audio/a1l9ac31662474139_1662474139.mp3"} />

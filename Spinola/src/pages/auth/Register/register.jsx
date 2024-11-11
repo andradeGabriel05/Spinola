@@ -29,6 +29,7 @@ export default function Register() {
             <h1>Spínola</h1>
           </Link>
           <div className="register_form">
+            <h2 style={{color: "#000"}}>Créer un compte</h2>
             <form onSubmit={handleRegister}>
               <input
                 type="text"

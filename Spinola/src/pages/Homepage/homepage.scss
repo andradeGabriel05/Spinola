@@ -54,9 +54,7 @@
       padding: 15px;
       display: flex;
       justify-content: center;
-
     }
-
   }
 
   .homepage_main {
@@ -83,10 +81,10 @@
 
       .left_side {
         margin-right: 20px;
-
+        width: 90%;
         .card1 {
           display: flex;
-
+          
           height: 100%;
           position: relative;
 
@@ -95,9 +93,12 @@
             background-image: url("https://img.freepik.com/premium-vector/learning-french-language-education-online-studying-foreign-languages-flat-vector-illustration_442961-107.jpg");
             background-repeat: no-repeat;
             background-position: center;
+            background-size: cover;
             width: 100%;
             height: 100%;
             position: absolute;
+            border-radius: 4px;
+            transition: all 0.3s ease;
           }
         }
       }
@@ -108,11 +109,11 @@
         justify-content: center;
 
         .image_card {
-          background-image: url("https://www.shutterstock.com/image-vector/learning-french-language-flat-vector-260nw-1908466663.jpg");
           background-image: url("https://www.touteleurope.eu/wp-content/uploads/2023/05/bonjour-23-langues-1-1024x683.jpg");
           background-size: cover;
           background-repeat: no-repeat;
-          width: 50%;
+          
+          width: 100%;
           height: 100%;
           position: absolute;
         }
@@ -121,14 +122,12 @@
       .left_side,
       .right_side {
         flex: 1;
-
+        
         .card1,
         .card2,
         .card3 {
           background-color: #fff;
-          border: 1px solid #ddd;
           border-radius: 4px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
           h2 {
             font-size: 1.5em;
@@ -142,9 +141,11 @@
 
           transition: all 0.3s ease;
 
-          &:hover {
-            transition: all 0.3s ease;
-            opacity: 0.4;
+          .image_card {
+            &:hover {
+              transition: all 0.3s ease;
+              filter: brightness(0.7);
+            }
           }
         }
       }
@@ -152,6 +153,7 @@
       .right_side {
         display: flex;
         flex-direction: column;
+        width: 50%;
 
         .card2,
         .card3 {
@@ -235,7 +237,6 @@
                 background-color: #000;
                 cursor: pointer;
               }
-
             }
           }
 

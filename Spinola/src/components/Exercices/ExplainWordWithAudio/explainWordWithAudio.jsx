@@ -1,6 +1,7 @@
 import "./explainWordWithAudio.scss";
 import { FaVolumeUp } from "react-icons/fa";
 
+
 export default function ExplainWordWithAudio({
   text,
   textAudio1,
@@ -36,7 +37,7 @@ export default function ExplainWordWithAudio({
           <audio id="audio2" src={audioSrc2}></audio>
         </div>
 
-      {textAudio3 && textAudio3 !== "" (
+      {textAudio3 && textAudio3 !== "" && (
 
         <div className="audio_explain">
           <p>{textAudio3}</p>

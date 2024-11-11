@@ -1,46 +1,65 @@
 import { useEffect, useRef, useState } from "react";
 import "./learnWithMusic.scss";
-import { test } from "./test";
+import { getValor, test } from "./test";
 
 export default function LearnWithMusic() {
   const [buttonState, setButtonState] = useState("playing");
   const [passedOnce, setPassedOnce] = useState(false);
-  const [tempoPreciso, setTempoPreciso] = useState(0); // Estado para observar o valor de `time`
+  const [tempoPreciso, setTempoPreciso] = useState(0);
   const videoRef = useRef(null);
 
-  function handlePauseResume() {
-    if (videoRef.current.paused) {
-      const tempo = test(buttonState, passedOnce);
-      console.log(tempo);
-      videoRef.current.play();
-      setButtonState("playing");
+  // function handlePauseResume() {
+  //   if (videoRef.current.paused) {
+  //     console.log(test(buttonState, passedOnce));
+  //     videoRef.current.play();
+  //     setButtonState("playing");
 
-      setTempoPreciso(tempo); // Define o valor de tempo
-      videoRef.current.currentTime = tempo / 1000;
-    } else {
-      videoRef.current.pause();
-      setButtonState("pause");
-      setPassedOnce(true);
+  //     setTempoPreciso(test(buttonState, passedOnce));
+  //     console.log(tempoPreciso / 1000);
+  //     videoRef.current.currentTime = tempoPreciso / 1000;
+  //   } else {
+  //     videoRef.current.pause();
+  //     setButtonState("pause");
+  //     setPassedOnce(true);
+  //   }
+  // }
+
+  // Atualize o estado do vídeo e passe para o test
+  useEffect(() => {
+    test(buttonState, passedOnce);
+    if (buttonState === "playing") {
+      // setPassedOnce(true);
     }
-  }
+  }, [buttonState, passedOnce]);
+
+  const [valorDeRetorno, setValorDeRetorno] = useState(getValor);
+  const [valorAtualMusica, setValorAtualMusica] = useState(0);
 
   useEffect(() => {
-    // Chama `test` e define o valor retornado em `tempoPreciso`
-    const tempo = test(buttonState, passedOnce);
-    setTempoPreciso(tempo);
+    const intervalo = setInterval(() => {
+      const novoValor = getValor();
+      if (novoValor !== valorDeRetorno && novoValor !== 0) {
+        setValorDeRetorno(novoValor);
+      }
 
-    // Verifica se `tempoPreciso` é suficiente para pausar o vídeo
-    if (
-      videoRef.current &&
-      videoRef.current.currentTime > tempoPreciso / 1000
-    ) {
-      videoRef.current.pause();
-      setButtonState("pause");
-      setPassedOnce(true);
-      console.log("Vídeo pausado no tempo especificado.");
-    }
-  }, [buttonState, passedOnce, tempoPreciso]);
+      console.log(valorDeRetorno);
 
+      if (videoRef.current) {
+        const currentTime = videoRef.current.currentTime;
+        setValorAtualMusica(currentTime);
+
+        if (currentTime > valorDeRetorno / 1000 && valorDeRetorno !== 0) {
+          videoRef.current.pause();
+          console.log("Vídeo pausado no tempo especificado.");
+        } else {
+          videoRef.current.play();
+          setButtonState("play");
+        }
+      }
+    }, 300); // Intervalo de 300ms, ajuste conforme necessário
+
+    return () => clearInterval(intervalo);
+  }, [valorDeRetorno]);
   return (
     <div className="container_music_video">
       <div className="wrapper_video_choice">
@@ -50,7 +69,7 @@ export default function LearnWithMusic() {
             type="video/mp4"
           />
         </video>
-
+        {/*         
         <div className="wrapper_btns_choice">
           <button
             onClick={() => {
@@ -59,7 +78,7 @@ export default function LearnWithMusic() {
           >
             {buttonState}
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="lyrics" id="lyricsPageId"></div>
     </div>
