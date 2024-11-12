@@ -5,7 +5,7 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
-export default function Exercice6() {
+export default function Exercice10() {
   return (
     <div className="container_execice">
       <HeaderExercices progressExercice="66.66%" prevProgressExercice={"55.55%"} />
@@ -15,19 +15,16 @@ export default function Exercice6() {
       </div>
 
       <VideoExercices
-        miniature={
-          "https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/ebba3df9-502f-40ea-98e7-29bcf3652a16.jpg@jpg"
-        }
-        audio="https://cdn.busuu.com/media/resized/audio/a1l1081662480153_1662480153.mp3"
+        videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/9749865d-f6a9-45a9-9a06-797b6c63beab_small.mp4"}
       />
 
       <VideoInputExercices
-        answer_1="américains"
-        answer_2="américaines"
-        sentenceText1="Nous sommes"
+        answer_1="allemandes"
+        answer_2="allemands"
+        sentenceText1="Elles sont "
         sentenceText2="."
-        correctAnswer="américaines"
-        nextExercise="/learning/exercices/first-lessons/4/4_1/exercice7"
+        correctAnswer="allemandes"
+        nextExercise="/learning/exercices/first-lessons/4/4_1/exercice11"
       />
     </div>
   );

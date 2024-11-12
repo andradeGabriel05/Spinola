@@ -5,32 +5,24 @@ import "../exercice.scss";
 
 export default function Exercice1() {
   return (
-    <div className="container_execice bigger_page">
-      <HeaderExercices progressExercice="11.11%" prevProgressExercice={"0%"} />
+    <div className="container_execice">
+      <HeaderExercices progressExercice="9.09%" prevProgressExercice={"0%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Meet Fed, Mounia and Sophie in the office.</p>
+        <p>New word!</p>
       </div>
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/0c91eea8-5c8d-4b8c-87a2-3b3fef357ee7_small.mp4" />
+        <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/cefaa4cf-d8c2-4628-af9c-466f95608b46_small.mp4" />
 
-        <div className="exercice_text page_exercice_text text_left">
-          <p>Mounia: Bonjour Fed !</p>
-          <p>Fed: Salut Mounia, ça va ? Tu es fatiguée ?</p>
-          <p>Mounia: Pff ... Oui, je suis fatiguée ! Et toi, ça va ?</p>
-          <p>Fed: Bien merci, je suis content aujourd'hui.</p>
-          <p>Sophie: Salut, je m'appelle Sophie. Enchantée !</p>
-          <p>Mounia: Salut Sophie, je m'appelle Mounia.</p>
-          <p>Fed: Bonjour Sophie, je m'appelle Fed. Enchanté !</p>
+        <div className="exercice_text page_exercice_text">
+          <p>Nous sommes anglaises.</p>
+          <p>We are English.</p>
         </div>
       </div>
       <FooterExercices
-        nextExercise={"/learning/exercices/first-lessons/3/3_1/exercice2"}
+        nextExercise={"/learning/exercices/first-lessons/4/4_1/exercice2"}
       />
     </div>
   );
 }
-
-// Vous ... anglais ? Je ... aussi anglaise.
-// https://cdn.busuu.com/media-resources/video/mp4/a6abc7ab-c803-4443-a12a-6490986b6518_small.mp4

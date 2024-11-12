@@ -117,9 +117,10 @@ export default function PremiereLecon() {
           <div className="lesson_wrapper">
             <h1>Chapter 4: Essentials</h1>
             <Lessonbox
-              title="Bonjour et bienvenue"
+              title="Le pluriel de les nationalités"
               img="https://picsum.photos/200/300?random=13"
               description="Exercice : Dire bonjour à une personne et lui parler de soi."
+              to="/learning/exercices/first-lessons/4/4_1/exercice1"
             />
             <Lessonbox
               title="La politesse"

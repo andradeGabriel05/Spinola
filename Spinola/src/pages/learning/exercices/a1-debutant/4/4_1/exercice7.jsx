@@ -9,19 +9,25 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 export default function Exercice7() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="77.77%" prevProgressExercice={"66.66%"}/>
+      <HeaderExercices
+        progressExercice="77.77%"
+        prevProgressExercice={"66.66%"}
+      />
 
       <div className="exercice_title page_exercice_text">
         <p>Complete the sentence.</p>
       </div>
 
-      <VideoExercices miniature="https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/7aca3a8c-c0b7-4674-aa53-b755f54d26e2.jpg@jpg" audio={"https://cdn.busuu.com/media/resized/audio/a1l8jesuiscontentauj1662462242_1662462242.mp3"}/>
+      <div className="wrapper_video_enunciate">
+        <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/c1818fa2-5b5d-458c-b51a-5e235c155b6f_small.mp4" />
 
-      <ExerciceWrite
-        sentenceText1="Je suis "
-        sentenceText2="aujourd'hui !"
-        correctAnswer="content"
-        nextExercise={"/learning/exercices/first-lessons/3/3_1/exercice8"}
+        <div className="exercice_text page_exercice_text">
+          <p>Ils sont allemands.</p>
+          <p>They are German.</p>
+        </div>
+      </div>
+      <FooterExercices
+        nextExercise={"/learning/exercices/first-lessons/4/4_1/exercice8"}
       />
     </div>
   );

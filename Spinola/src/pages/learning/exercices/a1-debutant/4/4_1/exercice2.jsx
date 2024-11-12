@@ -1,27 +1,29 @@
-import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
-
 
 export default function Exercice2() {
   return (
-    <div className="container_execice bigger_page">
-      <HeaderExercices progressExercice="22.22%" prevProgressExercice={"11.11%"} />
+    <div className="container_execice">
+      <HeaderExercices progressExercice="33.33%" prevProgressExercice={"22.22%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>What does Fed ask Mounia?</p>
+        <p>What is he saying to Monia?</p>
       </div>
 
-      <VideoExercices miniature={"https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/035ac296-f83f-4d8d-ae98-3eeeb3c52cac.jpg@jpg"} audio="https://cdn.busuu.com/media/resized/audio/a1l8mcq1onlineaudioconvertercom1662463532_1662463532.mp3" />
+      <VideoExercices videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/95d515a0-7a6c-40fc-8c11-2c515f84c9b2_small.mp4"} />
 
-      <ExerciceWithoutVideo
-        answer_1="Her name"
-        answer_2="How Sophie is doing"
-        answer_3="How she's doing"
-        correctAnswer="How she's doing"
-        nextExercise={"/learning/exercices/first-lessons/3/3_1/exercice3"}
+      <VideoInputExercices 
+        answer_1="anglais"
+        answer_2="anglaises"
+        sentenceText1="Nous sommes "
+        sentenceText2="."
+        sentenceText3="? Tu es fatiguée ?"
+        correctAnswer="anglaises"
+        nextExercise="/learning/exercices/first-lessons/4/4_1/exercice3"
       />
     </div>
   );

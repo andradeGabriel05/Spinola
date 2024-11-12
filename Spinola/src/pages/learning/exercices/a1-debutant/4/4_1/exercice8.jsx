@@ -7,21 +7,27 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 export default function Exercice8() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="88.88%" prevProgressExercice={"77.77%"}/>
+      <HeaderExercices
+        progressExercice="88.88%"
+        prevProgressExercice={"77.77%"}
+      />
 
       <div className="exercice_title page_exercice_text">
         <p>True or false?</p>
       </div>
 
-      <VideoExercices miniature={" "} audio="https://cdn.busuu.com/media/resized/audio/a1l8tf21662462405_1662462405.mp3" />
+      <VideoExercices
+        miniature={"https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/3b56b728-6ca7-4f6d-854d-069754803002.jpg@jpg"}
+        audio="https://cdn.busuu.com/media/resized/audio/a1l10101662480207_1662480207.mp3"
+      />
 
       <VideoBoolExercices
-        question="Sophie doesn't know Fed and Mounia. "
+        title={"Christoph et Daniel ? Ils sont allemands !"}
+        question="Ella says that Christoph and Daniel are English. "
         answer_1="True"
         answer_2="False"
-        answer="True"
-        correctAnswer="True"
-        nextExercise="/learning/exercices/first-lessons/3/3_1/exercice9"
+        correctAnswer="False"
+        nextExercise="/learning/exercices/first-lessons/4/4_1/exercice9"
       />
     </div>
   );

@@ -5,7 +5,7 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
-export default function Exercice6() {
+export default function Exercice12() {
   return (
     <div className="container_execice">
       <HeaderExercices progressExercice="66.66%" prevProgressExercice={"55.55%"} />
