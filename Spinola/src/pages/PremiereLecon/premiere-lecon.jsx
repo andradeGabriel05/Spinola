@@ -123,9 +123,10 @@ export default function PremiereLecon() {
               to="/learning/exercices/first-lessons/4/4_1/exercice1"
             />
             <Lessonbox
-              title="La politesse"
+              title="Une anglaise à Paris"
               img="https://picsum.photos/200/300?random=14"
-              description="Exercice : Utiliser la politesse pour déclarer votre intention."
+              description="vous découvrirez les expériences d'une Anglaise vivant à Paris"
+              to="/learning/exercices/first-lessons/4/4_2/exercice1"
             />
             <Lessonbox
               title="Comment allez-vous?"

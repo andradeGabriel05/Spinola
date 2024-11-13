@@ -4,7 +4,8 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
-
+import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
+import audio from "Spinola/public/recordsExercices/nousSommesAubergeEspagnole.mp3";
 export default function Exercice7() {
   return (
     <div className="container_execice">
@@ -14,19 +15,17 @@ export default function Exercice7() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Hannah and Miles are a woman and a man from England. Select the correct nationality for them.</p>
+        <p>L'auberge espagnole !</p>
       </div>
 
+      <ExplainWordWithAudio
+        text={`It's common now to use the expression "auberge espagnole" when talking about a group of friends living together from very different cultural backgrounds who feel enriched by this experience. `}
+        textAudio1={`Nous sommes une vraie auberge espagnole ! (We are a true "auberge espagnole".)`}
+        audioSrc1={audio}
+      />
 
-      <VideoInputExercices
-        answer_1="anglaise"
-        answer_2="anglais"
-        sentenceText1="Hannah est "
-        sentenceText2="et Miles est"
-        sentenceText3="."
-        correctAnswer="anglaise"
-        correctAnswer2="anglais"
-        nextExercise={"/learning/exercices/first-lessons/3/3_2/exercice8"}
+      <FooterExercices
+        nextExercise={"/premiere-lecon"}
       />
     </div>
   );

@@ -10,7 +10,7 @@ export default function ExplainWordWithAudio({
   textAudio3,
   audioSrc3,
   textAudio4,
-  audioSrc4
+  audioSrc4,
 }) {
   function handlePlayAudio(audioId) {
     var audio = document.getElementById(audioId);
@@ -18,8 +18,8 @@ export default function ExplainWordWithAudio({
   }
   return (
     <div className="exercice_title page_exercice_text exercice_explain exercice_explain_wth_audio">
-      <div className="text_explain" >
-        <p style={{textAlign: "left"}}>{text}</p>
+      <div className="text_explain">
+        <p style={{ textAlign: "left" }}>{text}</p>
 
         <div className="audio_explain">
           <p>{textAudio1}</p>
@@ -29,14 +29,16 @@ export default function ExplainWordWithAudio({
           />
           <audio id="audio1" src={audioSrc1}></audio>
         </div>
-        <div className="audio_explain">
-          <p>{textAudio2}</p>
-          <FaVolumeUp
-            className="reactIcon play_audio_icon"
-            onClick={() => handlePlayAudio("audio2")}
-          />
-          <audio id="audio2" src={audioSrc2}></audio>
-        </div>
+        {textAudio2 && textAudio2 !== "" && (
+          <div className="audio_explain">
+            <p>{textAudio2}</p>
+            <FaVolumeUp
+              className="reactIcon play_audio_icon"
+              onClick={() => handlePlayAudio("audio2")}
+            />
+            <audio id="audio2" src={audioSrc2}></audio>
+          </div>
+        )}
 
         {textAudio3 && textAudio3 !== "" && (
           <div className="audio_explain">

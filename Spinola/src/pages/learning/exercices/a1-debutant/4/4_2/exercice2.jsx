@@ -1,30 +1,44 @@
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
+import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import audio from "Spinola/public/recordsExercices/p_32757226_503.mp3";
 import "../exercice.scss";
-
 
 export default function Exercice2() {
   return (
     <div className="container_execice bigger_page">
-      <HeaderExercices progressExercice="18.18%" prevProgressExercice={"9.09%"} />
+      <HeaderExercices
+        progressExercice="18.18%"
+        prevProgressExercice={"9.09%"}
+      />
 
       <div className="exercice_title page_exercice_text">
         <p>Tu es de quelle nationalité ? </p>
       </div>
 
-      <VideoExercices miniature={"https://st.focusedcollection.com/8860618/i/650/focused_124364670-stock-photo-two-people-talking.jpg"} audio={"https://cdn.busuu.com/media/resized/audio/ltuesdequelnationalite_1604923381.mp3"} />
+      <VideoExercices
+        miniature={
+          "https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/7ca2f43e-a46a-49de-8ef5-6f81d1318165.jpg@jpg"
+        }
+        audio={audio}
+      />
 
-      <VideoBoolExercices 
-        answer_1="true"
-        answer_2="false"
-        title="true"
-        correctAnswer="true"
-        question={`"Tu es de quelle nationalité ?" means: What nationality are you?`}
-        nextExercise="/learning/exercices/first-lessons/3/3_2/exercice3"
-      
+      <div className="exercice_text page_exercice_text">
+        <p>L'auberge espagnole</p>
+        <p>
+          Salut et enchantée ! Je m’appelle Lison, je suis anglaise et je suis à
+          Paris, en France. Je suis toujours contente ! Et voici mes amis : Andy
+          est américain, il est un peu impatient. Tina et Oskar sont allemands,
+          ils sont souvent fatigués ! Nous sommes une vraie auberge espagnole !
+          Et toi, tu es de quelle nationalité, comment tu t’appelles ?
+        </p>
+      </div>
+
+      <FooterExercices
+        nextExercise={"/learning/exercices/first-lessons/4/4_2/exercice3"}
       />
     </div>
   );

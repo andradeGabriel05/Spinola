@@ -156,7 +156,9 @@ function checkInputs() {
   if (allCorrect) {
     console.log("foi!"); // Prossegue o tempo do texto
     console.log(time);
+
     setValor(tempoAtual);
+    valoresAtuais.length = 0;
 
     test("playing", true);
   } else {

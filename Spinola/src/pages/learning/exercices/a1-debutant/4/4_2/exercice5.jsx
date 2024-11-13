@@ -4,6 +4,7 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
 export default function Exercice5() {
   return (
@@ -14,22 +15,15 @@ export default function Exercice5() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>What is he saying?</p>
+        <p>Select the statement that describes Andy best.</p>
       </div>
 
-      <div className="wrapper_video_enunciate">
-        <VideoExercices
-          videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/20ec6b6f-e426-4168-a984-e0aa9b2f47af_small.mp4"}
-        />
-      </div>
-
-      <VideoInputExercices
-        answer_1="français"
-        answer_2="française"
-        sentenceText1="Thomas ? Il est "
-        sentenceText2="."
-        correctAnswer="français"
-        nextExercise={"/learning/exercices/first-lessons/3/3_2/exercice6"}
+      <ExerciceWithoutVideo
+        answer_1="He is tired."
+        answer_2="He is happy."
+        answer_3="He is impatient."
+        correctAnswer="He is impatient."
+        nextExercise="/learning/exercices/first-lessons/4/4_2/exercice6"
       />
     </div>
   );

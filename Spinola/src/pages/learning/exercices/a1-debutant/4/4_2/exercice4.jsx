@@ -4,26 +4,27 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import ExplainWord from "../../../../../../components/Exercices/ExplainWord/explainWord";
 import "../exercice.scss";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
+import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
 export default function Exercice4() {
   return (
-    <div className="container_execice">
+    <div className="container_execice bigger_page">
       <HeaderExercices progressExercice="36.36%" prevProgressExercice={"27.27%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>👨 Masculine or feminine 👩?</p>
+        <p>Complete the sentence.</p>
       </div>
 
-      <ExplainWordWithAudio
-        text={`We add an -e at the end of the adjective for words that describe people and things in the feminine form: `}
-        textAudio1={`Je suis français. - a male person `}
-        audioSrc1={`https://cdn.busuu.com/media-resources/video/mp4/03bd6c72-fcbc-4431-b0c5-44dfc488432b_small.mp4`}
-        textAudio2={`Je suis française. - a female person `}
-        audioSrc2={`https://cdn.busuu.com/media-resources/video/mp4/e9fc00f7-a17b-4479-8ae2-7664e56257cc_small.mp4`}
+      <VideoExercices
+      miniature={" "}
+      audio={"https://cdn.busuu.com/media-resources/audio/763f007d-cd85-4f86-845e-161f85eb490d.mp3"}
       />
 
-      <FooterExercices
-        nextExercise={"/learning/exercices/first-lessons/3/3_2/exercice5"}
+      <ExerciceWrite
+        sentenceText1="Je suis "
+        sentenceText2="et je suis à Paris, en France."
+        correctAnswer="anglaise"
+        nextExercise="/learning/exercices/first-lessons/4/4_2/exercice5"
       />
     </div>
   );
