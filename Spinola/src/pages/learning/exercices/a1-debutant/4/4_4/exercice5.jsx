@@ -4,6 +4,7 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
+import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 
 export default function Exercice5() {
   return (
@@ -19,18 +20,23 @@ export default function Exercice5() {
 
       <div className="wrapper_video_enunciate">
         <VideoExercices
-          miniature={"https://cdn.busuu.com/media-resources/image/a/pr:exercise_m/plain/s3://busuu-logos-service-media-production/media-resources/image/dcd124f4-544e-4b1d-b82b-20bb6b670a3a.jpg@jpg"}
-          audio="https://cdn.busuu.com/media/resized/audio/a1l1161662477361_1662477361.mp3"
+          miniature={" "}
+          audio="https://cdn.busuu.com/media/resized/audio/a1l11121662477568_1662477568.mp3"
         />
       </div>
 
-      <VideoInputExercices
-        answer_1="sont"
-        answer_2="sommes"
-        sentenceText1="Nous "
-        sentenceText2="fatigués aujourd’hui."
-        correctAnswer="sommes"
-        nextExercise={"/learning/exercices/first-lessons/3/3_4/exercice6"}
+      <div className="exercice_text page_exercice_text">
+        <p></p>
+
+      </div>
+
+      <VideoBoolExercices
+        answer_1="True"
+        answer_2="False"
+        title="Lisa et Marc ? Ils sont impatients !"
+        correctAnswer="True"
+        question="Victor is talking about a man and a woman. "
+        nextExercise="/learning/exercices/first-lessons/4/4_4/exercice6"
       />
     </div>
   );

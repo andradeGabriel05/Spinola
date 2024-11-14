@@ -1,40 +1,41 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
-import audio from "Spinola/public/recordsExercices/marieEtSophieFr.mp3"
-import audio2 from "Spinola/public/recordsExercices/pierreEtThomasFr.mp3"
-import audio3 from "Spinola/public/recordsExercices/mariePierreSophieThomasFr.mp3"
-import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
-import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
+import "../exercice.scss";
 
 export default function Exercice8() {
   return (
     <div className="container_execice">
       <HeaderExercices
-        progressExercice="88.88%"
-        prevProgressExercice={"77.77%"}
+        progressExercice="90.90%"
+        prevProgressExercice={"81.81%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>When do we use "ils"?</p>
+        <p>Complete the sentence.</p>
       </div>
 
-      <ExplainWordWithAudio
-        text={`We use "ils" when we talk about a group of men. We also use it to refer to a mixed group of men and women.`}
-        textAudio1="Marie et Sophie = Elles sont françaises."
-        audioSrc1={audio}
-        textAudio2="Pierre et Thomas = Ils sont français."
-        audioSrc2={audio2}
-        textAudio3="Marie, Pierre, Sophie et Thomas = Ils sont français."
-        audioSrc3={audio3}
+      <VideoExercices
+        videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/aaef0d31-2eba-4d87-ac6c-62ef960681e6_small.mp4"}
       />
 
-      {/* https://cdn.busuu.com/media/resized/audio/a1l681661427808_1661427808.mp3 */}
-
-      <FooterExercices
-        nextExercise={"/learning/exercices/first-lessons/3/3_4/exercice9"}
+      <VideoInputExercices
+        answer_1="vus"
+        answer_2="êtes"
+        answer_3="es"
+        answer_4="Vous"
+        sentenceText1=""
+        sentenceText2=" "
+        sentenceText3="fatigués ?"
+        correctAnswer="Vous"
+        correctAnswer2="êtes"
+        nextExercise="/premiere-lecon"
       />
     </div>
   );
 }
+
+// https://cdn.busuu.com/media-resources/audio/e4e29037-b7f6-4bf0-bab6-9ee081ddbf8f.mp3

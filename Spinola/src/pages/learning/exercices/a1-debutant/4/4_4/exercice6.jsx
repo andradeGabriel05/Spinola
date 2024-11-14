@@ -19,18 +19,17 @@ export default function Exercice6() {
 
       <div className="wrapper_video_enunciate">
         <VideoExercices
-          miniature={"https://cdn.busuu.com/media-resources/image/a/pr:exercise_m/plain/s3://busuu-logos-service-media-production/media-resources/image/2c4299ed-ad0c-42a8-9276-f0d316968221.jpg@jpg"}
-          audio="https://cdn.busuu.com/media/resized/audio/a1l1181662477433_1662477433.mp3"
+          videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/65705997-7624-4f58-bddf-5d64ee5cd57c_small.mp4"}
         />
       </div>
 
       <VideoInputExercices
-        answer_1="êtes"
-        answer_2="est"
-        sentenceText1="Vous "
-        sentenceText2="toujours contents !"
-        correctAnswer="êtes"
-        nextExercise={"/learning/exercices/first-lessons/3/3_4/exercice7"}
+        answer_1="mexican"
+        answer_2="mexicaine"
+        sentenceText1="Je suis "
+        sentenceText2=", et toi ?"
+        correctAnswer="mexican"
+        nextExercise={"/learning/exercices/first-lessons/4/4_4/exercice7"}
       />
     </div>
   );

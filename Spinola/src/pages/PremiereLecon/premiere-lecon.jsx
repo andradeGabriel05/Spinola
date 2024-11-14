@@ -138,6 +138,7 @@ export default function PremiereLecon() {
               title="Exprimer votre émotion."
               img="https://picsum.photos/200/300?random=16"
               description="Exercice : Utiliser des phrases de déclaration pour exprimer votre émotion."
+              to="/learning/exercices/first-lessons/4/4_4/exercice1"
             />
           </div>
         </div>

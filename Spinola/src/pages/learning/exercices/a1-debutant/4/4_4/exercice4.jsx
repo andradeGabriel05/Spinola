@@ -5,6 +5,7 @@ import ExplainWord from "../../../../../../components/Exercices/ExplainWord/expl
 import "../exercice.scss";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
+import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
 export default function Exercice4() {
   return (
@@ -15,23 +16,22 @@ export default function Exercice4() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>Complete the sentence</p>
       </div>
 
       <div className="wrapper_video_enunciate">
         <VideoExercices
-          miniature={"https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"}
-          audio="https://cdn.busuu.com/media/resized/audio/a1l1151662477335_1662477335.mp3"
+          miniature={" "}
+          audio="https://cdn.busuu.com/media-resources/audio/763f007d-cd85-4f86-845e-161f85eb490d.mp3"
         />
       </div>
 
-      <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        title={`Nous sommes mexicains.`}
-        correctAnswer="True"
-        question={`We don't pronounce the final -s in the words "nous" and "sommes".`}
-        nextExercise="/learning/exercices/first-lessons/3/3_4/exercice5"
+      <ExerciceWrite
+        sentenceText1="Je suis "
+        sentenceText2="et je suis à Paris, en France."
+
+        correctAnswer="anglaise"
+        nextExercise="/learning/exercices/first-lessons/4/4_4/exercice5"
       />
     </div>
   );
