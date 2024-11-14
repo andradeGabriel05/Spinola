@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./learnWithMusic.scss";
-import { getValor, test } from "./test";
+import { getIsPaused, getValor, test } from "./test";
 
 export default function LearnWithMusic() {
   const [buttonState, setButtonState] = useState("playing");
@@ -30,9 +30,10 @@ export default function LearnWithMusic() {
     if (buttonState === "playing") {
       // setPassedOnce(true);
     }
-  }, [buttonState, passedOnce]);
+  }, []);
 
   const [valorDeRetorno, setValorDeRetorno] = useState(getValor);
+  const [isPaused, setIsPaused] = useState(false);
   const [valorAtualMusica, setValorAtualMusica] = useState(0);
 
   useEffect(() => {
@@ -42,24 +43,33 @@ export default function LearnWithMusic() {
         setValorDeRetorno(novoValor);
       }
 
-      console.log(valorDeRetorno);
+      const currentTime = videoRef.current.currentTime;
+      setValorAtualMusica(currentTime);
 
-      if (videoRef.current) {
-        const currentTime = videoRef.current.currentTime;
-        setValorAtualMusica(currentTime);
-
-        if (currentTime > valorDeRetorno / 1000 && valorDeRetorno !== 0) {
-          videoRef.current.pause();
-          console.log("Vídeo pausado no tempo especificado.");
-        } else {
-          videoRef.current.play();
-          setButtonState("play");
-        }
+      if (!isPaused && currentTime > valorDeRetorno / 1000 && valorDeRetorno !== 0) {
+        videoRef.current.pause();
+        console.log("Vídeo pausado no tempo especificado.");
+      } else if (!isPaused) {
+        videoRef.current.play();
+        setButtonState("play");
       }
+      console.log(valorDeRetorno);
+      console.log(videoRef.current.currentTime);
     }, 300); // Intervalo de 300ms, ajuste conforme necessário
+
+    console.log(isPaused);
 
     return () => clearInterval(intervalo);
   }, [valorDeRetorno]);
+
+  useEffect(() => {
+    console.log("OASD");
+
+    if (isPaused) {
+      videoRef.current.currentTime = valorDeRetorno;
+    }
+  }, [isPaused, valorDeRetorno]);
+
   return (
     <div className="container_music_video">
       <div className="wrapper_video_choice">

@@ -4,32 +4,39 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
+import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
 export default function Exercice6() {
   return (
-    <div className="container_execice">
+    <div className="container_execice bigger_page">
       <HeaderExercices
-        progressExercice="85.71%"
-        prevProgressExercice={"71.42%"}
+        progressExercice="71.42%"
+        prevProgressExercice={"57.14%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the nationalities in the order you hear them. </p>
+        <p>Complete the sentence.</p>
       </div>
 
       <VideoExercices
         miniature={" "}
         audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac71662474246_1662474246.mp3"
+          "https://cdn.busuu.com/media-resources/audio/5ab07f32-f69e-467e-bd73-0a070a01c1cb.mp3"
         }
       />
 
-      <ExerciceWithoutVideo
-        answer_1="anglais / mexicain / américain"
-        answer_2="mexicain / américain / anglais"
-        answer_3="américain / anglaise / mexicain"
-        correctAnswer="américain / anglaise / mexicain"
-        nextExercise="/learning/exercices/first-lessons/3/3_3/exercice7"
+      <VideoInputExercices
+        answer_1="suis"
+        answer_2="suit"
+        answer_3="contente"
+        answer_4="content"
+        sentenceText1="Je"
+        sentenceText2="toujours"
+        sentenceText3="!"
+        correctAnswer="suis"
+        correctAnswer2="contente"
+        nextExercise="/learning/exercices/first-lessons/4/4_3/exercice7"
       />
     </div>
   );

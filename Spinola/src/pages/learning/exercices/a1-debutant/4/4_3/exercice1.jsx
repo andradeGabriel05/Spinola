@@ -3,33 +3,35 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
+import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
 export default function Exercice1() {
   return (
     <div className="container_execice">
-      <HeaderExercices progressExercice="14.28%" prevProgressExercice={"0%"}/>
+      <HeaderExercices progressExercice="14.28%" prevProgressExercice={"0%"} />
 
       <div className="exercice_title page_exercice_text">
         <p>New word!</p>
       </div>
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/8287fd6e-7f52-4f5f-9730-ea9cfb9aa796_small.mp4" />
+        <VideoExercices
+          audio={
+            "https://cdn.busuu.com/media-resources/audio/d69b5976-273a-4ac9-899f-c63b9c91ca12.mp3"
+          }
+          miniature={
+            "https://cdn.busuu.com/media/resized/entity/1440/addasubheading31662481693_1662481693_1440.jpg"
+          }
+        />
       </div>
 
-    <VideoInputExercices 
-      answer_1="quelle"
-      answer_2="es"
-      answer_3="est"
-      answer_4="quel"
-      sentenceText1="Tu "
-      sentenceText2=" de "
-      sentenceText3="nationalité ?"
-      correctAnswer="es"
-      correctAnswer2="quelle"
-      nextExercise="/learning/exercices/first-lessons/3/3_3/exercice2"
-    />
-      
+      <ExerciceWithoutVideo
+        answer_1="mexicain"
+        answer_2="américain"
+        answer_3="anglais"
+        correctAnswer="mexicain"
+        nextExercise="/learning/exercices/first-lessons/4/4_3/exercice2"
+      />
     </div>
   );
 }

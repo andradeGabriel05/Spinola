@@ -19,17 +19,26 @@ export default function Exercice4() {
       </div>
 
       <VideoExercices
-        miniature={"https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/69691edf-c56e-48b9-821e-4eb7b470e373.jpg@jpg"}
+        miniature={"https://cdn.busuu.com/media/resized/entity/720/shutterstock_11082080481662133842_1662133842_720.jpg"}
         audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac51662474177_1662474177.mp3"
+          "https://cdn.busuu.com/media-resources/audio/42573d95-c789-4ffd-aef4-864194be542f.mp3"
         }
       />
 
-      <ExerciceWrite
-        sentenceText1="Chris est "
-        sentenceText2=". "
-        correctAnswer="anglais"
-        nextExercise="/learning/exercices/first-lessons/3/3_3/exercice5"
+      <VideoInputExercices
+        answer_1="m'"
+        answer_2="appelle"
+        answer_3="allemande"
+        answer_4="appel"
+        answer_5="Allemande"
+        sentenceText1="Je "
+        sentenceText2=""
+        sentenceText3="Kristina et je suis"
+  sentenceText4="."
+        correctAnswer="m'"
+        correctAnswer2="appelle"
+        correctAnswer3="allemande"
+        nextExercise="/learning/exercices/first-lessons/4/4_3/exercice5"
       />
     </div>
   );

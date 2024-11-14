@@ -5,34 +5,32 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 
+
 export default function Exercice7() {
   return (
     <div className="container_execice">
       <HeaderExercices
-        progressExercice="100%"
-        prevProgressExercice={"85.71%"}
+        progressExercice="85.71%"
+        prevProgressExercice={"71.42%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>Select the nationalities in the order you hear them. </p>
       </div>
 
       <VideoExercices
-        miniature={
-          "https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/7b81a128-a67f-4129-bbd0-5b9b051a5816.jpg@jpg"
-        }
+        miniature={" "}
         audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac81662474292_1662474292.mp3"
+          "https://cdn.busuu.com/media-resources/audio/4948f4db-90e1-4c63-a9b2-dc467d1aa3b6.mp3"
         }
       />
+
       <ExerciceWrite
-        sentenceText1="Elle est "
-        sentenceText2="."
-        correctAnswer="americaine"
-        nextExercise={"/premiere-lecon"}
+        sentenceText1="Tom "
+        sentenceText2="souvent impatient."
+        correctAnswer="est"
+        nextExercise="/premiere-lecon"
       />
     </div>
   );
 }
-
-// https://cdn.busuu.com/media-resources/audio/e4e29037-b7f6-4bf0-bab6-9ee081ddbf8f.mp3

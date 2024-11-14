@@ -3,7 +3,7 @@ var time = 0;
 var currentTime = 0;
 const valoresAtuais = [];
 var currentVerseIndex = 0;
-var tempoAtual = 0
+var tempoAtual = 0;
 export function test(videoState, passedOnce) {
   const lyricsData = {
     lyricsTimeVerse: [
@@ -63,12 +63,15 @@ export function test(videoState, passedOnce) {
     ],
   };
 
+  console.log(time);
+
   if (videoState === "pause") {
     timeoutIds.forEach((id) => clearTimeout(id));
     valoresAtuais.length = 0;
     timeoutIds.length = 0;
     console.log("Pausou");
     console.log(time);
+    setIsPaused(true);
 
     //para pegar o tempo do pause
     setValor(time);
@@ -81,10 +84,8 @@ export function test(videoState, passedOnce) {
   lyricsData.lyricsTimeVerse.forEach((lista, index) => {
     const originalKey = Object.keys(lista)[0];
 
-
     const intervalId = setTimeout(
       () => {
-        let key = originalKey;
         if (passedOnce && time != undefined) {
           time = Number(originalKey);
         }
@@ -101,13 +102,13 @@ export function test(videoState, passedOnce) {
 
         words.forEach((word) => {
           contador += 1;
-          const chanceOfWrite = parseInt(Math.random() * 100 + 1);
+          const chanceOfWrite = parseInt(Math.random() * 10 + 1);
 
           const input = document.createElement("input");
           input.id = `input-${contador}`;
           input.setAttribute("data-word", word);
 
-          if (chanceOfWrite < 100) {
+          if (chanceOfWrite < 10) {
             input.value = word;
             input.disabled = true;
           } else {
@@ -133,7 +134,10 @@ export function test(videoState, passedOnce) {
           return;
         }
 
-        tempoAtual = passedOnce ? Number(originalKey) - time : Number(originalKey)
+        tempoAtual = passedOnce
+          ? Number(originalKey) - time
+          : Number(originalKey);
+          
       },
       passedOnce ? Number(originalKey) - time : Number(originalKey)
     );
@@ -158,6 +162,9 @@ function checkInputs() {
     console.log(time);
 
     setValor(tempoAtual);
+    setIsPaused(false);
+    console.log(isPaused)
+    console.log(getValor)
     valoresAtuais.length = 0;
 
     test("playing", true);
@@ -167,6 +174,7 @@ function checkInputs() {
 }
 
 let valorDeRetorno = 0;
+var isPaused = false;
 
 export function setValor(valor) {
   valorDeRetorno = valor;
@@ -174,4 +182,12 @@ export function setValor(valor) {
 
 export function getValor() {
   return valorDeRetorno;
+}
+
+export function setIsPaused(response) {
+  isPaused = response;
+}
+
+export function getIsPaused() {
+  return isPaused;
 }

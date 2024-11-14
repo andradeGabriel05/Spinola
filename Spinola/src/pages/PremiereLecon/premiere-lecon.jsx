@@ -119,19 +119,20 @@ export default function PremiereLecon() {
             <Lessonbox
               title="Le pluriel de les nationalités"
               img="https://picsum.photos/200/300?random=13"
-              description="Exercice : Dire bonjour à une personne et lui parler de soi."
+              description="Les nationalités au pluriel et ses formes masculines et féminines."
               to="/learning/exercices/first-lessons/4/4_1/exercice1"
             />
             <Lessonbox
               title="Une anglaise à Paris"
               img="https://picsum.photos/200/300?random=14"
-              description="vous découvrirez les expériences d'une Anglaise vivant à Paris"
+              description="Vous découvrirez les expériences d'une Anglaise vivant à Paris"
               to="/learning/exercices/first-lessons/4/4_2/exercice1"
             />
             <Lessonbox
-              title="Comment allez-vous?"
+              title="Développement "
               img="https://picsum.photos/200/300?random=15"
-              description="Exercice : Dire comment vous allez au travail ou à votre logement."
+              description="Développez vos compétences en français en écoutant des conversations."
+              to="/learning/exercices/first-lessons/4/4_3/exercice1"
             />
             <Lessonbox
               title="Exprimer votre émotion."

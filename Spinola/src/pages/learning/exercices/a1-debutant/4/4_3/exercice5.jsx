@@ -19,18 +19,22 @@ export default function Exercice5() {
       </div>
 
       <VideoExercices
-        miniature={"https://cdn.busuu.com/media-resources/image/a/pr:exercise_l/plain/s3://busuu-logos-service-media-production/media-resources/image/6d01edbc-5cc1-4ddc-a2f6-af4057faf1d7.jpg@jpg"}
+        miniature={
+          "https://cdn.busuu.com/media/resized/entity/1440/shutterstock_7898722571662134773_1662134773_1440.jpg"
+        }
         audio={
-          "https://cdn.busuu.com/media/resized/audio/a1l9ac61662474207_1662474207.mp3"
+          "https://cdn.busuu.com/media-resources/audio/119bd315-3535-4072-bf83-1285acd0e948.mp3"
         }
       />
 
-      <ExerciceWrite
-        sentenceText1="Tu es "
-        sentenceText2="? "
-        correctAnswer="mexicaine"
-        nextExercise="/learning/exercices/first-lessons/3/3_3/exercice6"
-      />
+      <VideoBoolExercices
+          answer_1="True"
+          answer_2="False"
+          title="Tom est souvent impatient et moi je suis toujours contente !"
+          correctAnswer="False"
+          question="Tom is always happy."
+          nextExercise="/learning/exercices/first-lessons/4/4_3/exercice6"
+          />
     </div>
   );
 }
