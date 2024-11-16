@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./learnWithMusic.scss";
 import axios from "axios";
-import { getClickedWord, test } from "./test";
+import { getClickedWord, getValorKey, test } from "./test";
 
 export default function LearnWithMusic() {
   // const [buttonState, setButtonState] = useState("playing");
@@ -54,6 +54,7 @@ export default function LearnWithMusic() {
   const [translatedText, setTranslatedText] = useState("");
   const [targetLanguage, setTargetLanguage] = useState("en"); // Idioma de destino
   const [clickedWordState, setClickedWordState] = useState(getClickedWord);
+  const [time, setTime] = useState(getValorKey);
 
   useEffect(() => {
     // Atualiza o estado sempre que clickedWord muda
@@ -72,7 +73,10 @@ export default function LearnWithMusic() {
     if (clickedWordState != "" && clickedWordState !== "'") {
       console.log("clickedWordState mudou para:", clickedWordState);
       videoRef.current.pause();
+      handleTranslate()
     } else {
+      videoRef.current.currentTime = getValorKey() / 1000;
+      console.log(videoRef.current.currentTime);
       videoRef.current.play();
     }
   }, [clickedWordState]);
@@ -80,7 +84,8 @@ export default function LearnWithMusic() {
   useEffect(() => {
     test();
   }, []);
-  const handleTranslate = async () => {
+
+  async function handleTranslate() {
     const apiKey = "";
 
     try {
@@ -89,7 +94,7 @@ export default function LearnWithMusic() {
         new URLSearchParams({
           auth_key: apiKey,
           text: clickedWordState,
-          target_lang: targetLanguage,
+          target_lang: "EN",
         }),
         {
           headers: {
@@ -100,14 +105,26 @@ export default function LearnWithMusic() {
 
       // Atualiza o estado com o texto traduzido
       setTranslatedText(response.data.translations[0].text);
+      console.log(translatedText)
+      console.log(response)
+
+      const divForTextTranslated = document.createElement("div");
+      divForTextTranslated.innerHTML = `
+        <span id='textForTranslatedWord'>Tradução:</span>
+        <span id='translatedWordId'>${response.data.translations[0].text}</span>
+      `;
+
+      wordTranslateBox.appendChild(divForTextTranslated);
+
     } catch (error) {
       console.error("Erro ao traduzir:", error);
       setTranslatedText("Erro");
     }
-  };
+  }
 
   return (
     <div className="container_music_video">
+      <span>{translatedText}</span>
       <div className="wrapper_video_choice">
         <video id="videoMusic" autoPlay={true} ref={videoRef}>
           <source

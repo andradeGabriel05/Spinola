@@ -73,6 +73,7 @@
         display: flex;
         align-items: center;
         text-align: center;
+        flex-direction: column;
         justify-content: center;
         padding: 5px;
         width: 90%;
@@ -86,5 +87,21 @@
             padding: 5px;
             cursor: pointer;
         }
+    }
+
+    #textForTranslatedWord {
+        display: flex;
+        margin: 10px;
+        color: #000;
+        border-bottom: none;
+        width: 100%;
+    }
+    #translatedWordId {
+        display: flex;
+        padding: 10px;
+        margin: 10px;
+        border: solid 1px #d3d3d3;
+        color: #000;
+        border-radius: 5px; 
     }
 }
