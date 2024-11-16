@@ -1,10 +1,4 @@
-const timeoutIds = [];
-var time = 0;
-var currentTime = 0;
-const valoresAtuais = [];
-var currentVerseIndex = 0;
-var tempoAtual = 0;
-export function test(videoState, passedOnce) {
+export function test() {
   const lyricsData = {
     lyricsTimeVerse: [
       // 4282
@@ -63,131 +57,64 @@ export function test(videoState, passedOnce) {
     ],
   };
 
-  console.log(time);
+  var contador = 0;
 
-  if (videoState === "pause") {
-    timeoutIds.forEach((id) => clearTimeout(id));
-    valoresAtuais.length = 0;
-    timeoutIds.length = 0;
-    console.log("Pausou");
-    console.log(time);
-    setIsPaused(true);
+  lyricsData.lyricsTimeVerse.forEach((lista) => {
+    var originalKey = Object.keys(lista)[0];
 
-    //para pegar o tempo do pause
-    setValor(time);
-    return time;
-  }
+    setTimeout(() => {
+      lyricsPageId.innerHTML = "";
+      const words = lista[originalKey].split(" ");
 
-  valoresAtuais.length = 0;
-  let contador = 0;
+      words.forEach((word) => {
+        contador += 1;
 
-  lyricsData.lyricsTimeVerse.forEach((lista, index) => {
-    const originalKey = Object.keys(lista)[0];
+        const span = document.createElement("span");
+        span.id = `span-${contador}`;
+        span.setAttribute("data-word", word);
 
-    const intervalId = setTimeout(
-      () => {
-        if (passedOnce && time != undefined) {
-          time = Number(originalKey);
-        }
+        span.textContent = word;
+        span.disabled = true;
 
-        const verse = lista[originalKey]; // Sempre usa a key original para pegar o verso
-        if (!verse) {
-          console.warn(`No verse found for key ${originalKey}`);
-          return;
-        }
+        lyricsPageId.appendChild(span);
 
-        time = Number(originalKey);
-        lyricsPageId.innerHTML = "";
-        const words = verse.split(" ");
+        span.addEventListener("click", () => {
+          setClickedWord(span.textContent);
+          const wordTranslate = document.createElement("div");
+          wordTranslate.id = "wordTranslateBox";
 
-        words.forEach((word) => {
-          contador += 1;
-          const chanceOfWrite = parseInt(Math.random() * 10 + 1);
+          lyricsPageId.appendChild(wordTranslate);
 
-          const input = document.createElement("input");
-          input.id = `input-${contador}`;
-          input.setAttribute("data-word", word);
+          const spanInsideDiv = document.createElement("span");
+          spanInsideDiv.id = `spanInsideDiv`;
+          spanInsideDiv.textContent = span.textContent; //o texto que o usuario clicou
 
-          if (chanceOfWrite < 10) {
-            input.value = word;
-            input.disabled = true;
-          } else {
-            input.value = "";
-          }
+          wordTranslate.appendChild(spanInsideDiv);
 
-          lyricsPageId.appendChild(input);
-          valoresAtuais.push(input.value);
+          const closeX = document.createElement("p");
+          closeX.id = "closeX";
+          closeX.textContent = "X";
+          closeX.onclick = teste;
 
-          input.addEventListener("keyup", () => {
-            checkInputs();
-          });
+          spanInsideDiv.appendChild(closeX);
         });
-
-        if (index + 1 < lyricsData.lyricsTimeVerse.length) {
-          const nextVerse = lyricsData.lyricsTimeVerse[index + 1];
-          time = Number(Object.keys(nextVerse)[0]);
-          console.log("Próximo tempo:", time);
-        }
-
-        if (valoresAtuais.includes("")) {
-          test("pause", true);
-          return;
-        }
-
-        tempoAtual = passedOnce
-          ? Number(originalKey) - time
-          : Number(originalKey);
-          
-      },
-      passedOnce ? Number(originalKey) - time : Number(originalKey)
-    );
-    timeoutIds.push(intervalId);
+      });
+    }, originalKey);
+    // }, 0);
   });
 }
+let clickedWord = "";
 
-function checkInputs() {
-  console.log(time);
-  const inputs = document.querySelectorAll("#lyricsPageId input");
-  let allCorrect = true;
-
-  inputs.forEach((input) => {
-    const correctWord = input.getAttribute("data-word");
-    if (input.value !== correctWord) {
-      allCorrect = false;
-    }
-  });
-
-  if (allCorrect) {
-    console.log("foi!"); // Prossegue o tempo do texto
-    console.log(time);
-
-    setValor(tempoAtual);
-    setIsPaused(false);
-    console.log(isPaused)
-    console.log(getValor)
-    valoresAtuais.length = 0;
-
-    test("playing", true);
-  } else {
-    console.log("não foi");
-  }
+function setClickedWord(word) {
+  clickedWord = word;
 }
 
-let valorDeRetorno = 0;
-var isPaused = false;
-
-export function setValor(valor) {
-  valorDeRetorno = valor;
+export function getClickedWord() {
+  return clickedWord;
 }
 
-export function getValor() {
-  return valorDeRetorno;
-}
-
-export function setIsPaused(response) {
-  isPaused = response;
-}
-
-export function getIsPaused() {
-  return isPaused;
+function teste() {
+  const wordTranslate = document.getElementById("wordTranslateBox");
+  wordTranslate.remove();
+  setClickedWord("'");
 }

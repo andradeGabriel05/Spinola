@@ -1,94 +1,130 @@
 import { useEffect, useRef, useState } from "react";
 import "./learnWithMusic.scss";
-import { getIsPaused, getValor, test } from "./test";
+import axios from "axios";
+import { getClickedWord, test } from "./test";
 
 export default function LearnWithMusic() {
-  const [buttonState, setButtonState] = useState("playing");
-  const [passedOnce, setPassedOnce] = useState(false);
-  const [tempoPreciso, setTempoPreciso] = useState(0);
+  // const [buttonState, setButtonState] = useState("playing");
+  // const [passedOnce, setPassedOnce] = useState(false);
+  // const [tempoPreciso, setTempoPreciso] = useState(0);
   const videoRef = useRef(null);
 
-  // function handlePauseResume() {
-  //   if (videoRef.current.paused) {
-  //     console.log(test(buttonState, passedOnce));
-  //     videoRef.current.play();
-  //     setButtonState("playing");
+  // // Atualize o estado do vídeo e passe para o test
 
-  //     setTempoPreciso(test(buttonState, passedOnce));
-  //     console.log(tempoPreciso / 1000);
-  //     videoRef.current.currentTime = tempoPreciso / 1000;
-  //   } else {
-  //     videoRef.current.pause();
-  //     setButtonState("pause");
-  //     setPassedOnce(true);
-  //   }
-  // }
+  // const [valorDeRetorno, setValorDeRetorno] = useState(getValor);
+  // const [isPaused, setIsPaused] = useState(getIsPaused);
 
-  // Atualize o estado do vídeo e passe para o test
+  // useEffect(() => {
+  //   const intervalo = setInterval(() => {
+  //     const novoValor = getValor();
+  //     if (novoValor !== valorDeRetorno && novoValor !== 0) {
+  //       setValorDeRetorno(novoValor);
+  //     }
+
+  //     const currentTime = videoRef.current.currentTime;
+
+  //     if (
+  //       isPaused &&
+  //       currentTime > valorDeRetorno / 1000 &&
+  //       valorDeRetorno !== 0
+  //     ) {
+  //       videoRef.current.pause();
+  //       console.log("Vídeo pausado no tempo especificado.");
+  //       videoRef.current.currentTime = valorDeRetorno / 1000
+  //     } else if (!isPaused) {
+  //       videoRef.current.play();
+  //       setButtonState("play");
+  //     }
+  //   }, 300); // Intervalo de 300ms, ajuste conforme necessário
+
+  //   console.log(isPaused);
+
+  //   return () => clearInterval(intervalo);
+  // }, [isPaused, valorDeRetorno]);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIsPaused(getIsPaused());
+  //   }, 300); // Verifica alterações na variável global a cada 100ms
+
+  //   return () => clearInterval(interval); // Limpa o intervalo quando o componente desmontar
+  // }, []);
+
+  const [inputText, setInputText] = useState("");
+  const [translatedText, setTranslatedText] = useState("");
+  const [targetLanguage, setTargetLanguage] = useState("en"); // Idioma de destino
+  const [clickedWordState, setClickedWordState] = useState(getClickedWord);
+
   useEffect(() => {
-    test(buttonState, passedOnce);
-    if (buttonState === "playing") {
-      // setPassedOnce(true);
+    // Atualiza o estado sempre que clickedWord muda
+    const interval = setInterval(() => {
+      const newClickedWord = getClickedWord();
+      if (newClickedWord != clickedWordState) {
+        setClickedWordState(newClickedWord);
+        console.log(newClickedWord); // Mostra o valor atualizado
+      }
+    }, 100); // Verifica a cada 100ms
+
+    return () => clearInterval(interval); // Limpa o intervalo ao desmontar
+  }, [clickedWordState]);
+
+  useEffect(() => {
+    if (clickedWordState != "" && clickedWordState !== "'") {
+      console.log("clickedWordState mudou para:", clickedWordState);
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
     }
+  }, [clickedWordState]);
+
+  useEffect(() => {
+    test();
   }, []);
+  const handleTranslate = async () => {
+    const apiKey = "";
 
-  const [valorDeRetorno, setValorDeRetorno] = useState(getValor);
-  const [isPaused, setIsPaused] = useState(false);
-  const [valorAtualMusica, setValorAtualMusica] = useState(0);
+    try {
+      const response = await axios.post(
+        "https://api-free.deepl.com/v2/translate",
+        new URLSearchParams({
+          auth_key: apiKey,
+          text: clickedWordState,
+          target_lang: targetLanguage,
+        }),
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
+      );
 
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      const novoValor = getValor();
-      if (novoValor !== valorDeRetorno && novoValor !== 0) {
-        setValorDeRetorno(novoValor);
-      }
-
-      const currentTime = videoRef.current.currentTime;
-      setValorAtualMusica(currentTime);
-
-      if (!isPaused && currentTime > valorDeRetorno / 1000 && valorDeRetorno !== 0) {
-        videoRef.current.pause();
-        console.log("Vídeo pausado no tempo especificado.");
-      } else if (!isPaused) {
-        videoRef.current.play();
-        setButtonState("play");
-      }
-      console.log(valorDeRetorno);
-      console.log(videoRef.current.currentTime);
-    }, 300); // Intervalo de 300ms, ajuste conforme necessário
-
-    console.log(isPaused);
-
-    return () => clearInterval(intervalo);
-  }, [valorDeRetorno]);
-
-  useEffect(() => {
-    console.log("OASD");
-
-    if (isPaused) {
-      videoRef.current.currentTime = valorDeRetorno;
+      // Atualiza o estado com o texto traduzido
+      setTranslatedText(response.data.translations[0].text);
+    } catch (error) {
+      console.error("Erro ao traduzir:", error);
+      setTranslatedText("Erro");
     }
-  }, [isPaused, valorDeRetorno]);
+  };
 
   return (
     <div className="container_music_video">
       <div className="wrapper_video_choice">
-        <video id="videoMusic" ref={videoRef} autoPlay={true}>
+        <video id="videoMusic" autoPlay={true} ref={videoRef}>
           <source
             src="/Françoise Hardy’s Message Personnel (1973).mp4"
             type="video/mp4"
           />
         </video>
-        {/*         
+
         <div className="wrapper_btns_choice">
-          <button
+          {/* <button
             onClick={() => {
-              handlePauseResume();
+              handleTranslate();
             }}
           >
-            {buttonState}
-          </button>
-        </div> */}
+            {translatedText}
+          </button> */}
+        </div>
       </div>
       <div className="lyrics" id="lyricsPageId"></div>
     </div>

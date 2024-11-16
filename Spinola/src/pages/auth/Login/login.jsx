@@ -17,6 +17,32 @@ export default function Login() {
       window.location.href = "/";
     } catch (error) {
       console.error("Error:", error);
+
+      if (emailId.value == "" && passwordId.value == "") {
+        emailId.style.border = "1px solid red";
+        document.getElementById("textEmailField").innerHTML =
+          "Email and password is required";
+      } else if (emailId.value == "" ) {
+        emailId.style.border = "1px solid red";
+        document.getElementById("textEmailField").innerHTML =
+          "Email is required";
+      } else if(passwordId.value == "") {
+        passwordId.style.border = "1px solid red";
+        document.getElementById("textPasswordField").innerHTML =
+          "Password is required";
+      } else if (error.response.status === 404) {
+        document.getElementById("textEmailField").innerHTML =
+          "Email ou mot de passe incorrect";
+        passwordId.style.border = "1px solid red";
+        emailId.style.border = "1px solid red";
+      }
+
+      document.addEventListener("keyup", () => {
+        emailId.style.border = "1px solid #dadada";
+        passwordId.style.border = "1px solid #dadada";
+        document.getElementById("textEmailField").innerHTML = "";
+        document.getElementById("textPasswordField").innerHTML = "";
+      })
     }
   }
 
@@ -30,6 +56,11 @@ export default function Login() {
           <div className="register_form">
             <h2 style={{ color: "#000" }}>Se connecter</h2>
             <form onSubmit={handleLogin}>
+              <p
+                id="textEmailField"
+                data-validation="emailField"
+                style={{ color: "#000" }}
+              ></p>
               <input
                 type="text"
                 name="email"
@@ -37,6 +68,11 @@ export default function Login() {
                 placeholder="Email"
               />
 
+              <p
+                id="textPasswordField"
+                data-validation="passwordField"
+                style={{ color: "#000" }}
+              ></p>
               <input
                 type="text"
                 name="password"
