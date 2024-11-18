@@ -9,12 +9,7 @@ export default function navigationLevels() {
       <div className="levels">
         <ActivatedButton link="/a2">A2 Élémentaire</ActivatedButton>
       </div>
-      <div className="levels">
-        <ActivatedButton link="/a3">B1 Intermédiaire</ActivatedButton>
-      </div>
-      <div className="levels">
-        <ActivatedButton link="/a4">B2 Avancé</ActivatedButton>
-      </div>
+
     </section>
   );
 }

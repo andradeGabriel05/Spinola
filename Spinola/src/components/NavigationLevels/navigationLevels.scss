@@ -36,6 +36,7 @@
     display: flex;
     justify-content: center;
 
+
     &:hover {
       background-color: #0000007b;
     }
@@ -51,5 +52,7 @@
     padding: 15px;
     display: flex;
     justify-content: center;
+    border: solid 1px #d4d3d39e;
+    border-radius: 5px;
   }
 }

@@ -86,7 +86,7 @@ export default function LearnWithMusic() {
   }, []);
 
   async function handleTranslate() {
-    const apiKey = "";
+    const apiKey = "af587c51-ce3e-4b79-a195-c4367b10e29c:fx";
 
     try {
       const response = await axios.post(

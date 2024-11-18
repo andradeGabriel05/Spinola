@@ -23,13 +23,19 @@ export default function homepage() {
             </Link>
           </div>
           <div className="right_side">
-            <div className="card2">
-              <div className="image_card"></div>
-              <div className="text">
-                <p>Bonjour!</p>
-                <h2>Apprenez à dire bonjour et à vous présenter.</h2>
+            <Link
+              to="/learning/exercices/first-lessons/1/1_1/exercice1"
+              className="first_exercice_link"
+            >
+              <div className="card2">
+                <div className="image_card"></div>
+                <div className="text">
+                  <p>Bonjour!</p>
+                  <h2>Apprenez à dire bonjour et à vous présenter.</h2>
+                </div>
               </div>
-            </div>
+            </Link>
+
             <div className="card3">
               <h2>Titre de la carte 3</h2>
               <p>Description de la carte 3</p>
@@ -37,7 +43,6 @@ export default function homepage() {
           </div>
         </div>
       </section>
-
 
       <BookSection />
 

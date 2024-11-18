@@ -1,54 +1,172 @@
+import { Bar, Doughnut } from "react-chartjs-2";
+import { getRadialBarConfig } from "./dashboard";
+import { FaHome, FaUser, FaCog, FaDoorClosed, FaDoorOpen } from "react-icons/fa";
+import WelcomeImage from "Spinola/src/assets/vectors/Learning languages-cuate(2).svg";
+import "./user.scss";
 import { Link } from "react-router-dom";
-
-import "./user.scss"
+import { getBarChartConfig } from "./columnGraph";
 export default function User() {
-    // var barGraph = new Chart(document.getElementById('barGraph').getContext('2d'), {
-    //     type: 'line',
-    //     data: {
-    //         datasets: [{
-    //             label: 'Exercices',
-    //             borderColor: '#63B1BC',
-    //             backgroundColor: '#0762C8'
-    //         }]
-    //     },
-    //     options: {
-    //         scales: {
-    //             x: {
-    //                 beginAtZero: true
-    //             },
-    //             y: {
-    //                 title: {
-    //                     display: true,
-    //                     text: '(%)'
-    //                 },
-    //                 beginAtZero: true
-    //             }
-    //         }
-    //     },
+  // Example data
+  const data = [70, 30];
+  const labels = [];
 
-    // });
+  const chartConfig = getRadialBarConfig(data, labels);
 
-    return (
-        <div className="container_user">
-            <aside>
-                <h1 className="aside_logo">Spínola</h1>
-                <Link>Home</Link>
-                <Link>User</Link>
-                <Link>Configuration</Link>
-                <Link>IDK</Link>
-            </aside >
+  // Dados de exemplo
+  const dataColumn = [12, 19, 3, 5, 2];
+  const labelsColumn = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"];
 
-            <div className="grid_graph">
-                <div>
-                    <div>
-                        <canvas id="barGraph"></canvas>
+  // Configuração do gráfico
+  const chartConfigColumn = getBarChartConfig(dataColumn, labelsColumn);
+
+  return (
+    <div className="container_user">
+      <aside>
+        <nav className="aside_nav">
+          <div className="aside_nav_above">
+            <ul>
+              <li>
+                <Link to="/home">
+                  <FaHome />
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/settings">
+                  <FaCog />
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="aside_nav_below">
+            <ul>
+              <li>
+                <Link to="/user">
+                  <FaDoorOpen />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <main>
+        <header className="header_dashboard">
+          <Link to={"/"} className="logo_name">Spínola</Link >
+
+          <h1>Language</h1>
+        </header>
+
+        <div className="sections_dashboard">
+          <div className="wrapper_sections_left_dashboard">
+            <section className="welcome_user_dashboard">
+              <div className="welcome_user_dashboard_text">
+                <h1>Welcome back, Name!</h1>
+                <p>
+                  Great to see you again. Keep up the great work and continue
+                  refining your French skills!
+                </p>
+              </div>
+              <div className="image_welcome"></div>
+            </section>
+
+            <div className="four_cards">
+              <div className="user_statistics">
+                <section className="progress_user_dashboard">
+                  <h1>Progress statistics</h1>
+                  <div className="grid_graph">
+                    <div className="doughnut_graph">
+                      <Doughnut
+                        data={chartConfig.data}
+                        options={chartConfig.options}
+                      />
+                      <span className="perc_progress">70%</span>
                     </div>
-                    <div>
-                        <canvas id="barGraph"></canvas>
-                    </div>
-                </div>
+                  </div>
+                  <p>You are 30% away of complete all the lessons</p>
+                </section>
 
+                <section className="section_statistics_dashboard">
+                  <h1>Statistics:</h1>
+                  <div className="statistics_text">
+                    <h2>Lessons completed</h2>
+                    <span>33</span>
+                  </div>
+                  <div className="statistics_text">
+                    <h2>Total points</h2>
+                    <span>12112</span>
+                  </div>
+                </section>
+              </div>
+
+              <div className="points_card_dashboard">
+                <section className="idk_dashboard">
+                  <h1>Test</h1>
+                  <p>Test your knowledge with our quizzes</p>
+                  <button>Start test</button>
+                </section>
+
+                <section className="section_ranking_dashboard">
+                  <h1>Ranking of points</h1>
+                  <div className="user_division">
+                    <div className="user_division_details">
+                      <div className="icon_user">
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/512/266/266033.png"
+                          alt=""
+                        />
+                      </div>
+                      <div className="user_division_text">
+                        <h2>John Doe</h2>
+                        <span>1123 points</span>
+                      </div>
+                    </div>
+                    <div className="classification_ranking">
+                      <span>#1</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
+          </div>
+          <section className="time_dashboard">
+            <h1>Activity</h1>
+            <div className="day_strike">
+              <div className="circle_day_strike">
+                <div className="circle_day_strike_text">
+                  <span>0</span>
+                  <p>Day strike</p>
+                </div>
+              </div>
+            </div>
+            <div className="time_spent">
+              <h2>This week</h2>
+              <div className="column_graph">
+                <Bar
+                  data={chartConfigColumn.data}
+                  options={chartConfigColumn.options}
+                />
+                <p>1.3h spent learning this week</p>
+              </div>
+              <div className="time_spent_statistics">
+                <h2>Time spent learning</h2>
+                <div className="time_spent_statistics_text">
+                  <h2>Today</h2>
+                  <span>0.3h</span>
+                </div>
+                <div className="time_spent_statistics_text">
+                  <h2>Yesterday</h2>
+                  <span>0.3h</span>
+                </div>
+                <div className="time_spent_statistics_text">
+                  <h2>This week</h2>
+                  <span>1.3h</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-    )
+      </main>
+    </div>
+  );
 }
