@@ -1,13 +1,13 @@
 const exerciseModel = require("../models/exerciceModel");
 
 function incrementUserDetails(req, res) {
-  const {userId, pointsValue, timeSpent} = req.body;
+  const {userId, pointsValue} = req.body;
 
   if (!userId) {
     res.status(400).send("Seu ID está undefined!");
   } else {
     exerciseModel
-      .incrementUserDetails(userId, pointsValue, timeSpent)
+      .incrementUserDetails(userId, pointsValue)
       .then((resultado) => {
         res.json(resultado);
       })

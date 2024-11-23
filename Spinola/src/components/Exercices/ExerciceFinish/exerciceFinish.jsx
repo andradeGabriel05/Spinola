@@ -21,7 +21,7 @@ export default function exerciceFinish() {
   console.log("Score: ", score);
   console.log("Points: ", correctAnswer);
   async function handleExerciceResponse() {
-    const quantityPoints = correctAnswer; // Assuming quantityPoints is correctAnswers
+    const quantityPoints = correctAnswer;
 
     if (userId) {
       try {
@@ -29,7 +29,6 @@ export default function exerciceFinish() {
           .put("http://localhost:3300/api/update-user-details", {
             userId,
             pointsValue: quantityPoints,
-            timeSpent,
           })
           .then((response) => {
             console.log(response);
@@ -38,6 +37,18 @@ export default function exerciceFinish() {
             console.error("Error:", error);
           });
 
+
+          await axios
+          .post("http://localhost:3300/api/register-exercise", {
+            userId,
+            timeSpent,
+          })
+          .then((response) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
       } catch (error) {
         console.error("Error:", error);
       }

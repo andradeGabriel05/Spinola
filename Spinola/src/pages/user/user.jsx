@@ -12,27 +12,90 @@ import { useEffect, useState } from "react";
 
 export default function User() {
   const userId = localStorage.getItem("user");
+  const username = localStorage.getItem("username");
   const [points, setPoints] = useState(0);
   const [daystrike, setDaystrike] = useState(0);
   const [lessons, setLessons] = useState(0);
   const [timeSpent, setTimeSpent] = useState(0);
+  const [timeSpentYesterday, setTimeSpentYesterday] = useState(0);
+  const [timeSpentToday, setTimeSpentToday] = useState(0);
+  const [timeSpentWeek, setTimeSpentWeek] = useState(0);
+  const [timeSpentWeekTotal, setTimeSpentWeekTotal] = useState(0);
+
+  const [sunday, setSunday] = useState(0);
+  const [monday, setMonday] = useState(0);
+  const [tuesday, setTuesday] = useState(0);
+  const [wednesday, setWednesday] = useState(0);
+  const [thursday, setThursday] = useState(0);
+  const [friday, setFriday] = useState(0);
+  const [saturday, setSaturday] = useState(0);
 
   async function getAllPosts() {
     try {
       const response = await axios.get(
         `http://localhost:3300/api/verify-exercise-details/user?userId=${userId}`
       );
-      console.log(response);
       setPoints(response.data[0].points);
       setDaystrike(response.data[0].day_strike);
       setLessons(response.data[0].lessons);
-      setTimeSpent(response.data[0].time_spent);
+
+      // Get time spent all time
+
+      const getTimeSpent = await axios.get(
+        `http://localhost:3300/api/verify-exercises-user/user?userId=${userId}`
+      );
+      if (getTimeSpent.data.length !== 0) {
+        setTimeSpent(getTimeSpent.data[0].time_spent);
+      }
+      // Get time spent yesterday
+      const getTimeSpentYesterday = await axios.get(
+        `http://localhost:3300/api/verify-exercises-user-yesterday/user?userId=${userId}`
+      );
+      if (getTimeSpentYesterday.data.length !== 0) {
+        console.log(getTimeSpentYesterday);
+        console.log(getTimeSpentYesterday.data[0].time_spent);
+        setTimeSpentYesterday(getTimeSpentYesterday.data[0].time_spent);
+      }
+
+      // Get time spent today
+      const getTimeSpentToday = await axios.get(
+        `http://localhost:3300/api/verify-exercises-user-today/user?userId=${userId}`
+      );
+      if (getTimeSpentToday.data.length !== 0) {
+        setTimeSpentToday(getTimeSpentToday.data[0].time_spent);
+      }
+
+      const getTimeSpentWeek = await axios.get(
+        `http://localhost:3300/api/verify-exercises-user-week/user?userId=${userId}`
+      );
+      if (getTimeSpentWeek.data.length !== 0) {
+        setMonday(Number(getTimeSpentWeek.data[0].time_spent) / 60);
+        setTuesday(Number(getTimeSpentWeek.data[1].time_spent) / 60);
+        setWednesday(Number(getTimeSpentWeek.data[2].time_spent) / 60);
+        setThursday(Number(getTimeSpentWeek.data[3].time_spent) / 60);
+        setFriday(Number(getTimeSpentWeek.data[4].time_spent) / 60);
+        setSaturday(Number(getTimeSpentWeek.data[5].time_spent) / 60);
+        setSunday(Number(getTimeSpentWeek.data[6].time_spent) / 60);
+      }
+
+      const getTimeSpentWeekTotal = await axios.get(
+        `http://localhost:3300/api/verify-exercises-user-week-total/user?userId=${userId}`
+      );
+      console.log(getTimeSpentWeekTotal)
+      if (getTimeSpentWeekTotal.data.length !== 0) {
+        console.log(getTimeSpentWeekTotal.data);
+        setTimeSpentWeekTotal(Number(getTimeSpentWeekTotal.data[0].time_spent  / 60 ).toFixed(2));
+      }
     } catch (error) {
       console.error("Error:", error);
     }
   }
 
-  const timeSpentHour = parseInt(timeSpent / 60).toFixed(2);
+  const timeSpentHour = Number(timeSpent / 60).toFixed(2);
+
+  const timeSpentHourToday = Number(timeSpentToday / 60).toFixed(2);
+
+  const timeSpentHourYesterday = Number(timeSpentYesterday / 60).toFixed(2);
 
   useEffect(() => {
     getAllPosts();
@@ -44,7 +107,15 @@ export default function User() {
   const chartConfig = getRadialBarConfig(data);
 
   // Dados de exemplo
-  const dataColumn = [12, 19, 3, 5, 2, 3, 7];
+  const dataColumn = [
+    sunday,
+    monday,
+    tuesday,
+    wednesday,
+    thursday,
+    friday,
+    saturday,
+  ];
   const labelsColumn = [
     "Sunday",
     "Monday",
@@ -102,7 +173,7 @@ export default function User() {
           <div className="wrapper_sections_left_dashboard">
             <section className="welcome_user_dashboard">
               <div className="welcome_user_dashboard_text">
-                <h1>Welcome back, Name!</h1>
+                <h1>Welcome back, {username}!</h1>
                 <p>
                   Great to see you again. Keep up the great work and continue
                   refining your French skills!
@@ -187,21 +258,21 @@ export default function User() {
                   data={chartConfigColumn.data}
                   options={chartConfigColumn.options}
                 />
-                <p>1.3h spent learning this week</p>
+                <p>{timeSpentWeekTotal}h spent learning this week</p>
               </div>
               <div className="time_spent_statistics">
                 <h2>Time spent learning</h2>
                 <div className="time_spent_statistics_text">
                   <h2>Today</h2>
-                  <span>{timeSpentHour}</span>
+                  <span>{timeSpentHourToday}h</span>
                 </div>
                 <div className="time_spent_statistics_text">
                   <h2>Yesterday</h2>
-                  <span>0.3h</span>
+                  <span>{timeSpentHourYesterday}h</span>
                 </div>
                 <div className="time_spent_statistics_text">
-                  <h2>This week</h2>
-                  <span>1.3h</span>
+                  <h2>All time</h2>
+                  <span>{timeSpentHour}h</span>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ var cors = require("cors");
 
 const userRoutes = require("./src/routes/userRoutes");
 const exerciseRoutes = require("./src/routes/exerciseRoutes");
-
+const userTimeSpentRoutes = require("./src/routes/userTimeSpentRoutes");
 const app = express();
 const SERVER_PORT = process.env.PORT || 3300;
 
@@ -29,6 +29,8 @@ app.use((request, response, next) => {
 // Rotas
 app.use("/api", userRoutes);
 app.use("/api", exerciseRoutes);
+app.use("/api", userTimeSpentRoutes);
+
 
 // Servidor
 app.listen(SERVER_PORT, () => {

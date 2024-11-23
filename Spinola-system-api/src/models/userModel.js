@@ -17,8 +17,8 @@ function createUser(username, email, password) {
 
 function createUserDetails(userId) {
   const instrucaoSql = `
-  INSERT INTO user_exercice_details (id_user, points, lessons, time_spent, day_strike)
-  VALUES (${userId}, 0, 0, 0, 0);
+  INSERT INTO user_exercice_details (id_user, points, lessons, day_strike)
+  VALUES (${userId}, 0, 0, 0);
 `;
   console.log("Executando a instrução SQL:\n" + instrucaoSql);
   return database.executar(instrucaoSql);
