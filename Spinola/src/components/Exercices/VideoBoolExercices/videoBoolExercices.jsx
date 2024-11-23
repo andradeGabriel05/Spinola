@@ -1,5 +1,6 @@
 import "./videoBoolExercices.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
+import { exerciceCounter } from "../../../global";
 export default function VideoBoolExercices({
   answer_1,
   answer_2,
@@ -15,8 +16,10 @@ export default function VideoBoolExercices({
     console.log(correctAnswer);
     if (answer === correctAnswer) {
       element.style.backgroundColor = "green";
+      exerciceCounter.push("correct");
     } else {
       element.style.backgroundColor = "#CA2F0A";
+      exerciceCounter.push("wrong");
     }
     document.getElementById("answer1").disabled = true;
     document.getElementById("answer2").disabled = true;

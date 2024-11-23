@@ -1,11 +1,55 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "./exerciceFinish.scss";
 import imageMonument from "Spinola/src/assets/vectors/monuments.png";
 import FooterExercices from "../FooterExercices/footerExercices";
+import axios from "axios";
+import { exerciceCounter } from "../../../global";
 // import HeaderExercices from "../HeaderExercices/headerExercices";
 
 export default function exerciceFinish() {
+
   const username = localStorage.getItem("username");
+  const exercices = localStorage.getItem("exercices");
+  const timeSpent = localStorage.getItem("timeSpent");
+  const correctAnswer = localStorage.getItem("correct");
+  const userId = localStorage.getItem("user");
+
+  console.log(exercices);
+
+  const score = (correctAnswer / exercices) * 100;
+
+  console.log("Score: ", score);
+  console.log("Points: ", correctAnswer);
+  async function handleExerciceResponse() {
+    const quantityPoints = correctAnswer; // Assuming quantityPoints is correctAnswers
+
+    if (userId) {
+      try {
+        await axios
+          .put("http://localhost:3300/api/update-user-details", {
+            userId,
+            pointsValue: quantityPoints,
+            timeSpent,
+          })
+          .then((response) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    } else {
+      console.error("User ID not found");
+    }
+  }
+
+  useEffect(() => {
+    handleExerciceResponse();
+  }, []);
+
   return (
     <>
       <div className="container_finish">
@@ -26,17 +70,15 @@ export default function exerciceFinish() {
         <div className="wrapper_boxes">
           <div className="score box">
             <p>Score</p>
-            <h3>100%</h3>
+            <h3>{score}%</h3>
           </div>
           <div className="points box">
             <p>Points</p>
-            <h3>+5</h3>
+            <h3>+{correctAnswer}</h3>
           </div>
         </div>
       </div>
-      <FooterExercices
-        nextExercise={"/premiere-lecon"}
-      />
+      <FooterExercices nextExercise={"/premiere-lecon"} />
     </>
   );
 }

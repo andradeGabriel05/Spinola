@@ -6,37 +6,26 @@ import { useEffect, useState } from "react";
 import exerciceFinish from "../ExerciceFinish/exerciceFinish";
 // import { handleSubmit } from "../../../global/handleExercice";
 
-export default function FooterExercices({ nextExercise, last, quantityPoints }) {
+export default function FooterExercices({
+  nextExercise,
+  last,
+}) {
+  console.log(exerciceCounter.length);
   async function handleExerciceResponse(event) {
     event.preventDefault();
-
-    const userId = localStorage.getItem("user");
-
-    if (last && userId) {
-      try {
-        await axios.put("http://localhost:3300/api/verify-exercise", {
-          userId,
-        });
-
-        
-        await axios.put("http://localhost:3300/api/verify-points", {
-          pointsValue: quantityPoints,
-          userId,
-        });
-        window.location.href = "/exercise-finish";
-      } catch (error) {
-        console.error("Error:", error);
+    let correct = 0;
+    for(let i = 0; i < exerciceCounter.length; i++){
+      if(exerciceCounter[i].includes("correct")) {
+        correct++;
+      } else {
+        console.log("error");
       }
-    } else {
-      console.error("User ID not found");
     }
-  }
+    console.log(correct);
+    localStorage.setItem("correct", correct);
+    localStorage.setItem("exercices", exerciceCounter.length);
+    window.location.href = "/exercise-finish";
 
-  const [exerciceCounterOnclick, setExerciceCounterOnclick] = useState(0);
-
-  function handleExerciceCounter() {
-    setExerciceCounterOnclick(exerciceCounterOnclick + 1);
-    console.log(exerciceCounterOnclick);
   }
 
   return (
@@ -51,9 +40,7 @@ export default function FooterExercices({ nextExercise, last, quantityPoints }) 
             </form>
           ) : (
             <Link to={nextExercise}>
-              <button className="btn-continue" onClick={handleExerciceCounter}>
-                Continue
-              </button>
+              <button className="btn-continue">Continue</button>
             </Link>
           )}
         </div>

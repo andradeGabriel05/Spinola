@@ -54,7 +54,6 @@ function createUser(req, res) {
         const idUser = resultado.insertId
         usuarioModel
         .createUserDetails(idUser)
-
       })
       .catch((erro) => {
         console.error("Houve um erro ao realizar o cadastro!", erro.sqlMessage);

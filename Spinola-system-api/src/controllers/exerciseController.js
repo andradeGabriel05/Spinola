@@ -1,79 +1,21 @@
 const exerciseModel = require("../models/exerciceModel");
 
-function verifyExercise(req, res) {
-  const { userId } = req.body;
+function incrementUserDetails(req, res) {
+  const {userId, pointsValue, timeSpent} = req.body;
 
   if (!userId) {
-    res.status(400).send("O ID está undefined!");
+    res.status(400).send("Seu ID está undefined!");
   } else {
     exerciseModel
-      .incrementLessons(userId)
+      .incrementUserDetails(userId, pointsValue, timeSpent)
       .then((resultado) => {
-        if (resultado.length === 0) {
-          res
-            .status(404)
-            .send("Exercício não encontrado para o usuário informado.");
-        } else {
-          res.json(resultado);
-        }
+        res.json(resultado);
       })
       .catch((erro) => {
-        console.error(
-          "Houve um erro ao buscar os exercícios!",
-          erro.sqlMessage
-        );
+        console.error("Houve um erro ao realizar o cadastro!", erro.sqlMessage);
         res.status(500).json(erro.sqlMessage);
       });
   }
-}
-
-// function dayStrike() {
-//   const { userId } = req.body;
-
-//   if (!userId) {
-//     res.status(400).send("O ID está undefined!");
-//   } else {
-//     exerciseModel
-//       .incrementDayStrike(userId)
-//       .then((resultado) => {
-//         if (resultado.length === 0) {
-//           res
-//             .status(404)
-//             .send("Exercício não encontrado para o usuário informado.");
-//         } else {
-//           res.json(resultado);
-//         }
-//       })
-//       .catch((erro) => {
-//         console.error(
-//           "Houve um erro ao buscar os exercícios!",
-//           erro.sqlMessage
-//         );
-//         res.status(500).json(erro.sqlMessage);
-//       });
-//   }
-// }
-
-function incrementPoints(req, res) {
-  const { pointsValue, userId } = req.body;
-
-  console.log("Corpo da requisição recebido:", req.body)
-
-  exerciseModel
-    .incrementPoints(pointsValue, userId)
-    .then((resultado) => {
-      if (resultado.length === 0) {
-        res
-          .status(404)
-          .send("Exercício não encontrado para o usuário informado.");
-      } else {
-        res.json(resultado);
-      }
-    })
-    .catch((erro) => {
-      console.error("Houve um erro ao buscar os exercícios!", erro.sqlMessage);
-      res.status(500).json(erro.sqlMessage);
-    });
 }
 
 function getUserExercicesDetails(req, res) {
@@ -104,7 +46,6 @@ function getUserExercicesDetails(req, res) {
 }
 
 module.exports = {
-  verifyExercise,
-  incrementPoints,
+  incrementUserDetails,
   getUserExercicesDetails,
 };

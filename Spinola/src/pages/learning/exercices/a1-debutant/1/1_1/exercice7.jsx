@@ -2,18 +2,27 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
+import { useEffect } from "react";
 
 export default function Exercice7() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
   return (
     <div className="container_exercise">
-      <HeaderExercices progressExercice="87.5%" prevProgressExercice={"75%"}/>
+      <HeaderExercices progressExercice="87.5%" prevProgressExercice={"75%"} />
 
       <div className="exercice_title page_exercice_text">
         <p>New word!</p>
       </div>
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices videoSrc="https://static.memrise.com/uploads/items/videos/medium/86608__m__1528464136_normalized.mp4#t=0.1" position="top"/>
+        <VideoExercices
+          videoSrc="https://static.memrise.com/uploads/items/videos/medium/86608__m__1528464136_normalized.mp4#t=0.1"
+          position="top"
+        />
 
         <div className="exercice_text page_exercice_text">
           <p>Oui</p>
@@ -22,7 +31,6 @@ export default function Exercice7() {
       </div>
       <FooterExercices
         nextExercise={"/learning/exercices/first-lessons/1/1_1/exercice8"}
-
       />
     </div>
   );

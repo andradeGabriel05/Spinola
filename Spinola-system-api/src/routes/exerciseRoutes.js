@@ -1,11 +1,9 @@
 const express = require("express");
-const { verifyExercise, getUserExercicesDetails, incrementPoints, getTotalPoints } = require("../controllers/exerciseController");
+const { incrementUserDetails, getUserExercicesDetails } = require("../controllers/exerciseController");
 
 const router = express.Router();
 
-router.put("/verify-exercise", verifyExercise);
 router.get("/verify-exercise-details/user", getUserExercicesDetails);
-// router.put("/verify-day-strike", dayStrike);
-router.put("/verify-points", incrementPoints);
+router.put("/update-user-details", incrementUserDetails);
 
 module.exports = router;

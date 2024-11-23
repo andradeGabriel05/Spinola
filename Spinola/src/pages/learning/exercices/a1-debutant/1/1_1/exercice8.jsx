@@ -2,8 +2,14 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
+import { useEffect } from "react";
 
 export default function Exercice8() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="100%" prevProgressExercice={"87.5%"} />
@@ -23,7 +29,7 @@ export default function Exercice8() {
           <p>No</p>
         </div>
       </div>
-      <FooterExercices nextExercise={"/exercise-finish"} last={true} quantityPoints={8} />
+      <FooterExercices nextExercise={"/exercise-finish"} last={true} />
     </div>
   );
 }

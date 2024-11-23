@@ -2,10 +2,9 @@ import { Chart, ArcElement, Tooltip, Legend } from 'chart.js';
 
 Chart.register(ArcElement, Tooltip, Legend);
 
-export const getRadialBarConfig = (data, labels) => ({
+export const getRadialBarConfig = (data) => ({
   type: 'doughnut', // RadialBar isn't natively supported, so we mimic it using doughnut
   data: {
-    labels,
     datasets: [
       {
         data,

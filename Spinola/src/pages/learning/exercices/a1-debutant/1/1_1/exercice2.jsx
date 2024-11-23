@@ -5,6 +5,7 @@ import "../exercice.scss";
 
 
 export default function Exercice2() {
+  
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="25%" prevProgressExercice="12.5%" />

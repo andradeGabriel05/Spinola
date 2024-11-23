@@ -163,6 +163,9 @@ import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
 import Login from "./pages/auth/Login/login";
 import Register from "./pages/auth/Register/register";
 import User from "./pages/user/user";
+import { useEffect, useState } from "react";
+
+export let timeSpentSeconds = 0;
 
 function App() {
   return (
@@ -180,6 +183,19 @@ function AppContent() {
     location.pathname.includes("/login");
   const isUserPage = location.pathname.includes("/user");
   const isExerciceFinished = location.pathname.includes("exercise-finish");
+  const [timeSpent, setTimeSpent] = useState(0);
+
+  useEffect(() => {
+    let interval;
+    if (isExercice) {
+      interval = setInterval(() => {
+        setTimeSpent((prevTime) => prevTime + 1);
+        console.log(timeSpent);
+        localStorage.setItem("timeSpent", timeSpent);
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isExercice, timeSpent]);
 
   return (
     <div className="main-content">
@@ -770,7 +786,9 @@ function AppContent() {
         />
       </Routes>
 
-      {!isExercice && !isAuth && !isUserPage && !isExerciceFinished && <Footer />}
+      {!isExercice && !isAuth && !isUserPage && !isExerciceFinished && (
+        <Footer />
+      )}
     </div>
   );
 }

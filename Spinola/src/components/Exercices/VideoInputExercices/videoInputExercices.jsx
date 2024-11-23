@@ -1,6 +1,7 @@
 import "./videoInputExercices.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
 import { useEffect, useState } from "react";
+import { exerciceCounter } from "../../../global";
 export default function VideoInputExercices({
   answer_1,
   answer_2,
@@ -19,14 +20,18 @@ export default function VideoInputExercices({
   var answeredOnce = false;
   var answeredTwice = false;
   function verifyAnswer(buttonId, answer) {
+    console.log(exerciceCounter);
+
     if (!answeredOnce) {
       const element = document.getElementById(buttonId);
       const target = document.getElementById("exerciceResonseId");
       target.appendChild(element);
       if (answer === correctAnswer) {
         element.style.backgroundColor = "green";
+        exerciceCounter.push("correct2");
       } else {
         element.style.backgroundColor = "#CA2F0A";
+        exerciceCounter.push("wrong");
       }
 
       answeredOnce = true;

@@ -4,6 +4,7 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import "../exercice.scss";
 
 export default function Exercice6() {
+
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="75%" prevProgressExercice="62.5%" />

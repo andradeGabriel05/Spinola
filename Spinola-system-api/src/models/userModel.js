@@ -7,22 +7,23 @@ function createUser(username, email, password) {
     email,
     password
   );
-
+  const currentDate = new Date().toISOString().split("T")[0];
   const instrucaoSql = `
-    INSERT INTO users (username, email, password, date_create) VALUES ('${username}', '${email}', '${password}', '2000-10-10');
+    INSERT INTO users (username, email, password, date_create) VALUES ('${username}', '${email}', '${password}', '${currentDate}');
   `;
   console.log("Executando a instrução SQL:\n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
 
-function createUserDetails(username) {
+function createUserDetails(userId) {
   const instrucaoSql = `
-  INSERT INTO user_exercice_details (id_user, points, lessons, day_strike)
-  VALUES ((SELECT id_user FROM users WHERE username = ${username}), 0, 0, 0);
+  INSERT INTO user_exercice_details (id_user, points, lessons, time_spent, day_strike)
+  VALUES (${userId}, 0, 0, 0, 0);
 `;
   console.log("Executando a instrução SQL:\n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
+
 
 function login(email, senha) {
   console.log(

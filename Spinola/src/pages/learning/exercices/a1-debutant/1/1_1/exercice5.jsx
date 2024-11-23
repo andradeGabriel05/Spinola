@@ -2,12 +2,17 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
-
+import { exerciceCounter } from "../../../../../../global";
+import { useEffect } from "react";
 
 export default function Exercice5() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
   return (
     <div className="container_exercise">
-      <HeaderExercices progressExercice="62.5%" prevProgressExercice="50%"/>
+      <HeaderExercices progressExercice="62.5%" prevProgressExercice="50%" />
 
       <div className="exercice_title page_exercice_text">
         <p>New word!</p>
@@ -21,7 +26,9 @@ export default function Exercice5() {
           <p>Goodbye!</p>
         </div>
       </div>
-      <FooterExercices nextExercise={"/learning/exercices/first-lessons/1/1_1/exercice6"}/>
+      <FooterExercices
+        nextExercise={"/learning/exercices/first-lessons/1/1_1/exercice6"}
+      />
     </div>
   );
 }
