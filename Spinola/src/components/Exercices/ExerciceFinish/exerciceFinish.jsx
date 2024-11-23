@@ -7,7 +7,6 @@ import { exerciceCounter } from "../../../global";
 // import HeaderExercices from "../HeaderExercices/headerExercices";
 
 export default function exerciceFinish() {
-
   const username = localStorage.getItem("username");
   const exercices = localStorage.getItem("exercices");
   const timeSpent = localStorage.getItem("timeSpent");
@@ -37,8 +36,7 @@ export default function exerciceFinish() {
             console.error("Error:", error);
           });
 
-
-          await axios
+        await axios
           .post("http://localhost:3300/api/register-exercise", {
             userId,
             timeSpent,
@@ -49,6 +47,19 @@ export default function exerciceFinish() {
           .catch((error) => {
             console.error("Error:", error);
           });
+
+        const dayStrikeVerification = await axios.get(
+          `http://localhost:3300/api/update-day-strike-verification?userId=${userId}`
+        );
+        if (dayStrikeVerification.data.length == 1) {
+          const dayStrikeIncrement = await axios.put(
+            `http://localhost:3300/api/update-day-strike`,
+            {
+              userId,
+            }
+          );
+          console.log(dayStrikeIncrement);
+        }
       } catch (error) {
         console.error("Error:", error);
       }

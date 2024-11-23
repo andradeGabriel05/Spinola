@@ -19,7 +19,6 @@ export default function User() {
   const [timeSpent, setTimeSpent] = useState(0);
   const [timeSpentYesterday, setTimeSpentYesterday] = useState(0);
   const [timeSpentToday, setTimeSpentToday] = useState(0);
-  const [timeSpentWeek, setTimeSpentWeek] = useState(0);
   const [timeSpentWeekTotal, setTimeSpentWeekTotal] = useState(0);
 
   const [sunday, setSunday] = useState(0);
@@ -32,6 +31,7 @@ export default function User() {
 
   async function getAllPosts() {
     try {
+
       const response = await axios.get(
         `http://localhost:3300/api/verify-exercise-details/user?userId=${userId}`
       );
@@ -63,39 +63,43 @@ export default function User() {
       );
       if (getTimeSpentToday.data.length !== 0) {
         setTimeSpentToday(getTimeSpentToday.data[0].time_spent);
+        console.log(getTimeSpentToday.data[0].time_spent)  
+
       }
 
       const getTimeSpentWeek = await axios.get(
         `http://localhost:3300/api/verify-exercises-user-week/user?userId=${userId}`
       );
       if (getTimeSpentWeek.data.length !== 0) {
-        setMonday(Number(getTimeSpentWeek.data[0].time_spent) / 60);
-        setTuesday(Number(getTimeSpentWeek.data[1].time_spent) / 60);
-        setWednesday(Number(getTimeSpentWeek.data[2].time_spent) / 60);
-        setThursday(Number(getTimeSpentWeek.data[3].time_spent) / 60);
-        setFriday(Number(getTimeSpentWeek.data[4].time_spent) / 60);
-        setSaturday(Number(getTimeSpentWeek.data[5].time_spent) / 60);
-        setSunday(Number(getTimeSpentWeek.data[6].time_spent) / 60);
+        setMonday((Number(getTimeSpentWeek.data[0].time_spent) / 3600).toFixed(2));
+        setTuesday((Number(getTimeSpentWeek.data[1].time_spent) / 3600).toFixed(2));
+        setWednesday((Number(getTimeSpentWeek.data[2].time_spent) / 3600).toFixed(2));
+        setThursday((Number(getTimeSpentWeek.data[3].time_spent) / 3600).toFixed(2));
+        setFriday((Number(getTimeSpentWeek.data[4].time_spent) / 3600).toFixed(2));
+        setSaturday((Number(getTimeSpentWeek.data[5].time_spent) / 3600).toFixed(2));
+        setSunday((Number(getTimeSpentWeek.data[6].time_spent) / 3600).toFixed(2));
       }
 
       const getTimeSpentWeekTotal = await axios.get(
         `http://localhost:3300/api/verify-exercises-user-week-total/user?userId=${userId}`
       );
-      console.log(getTimeSpentWeekTotal)
+      console.log(getTimeSpentWeekTotal);
       if (getTimeSpentWeekTotal.data.length !== 0) {
         console.log(getTimeSpentWeekTotal.data);
-        setTimeSpentWeekTotal(Number(getTimeSpentWeekTotal.data[0].time_spent  / 60 ).toFixed(2));
+        setTimeSpentWeekTotal(
+          Number(getTimeSpentWeekTotal.data[0].time_spent / 3600).toFixed(2)
+        );
       }
     } catch (error) {
       console.error("Error:", error);
     }
   }
 
-  const timeSpentHour = Number(timeSpent / 60).toFixed(2);
+  const timeSpentHour = Number(timeSpent / 3600).toFixed(2);
 
-  const timeSpentHourToday = Number(timeSpentToday / 60).toFixed(2);
+  const timeSpentHourToday = Number(timeSpentToday / 3600).toFixed(2);
 
-  const timeSpentHourYesterday = Number(timeSpentYesterday / 60).toFixed(2);
+  const timeSpentHourYesterday = Number(timeSpentYesterday / 3600).toFixed(2);
 
   useEffect(() => {
     getAllPosts();
