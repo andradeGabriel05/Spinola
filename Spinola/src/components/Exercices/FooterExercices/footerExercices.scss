@@ -12,7 +12,7 @@
     box-shadow: 0px -9px 11px 1px #969696bf;
     -webkit-box-shadow: 0px -9px 11px 1px #969696bf;
     -moz-box-shadow: 0px -9px 11px 1px #969696bf;
-    a {
+    a, form {
       width: 13%;
       .btn-continue {
         color: #ffffff;
@@ -27,5 +27,6 @@
         transition: background-color 0.3s ease;
       }
     }
+
   }
 }

@@ -6,7 +6,7 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 
 export default function Exercice8() {
   return (
-    <div className="container_execice">
+    <div className="container_exercise">
       <HeaderExercices progressExercice="72.72%" prevProgressExercice={"63.63%"}/>
 
       <div className="exercice_title page_exercice_text">

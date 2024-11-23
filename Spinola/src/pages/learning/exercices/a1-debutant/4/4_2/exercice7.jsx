@@ -8,7 +8,7 @@ import ExplainWordWithAudio from "../../../../../../components/Exercices/Explain
 import audio from "Spinola/public/recordsExercices/nousSommesAubergeEspagnole.mp3";
 export default function Exercice7() {
   return (
-    <div className="container_execice">
+    <div className="container_exercise">
       <HeaderExercices
         progressExercice="63.63%"
         prevProgressExercice={"54.54%"}

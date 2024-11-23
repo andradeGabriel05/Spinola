@@ -9,7 +9,7 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 
 export default function Exercice4() {
   return (
-    <div className="container_execice">
+    <div className="container_exercise">
       <HeaderExercices
         progressExercice="44.44%"
         prevProgressExercice={"33.33%"}

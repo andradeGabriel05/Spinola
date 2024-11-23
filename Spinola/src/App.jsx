@@ -3,6 +3,7 @@ import Footer from "./components/Footer/footer";
 import Homepage from "./pages/Homepage/homepage";
 import HomepageA2 from "./pages/HomepageA2/homepageA2";
 import DownloadBooks from "./pages/DownloadBooks/downloadBooks";
+import ExerciceFinish from "./components/Exercices/ExerciceFinish/exerciceFinish";
 
 import Exercice1 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice1";
 import Exercice2 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice2";
@@ -156,8 +157,6 @@ import Exercice6_4_4 from "./pages/learning/exercices/a1-debutant/4/4_4/exercice
 import Exercice7_4_4 from "./pages/learning/exercices/a1-debutant/4/4_4/exercice7";
 import Exercice8_4_4 from "./pages/learning/exercices/a1-debutant/4/4_4/exercice8";
 
-
-
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
 import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
@@ -180,10 +179,13 @@ function AppContent() {
     location.pathname.includes("/register") ||
     location.pathname.includes("/login");
   const isUserPage = location.pathname.includes("/user");
+  const isExerciceFinished = location.pathname.includes("exercise-finish");
 
   return (
     <div className="main-content">
-      {!isExercice && !isAuth && !isUserPage && <Header />}
+      {!isExercice && !isAuth && !isUserPage && !isExerciceFinished && (
+        <Header />
+      )}
 
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -194,6 +196,7 @@ function AppContent() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="user" element={<User />} />
+        <Route path="exercise-finish" element={<ExerciceFinish />} />
         <Route
           path="/learning/exercices/first-lessons/1/1_1/exercice1"
           element={<Exercice1 />}
@@ -673,7 +676,7 @@ function AppContent() {
         <Route
           path="/learning/exercices/first-lessons/4/4_1/exercice11"
           element={<Exercice11_4_1 />}
-       />
+        />
 
         <Route
           path="/learning/exercices/first-lessons/4/4_2/exercice1"
@@ -765,10 +768,9 @@ function AppContent() {
           path="/learning/exercices/first-lessons/4/4_4/exercice8"
           element={<Exercice8_4_4 />}
         />
-
       </Routes>
 
-      {!isExercice && !isAuth && !isUserPage && <Footer />}
+      {!isExercice && !isAuth && !isUserPage && !isExerciceFinished && <Footer />}
     </div>
   );
 }

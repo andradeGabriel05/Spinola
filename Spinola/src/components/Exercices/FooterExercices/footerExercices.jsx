@@ -3,29 +3,41 @@ import "./footerExercices.scss";
 import axios from "axios";
 import { exerciceCounter } from "../../../global";
 import { useEffect, useState } from "react";
+import exerciceFinish from "../ExerciceFinish/exerciceFinish";
 // import { handleSubmit } from "../../../global/handleExercice";
 
-export default function FooterExercices({ nextExercise, last }) {
+export default function FooterExercices({ nextExercise, last, quantityPoints }) {
   async function handleExerciceResponse(event) {
     event.preventDefault();
-    if (last) {
+
+    const userId = localStorage.getItem("user");
+
+    if (last && userId) {
       try {
-        await axios.put(`http://localhost:3300/verify-exercice`);
-        window.location.href = "/premiere-lecon";
+        await axios.put("http://localhost:3300/api/verify-exercise", {
+          userId,
+        });
+
+        
+        await axios.put("http://localhost:3300/api/verify-points", {
+          pointsValue: quantityPoints,
+          userId,
+        });
+        window.location.href = "/exercise-finish";
       } catch (error) {
         console.error("Error:", error);
       }
+    } else {
+      console.error("User ID not found");
     }
   }
 
   const [exerciceCounterOnclick, setExerciceCounterOnclick] = useState(0);
 
   function handleExerciceCounter() {
-    setExerciceCounterOnclick(exerciceCounterOnclick + 1)
-    console.log(exerciceCounterOnclick)
+    setExerciceCounterOnclick(exerciceCounterOnclick + 1);
+    console.log(exerciceCounterOnclick);
   }
-
-
 
   return (
     <div className="box-continue">

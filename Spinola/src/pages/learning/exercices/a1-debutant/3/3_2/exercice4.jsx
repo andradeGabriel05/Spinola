@@ -7,7 +7,7 @@ import ExplainWordWithAudio from "../../../../../../components/Exercices/Explain
 
 export default function Exercice4() {
   return (
-    <div className="container_execice">
+    <div className="container_exercise">
       <HeaderExercices progressExercice="36.36%" prevProgressExercice={"27.27%"} />
 
       <div className="exercice_title page_exercice_text">

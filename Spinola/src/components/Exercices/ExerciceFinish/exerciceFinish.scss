@@ -1,0 +1,67 @@
+@use "../../../styles/global" as *;
+
+.container_finish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  color: #fff;
+  padding: 5em 0;
+
+  .images_finish {
+    position: relative;
+    .img_gif {
+      width: 200px;
+      height: 150px;
+      background-image: url("/src/assets/vectors/output-onlinegiftools-ezgif.com-speed.gif");
+      background-size: cover;
+      background-position: center;
+      top: -30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      bottom: 150px;
+    }
+
+    .img_monument {
+      img {
+        width: 150px;
+      }
+    }
+  }
+
+  .wrapper_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .wrapper_boxes {
+    display: flex;
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    justify-content: center;
+      border: solid 1px #9d9d9d;
+      color: #000;
+      padding: 10px;
+      margin: 0 10px;
+      border-radius: 10px;
+      width: 150px;
+    }
+  }
+}

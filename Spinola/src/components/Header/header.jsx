@@ -2,31 +2,37 @@ import "./header.scss";
 import { Link } from "react-router-dom";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { FaQuinscape } from "react-icons/fa";
 
 export default function Header() {
   const idUser = localStorage.getItem("user");
   const username = localStorage.getItem("username");
   console.log(username);
 
-  // const handleLogout = () => {
-  //   localStorage.removeItem("user");
-  //   localStorage.removeItem("username");
-  //   window.location.reload();
-  // };
+  function handleLogout() {
+    window.location.reload();
+    localStorage.removeItem("user");
+    localStorage.removeItem("username");
+  }
 
   const [language, setLanguage] = useState("english");
   // const select_language = document.getElementById("select_language");
-  
+
   useEffect(() => {
     setLanguage(localStorage.getItem("language"));
-    console.log(language)
+    console.log(language);
     // setLanguage(select_language.value)
-  }, [language])
+  }, [language]);
 
   function handleLanguage() {
     localStorage.setItem("language", selectLanguage.value);
-    console.log(language)
-    
+    console.log(language);
+  }
+
+  function displayUserBox() {
+    console.log("ASDSAD")
+    const userBox = document.getElementById("userBox");
+    userBox.classList.toggle("active");
   }
 
   return (
@@ -57,17 +63,34 @@ export default function Header() {
         </div>
         <div className="right_side">
           <div className="lang">
-            <select id="selectLanguage" name="selectLanguage" onChange={handleLanguage}>
+            <select
+              id="selectLanguage"
+              name="selectLanguage"
+              onChange={handleLanguage}
+            >
               <option value={"english"}>English</option>
               <option value={"portuguese"}>Português</option>
               <option value={"french"}>Français</option>
             </select>
           </div>
           {idUser ? (
-            <div className="user">
-              <Link to="/user" className="register">
-                {username}
-              </Link>
+            <div className="user logged" onClick={displayUserBox}>
+              <div id="userBox">
+                <ul>
+                  <li>
+                    <Link to="/user">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/settings">Settings</Link>
+                  </li>
+                  <li>
+                    <Link to="/" onClick={handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <span>{username}</span>
             </div>
           ) : (
             <div className="user">

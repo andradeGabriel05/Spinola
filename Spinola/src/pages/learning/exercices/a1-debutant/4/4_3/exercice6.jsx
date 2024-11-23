@@ -9,7 +9,7 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 
 export default function Exercice6() {
   return (
-    <div className="container_execice bigger_page">
+    <div className="container_exercise bigger_page">
       <HeaderExercices
         progressExercice="71.42%"
         prevProgressExercice={"57.14%"}

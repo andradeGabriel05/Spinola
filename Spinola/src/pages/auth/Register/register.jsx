@@ -7,14 +7,14 @@ export default function Register() {
     event.preventDefault();
 
     const response = axios
-      .post(`http://localhost:3300/register-user`, {
+      .post(`http://localhost:3300/api/register-user`, {
         username: usernameId.value,
         email: emailId.value,
         password: passwordId.value,
       })
       .then((response) => {
         console.log("User created:", response.data);
-        window.location.href = "/";
+        window.location.href = "/login";
       })
       .catch((error) => {
         console.error("Error:", error);

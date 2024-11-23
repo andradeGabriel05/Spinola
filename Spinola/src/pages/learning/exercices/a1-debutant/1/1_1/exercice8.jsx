@@ -5,24 +5,25 @@ import "../exercice.scss";
 
 export default function Exercice8() {
   return (
-    <div className="container_execice">
-      <HeaderExercices progressExercice="100%" prevProgressExercice={"87.5%"}/>
+    <div className="container_exercise">
+      <HeaderExercices progressExercice="100%" prevProgressExercice={"87.5%"} />
 
       <div className="exercice_title page_exercice_text">
         <p>New word!</p>
       </div>
 
       <div className="wrapper_video_enunciate">
-        <VideoExercices videoSrc="https://static.memrise.com/uploads/items/videos/medium/86609__m__1528469383_normalized.mp4#t=0.1" position="top"/>
+        <VideoExercices
+          videoSrc="https://static.memrise.com/uploads/items/videos/medium/86609__m__1528469383_normalized.mp4#t=0.1"
+          position="top"
+        />
 
         <div className="exercice_text page_exercice_text">
           <p>Non</p>
           <p>No</p>
         </div>
       </div>
-      <FooterExercices
-        nextExercise={"/premiere-lecon"}
-      />
+      <FooterExercices nextExercise={"/exercise-finish"} last={true} quantityPoints={8} />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 
 export default function Exercice7() {
   return (
-    <div className="container_execice bigger_page">
+    <div className="container_exercise bigger_page">
       <HeaderExercices
         progressExercice="77.77%"
         prevProgressExercice={"66.66%"}

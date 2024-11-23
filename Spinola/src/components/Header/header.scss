@@ -51,8 +51,24 @@ header {
   .right_side {
     display: flex;
     align-items: center;
-
+    #selectLanguage {
+      margin-right: 15px;
+    }
+    .logged {
+      background-color: #fff !important;
+    }
     .user {
+      position: relative;
+      transition: all 0.1s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #000;
+
+
       img {
         width: 30px;
         height: 30px;
@@ -77,6 +93,38 @@ header {
         }
         margin: 0;
       }
+
+      #userBox {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        top: 40px;
+        transition: all 0.1s;
+        z-index: 10;
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            padding: 20px;
+
+            a {
+              color: #000;
+              text-decoration: none;
+              padding: 20px;
+              width: 100%;
+        margin-right: 0 !important;
+
+            }
+          }
+        }
+      }
     }
   }
+}
+.active {
+  opacity: 1 !important;
+  visibility: visible !important;
 }

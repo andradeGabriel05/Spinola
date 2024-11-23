@@ -7,13 +7,13 @@ export default function Login() {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`http://localhost:3300/login-user`, {
+      const response = await axios.post(`http://localhost:3300/api/login-user`, {
         email: emailId.value,
         password: passwordId.value,
       });
 
-      localStorage.setItem("user", response.data[0].id_user);
-      localStorage.setItem("username", response.data[0].username);
+      localStorage.setItem("user", response.data.id_user);
+      localStorage.setItem("username", response.data.username);
       window.location.href = "/";
     } catch (error) {
       console.error("Error:", error);

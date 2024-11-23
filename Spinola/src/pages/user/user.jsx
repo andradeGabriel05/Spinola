@@ -1,11 +1,36 @@
 import { Bar, Doughnut } from "react-chartjs-2";
-import { getRadialBarConfig } from "./dashboard";
-import { FaHome, FaUser, FaCog, FaDoorClosed, FaDoorOpen } from "react-icons/fa";
+import { getRadialBarConfig } from "./progressGraph";
+import { FaHome, FaCog, FaDoorOpen } from "react-icons/fa";
 import WelcomeImage from "Spinola/src/assets/vectors/Learning languages-cuate(2).svg";
 import "./user.scss";
 import { Link } from "react-router-dom";
 import { getBarChartConfig } from "./columnGraph";
+
+import "./statisticsUser";
+import axios from "axios";
+import { useState } from "react";
+
 export default function User() {
+  const userId = localStorage.getItem("user");
+  const [points, setPoints] = useState(0);
+  const [daystrike, setDaystrike] = useState(0);
+  const [lessons, setLessons] = useState(0);
+
+  async function getAllPosts() {
+    try {
+      const response = await axios.get(
+        `http://localhost:3300/api/verify-exercise-details/user?userId=${userId}`
+      );
+      setPoints(response.data[0].points);
+      setDaystrike(response.data[0].day_strike);
+      setLessons(response.data[0].lessons);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  getAllPosts();
+
   // Example data
   const data = [70, 30];
   const labels = [];
@@ -26,7 +51,7 @@ export default function User() {
           <div className="aside_nav_above">
             <ul>
               <li>
-                <Link to="/home">
+                <Link to="/">
                   <FaHome />
                 </Link>
               </li>
@@ -52,7 +77,9 @@ export default function User() {
 
       <main>
         <header className="header_dashboard">
-          <Link to={"/"} className="logo_name">Spínola</Link >
+          <Link to={"/"} className="logo_name">
+            Spínola
+          </Link>
 
           <h1>Language</h1>
         </header>
@@ -90,11 +117,11 @@ export default function User() {
                   <h1>Statistics:</h1>
                   <div className="statistics_text">
                     <h2>Lessons completed</h2>
-                    <span>33</span>
+                    <span>{lessons}</span>
                   </div>
                   <div className="statistics_text">
                     <h2>Total points</h2>
-                    <span>12112</span>
+                    <span>{points}</span>
                   </div>
                 </section>
               </div>
@@ -134,7 +161,7 @@ export default function User() {
             <div className="day_strike">
               <div className="circle_day_strike">
                 <div className="circle_day_strike_text">
-                  <span>0</span>
+                  <span>{daystrike}</span>
                   <p>Day strike</p>
                 </div>
               </div>

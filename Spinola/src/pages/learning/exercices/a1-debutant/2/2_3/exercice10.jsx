@@ -8,7 +8,7 @@ import ExerciceWithoutVideo from "../../../../../../components/Exercices/Exercic
 
 export default function Exercice7() {
   return (
-    <div className="container_execice">
+    <div className="container_exercise">
       <HeaderExercices progressExercice="90.90%" prevProgressExercice="81.81" />
 
       <div className="exercice_title page_exercice_text">
