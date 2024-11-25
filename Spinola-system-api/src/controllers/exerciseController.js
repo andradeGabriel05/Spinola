@@ -81,9 +81,24 @@ function incrementDayStrike(req, res) {
   }
 }
 
+function rankingPoints(req, res) {
+  exerciseModel
+    .rankingPoints()
+    .then((resultado) => {
+      res.status(200).json(resultado);
+    })
+    .catch((erro) => {
+      console.error("Houve um erro ao realizar o cadastro!", erro.sqlMessage);
+      res.status(500).json({ erro: "Erro ao obter ranking de pontos." });
+    });
+}
+
+
+
 module.exports = {
   incrementUserDetails,
   getUserExercicesDetails,
   incrementDayStrikeVerification,
   incrementDayStrike,
+  rankingPoints,
 };

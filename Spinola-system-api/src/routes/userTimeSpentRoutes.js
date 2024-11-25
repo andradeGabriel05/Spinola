@@ -6,6 +6,8 @@ const {
   verifyExercisesUserToday,
   verifyExercisesUserWeek,
   verifyExercisesUserWeekTotal,
+  verifyUserPercentage,
+  verifyExercisesMade,
 } = require("../controllers/userTimeSpentController");
 
 const router = express.Router();
@@ -22,5 +24,8 @@ router.get(
   "/verify-exercises-user-week-total/user",
   verifyExercisesUserWeekTotal
 );
+router.get("/verify-user-percentage", verifyUserPercentage);
+router.get("/verify-exercises-made", verifyExercisesMade);
+
 
 module.exports = router;

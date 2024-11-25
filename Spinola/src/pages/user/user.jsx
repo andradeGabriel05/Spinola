@@ -20,6 +20,9 @@ export default function User() {
   const [timeSpentYesterday, setTimeSpentYesterday] = useState(0);
   const [timeSpentToday, setTimeSpentToday] = useState(0);
   const [timeSpentWeekTotal, setTimeSpentWeekTotal] = useState(0);
+  const [percProgress, setPercProgress] = useState(0);
+
+  const [dataRanking, setDataRanking] = useState([]);
 
   const [sunday, setSunday] = useState(0);
   const [monday, setMonday] = useState(0);
@@ -31,7 +34,6 @@ export default function User() {
 
   async function getAllPosts() {
     try {
-
       const response = await axios.get(
         `http://localhost:3300/api/verify-exercise-details/user?userId=${userId}`
       );
@@ -63,22 +65,35 @@ export default function User() {
       );
       if (getTimeSpentToday.data.length !== 0) {
         setTimeSpentToday(getTimeSpentToday.data[0].time_spent);
-        console.log(getTimeSpentToday.data[0].time_spent)  
-
+        console.log(getTimeSpentToday.data[0].time_spent);
       }
 
       const getTimeSpentWeek = await axios.get(
         `http://localhost:3300/api/verify-exercises-user-week/user?userId=${userId}`
       );
-      if (getTimeSpentWeek.data.length !== 0) {
-        setMonday((Number(getTimeSpentWeek.data[0].time_spent) / 3600).toFixed(2));
-        setTuesday((Number(getTimeSpentWeek.data[1].time_spent) / 3600).toFixed(2));
-        setWednesday((Number(getTimeSpentWeek.data[2].time_spent) / 3600).toFixed(2));
-        setThursday((Number(getTimeSpentWeek.data[3].time_spent) / 3600).toFixed(2));
-        setFriday((Number(getTimeSpentWeek.data[4].time_spent) / 3600).toFixed(2));
-        setSaturday((Number(getTimeSpentWeek.data[5].time_spent) / 3600).toFixed(2));
-        setSunday((Number(getTimeSpentWeek.data[6].time_spent) / 3600).toFixed(2));
-      }
+      // if (getTimeSpentWeek.data.length !== 0) {
+      //   setMonday(
+      //     (Number(getTimeSpentWeek.data[0].time_spent) / 3600).toFixed(2)
+      //   );
+      //   setTuesday(
+      //     (Number(getTimeSpentWeek.data[1].time_spent) / 3600).toFixed(2)
+      //   );
+      //   setWednesday(
+      //     (Number(getTimeSpentWeek.data[2].time_spent) / 3600).toFixed(2)
+      //   );
+      //   setThursday(
+      //     (Number(getTimeSpentWeek.data[3].time_spent) / 3600).toFixed(2)
+      //   );
+      //   setFriday(
+      //     (Number(getTimeSpentWeek.data[4].time_spent) / 3600).toFixed(2)
+      //   );
+      //   setSaturday(
+      //     (Number(getTimeSpentWeek.data[5].time_spent) / 3600).toFixed(2)
+      //   );
+        // setSunday(
+        //   (Number(getTimeSpentWeek.data[6].time_spent) / 3600).toFixed(2)
+        // );
+      // }
 
       const getTimeSpentWeekTotal = await axios.get(
         `http://localhost:3300/api/verify-exercises-user-week-total/user?userId=${userId}`
@@ -90,10 +105,31 @@ export default function User() {
           Number(getTimeSpentWeekTotal.data[0].time_spent / 3600).toFixed(2)
         );
       }
+
+      const percentageProgress = await axios.get(
+        `http://localhost:3300/api/verify-user-percentage?userId=${userId}`
+      );
+      setPercProgress(Number((percentageProgress.data[0].completed_percentage)).toFixed(1));
+      console.log(percentageProgress);
     } catch (error) {
       console.error("Error:", error);
     }
   }
+
+  const rankingPoints = async () => {
+    await axios
+      .get("http://localhost:3300/api/ranking-points")
+      .then((response) => {
+        console.log(response.data);
+        setDataRanking(response.data);
+        console.log(dataRanking);
+      })
+      .catch((error) => {
+        console.error("Erro:", error);
+      });
+  };
+
+  console.log(dataRanking);
 
   const timeSpentHour = Number(timeSpent / 3600).toFixed(2);
 
@@ -101,12 +137,15 @@ export default function User() {
 
   const timeSpentHourYesterday = Number(timeSpentYesterday / 3600).toFixed(2);
 
+  const percentage = 100 - percProgress
+
   useEffect(() => {
     getAllPosts();
+    rankingPoints();
   }, []);
 
   // Example data
-  const data = [70, 30];
+  const data = [percProgress, percentage];
 
   const chartConfig = getRadialBarConfig(data);
 
@@ -196,21 +235,21 @@ export default function User() {
                         data={chartConfig.data}
                         options={chartConfig.options}
                       />
-                      <span className="perc_progress">70%</span>
+                      <span className="perc_progress">{percProgress}%</span>
                     </div>
                   </div>
-                  <p>You are 30% away of complete all the lessons</p>
+                  <p>You are {percentage}% away of complete all the lessons</p>
                 </section>
 
                 <section className="section_statistics_dashboard">
                   <h1>Statistics:</h1>
                   <div className="statistics_text">
                     <h2>Lessons completed</h2>
-                    <span>{lessons}</span>
+                    <h2>{lessons}</h2>
                   </div>
                   <div className="statistics_text">
                     <h2>Total points</h2>
-                    <span>{points}</span>
+                    <h2>{points}</h2>
                   </div>
                 </section>
               </div>
@@ -224,23 +263,35 @@ export default function User() {
 
                 <section className="section_ranking_dashboard">
                   <h1>Ranking of points</h1>
-                  <div className="user_division">
-                    <div className="user_division_details">
-                      <div className="icon_user">
-                        <img
-                          src="https://cdn-icons-png.flaticon.com/512/266/266033.png"
-                          alt=""
-                        />
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="user_division">
+                      <div className="user_division_details">
+                        <div className="icon_user">
+                          <img
+                            src="https://cdn-icons-png.flaticon.com/512/266/266033.png"
+                            alt=""
+                          />
+                        </div>
+
+                        <div className="user_division_text">
+                          {dataRanking[i] ? (
+                            <>
+                              <h2>{dataRanking[i].username}</h2>
+                              <span>{dataRanking[i].points} points</span>
+                            </>
+                          ) : (
+                            <>
+                              <h2>Username</h2>
+                              <span>0 points</span>
+                            </>
+                          )}
+                        </div>
                       </div>
-                      <div className="user_division_text">
-                        <h2>John Doe</h2>
-                        <span>1123 points</span>
+                      <div className="classification_ranking">
+                        <span>#{i + 1}</span>
                       </div>
                     </div>
-                    <div className="classification_ranking">
-                      <span>#1</span>
-                    </div>
-                  </div>
+                  ))}
                 </section>
               </div>
             </div>

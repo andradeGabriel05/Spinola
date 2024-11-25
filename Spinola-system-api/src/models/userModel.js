@@ -7,9 +7,8 @@ function createUser(username, email, password) {
     email,
     password
   );
-  const currentDate = new Date().toISOString().split("T")[0];
   const instrucaoSql = `
-    INSERT INTO users (username, email, password, date_create) VALUES ('${username}', '${email}', '${password}', '${currentDate}');
+    INSERT INTO users (username, email, password) VALUES ('${username}', '${email}', '${password}');
   `;
   console.log("Executando a instrução SQL:\n" + instrucaoSql);
   return database.executar(instrucaoSql);
@@ -17,7 +16,7 @@ function createUser(username, email, password) {
 
 function createUserDetails(userId) {
   const instrucaoSql = `
-  INSERT INTO user_exercice_details (id_user, points, lessons, day_strike)
+  INSERT INTO user_exercise_details (id_user, points, lessons, day_strike)
   VALUES (${userId}, 0, 0, 0);
 `;
   console.log("Executando a instrução SQL:\n" + instrucaoSql);

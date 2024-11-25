@@ -9,6 +9,8 @@ import exerciceFinish from "../ExerciceFinish/exerciceFinish";
 export default function FooterExercices({
   nextExercise,
   last,
+  chapter,
+  exercise,
 }) {
   console.log(exerciceCounter.length);
   async function handleExerciceResponse(event) {
@@ -24,6 +26,8 @@ export default function FooterExercices({
     console.log(correct);
     localStorage.setItem("correct", correct);
     localStorage.setItem("exercices", exerciceCounter.length);
+    localStorage.setItem("chapter", chapter);
+    localStorage.setItem("exerciseMade", exercise);
     window.location.href = "/exercise-finish";
 
   }

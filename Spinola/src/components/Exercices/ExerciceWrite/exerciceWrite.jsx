@@ -1,5 +1,6 @@
 import "./exerciceWrite.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
+import { exerciceCounter } from "../../../global";
 export default function ExerciceWrite({
   sentenceText1,
   sentenceText2,
@@ -15,7 +16,9 @@ export default function ExerciceWrite({
 
       document.getElementById("userAnswerId").disabled = true;
       footerExercicePage.style.display = "flex";
-      console.log(true)
+      console.log(true);
+      
+      exerciceCounter.push("correct1");
     }
     console.log(input);
   }
@@ -34,7 +37,6 @@ export default function ExerciceWrite({
           />
 
           <span>{sentenceText2}</span>
-
         </div>
       </div>
 

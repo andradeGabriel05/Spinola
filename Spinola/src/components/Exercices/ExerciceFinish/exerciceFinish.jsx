@@ -11,6 +11,8 @@ export default function exerciceFinish() {
   const exercices = localStorage.getItem("exercices");
   const timeSpent = localStorage.getItem("timeSpent");
   const correctAnswer = localStorage.getItem("correct");
+  const chapter = localStorage.getItem("chapter");
+  const exerciseMade = localStorage.getItem("exerciseMade");
   const userId = localStorage.getItem("user");
 
   console.log(exercices);
@@ -40,6 +42,8 @@ export default function exerciceFinish() {
           .post("http://localhost:3300/api/register-exercise", {
             userId,
             timeSpent,
+            chapter,
+            exercise: exerciseMade,
           })
           .then((response) => {
             console.log(response);
@@ -51,7 +55,7 @@ export default function exerciceFinish() {
         const dayStrikeVerification = await axios.get(
           `http://localhost:3300/api/update-day-strike-verification?userId=${userId}`
         );
-        if (dayStrikeVerification.data.length == 1) {
+        if (dayStrikeVerification.data.length < 1) {
           const dayStrikeIncrement = await axios.put(
             `http://localhost:3300/api/update-day-strike`,
             {

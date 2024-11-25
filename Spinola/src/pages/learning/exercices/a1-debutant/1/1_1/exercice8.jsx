@@ -29,7 +29,12 @@ export default function Exercice8() {
           <p>No</p>
         </div>
       </div>
-      <FooterExercices nextExercise={"/exercise-finish"} last={true} />
+      <FooterExercices
+        nextExercise={"/exercise-finish"}
+        last={true}
+        chapter={1}
+        exercise={1}
+      />
     </div>
   );
 }

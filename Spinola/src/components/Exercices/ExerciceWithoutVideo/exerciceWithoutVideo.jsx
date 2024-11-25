@@ -1,5 +1,6 @@
 import "./exerciceWithoutVideo.scss";
 import FooterExercices from "../FooterExercices/footerExercices";
+import { exerciceCounter } from "../../../global";
 export default function ExerciceWithoutVideo({
   answer_1,
   answer_2,
@@ -7,14 +8,19 @@ export default function ExerciceWithoutVideo({
   answer_4,
   correctAnswer,
   nextExercise,
+  last,
+  chapter,
+  exercise,
 }) {
   function verifyAnswer(buttonId, answer) {
     const element = document.getElementById(buttonId);
 
     if (answer === correctAnswer) {
       element.style.backgroundColor = "green";
+      exerciceCounter.push("correct1");
     } else {
       element.style.backgroundColor = "#CA2F0A";
+      exerciceCounter.push("wrong");
     }
 
     footerExercicePage.style.display = "flex";
@@ -76,7 +82,7 @@ export default function ExerciceWithoutVideo({
         id="footerExercicePage"
         style={{ display: "none" }}
       >
-        <FooterExercices nextExercise={nextExercise} />
+        <FooterExercices nextExercise={nextExercise} last={last} chapter={chapter} exercise={exercise} />
       </div>
     </>
   );

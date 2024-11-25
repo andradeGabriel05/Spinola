@@ -25,7 +25,10 @@ export default function Exercice5() {
         answer_3="Elle est impatiente aujourd'hui."
         answer_4="Elle es impatiente aujourd'hui."
         correctAnswer="Elle est impatiente aujourd'hui."
-        nextExercise="/learning/exercices/first-lessons/2/2_4/exercice6"
+        nextExercise={"/exercise-finish"}
+        last={"true"}
+        chapter={2}
+        exercise={4}
       />
     </div>
   );
