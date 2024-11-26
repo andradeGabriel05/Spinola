@@ -5,6 +5,7 @@ var cors = require("cors");
 const userRoutes = require("./src/routes/userRoutes");
 const exerciseRoutes = require("./src/routes/exerciseRoutes");
 const userTimeSpentRoutes = require("./src/routes/userTimeSpentRoutes");
+const media = require("./src/routes/mediaRoutes");
 const app = express();
 const SERVER_PORT = process.env.PORT || 3300;
 
@@ -30,6 +31,7 @@ app.use((request, response, next) => {
 app.use("/api", userRoutes);
 app.use("/api", exerciseRoutes);
 app.use("/api", userTimeSpentRoutes);
+app.use("/api", media);
 
 
 // Servidor

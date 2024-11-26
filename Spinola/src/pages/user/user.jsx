@@ -1,10 +1,11 @@
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut, Pie } from "react-chartjs-2";
 import { getRadialBarConfig } from "./progressGraph";
 import { FaHome, FaCog, FaDoorOpen } from "react-icons/fa";
 import WelcomeImage from "Spinola/src/assets/vectors/Learning languages-cuate(2).svg";
 import "./user.scss";
 import { Link } from "react-router-dom";
 import { getBarChartConfig } from "./columnGraph";
+import { getPieConfig } from "./mediaGraph";
 
 import "./statisticsUser";
 import axios from "axios";
@@ -13,14 +14,21 @@ import { useEffect, useState } from "react";
 export default function User() {
   const userId = localStorage.getItem("user");
   const username = localStorage.getItem("username");
+
   const [points, setPoints] = useState(0);
   const [daystrike, setDaystrike] = useState(0);
   const [lessons, setLessons] = useState(0);
+
   const [timeSpent, setTimeSpent] = useState(0);
   const [timeSpentYesterday, setTimeSpentYesterday] = useState(0);
   const [timeSpentToday, setTimeSpentToday] = useState(0);
   const [timeSpentWeekTotal, setTimeSpentWeekTotal] = useState(0);
+
   const [percProgress, setPercProgress] = useState(0);
+
+  const [timeOnMusic, setTimeOnMusic] = useState(0.0001)
+  const [timeOnPodcast, setTimeOnPodcast] = useState(0.0001)
+  const [timeOnVideo, setTimeOnVideo] = useState(0.0001)
 
   const [dataRanking, setDataRanking] = useState([]);
 
@@ -71,29 +79,50 @@ export default function User() {
       const getTimeSpentWeek = await axios.get(
         `http://localhost:3300/api/verify-exercises-user-week/user?userId=${userId}`
       );
-      // if (getTimeSpentWeek.data.length !== 0) {
-      //   setMonday(
-      //     (Number(getTimeSpentWeek.data[0].time_spent) / 3600).toFixed(2)
-      //   );
-      //   setTuesday(
-      //     (Number(getTimeSpentWeek.data[1].time_spent) / 3600).toFixed(2)
-      //   );
-      //   setWednesday(
-      //     (Number(getTimeSpentWeek.data[2].time_spent) / 3600).toFixed(2)
-      //   );
-      //   setThursday(
-      //     (Number(getTimeSpentWeek.data[3].time_spent) / 3600).toFixed(2)
-      //   );
-      //   setFriday(
-      //     (Number(getTimeSpentWeek.data[4].time_spent) / 3600).toFixed(2)
-      //   );
-      //   setSaturday(
-      //     (Number(getTimeSpentWeek.data[5].time_spent) / 3600).toFixed(2)
-      //   );
-        // setSunday(
-        //   (Number(getTimeSpentWeek.data[6].time_spent) / 3600).toFixed(2)
-        // );
-      // }
+
+      if (typeof (getTimeSpentWeek.data[0]) != "undefined") {
+        setMonday(
+          (Number(getTimeSpentWeek.data[0].time_spent) / 3600).toFixed(2)
+        );
+      }
+
+      if (typeof (getTimeSpentWeek.data[1]) != "undefined") {
+        setTuesday(
+          (Number(getTimeSpentWeek.data[1].time_spent) / 3600).toFixed(2)
+        );
+      }
+
+      if (typeof (getTimeSpentWeek.data[2]) != "undefined") {
+        setWednesday(
+          (Number(getTimeSpentWeek.data[2].time_spent) / 3600).toFixed(2)
+        );
+      }
+
+      if (typeof (getTimeSpentWeek.data[3]) != "undefined") {
+
+        setThursday(
+          (Number(getTimeSpentWeek.data[3].time_spent) / 3600).toFixed(2)
+        );
+      }
+
+      if (typeof (getTimeSpentWeek.data[4]) != "undefined") {
+
+        setFriday(
+          (Number(getTimeSpentWeek.data[4].time_spent) / 3600).toFixed(2)
+        );
+      }
+
+      if (typeof (getTimeSpentWeek.data[5]) != "undefined") {
+        setSaturday(
+          (Number(getTimeSpentWeek.data[5].time_spent) / 3600).toFixed(2)
+        );
+      }
+
+      if (typeof (getTimeSpentWeek.data[6]) != "undefined") {
+        setSunday(
+          (Number(getTimeSpentWeek.data[6].time_spent) / 3600).toFixed(2)
+        );
+      }
 
       const getTimeSpentWeekTotal = await axios.get(
         `http://localhost:3300/api/verify-exercises-user-week-total/user?userId=${userId}`
@@ -111,6 +140,27 @@ export default function User() {
       );
       setPercProgress(Number((percentageProgress.data[0].completed_percentage)).toFixed(1));
       console.log(percentageProgress);
+
+
+      const timeOnMedia = await axios.get(
+        `http://localhost:3300/api/get-time-on-media?userId=${userId}`
+      )
+      console.log(timeOnMedia)
+
+
+      if (typeof (timeOnMedia.data[0]) != "undefined") {
+        setTimeOnVideo((Number(timeOnMedia.data[0].time_spent)/3600).toFixed(2))
+      }
+
+      if (typeof (timeOnMedia.data[1]) != "undefined") {
+        setTimeOnMusic((Number(timeOnMedia.data[1].time_spent)/3600).toFixed(2))
+      }
+      
+      if (typeof (timeOnMedia.data[2]) != "undefined") {
+        setTimeOnPodcast((Number(timeOnMedia.data[2].time_spent)/3600).toFixed(2))
+      }
+
+
     } catch (error) {
       console.error("Error:", error);
     }
@@ -171,6 +221,21 @@ export default function User() {
 
   // Configuração do gráfico
   const chartConfigColumn = getBarChartConfig(dataColumn, labelsColumn);
+
+
+
+  const dataPie = [
+    timeOnMusic,
+    timeOnVideo,
+    timeOnPodcast
+  ];
+  const labelsPie = [
+    "Music",
+    "Videos",
+    "Podcast",
+  ];
+
+  const chartConfigPie = getPieConfig(dataPie, labelsPie);
 
   return (
     <div className="container_user">
@@ -255,10 +320,11 @@ export default function User() {
               </div>
 
               <div className="points_card_dashboard">
-                <section className="idk_dashboard">
-                  <h1>Test</h1>
-                  <p>Test your knowledge with our quizzes</p>
-                  <button>Start test</button>
+                <section className="time_on_medias">
+                  <span>
+                    <h1>Time on medias (hours)</h1>
+                  </span>
+                  <Pie data={chartConfigPie.data} options={chartConfigPie.options} />
                 </section>
 
                 <section className="section_ranking_dashboard">
@@ -313,10 +379,10 @@ export default function User() {
                   data={chartConfigColumn.data}
                   options={chartConfigColumn.options}
                 />
-                <p>{timeSpentWeekTotal}h spent learning this week</p>
+                <p>{timeSpentWeekTotal}h spent on exercises this week</p>
               </div>
               <div className="time_spent_statistics">
-                <h2>Time spent learning</h2>
+                <h2>Time on exercises</h2>
                 <div className="time_spent_statistics_text">
                   <h2>Today</h2>
                   <span>{timeSpentHourToday}h</span>
