@@ -7,6 +7,9 @@ export default function ExerciceWrite({
 
   correctAnswer,
   nextExercise,
+  last,
+  chapter,
+  exercise
 }) {
   function verifyAnswer() {
     const input = document.getElementById("userAnswerId").value.toLowerCase();
@@ -45,7 +48,7 @@ export default function ExerciceWrite({
         id="footerExercicePage"
         style={{ display: "none" }}
       >
-        <FooterExercices nextExercise={nextExercise} />
+        <FooterExercices nextExercise={nextExercise} last={last} chapter={chapter} exercise={exercise} />
       </div>
     </>
   );

@@ -84,32 +84,44 @@ export default function homepage() {
             <div className="media_flex">
               <h3>Musiques</h3>
               <div className="content_wrapper">
-                <div className="media_box musique_box1">
-                  <div className="video_text">
-                    <p>
-                      Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                    </p>
-                    <h4>Coffee Break Languages</h4>
-                  </div>
-                </div>
 
-                <div className="media_box musique_box2">
-                  <div className="video_text">
-                    <p>
-                      Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                    </p>
-                    <h4>Coffee Break Languages</h4>
+                <Link to={"music-learning/message-personnel"} className="musique_box1_link">
+                  <div className="media_box musique_box1">
+                    <div className="video_text">
+                      <p>
+                        Message Personnel
+                      </p>
+                      <h4>Françoise Hardy</h4>
+                    </div>
                   </div>
-                </div>
-                <div className="media_box musique_box3">
-                  <div className="video_text">
-                    <p>
-                      Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                    </p>
-                    <h4>Coffee Break Languages</h4>
+                </Link>
+
+                <Link to={"music-learning/le-ciel-le-soleil-la-mer"} className="musique_box2_link">
+                  <div className="media_box musique_box2">
+                    <div className="video_text">
+                      <p>
+                        Le Ciel Le Soleil Et La Mer
+                      </p>
+                      <h4>
+                        François Deguelt
+                      </h4>
+                    </div>
                   </div>
-                </div>
+                </Link>
+
+                <Link to={"music-learning/en-chantant"} className="musique_box3_link">
+                  <div className="media_box musique_box3">
+                    <div className="video_text">
+                      <p>
+                      En chantant 
+                      </p>
+                      <h4>Michel Sardou</h4>
+                    </div>
+                  </div>
+                </Link>
+
               </div>
+
             </div>
             <div className="media_flex">
               <h3>Podcasts</h3>
@@ -142,8 +154,8 @@ export default function homepage() {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }
 

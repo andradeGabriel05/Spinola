@@ -20,7 +20,6 @@ export default function Exercice2() {
       <VideoBoolExercices 
         answer_1="true"
         answer_2="false"
-        title="true"
         correctAnswer="true"
         question={`"Tu es de quelle nationalité ?" means: What nationality are you?`}
         nextExercise="/learning/exercices/first-lessons/3/3_2/exercice3"

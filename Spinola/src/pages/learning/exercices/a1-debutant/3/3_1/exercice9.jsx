@@ -25,6 +25,9 @@ export default function Exercice9() {
         sentenceText2="!"
         correctAnswer="enchantée"
         nextExercise="/premiere-lecon"
+        last={true}
+        chapter={3}
+        exercise={1}
       />
     </div>
   );

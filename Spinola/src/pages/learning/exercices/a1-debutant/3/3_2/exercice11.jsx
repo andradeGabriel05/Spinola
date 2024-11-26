@@ -5,8 +5,15 @@ import ExplainWord from "../../../../../../components/Exercices/ExplainWord/expl
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice11() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -27,6 +34,9 @@ export default function Exercice11() {
       </div>
       <FooterExercices
         nextExercise={"/premiere-lecon"}
+        last={true} 
+        chapter={3} 
+        exercise={2}
       />
     </div>
   );

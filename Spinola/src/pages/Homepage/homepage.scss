@@ -82,6 +82,7 @@
       .left_side {
         margin-right: 20px;
         width: 90%;
+
         .card1 {
           display: flex;
 
@@ -129,10 +130,12 @@
         .card3 {
           background-color: #fff;
           border-radius: 4px;
+
           &:hover {
             transition: all 0.3s ease;
             filter: brightness(0.7);
           }
+
           h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
@@ -166,6 +169,7 @@
         .first_exercice_link {
           height: 50%;
           margin-bottom: 20px;
+
           .card2 {
             height: 100%;
 
@@ -298,32 +302,43 @@
         justify-content: space-between;
         width: 100%;
 
-        .media_box {
-          background-color: #ddd;
-          width: 30%;
-          height: 32vh;
-          border-radius: 4px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          display: flex;
-          align-items: flex-end;
+        a {
+          transition: all 0.3s;
 
-          .video_text {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            background-color: #000000cd;
-            height: fit-content;
+          .media_box {
+            background-color: #ddd;
             width: 100%;
-            margin-bottom: 20px;
+            height: 32vh;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-end;
+            transition: all 0.3s;
 
-            * {
-              margin-left: 10px;
-            }
+            .video_text {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              background-color: #000000cd;
+              height: fit-content;
+              width: 100%;
+              margin-bottom: 20px;
+              transition: all 0.3s;
 
-            h4 {
-              font-size: 1em;
-              color: #fff;
-              margin-bottom: 5px;
+              * {
+                margin-left: 10px;
+              }
+
+              p {
+                color: #fff;
+
+              }
+
+              h4 {
+                font-size: 1em;
+                color: #fff;
+                margin-bottom: 5px;
+              }
             }
           }
         }
@@ -359,14 +374,27 @@
 
         .musique_box1 {
           background-image: url("https://i.ytimg.com/vi/ylGrEipMWkY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLIkIxobDNm1DU3jnw_Ie0LxrlEw");
+
+          a {
+            margin-right: 30px;
+          }
         }
 
         .musique_box2 {
           background-image: url("https://i.ytimg.com/vi/uuHzruD8byc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8r3mpX3JEnKxw6W-Te9DM-UTjvA");
+
+          a {
+            margin: 0 30px;
+          }
         }
 
         .musique_box3 {
           background-image: url("https://i.ytimg.com/vi/Y052xCD-mNU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmIW1xg1c4mTiMM-HG798kbgP6DA");
+
+          a {
+            margin-left: 30px;
+
+          }
         }
 
         .podcast_box1 {
@@ -384,5 +412,19 @@
         }
       }
     }
+  }
+}
+
+.content_wrapper {
+  .musique_box1_link {
+    margin-right: 30px !important;
+  }
+
+  .musique_box2_link {
+    margin: 0 30px;
+  }
+
+  .musique_box3_link {
+    margin-left: 30px;
   }
 }

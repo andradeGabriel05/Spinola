@@ -1,12 +1,20 @@
+import { useEffect } from "react";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
 
 
 export default function Exercice3() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
+
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="22.22%" prevProgressExercice={"11.11%"} />

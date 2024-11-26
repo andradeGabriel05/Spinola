@@ -2,8 +2,15 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice3() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices

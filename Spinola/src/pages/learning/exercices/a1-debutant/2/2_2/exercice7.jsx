@@ -5,7 +5,7 @@ import "../exercice.scss";
 
 export default function Exercice7() {
   return (
-    <div className="container_exercise">
+    <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="77.77%" prevProgressExercice="66.66%"/>
 
       <div className="exercice_title page_exercice_text">
@@ -17,7 +17,7 @@ export default function Exercice7() {
       <VideoBoolExercices
         answer_1="True"
         answer_2="False"
-        title="Trés bien"
+        title="Très bien"
         correctAnswer="True"
         question="Très bien means very well."
         nextExercise={"/learning/exercices/first-lessons/2/2_2/exercice8"}

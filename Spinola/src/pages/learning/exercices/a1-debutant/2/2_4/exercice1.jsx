@@ -5,8 +5,10 @@ import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice1() {
+  exerciceCounter.length = 0;
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="20%" prevProgressExercice="0%" />

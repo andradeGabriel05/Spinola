@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../global";
 import "./explainWordWithAudio.scss";
 import { FaVolumeUp } from "react-icons/fa";
 
@@ -12,6 +14,12 @@ export default function ExplainWordWithAudio({
   textAudio4,
   audioSrc4,
 }) {
+
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   function handlePlayAudio(audioId) {
     var audio = document.getElementById(audioId);
     audio.play();

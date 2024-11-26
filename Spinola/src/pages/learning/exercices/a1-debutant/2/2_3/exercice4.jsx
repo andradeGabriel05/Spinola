@@ -1,10 +1,17 @@
+import { useEffect } from "react";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice4() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="36.36%" prevProgressExercice="27.27%"/>

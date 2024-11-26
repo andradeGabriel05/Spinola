@@ -5,8 +5,15 @@ import ExplainWord from "../../../../../../components/Exercices/ExplainWord/expl
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice9() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise">
       <HeaderExercices

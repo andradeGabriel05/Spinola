@@ -7,11 +7,19 @@ import audio3 from "Spinola/public/recordsExercices/souvent.mp3";
 import audio4 from "Spinola/public/recordsExercices/l_auberge.mp3";
 import "../exercice.scss";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice1() {
+  useEffect(() => {
+    exerciceCounter.length = 0
+
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise bigger_page">
-      <HeaderExercices progressExercice="9.09%" prevProgressExercice={"0%"} />
+      <HeaderExercices progressExercice="14.28%" prevProgressExercice={"0%"} />
 
       <div className="exercice_title page_exercice_text">
         <p>Salut ! 👋</p>

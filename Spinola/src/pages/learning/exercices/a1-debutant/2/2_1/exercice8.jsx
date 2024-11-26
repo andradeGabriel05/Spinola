@@ -3,8 +3,15 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
+import { exerciceCounter } from "../../../../../../global";
+import { useEffect } from "react";
 
 export default function Exercice8() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="80%" />

@@ -19,7 +19,7 @@ export default function Exercice11() {
       </div>
 
       <VideoExercices
-      miniature={" "}
+        miniature={" "}
         audio={
           "https://cdn.busuu.com/media/resized/audio/a1l11ac31662477697_1662477697.mp3"
         }
@@ -36,6 +36,7 @@ export default function Exercice11() {
         correctAnswer="sommes"
         correctAnswer2="est"
         nextExercise="/premiere-lecon"
+        last={true} chapter={3} exercise={4}
       />
     </div>
   );

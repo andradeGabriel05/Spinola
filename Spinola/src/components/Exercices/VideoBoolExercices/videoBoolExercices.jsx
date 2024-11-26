@@ -9,6 +9,8 @@ export default function VideoBoolExercices({
   question,
   nextExercise,
   last,
+  chapter,
+  exercise
 }) {
   function verifyAnswer(answer, buttonId) {
     const element = document.getElementById(buttonId);
@@ -17,13 +19,23 @@ export default function VideoBoolExercices({
     if (answer === correctAnswer) {
       element.style.backgroundColor = "green";
       exerciceCounter.push("correct");
+
+      console.log("QAWE ")
+  
     } else {
       element.style.backgroundColor = "#CA2F0A";
       exerciceCounter.push("wrong");
     }
+    console.log(exerciceCounter)
     document.getElementById("answer1").disabled = true;
     document.getElementById("answer2").disabled = true;
     footerExercicePage.style.display = "flex";
+
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
   }
   return (
     <>
@@ -67,7 +79,7 @@ export default function VideoBoolExercices({
         id="footerExercicePage"
         style={{ display: "none" }}
       >
-        <FooterExercices nextExercise={nextExercise} last={last} />
+        <FooterExercices nextExercise={nextExercise} last={last} chapter={chapter} exercise={exercise} />
       </div>
     </>
   );

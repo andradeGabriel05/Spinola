@@ -1,4 +1,4 @@
-import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
+  import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
@@ -26,6 +26,8 @@ export default function Exercice5() {
       <VideoInputExercices
         answer_1="français"
         answer_2="française"
+        answer_3="fançai"
+        answer_4="franssais"
         sentenceText1="Thomas ? Il est "
         sentenceText2="."
         correctAnswer="français"

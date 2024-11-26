@@ -31,6 +31,9 @@ export default function Exercice6() {
         correctAnswer="revoir"
         question={`"Et vous?" means "And you? (singular formal)".`}
         nextExercise={"/premiere-lecon"}
+        last={true}
+        chapter={1}
+        exercise={4}
       />
     </div>
   );

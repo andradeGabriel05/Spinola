@@ -17,7 +17,7 @@ export default function exerciceFinish() {
 
   console.log(exercices);
 
-  const score = (correctAnswer / exercices) * 100;
+  const score = Number((correctAnswer / exercices) * 100).toFixed(2);
 
   console.log("Score: ", score);
   console.log("Points: ", correctAnswer);
@@ -26,6 +26,20 @@ export default function exerciceFinish() {
 
     if (userId) {
       try {
+        const dayStrikeVerification = await axios.get(
+          `http://localhost:3300/api/update-day-strike-verification?userId=${userId}`
+        );
+        console.log(dayStrikeVerification)
+        if (dayStrikeVerification.data.length < 1) {
+          const dayStrikeIncrement = await axios.put(
+            `http://localhost:3300/api/update-day-strike`,
+            {
+              userId,
+            }
+          );
+          console.log(dayStrikeIncrement);
+        }
+
         await axios
           .put("http://localhost:3300/api/update-user-details", {
             userId,
@@ -52,18 +66,7 @@ export default function exerciceFinish() {
             console.error("Error:", error);
           });
 
-        const dayStrikeVerification = await axios.get(
-          `http://localhost:3300/api/update-day-strike-verification?userId=${userId}`
-        );
-        if (dayStrikeVerification.data.length < 1) {
-          const dayStrikeIncrement = await axios.put(
-            `http://localhost:3300/api/update-day-strike`,
-            {
-              userId,
-            }
-          );
-          console.log(dayStrikeIncrement);
-        }
+
       } catch (error) {
         console.error("Error:", error);
       }

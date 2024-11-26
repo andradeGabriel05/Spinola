@@ -63,7 +63,7 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="La politesse"
-              img="https://picsum.photos/200/300?random=2"
+              img="https://cdn-icons-png.flaticon.com/256/11532/11532902.png"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
               link="/learning/exercices/first-lessons/1/1_2/exercice1"
               idExercice="2"
@@ -71,15 +71,15 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="Comment allez-vous?"
-              img="https://picsum.photos/200/300?random=3"
+              img="https://st3.depositphotos.com/6672868/15048/v/450/depositphotos_150488806-stock-illustration-handshake-flat-icon.jpg"
               description="Exercice : Dire comment vous allez au travail ou à votre logement."
               link="/learning/exercices/first-lessons/1/1_3/exercice1"
               idExercice="3"
               isDone={idMade.includes(3)}
             />
             <Lessonbox
-              title="Exprimer votre émotion."
-              img="https://picsum.photos/200/300?random=4"
+              title="Développez votre apprentissage"
+              img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3WqXl8xs-w5hLH5y6KnT7gFTuV35yVxSGqho5y2ei1T8trWbTn3JXSYfZ8ZVytZEQRo&usqp=CAU"
               description="Exercice : Utiliser des phrases de déclaration pour exprimer votre émotion."
               link="/learning/exercices/first-lessons/1/1_4/exercice1"
               idExercice="4"
@@ -90,15 +90,15 @@ export default function PremiereLecon() {
             <h1>Chapter 2: Essentials</h1>
             <Lessonbox
               title="Informel salutations"
-              img="https://picsum.photos/200/300?random=5"
-              description="Exercice : Dire bonjour à une personne et lui parler de soi."
+              img="https://images.stockcake.com/public/b/2/f/b2f3f192-1a20-4170-ae14-ad93d3db1566_medium/friendly-conversation-stockcake.jpg"
+              description="Apprenez les informel salutations"
               link="/learning/exercices/first-lessons/2/2_1/exercice1"
               idExercice="5"
               isDone={idMade.includes(5)}
             />
             <Lessonbox
-              title="La politesse"
-              img="https://picsum.photos/200/300?random=6"
+              title="Ça va?"
+              img="https://res.cloudinary.com/teepublic/image/private/s--8qOboeXB--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_000000,e_outline:48/co_000000,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1674144606/production/designs/38559115_0.jpg"
               description="Exercice : Utiliser la politesse pour déclarer votre intention."
               link="/learning/exercices/first-lessons/2/2_2/exercice1"
               idExercice="6"
@@ -106,7 +106,7 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="Être"
-              img="https://picsum.photos/200/300?random=7"
+              img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6esoK6aflu6rCrsgvOfPPt3ulGc-PdD-hDw&s"
               description="Apprenez les bases du verbe être"
               link="/learning/exercices/first-lessons/2/2_3/exercice1"
               idExercice="7"
@@ -114,7 +114,7 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="En pratiquant le verbe être"
-              img="https://picsum.photos/200/300?random=8"
+              img="https://static.vecteezy.com/system/resources/previews/021/552/364/non_2x/flat-illustration-of-man-and-woman-doing-exercise-couple-sitting-on-fitness-mats-and-doing-workout-using-dumbbells-on-beige-background-vector.jpg"
               description='Pratiquez le verbe "être" en français avec des phrases simples.'
               link="/learning/exercices/first-lessons/2/2_4/exercice1"
               idExercice="8"
@@ -125,7 +125,7 @@ export default function PremiereLecon() {
             <h1>Chapter 3: Essentials</h1>
             <Lessonbox
               title="Suite à une interaction de base"
-              img="https://picsum.photos/200/300?random=9"
+              img="https://www.bluezones.com/wp-content/uploads/2019/10/how-to-make-friends-as-an-adult-1-760x480.jpg"
               description="Améliorez vos compétences d'écoute en suivant une vidéo."
               link="/learning/exercices/first-lessons/3/3_1/exercice1"
               idExercice="9"
@@ -133,7 +133,7 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="Les nationalités "
-              img="https://picsum.photos/200/300?random=10"
+              img="https://cdn-icons-png.flaticon.com/256/9235/9235315.png"
               description="Apprenez à dire votre nationalité et faire la différence entre le masculin et le féminin dans les prénoms et les nationalités."
               link="/learning/exercices/first-lessons/3/3_2/exercice1"
               idExercice="10"
@@ -141,7 +141,7 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="Les nationalités: Approfondir les formes masculines et féminines"
-              img="https://picsum.photos/200/300?random=11"
+              img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkWuptRd1v1DiQBbKISX1MM1BUBK5FChnjtA&s"
               description="La distinction entre les formes masculines et féminines des nationalités et des prénoms."
               link="/learning/exercices/first-lessons/3/3_3/exercice1"
               idExercice="11"
@@ -149,7 +149,7 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title={`Le pluriel de "être"`}
-              img="https://picsum.photos/200/300?random=12"
+              img="https://cdn-icons-png.freepik.com/256/17041/17041290.png"
               description="Apprenez à conjuguer le verbe 'être' au pluriel et à l'utiliser dans des phrases simples. "
               link="/learning/exercices/first-lessons/3/3_4/exercice1"
               idExercice="12"
@@ -160,7 +160,7 @@ export default function PremiereLecon() {
             <h1>Chapter 4: Essentials</h1>
             <Lessonbox
               title="Le pluriel de les nationalités"
-              img="https://picsum.photos/200/300?random=13"
+              img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_jYLRPs4VxySNYjsD4YcHcQ0mUhb4f3Hetg&s"
               description="Les nationalités au pluriel et ses formes masculines et féminines."
               link="/learning/exercices/first-lessons/4/4_1/exercice1"
               idExercice="13"
@@ -168,23 +168,23 @@ export default function PremiereLecon() {
             />
             <Lessonbox
               title="Une anglaise à Paris"
-              img="https://picsum.photos/200/300?random=14"
+              img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0rr4VcL62SgtZ8nekSQkh5xTWHNbkpC5EQA&s"
               description="Vous découvrirez les expériences d'une Anglaise vivant à Paris"
               link="/learning/exercices/first-lessons/4/4_2/exercice1"
               idExercice="14"
               isDone={idMade.includes(14)}
             />
             <Lessonbox
-              title="Développement "
-              img="https://picsum.photos/200/300?random=15"
+              title="Développement"
+              img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfS_j9m2O0LUZhyMtWzJNPgt76FKdq1MZneA&s"
               description="Développez vos compétences en français en écoutant des conversations."
               link="/learning/exercices/first-lessons/4/4_3/exercice1"
               idExercice="15"
               isDone={idMade.includes(15)}
             />
             <Lessonbox
-              title="Exprimer votre émotion."
-              img="https://picsum.photos/200/300?random=16"
+              title="Révision rapide du chapitre 4"
+              img="https://hthacademy.org.uk/wp-content/uploads/sites/135/sites/251/2021/10/Revision-scaled.jpg"
               description="Exercice : Utiliser des phrases de déclaration pour exprimer votre émotion."
               link="/learning/exercices/first-lessons/4/4_4/exercice1"
               idExercice="16"

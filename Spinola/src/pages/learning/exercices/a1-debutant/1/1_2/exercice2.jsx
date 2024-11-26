@@ -4,8 +4,9 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import "../exercice.scss";
 
 export default function Exercice2() {
+
   return (
-    <div className="container_exercise">
+    <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="22.22%" prevProgressExercice="11.11%"/>
 
       <div className="exercice_title page_exercice_text">

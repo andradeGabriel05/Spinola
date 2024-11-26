@@ -4,8 +4,14 @@ import ExplainWord from "../../../../../../components/Exercices/ExplainWord/expl
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice1() {
+  useEffect(() => {
+    exerciceCounter.length = 0
+    console.log(exerciceCounter);
+  }, []);
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="11.11%" prevProgressExercice={"0%"} />

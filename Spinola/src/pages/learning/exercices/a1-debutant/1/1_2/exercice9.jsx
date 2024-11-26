@@ -21,6 +21,9 @@ export default function Exercice9() {
         correctAnswer="True"
         question={`"Pardon" means "sorry".`}
         nextExercise={"/premiere-lecon"}
+        last={true}
+        chapter={1}
+        exercise={2}
       />
     </div>
   );

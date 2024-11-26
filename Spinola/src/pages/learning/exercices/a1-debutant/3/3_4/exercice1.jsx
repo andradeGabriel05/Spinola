@@ -3,8 +3,10 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import ExplainWord from "../../../../../../components/Exercices/ExplainWord/explainWord";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice1() {
+  exerciceCounter.length = 0;
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="11.11%" prevProgressExercice={"0%"} />

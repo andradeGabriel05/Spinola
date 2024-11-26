@@ -26,6 +26,9 @@ export default function Exercice11() {
         sentenceText2="contente ?"
         correctAnswer="Tu es"
         nextExercise="/premiere-lecon"
+        last={true}
+        chapter={2}
+        exercise={3}
       />
 
       {/*     Elle est contente mais tu es fatigué !

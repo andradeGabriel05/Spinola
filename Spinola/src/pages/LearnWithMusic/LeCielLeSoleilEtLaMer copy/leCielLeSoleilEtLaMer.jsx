@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import "./learnWithMusic.scss";
+import "./leCielLeSoleilEtLaMer.scss";
 import axios from "axios";
-import { getClickedWord, getValorKey, test } from "./test";
+import { getClickedWord, getValorKey, wordsForTranslate } from "./wordsForTranslate";
 
-export default function LearnWithMusic() {
+export default function LeCielLeSoleilEtLaMer() {
   // const [buttonState, setButtonState] = useState("playing");
   // const [passedOnce, setPassedOnce] = useState(false);
   // const [tempoPreciso, setTempoPreciso] = useState(0);
@@ -82,7 +82,7 @@ export default function LearnWithMusic() {
   }, [clickedWordState]);
 
   useEffect(() => {
-    test();
+    wordsForTranslate();
   }, []);
 
   async function handleTranslate() {
@@ -124,7 +124,6 @@ export default function LearnWithMusic() {
 
   return (
     <div className="container_music_video">
-      <span>{translatedText}</span>
       <div className="wrapper_video_choice">
         <video id="videoMusic" autoPlay={true} ref={videoRef}>
           <source

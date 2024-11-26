@@ -30,6 +30,9 @@ export default function Exercice10() {
         answer_4="Sophie dit 'enchanté'."
         correctAnswer="Rachid dit 'enchanté'."
         nextExercise={"/premiere-lecon"}
+        last={true}
+        chapter={2}
+        exercise={1}
       />
     </div>
   );

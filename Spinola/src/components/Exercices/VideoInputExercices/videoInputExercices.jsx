@@ -17,13 +17,14 @@ export default function VideoInputExercices({
   correctAnswer2,
   correctAnswer3,
   nextExercise,
+  last,
+  chapter,
+  exercise
 }) {
-  let answeredOnce = false;
-  let answeredTwice = false;
-  let answeredThree = false;
-  
+  const [answeredOnce, setAnsweredOnce] = useState(false);
+  const [answeredTwice, setAnsweredTwice] = useState(false);
+
   function verifyAnswer(buttonId, answer) {
-    console.log(exerciceCounter);
     if (!answeredOnce) {
       const element = document.getElementById(buttonId);
       const target = document.getElementById("exerciceResonseId");
@@ -35,8 +36,9 @@ export default function VideoInputExercices({
         element.style.backgroundColor = "#CA2F0A";
         exerciceCounter.push("wrong");
       }
+      console.log(exerciceCounter);
 
-      answeredOnce = true;
+      setAnsweredOnce(true);
 
       if (correctAnswer2 == null) {
         document.getElementById("answer1").disabled = true;
@@ -44,6 +46,7 @@ export default function VideoInputExercices({
         if (answer_3) document.getElementById("answer3").disabled = true;
         if (answer_4) document.getElementById("answer4").disabled = true;
         footerExercicePage.style.display = "flex";
+        return
       }
       console.log("ASDASD");
     } else if (!answeredTwice) {
@@ -57,9 +60,8 @@ export default function VideoInputExercices({
       } else {
         element2.style.backgroundColor = "#CA2F0A";
       }
-      answeredOnce = true;
 
-      answeredTwice = true;
+      setAnsweredTwice(true);
 
       if (correctAnswer3 == null) {
         document.getElementById("answer1").disabled = true;
@@ -68,17 +70,16 @@ export default function VideoInputExercices({
         if (answer_4) document.getElementById("answer4").disabled = true;
         footerExercicePage.style.display = "flex";
       }
-    } else if (!answeredThree) {
+    } else {
       const element = document.getElementById(buttonId);
       const target3 = document.getElementById("exerciceResonseId3");
-      target3.appendChild(element);
+      if (target3 !== null) target3.appendChild(element);
 
       if (answer === correctAnswer3) {
         element.style.backgroundColor = "green";
       } else {
         element.style.backgroundColor = "#CA2F0A";
       }
-      answeredThree = true;
 
       document.getElementById("answer1").disabled = true;
       document.getElementById("answer2").disabled = true;
@@ -174,7 +175,7 @@ export default function VideoInputExercices({
         id="footerExercicePage"
         style={{ display: "none" }}
       >
-        <FooterExercices nextExercise={nextExercise} />
+        <FooterExercices nextExercise={nextExercise} last={last} chapter={chapter} exercise={exercise} />
       </div>
     </>
   );

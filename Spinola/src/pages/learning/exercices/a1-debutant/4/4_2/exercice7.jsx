@@ -10,8 +10,8 @@ export default function Exercice7() {
   return (
     <div className="container_exercise">
       <HeaderExercices
-        progressExercice="63.63%"
-        prevProgressExercice={"54.54%"}
+        progressExercice="100%"
+        prevProgressExercice={"84%"}
       />
 
       <div className="exercice_title page_exercice_text">
@@ -25,7 +25,7 @@ export default function Exercice7() {
       />
 
       <FooterExercices
-        nextExercise={"/premiere-lecon"}
+        nextExercise={"/premiere-lecon"} last={true} chapter={4} exercise={2}
       />
     </div>
   );

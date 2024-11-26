@@ -6,11 +6,11 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 
 export default function Exercice3() {
   return (
-    <div className="container_exercise">
+    <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="42.85%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>New word!</p>
+        <p>True or false</p>
       </div>
 
       <div className="wrapper_video_enunciate">

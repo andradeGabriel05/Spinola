@@ -2,8 +2,13 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
 
 export default function Exercice1() {
+  exerciceCounter.length = 0;
+  exerciceCounter.push("correct");
+
+  console.log(exerciceCounter);
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="11.11%" prevProgressExercice={"0%"} />

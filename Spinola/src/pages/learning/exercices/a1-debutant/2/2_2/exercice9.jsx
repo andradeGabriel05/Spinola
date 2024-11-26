@@ -10,7 +10,7 @@ export default function Exercice9() {
       <HeaderExercices progressExercice="100%" prevProgressExercice="88.88%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>What is she saying?</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -23,6 +23,9 @@ export default function Exercice9() {
           answer_4="Trés ben"
           correctAnswer="Très bien"
           nextExercise="/premiere-lecon"
+          last={true}
+          chapter={2}
+          exercise={2}
         />
       </div>
     </div>

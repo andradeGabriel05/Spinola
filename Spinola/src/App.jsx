@@ -159,7 +159,9 @@ import Exercice8_4_4 from "./pages/learning/exercices/a1-debutant/4/4_4/exercice
 
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
-import LearnWithMusic from "./pages/LearnWithMusic/learnWithMusic";
+import MessagePersonnel from "./pages/LearnWithMusic/MessagePersonnel/messagePersonnel";
+import LeCielLeSoleilEtLaMer from "./pages/LearnWithMusic/EnChantant/enChantant";
+import EnChantant from "./pages/LearnWithMusic/EnChantant/enChantant"
 import Login from "./pages/auth/Login/login";
 import Register from "./pages/auth/Register/register";
 import User from "./pages/user/user";
@@ -208,7 +210,9 @@ function AppContent() {
         <Route path="/a2" element={<HomepageA2 />} />
         <Route path="premiere-lecon" element={<PremiereLecon />} />
         <Route path="download-books" element={<DownloadBooks />} />
-        <Route path="music-learning" element={<LearnWithMusic />} />
+        <Route path="music-learning/message-personnel" element={<MessagePersonnel />} />
+        <Route path="music-learning/le-ciel-le-soleil-la-mer" element={<LeCielLeSoleilEtLaMer />} />
+        <Route path="music-learning/en-chantant" element={<EnChantant />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="user" element={<User />} />

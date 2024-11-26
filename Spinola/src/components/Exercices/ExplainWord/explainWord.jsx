@@ -1,6 +1,13 @@
+import { useEffect } from "react";
+import { exerciceCounter } from "../../../global";
 import "./explainWord.scss";
 
 export default function ExplainWord({text1, text2, text3, text4, text5}) {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="exercice_title page_exercice_text exercice_explain">
       <div className="text_explain">

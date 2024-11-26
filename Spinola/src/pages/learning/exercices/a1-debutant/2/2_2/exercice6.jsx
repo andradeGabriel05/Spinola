@@ -3,11 +3,18 @@ import ExerciceWithoutVideo from "../../../../../../components/Exercices/Exercic
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
+import { exerciceCounter } from "../../../../../../global";
+import { useEffect } from "react";
 
 export default function Exercice6() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise">
-      <HeaderExercices progressExercice="66.66%" prevProgressExercice="55.55%"/>
+      <HeaderExercices progressExercice="66.66%" prevProgressExercice="55.55%" />
 
       <div className="exercice_title page_exercice_text">
         <p>New Word!</p>

@@ -6,13 +6,20 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import audio from "Spinola/public/recordsExercices/p_32757226_503.mp3";
 import "../exercice.scss";
+import { exerciceCounter } from "../../../../../../global";
+import { useEffect } from "react";
 
 export default function Exercice2() {
+  useEffect(() => {
+    exerciceCounter.push("correct");
+    console.log(exerciceCounter);
+  }, []);
+
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
-        progressExercice="18.18%"
-        prevProgressExercice={"9.09%"}
+        progressExercice="28%"
+        prevProgressExercice={"14.28%"}
       />
 
       <div className="exercice_title page_exercice_text">

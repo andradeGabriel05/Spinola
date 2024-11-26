@@ -9,7 +9,7 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 export default function Exercice4() {
   return (
     <div className="container_exercise bigger_page">
-      <HeaderExercices progressExercice="36.36%" prevProgressExercice={"27.27%"} />
+      <HeaderExercices progressExercice="56%" prevProgressExercice={"42%"} />
 
       <div className="exercice_title page_exercice_text">
         <p>Complete the sentence.</p>

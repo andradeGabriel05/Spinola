@@ -30,6 +30,9 @@ export default function Exercice7() {
         sentenceText2="souvent impatient."
         correctAnswer="est"
         nextExercise="/premiere-lecon"
+        last={true}
+        chapter={4}
+        exercise={3}
       />
     </div>
   );

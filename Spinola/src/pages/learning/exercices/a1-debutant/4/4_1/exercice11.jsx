@@ -30,6 +30,9 @@ export default function Exercice11() {
         answer_3="Elles sont françaises !"
         correctAnswer="Nous sommes françaises !"
         nextExercise="/premiere-lecon"
+        last={true}
+        chapter={4}
+        exercise={1}
       />
     </div>
   );
