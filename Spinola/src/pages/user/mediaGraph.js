@@ -8,7 +8,7 @@ export const getPieConfig = (data, labels) => ({
     labels: labels,
     datasets: [
       {
-        data,
+        data: data,
         backgroundColor: ['#1b3370', '#d3d3d3', '#c33'],
         hoverBackgroundColor: ['#1b3370', '#d3d3d3', '#c33'],
         borderWidth: 2,

@@ -34,17 +34,17 @@
         id_exercise INT NOT NULL,
         activity_date DATE NOT NULL,
         time_spent FLOAT DEFAULT 0,
-        PRIMARY KEY (id_user, id_exercise),
         FOREIGN KEY (id_user) REFERENCES users(id_user),
         FOREIGN KEY (id_exercise) REFERENCES exercise(id_exercise)
     );
+    
 
     -- Inserts de exemplo para a tabela 'users'
-    INSERT INTO users (name, username, email, password)
+    INSERT INTO users (username, email, password)
     VALUES
-    ('Gabriel Andrade', 'gabriel_teste', 'gabriel@teste.com', '123'),
-    ('Jean Dupont', 'jeand', 'jeand@example.com', 'senha123'),
-    ('Marie Curie', 'mariec', 'mariec@example.com', 'senha456');
+    ('gabriel_teste', 'gabriel@teste.com', '123'),
+    ('jeand', 'jeand@example.com', 'senha123'),
+    ('mariec', 'mariec@example.com', 'senha456');
 
     -- Inserts de exemplo para a tabela 'exercise'
     INSERT INTO exercise (exercise, chapter, level)
@@ -64,9 +64,9 @@
     (3, 3, 'A1'),
     (4, 3, 'A1'),
 
-    (1, 1, 'A1'),
-    (2, 2, 'A1'),
-    (3, 3, 'A1'),
+    (1, 4, 'A1'),
+    (2, 4, 'A1'),
+    (3, 4, 'A1'),
     (4, 4, 'A1');
 
     -- Inserts de exemplo para a tabela 'user_exercise_details'
@@ -82,4 +82,29 @@
     (1, '2024-11-23', 20.0, 2),
     (2, '2024-11-22', 18.0, 3),
     (2, '2024-11-23', 25.0, 4);
+    
+    CREATE TABLE media_register(
+	id_media INT PRIMARY KEY AUTO_INCREMENT,
+    type_of_media VARCHAR(45),
+    time_spent FLOAT,
+    id_user INT,
+    FOREIGN KEY (id_user) REFERENCES users(id_user)
+    );
+    
+    INSERT INTO register_exercise (id_user, activity_date, time_spent, id_exercise)
+    VALUES
+    (1, '2024-11-22', 1500.5, 1);
+    
+    SELECT * FRom users JOIN register_exercise ON register_exercise.id_user = users.id_user;
+    SELECT type_of_media, sum(time_spent)
+      FROM media_register
+      WHERE id_user = 1
+	group by type_of_media;
 
+INSERT INTO media_register (id_user, type_of_media, time_spent) 
+VALUES 
+(1, '1', 1200),  -- Tipo de mídia 1, 120 minutos de tempo gasto
+(1, '2', 900),   -- Tipo de mídia 2, 90 minutos de tempo gasto
+(1, '1', 600),   -- Tipo de mídia 1, 60 minutos de tempo gasto
+(1, '3', 1500),  -- Tipo de mídia 3, 150 minutos de tempo gasto
+(1, '2', 800);   -- Tipo de mídia 2, 80 minutos de tempo gasto
