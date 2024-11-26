@@ -149,15 +149,15 @@ export default function User() {
 
 
       if (typeof (timeOnMedia.data[0]) != "undefined") {
-        setTimeOnVideo((Number(timeOnMedia.data[0].time_spent)/3600).toFixed(2))
+        setTimeOnVideo((Number(timeOnMedia.data[0].time_spent)/60000).toFixed(2))
       }
 
       if (typeof (timeOnMedia.data[1]) != "undefined") {
-        setTimeOnMusic((Number(timeOnMedia.data[1].time_spent)/3600).toFixed(2))
+        setTimeOnMusic((Number(timeOnMedia.data[1].time_spent)/60000).toFixed(2))
       }
       
       if (typeof (timeOnMedia.data[2]) != "undefined") {
-        setTimeOnPodcast((Number(timeOnMedia.data[2].time_spent)/3600).toFixed(2))
+        setTimeOnPodcast((Number(timeOnMedia.data[2].time_spent)/60000).toFixed(2))
       }
 
 
@@ -322,7 +322,7 @@ export default function User() {
               <div className="points_card_dashboard">
                 <section className="time_on_medias">
                   <span>
-                    <h1>Time on medias (hours)</h1>
+                    <h1>Time on medias (minutes)</h1>
                   </span>
                   <Pie data={chartConfigPie.data} options={chartConfigPie.options} />
                 </section>

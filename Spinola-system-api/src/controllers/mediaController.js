@@ -20,13 +20,13 @@ function getTimeMedia(req, res) {
 }
 
 function verifyTimeMedia(req, res) {
-  const { userId, timeSpent, type } = req.body;
+  const { typeOfMedia, timeSpent, userId  } = req.body;
 
   if (!userId) {
     res.status(400).send("Seu email está undefined!");
   } else {
     mediaModel
-      .verifyTimeMedia(type, timeSpent, userId)
+      .verifyTimeMedia(typeOfMedia, timeSpent, userId)
       .then((resultado) => {
         res.json(resultado);
       })

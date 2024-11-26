@@ -11,10 +11,10 @@ SELECT type_of_media, sum(time_spent) as time_spent
     return database.executar(query);
 }
 
-function verifyTimeMedia(type, timeSpent, userId) {
+function verifyTimeMedia(typeOfMedia, timeSpent, userId) {
     const instrucaoSql = `
         INSERT INTO media_register (type_of_media, time_spent, id_user) 
-        VALUES (${type}, ${timeSpent}, ${userId});
+        VALUES (${typeOfMedia}, ${timeSpent}, ${userId});
     `
 
     return database.executar(instrucaoSql)

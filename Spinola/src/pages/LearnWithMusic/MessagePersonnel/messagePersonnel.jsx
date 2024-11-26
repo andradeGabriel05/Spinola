@@ -64,6 +64,11 @@ export default function messagePersonnel() {
         setClickedWordState(newClickedWord);
         console.log(newClickedWord); // Mostra o valor atualizado
       }
+      if (videoRef.current.currentTime > 213.034) {
+        window.location.href = "/music-finish"
+        localStorage.setItem("typeOfMedia", 2) // music
+        localStorage.setItem("timeSpent", 213034)
+      }
     }, 100); // Verifica a cada 100ms
 
     return () => clearInterval(interval); // Limpa o intervalo ao desmontar

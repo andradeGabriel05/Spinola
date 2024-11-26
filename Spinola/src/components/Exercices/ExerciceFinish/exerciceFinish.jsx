@@ -82,7 +82,6 @@ export default function exerciceFinish() {
   return (
     <>
       <div className="container_finish">
-        <h1>ASD</h1>
         <div className="images_finish">
           <div className="gif_division">
             <div className="img_gif"></div>

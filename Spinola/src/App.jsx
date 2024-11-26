@@ -166,6 +166,7 @@ import Login from "./pages/auth/Login/login";
 import Register from "./pages/auth/Register/register";
 import User from "./pages/user/user";
 import { useEffect, useState } from "react";
+import MusicFinish from "./components/LearnWithMusic/MusicFinish";
 
 export let timeSpentSeconds = 0;
 
@@ -184,7 +185,7 @@ function AppContent() {
     location.pathname.includes("/register") ||
     location.pathname.includes("/login");
   const isUserPage = location.pathname.includes("/user");
-  const isExerciceFinished = location.pathname.includes("exercise-finish");
+  const isExerciceFinished = location.pathname.includes("exercise-finish") || location.pathname.includes("music-finish");
   const [timeSpent, setTimeSpent] = useState(0);
 
   useEffect(() => {
@@ -217,6 +218,7 @@ function AppContent() {
         <Route path="register" element={<Register />} />
         <Route path="user" element={<User />} />
         <Route path="exercise-finish" element={<ExerciceFinish />} />
+        <Route path="music-finish" element={<MusicFinish />} />
         <Route
           path="/learning/exercices/first-lessons/1/1_1/exercice1"
           element={<Exercice1 />}
