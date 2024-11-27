@@ -398,11 +398,11 @@
         }
 
         .podcast_box1 {
-          background-image: url("https://i.ytimg.com/vi/uyhNQh5Qhbs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBD9ayks73AJ75Akdq4S9Z8P1slQ");
+          background-image: url("https://i.scdn.co/image/ab6765630000ba8abd69ca14a6d766dc2f47adc1") !important;
         }
 
         .podcast_box2 {
-          background-image: url("https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/7/70af2cf4-3bf3-4c87-a090-4ae601a15527/cover_medium.jpg");
+          background-image: url("https://i.ytimg.com/vi/y0dPCvtJzEI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDKSMSIMsDIKr1IdxKx6_YhkFvgA") !important;
           background-size: contain;
           background-position: center;
         }
@@ -416,15 +416,15 @@
 }
 
 .content_wrapper {
-  .musique_box1_link {
+  .musique_box1_link, .podcast_box1_link {
     margin-right: 30px !important;
   }
 
-  .musique_box2_link {
+  .musique_box2_link, .podcast_box2_link {
     margin: 0 30px;
   }
 
-  .musique_box3_link {
+  .musique_box3_link, .podcast_box3_link {
     margin-left: 30px;
   }
 }

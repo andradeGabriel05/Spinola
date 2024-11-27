@@ -1,0 +1,992 @@
+{
+  "header": {
+    "pt-BR": {
+      "login": "Entrar",
+      "register": "Registrar",
+
+      "config": "Configurações",
+      "logout": "Sair"
+    },
+
+    "en": {
+      "login": "Login",
+      "register": "Register",
+
+      "config": "Settings",
+      "logout": "Logout"
+    },
+
+    "fr": {
+      "login": "Connexion",
+      "register": "Inscription",
+
+      "config": "Paramétres",
+      "logout": "Déconnexion"
+    }
+  },
+
+  "homepage": {
+    "pt-BR": {
+      "navLevel": "A1 Iniciante",
+      "collectionTitleBigger": "Coleção",
+      "collection": "Primeira lição",
+      "collectionSmallUp": "Aprenda a dizer olá e se apresentar!",
+
+      "marketingTitle": "O site gratuito para melhorar facilmente sua compreensão do francês a partir de vídeos",
+      "downloadBooks": "Baixar livros",
+      "downloadBooksDescription": "Aqui você pode baixar uma grande variedade de livros selecionados para melhorar seu aprendizado e expandir seus conhecimentos. Encontre títulos que abrangem diferentes áreas, desde habilidades técnicas até temas gerais, todos projetados para ajudá-lo a alcançar seus objetivos pessoais.",
+      "downloadBooksButton": "Baixar livros",
+
+      "mediaTitle": "Aprenda francês com alguns conteúdos",
+      "mediaVideo": "Vídeos",
+      "mediaMusic": "Músicas"
+    },
+
+    "en": {
+      "navLevel": "A1 Beginner",
+      "collectionTitleBigger": "Collection",
+      "collection": "First lesson",
+      "collectionSmallUp": "Learn to say hello and introduce yourself!",
+
+      "marketingTitle": "The free site to easily improve your understanding of french from videos",
+      "downloadBooks": "Download books",
+      "downloadBooksDescription": "Here you can download a wide variety of selected books to improve your learning and expand your knowledge. Find titles that cover different areas, from technical skills to general topics, all designed to help you achieve your personal goals.",
+      "downloadBooksButton": "Download books",
+
+      "mediaTitle": "Learn french with media",
+      "mediaVideo": "Videos",
+      "mediaMusic": "Music"
+    },
+
+    "fr": {
+      "navLevel": "A1 Débutant",
+      "collectionTitleBigger": "Collection",
+      "collection": "Première leçon",
+      "collectionSmallUp": "Apprenez à dire bonjour et à vous présenter.!",
+
+      "marketingTitle": "Le site gratuit pour améliorer facilement sa compréhension du français à partir de vidéos",
+      "downloadBooks": "Télécharger des livres",
+      "downloadBooksDescription": "Ici, vous pouvez télécharger une grande variété de livres sélectionnés pour améliorer votre apprentissage et élargir vos connaissances. Trouvez des titres couvrant différents domaines, des compétences techniques aux sujets généraux, tous conçus pour vous aider à atteindre vos objectifs personnels.",
+      "downloadBooksButton": "Télécharger des livres",
+
+      "mediaTitle": "Apprendre le français avec des média",
+      "mediaVideo": "Vidéos",
+      "mediaMusic": "Musique"
+    }
+  },
+
+  "exercisesA1": {
+    "pt-BR": {
+      "title": "Comece gratuitamente em francês",
+      "description": "Diga olá, fale sobre você, encontre um lugar para ficar, conheça nacionalidades... Exercícios gratuitos para aprender francês no nível iniciante a partir de vídeos.",
+
+      "button": "Começar",
+      "chapter1": "Capítulo 1: Introduções",
+      "chapter2": "Capítulo 2: Essenciais",
+      "chapter3": "Capítulo 3: Tudo sobre mim",
+      "chapter4": "Capítulo 4: Desenvolvimento da conversa",
+      "exercises": {
+        "1_1": {
+          "title": "Dizer olá",
+          "description": "Aprenda a dizer olá em francês"
+        },
+        "1_2": {
+          "title": "A polidez",
+          "description": "Usar a polidez para declarar sua intenção."
+        },
+        "1_3": {
+          "title": "Como você está?",
+          "description": "Diga como você está indo para o trabalho ou para sua casa."
+        },
+        "1_4": {
+          "title": "Desenvolva seu aprendizado",
+          "description": "Usar frases de declaração para expressar sua emoção."
+        },
+        "2_1": {
+          "title": "Saudações informais",
+          "description": "Aprenda saudações informais"
+        },
+        "2_2": {
+          "title": "Como você está?",
+          "description": "Diga como você está indo para o trabalho ou para sua casa."
+        },
+        "2_3": {
+          "title": "Ser",
+          "description": "Aprenda o básico do verbo ser"
+        },
+        "2_4": {
+          "title": "Praticando o verbo ser",
+          "description": "Pratique o verbo 'ser' em francês com frases simples."
+        },
+        "3_1": {
+          "title": "Seguindo uma interação básica",
+          "description": "Melhore suas habilidades de escuta seguindo um vídeo."
+        },
+        "3_2": {
+          "title": "Nacionalidades",
+          "description": "Aprenda a dizer sua nacionalidade e distinguir entre nomes e nacionalidades masculinos e femininos."
+        },
+        "3_3": {
+          "title": "Nacionalidades: Aprofundando formas masculinas e femininas",
+          "description": "A distinção entre formas masculinas e femininas de nacionalidades e nomes próprios."
+        },
+        "3_4": {
+          "title": "O plural de 'ser'",
+          "description": "Aprenda a conjugar o verbo 'ser' no plural e usá-lo em frases simples."
+        },
+        "4_1": {
+          "title": "O plural de nacionalidades",
+          "description": "Nacionalidades no plural e suas formas masculinas e femininas."
+        },
+        "4_2": {
+          "title": "Uma inglesa em Paris",
+          "description": "Você descobrirá as experiências de uma inglesa vivendo em Paris"
+        },
+        "4_3": {
+          "title": "Desenvolvimento",
+          "description": "Desenvolva suas habilidades em francês ouvindo conversas."
+        },
+        "4_4": {
+          "title": "Revisão rápida do capítulo 4",
+          "description": "Revise os pontos-chave do capítulo 4."
+        }
+      }
+    },
+
+    "en": {
+      "title": "Start for free in french",
+      "description": "Say hello, talk about yourself, find a place to stay, meet nationalities... Free exercises to learn French at the beginner level from videos.",
+      "button": "Start",
+      "chapter1": "Chapter 1: Introductions",
+      "chapter2": "Chapter 2: Essentials",
+      "chapter3": "Chapter 3: All about me",
+      "chapter4": "Chapter 4: Conversation development",
+      "exercises": {
+        "1_1": {
+          "title": "Say hello",
+          "description": "Learn to say hello in French"
+        },
+        "1_2": {
+          "title": "Politeness",
+          "description": "Use politeness to declare your intention."
+        },
+        "1_3": {
+          "title": "How are you?",
+          "description": "Say how you are going to work or to your home."
+        },
+        "1_4": {
+          "title": "Develop your learning",
+          "description": "Use declaration phrases to express your emotion."
+        },
+        "2_1": {
+          "title": "Informal greetings",
+          "description": "Learn informal greetings"
+        },
+        "2_2": {
+          "title": "How are you?",
+          "description": "Say how you are going to work or to your home."
+        },
+        "2_3": {
+          "title": "To be",
+          "description": "Learn the basics of the verb to be"
+        },
+        "2_4": {
+          "title": "Practicing the verb to be",
+          "description": "Practice the verb 'to be' in French with simple sentences."
+        },
+        "3_1": {
+          "title": "Following a basic interaction",
+          "description": "Improve your listening skills by following a video."
+        },
+        "3_2": {
+          "title": "Nationalities",
+          "description": "Learn how to say your nationality and distinguish between masculine and feminine first names and nationalities."
+        },
+        "3_3": {
+          "title": "Nationalities: Deepening masculine and feminine forms",
+          "description": "The distinction between masculine and feminine forms of nationalities and first names."
+        },
+        "3_4": {
+          "title": "The plural of 'to be'",
+          "description": "Learn to conjugate the verb 'to be' in the plural and use it in simple sentences."
+        },
+        "4_1": {
+          "title": "The plural of nationalities",
+          "description": "Nationalities in the plural and its masculine and feminine forms."
+        },
+        "4_2": {
+          "title": "An Englishwoman in Paris",
+          "description": "You will discover the experiences of an Englishwoman living in Paris"
+        },
+        "4_3": {
+          "title": "Development",
+          "description": "Develop your French skills by listening to conversations."
+        },
+        "4_4": {
+          "title": "Quick review of chapter 4",
+          "description": "Review the key points of chapter 4."
+        }
+      }
+    },
+
+    "fr": {
+      "title": "Débuter gratuitement en français",
+      "description": "Dire bonjour, parler de soi, trouver un logement, rencontrer des nationalités... Exercices gratuits pour apprendre le français au niveau débutant à partir de vidéos.",
+      "button": "Commencer",
+      "chapter1": "Chapitre 1: L'Introductions",
+      "chapter2": "Chapitre 2: Les Essentiels",
+      "chapter3": "Chapitre 3: Tout sur moi",
+      "chapter4": "Chapitre 4: Developpement de la conversation",
+      "exercises": {
+        "1_1": {
+          "title": "Dire bonjour",
+          "description": "Apprenez à dire bonjour en français"
+        },
+        "1_2": {
+          "title": "La politesse",
+          "description": "Utiliser la politesse pour déclarer votre intention."
+        },
+        "1_3": {
+          "title": "Comment allez-vous?",
+          "description": "Dire comment vous allez au travail ou à votre logement."
+        },
+        "1_4": {
+          "title": "Développez votre apprentissage",
+          "description": "Utiliser des phrases de déclaration pour exprimer votre émotion."
+        },
+        "2_1": {
+          "title": "Informel salutations",
+          "description": "Apprenez les informel salutations"
+        },
+        "2_2": {
+          "title": "Ça va?",
+          "description": "Utiliser la politesse pour déclarer votre intention."
+        },
+        "2_3": {
+          "title": "Être",
+          "description": "Apprenez les bases du verbe être"
+        },
+        "2_4": {
+          "title": "En pratiquant le verbe être",
+          "description": "Pratiquez le verbe 'être' en français avec des phrases simples."
+        },
+        "3_1": {
+          "title": "Suite à une interaction de base",
+          "description": "Améliorez vos compétences d'écoute en suivant une vidéo."
+        },
+        "3_2": {
+          "title": "Les nationalités ",
+          "description": "Apprenez à dire votre nationalité et faire la différence entre le masculin et le féminin dans les prénoms et les nationalités."
+        },
+        "3_3": {
+          "title": "Les nationalités: Approfondir les formes masculines et féminines",
+          "description": "La distinction entre les formes masculines et féminines des nationalités et des prénoms."
+        },
+        "3_4": {
+          "title": "Le pluriel de 'être'",
+          "description": "Apprenez à conjuguer le verbe 'être' au pluriel et à l'utiliser dans des phrases simples. "
+        },
+        "4_1": {
+          "title": "Le pluriel de les nationalités",
+          "description": "Les nationalités au pluriel et ses formes masculines et féminines."
+        },
+        "4_2": {
+          "title": "Une anglaise à Paris",
+          "description": "Vous découvrirez les expériences d'une Anglaise vivant à Paris"
+        },
+        "4_3": {
+          "title": "Développement",
+          "description": "Développez vos compétences en français en écoutant des conversations."
+        },
+        "4_4": {
+          "title": "Révision rapide du chapitre 4",
+          "description": "Révisez les points clés du chapitre 4."
+        }
+      }
+    }
+  },
+
+  "trueOrFalse": {
+    "pt-BR": {
+      "true": "Verdadeiro",
+      "false": "Falso"
+    },
+
+    "en": {
+      "true": "True",
+      "false": "False"
+    },
+
+    "fr": {
+      "true": "Vrai",
+      "false": "Faux"
+    }
+  },
+
+  "exerciseTitles": {
+    "pt-BR": {
+      "newWord": "Palavra nova!",
+      "completeSentence": "Complete a frase",
+      "trueOrFalse": "Verdadeiro ou falso",
+      "write": "Escreva a palavra em francês",
+      "whatSaying": "O que está sendo dito?",
+      "listenAndChoose": "Escute e escolha a resposta correta.",
+      "correctTranslation": "Digite a tradução correta de:",
+      "lookingBack": "Voltando um pouco...",
+
+      "congratulations": "Parabéns",
+      "score": "Acertos",
+      "points": "Pontos"
+    },
+
+    "en": {
+      "newWord": "New word!",
+      "completeSentence": "Complete the sentence",
+      "TrueOrFalse": "True or false",
+      "write": "Write the word in French",
+      "whatSaying": "What is being said?",
+      "listenAndChoose": "Listen and choose the correct answer.",
+      "correctTranslation": "Type the correct translation of:",
+      "lookingBack": "Looking back...",
+
+      "congratulations": "Congratulations",
+      "score": "Score",
+      "points": "Points"
+    },
+
+    "fr": {
+      "newWord": "Nouveau mot!",
+      "completeSentence": "Complétez la phrase",
+      "trueOrFalse": "Vrai ou faux",
+      "write": "Écrivez le mot en français",
+      "whatSaying": "Qu'est-ce qui est dit?",
+      "listenAndChoose": "Écoutez et choisissez la bonne réponse.",
+      "correctTranslation": "Tapez la traduction correcte de:",
+      "lookingBack": "Regarder en arrière...",
+
+      "congratulations": "Félicitations",
+      "score": "Score",
+      "points": "Points"
+    }
+  },
+
+  "exercise1_1": {
+    "pt-BR": {
+      "e1": {
+        "text": "Bom dia!"
+      },
+      "e3": {
+        "text": "Meu nome é Sab"
+      },
+      "e5": {
+        "text": "Adeus!"
+      },
+      "e6": {
+        "text": "'Au revoir' significa adeus"
+      },
+      "e7": {
+        "text": "Sim"
+      },
+      "e8": {
+        "text": "Não"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "Good morning!"
+      },
+      "e3": {
+        "text": "My name is Sab"
+      },
+      "e5": {
+        "text": "Goodbye!"
+      },
+      "e6": {
+        "text": "'Au revoir' means goodbye"
+      },
+      "e7": {
+        "text": "Yes"
+      },
+      "e8": {
+        "text": "No"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "Bonjour!"
+      },
+      "e3": {
+        "text": "Je m'appelle Sab"
+      },
+      "e5": {
+        "text": "Au revoir!"
+      },
+      "e6": {
+        "text": "'Au revoir' signifie au revoir"
+      },
+      "e7": {
+        "text": "Oui"
+      },
+      "e8": {
+        "text": "Non"
+      }
+    }
+  },
+
+  "exercise1_2": {
+    "pt-BR": {
+      "e1": {
+        "text": "Por favor"
+      },
+      "e2": {
+        "text": "'s'il vous plaît' significa 'por favor'"
+      },
+      "e3": {
+        "text": "Obrigado"
+      },
+      "e5": {
+        "text": "De nada"
+      },
+      "e6": {
+        "text": "Desculpe",
+        "title": "Como você pode responder quando alguém diz 'merci'?"
+      },
+      "e7": {
+        "text": "Sim"
+      },
+      "e8": {
+        "text": "Não"
+      },
+      "e9": {
+        "text": "'Pardon' significa 'desculpe'."
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "Please"
+      },
+      "e2": {
+        "text": "'s'il vous plaît' means 'please'"
+      },
+      "e3": {
+        "text": "Thank you"
+      },
+      "e5": {
+        "text": "You're welcome"
+      },
+      "e6": {
+        "text": "Sorry",
+        "title": "How can you respond when someone says 'merci'?"
+      },
+      "e7": {
+        "text": "Yes"
+      },
+      "e8": {
+        "text": "No"
+      },
+      "e9": {
+        "text": "'Pardon' means 'sorry'."
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "S'il vous plaît"
+      },
+      "e2": {
+        "text": "'s'il vous plaît' means 's'il vous plaît'"
+      },
+      "e3": {
+        "text": "Merci"
+      },
+      "e5": {
+        "text": "De rien"
+      },
+      "e6": {
+        "text": "Désolé",
+        "title": "Comment pouvez-vous répondre lorsque quelqu'un dit 'merci'?"
+      },
+      "e7": {
+        "text": "Oui"
+      },
+      "e8": {
+        "text": "Non"
+      },
+      "e9": {
+        "text": "'Pardon' signifie 'désolé'."
+      }
+    }
+  },
+
+  "exercise1_3": {
+    "pt-BR": {
+      "e1": {
+        "text": "Como você está?"
+      },
+      "e2": {
+        "text": "Estou bem"
+      },
+      "e3": {
+        "text": "'Ça va?' significa 'Como você está?'"
+      },
+      "e4": {
+        "text": "Como podemos responder à pergunta: 'Ça va ?'"
+      },
+      "e5": {
+        "text": "E você? (singular formal)"
+      },
+      "e6": {
+        "text": "'Et vous?' significa 'E você? (singular formal)'."
+      },
+      "e7": {
+        "text": "Estou com calor"
+      },
+      "e8": {
+        "text": "Estou com frio"
+      },
+      "e9": {
+        "text": "Estou com sono"
+      },
+      "e10": {
+        "text": "Estou com pressa"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "How's it going?"
+      },
+      "e2": {
+        "text": "I'm fine"
+      },
+      "e3": {
+        "text": "'Bien, merci' means 'Fine, thanks.'"
+      },
+      "e4": {
+        "text": "How can we reply to the question: 'Ça va ?'"
+      },
+      "e5": {
+        "text": "And you? (singular formal)"
+      },
+      "e6": {
+        "text": "'Et vous ?' means 'And you? (singular formal)'."
+      },
+      "e7": {
+        "text": "I'm hot"
+      },
+      "e8": {
+        "text": "I'm cold"
+      },
+      "e9": {
+        "text": "I'm sleepy"
+      },
+      "e10": {
+        "text": "I'm in a hurry"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "Comment ça va?"
+      },
+      "e2": {
+        "text": "Je vais bien"
+      },
+      "e3": {
+        "text": "'Ça va bien, merci' signifie 'Ça va bien, merci.'"
+      },
+      "e4": {
+        "text": "Comment pouvons-nous répondre à la question: 'Ça va ?'"
+      },
+      "e5": {
+        "text": "Et vous? (formel singulier)"
+      },
+      "e6": {
+        "text": "'Et vous?' signifie 'Et vous? (formel singulier)'."
+      },
+      "e7": {
+        "text": "J'ai chaud"
+      }
+    }
+  },
+
+  "exercise1_4": {
+    "pt-BR": {
+      "e1": {
+        "text": "Estou feliz"
+      },
+      "e2": {
+        "text": "Estou triste"
+      },
+      "e3": {
+        "text": "O que Seb pergunta a Élise?",
+        "options": {
+          "a": "Como ela está",
+          "b": "Nada",
+          "c": "Dizendo adeus",
+          "d": "Perguntando seu nome"
+        }
+      },
+      "e4": {
+        "text": "Estou com sede"
+      },
+      "e5": {
+        "text": "Estou cansado"
+      },
+      "e6": {
+        "text": "Estou com calor"
+      },
+      "e7": {
+        "text": "Estou com frio"
+      },
+      "e8": {
+        "text": "Estou com sono"
+      },
+      "e9": {
+        "text": "Estou com pressa"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "I'm happy"
+      },
+      "e2": {
+        "text": "I'm sad"
+      },
+      "e3": {
+        "text": "What does Seb ask Élise?",
+        "options": {
+          "a": "How she is doing",
+          "b": "Nothing",
+          "c": "Saying goodbye",
+          "d": "Asking her name"
+        }
+      },
+      "e4": {
+        "text": "I'm thirsty"
+      },
+      "e5": {
+        "text": "I'm tired"
+      },
+      "e6": {
+        "text": "I'm hot"
+      },
+      "e7": {
+        "text": "I'm cold"
+      },
+      "e8": {
+        "text": "I'm sleepy"
+      },
+      "e9": {
+        "text": "I'm in a hurry"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "Je suis heureux"
+      },
+      "e2": {
+        "text": "Je suis triste"
+      },
+      "e3": {
+        "text": "Que demande Seb à Élise?",
+        "options": {
+          "a": "Comment elle va",
+          "b": "Rien",
+          "c": "En disant au revoir",
+          "d": "En demandant son nom"
+        }
+      },
+      "e4": {
+        "text": "J'ai soif"
+      },
+      "e5": {
+        "text": "Je suis fatigué"
+      },
+      "e6": {
+        "text": "J'ai chaud"
+      },
+      "e7": {
+        "text": "J'ai froid"
+      },
+      "e8": {
+        "text": "J'ai sommeil"
+      },
+      "e9": {
+        "text": "Je suis pressé"
+      }
+    }
+  },
+
+  "exercise2_1": {
+    "pt-BR": {
+      "e1": {
+        "text": "Oi!"
+      },
+      "e2": {
+        "text": "Tchau!"
+      },
+      "e3": {
+        "title": "Bonjour ou Salut?",
+        "text1": "Salut é usado:",
+        "text2": "- para nossa família",
+        "text3": "- para nossos amigos",
+        "text4": "- em qualquer outro contexto informal"
+      },
+      "e4": {
+        "text": "'Salut' significa 'oi'."
+      },
+      "e5": {
+        "text": "Bom dia!"
+      },
+      "e6": {
+        "text": "E você? (singular, informal)"
+      },
+      "e7": {
+        "text": "Boa tarde!"
+      },
+      "e8": {
+        "text": "Prazer em conhecê-lo."
+      },
+      "e9": {
+        "text1": "Para dizer 'prazer em conhecê-lo' homens usam 'enchanté'👨 e mulheres usam",
+        "text2": "'enchantée'👩 (com um 'e' final extra).",
+        "text3": "Eles são pronunciados da mesma forma!"
+      },
+      "e10": {
+        "options": {
+          "a": "Rachid diz 'enchantée'.",
+          "b": "Rachid diz 'enchanté'.",
+          "c": "Mathilde diz 'enchanté'.",
+          "d": "Sophie diz 'enchanté'."
+        }
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "Hi!"
+      },
+      "e2": {
+        "text": "Bye!"
+      },
+      "e3": {
+        "title": "Bonjour or Salut?",
+        "text1": "Salut is used:",
+        "text2": "- to our family",
+        "text3": "- to our friends",
+        "text4": "- in any other informal context"
+      },
+      "e4": {
+        "text": "'Salut' means 'hi'."
+      },
+      "e5": {
+        "text": "Good morning!"
+      },
+      "e6": {
+        "text": "And you? (singular, informal)"
+      },
+      "e7": {
+        "text": "Good afternoon!"
+      },
+      "e8": {
+        "text": "Nice to meet you."
+      },
+      "e9": {
+        "text1": "To say 'nice to meet you' men use 'enchanté'👨 and women use",
+        "text2": "'enchantée'👩 (with an extra final 'e').",
+        "text3": "They are pronounced in the same way!"
+      },
+      "e10": {
+        "options": {
+          "a": "Rachid says 'enchantée'.",
+          "b": "Rachid says 'enchanté'.",
+          "c": "Mathilde says 'enchanté'.",
+          "d": "Sophie says 'enchanté'."
+        }
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "Salut!"
+      },
+      "e2": {
+        "text": "Au revoir!"
+      },
+      "e3": {
+        "text": "À plus tard!"
+      },
+      "e4": {
+        "text": "'Salut' signifie 'salut'."
+      },
+      "e5": {
+        "text": "Bonjour!"
+      },
+      "e6": {
+        "text": "Et toi? (singulier, informel)"
+      },
+
+      "e7": {
+        "text": "Bon après-midi!"
+      },
+      "e8": {
+        "text": "Enchanté. / Enchantée."
+      },
+      "e9": {
+        "text1": "Pour dire 'enchanté' les hommes utilisent 'enchanté'👨 et les femmes utilisent",
+        "text2": "'enchantée'👩 (avec un 'e' final supplémentaire).",
+        "text3": "Ils sont prononcés de la même manière!"
+      },
+      "e10": {
+        "options": {
+          "a": "Rachid dit 'enchantée'.",
+          "b": "Rachid dit 'enchanté'.",
+          "c": "Mathilde dit 'enchanté'.",
+          "d": "Sophie dit 'enchanté'."
+        }
+      }
+    }
+  },
+
+  "exercise2_2": {
+    "pt-BR": {
+      "e1": {
+        "text": "Como você está?"
+      },
+      "e2": {
+        "text1": "Como você está; Tudo certo?",
+        "text2": "(literal) 'tá indo?'"
+      },
+      "e3": {
+        "text1": "Estou bem, e você?",
+        "text2": "(literal) tá indo, e você?"
+      },
+      "e4": {
+        "title": "Explicando Ça va.",
+        "text1": "Você pode usar 'ça va' para perguntar a alguém como ele está.",
+        "text2": "Se alguém perguntar a você, você pode simplesmente responder com 'Ça va' (Está bem).",
+        "text3": "Você também pode usá-lo para indicar que algo é aceitável ou concordar com uma situação."
+      },
+      "e5": {
+        "options": {
+          "a": "Estou bem, e você?",
+          "b": "Bom dia",
+          "c": "Estou bem",
+          "d": "Como você está?"
+        }
+      },
+      "e6": {
+        "text": "Muito bem"
+      },
+      "e7": {
+        "text": "Très bien significa muito bem."
+      },
+      "e8": {
+        "options": {
+          "a": "Estou bem",
+          "b": "Bom dia",
+          "c": "Muito bem",
+          "d": "Como você está?"
+        }
+      },
+      "e9": {
+        "text": "Estou com pressa"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "How's it going?"
+      },
+      "e2": {
+        "text1": "how are you?; all good?",
+        "text2": "(literal) it goes?"
+      },
+      "e3": {
+        "text1": "I'm good, and you?",
+        "text2": "(literal) it goes, and you ?"
+      },
+      "e4": {
+        "title": "Explaining Ça va.",
+        "text1": "You can use 'ça va' to ask someone how they are doing.",
+        "text2": "If someone asks you, you can simply respond with 'Ça va' (It′s fine).",
+        "text3": "You can also use it to indicate that something is acceptable or to agree with a situation."
+      },
+      "e5": {
+        "options": {
+          "a": "I'm good, and you?",
+          "b": "Good morning",
+          "c": "I'm good",
+          "d": "How are you?"
+        }
+      },
+      "e6": {
+        "text": "Very well"
+      },
+      "e7": {
+        "text": "Très bien means very well."
+      },
+      "e8": {
+        "options": {
+          "a": "I'm good",
+          "b": "Good morning",
+          "c": "Very well",
+          "d": "How are you?"
+        }
+      },
+      "e9": {
+        "text": "I'm in a hurry"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "Comment ça va?"
+      },
+      "e2": {
+        "text1": "Comment ça va?; Tout va bien?",
+        "text2": "(littéral) ça va?"
+      },
+      "e3": {
+        "text": "Que signifie 'ça va?'"
+      },
+      "e4": {
+        "title": "Expliquer Ça va.",
+        "text1": "Vous pouvez utiliser 'ça va' pour demander à quelqu'un comment il va.",
+        "text2": "Si quelqu'un vous demande, vous pouvez simplement répondre avec 'Ça va' (C'est bien).",
+        "text3": "Vous pouvez également l'utiliser pour indiquer que quelque chose est acceptable ou pour être d'accord avec une situation."
+      },
+      "e5": {
+        "options": {
+          "a": "Je vais bien, et toi?",
+          "b": "Bonjour",
+          "c": "Je vais bien",
+          "d": "Comment ça va?"
+        }
+      },
+      "e6": {
+        "text": "Très bien"
+      },
+      "e7": {
+        "text": "Très bien signifie très bien."
+      },
+      "e8": {
+        "options": {
+          "a": "Je vais bien",
+          "b": "Bonjour",
+          "c": "Très bien",
+          "d": "Comment ça va?"
+        }
+      },
+      "e9": {
+        "text": "Je suis pressé"
+      }
+    }
+  }
+}

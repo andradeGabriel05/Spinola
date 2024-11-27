@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import { FaQuinscape } from "react-icons/fa";
+import LanguageFile from "../../language.json";
 
 export default function Header() {
   const idUser = localStorage.getItem("user");
   const username = localStorage.getItem("username");
+
   console.log(username);
 
   function handleLogout() {
@@ -15,22 +17,22 @@ export default function Header() {
     localStorage.removeItem("username");
   }
 
-  const [language, setLanguage] = useState("english");
-  // const select_language = document.getElementById("select_language");
+  const [language, setLanguage] = useState(
+    localStorage.getItem("language") || "en"
+  );
 
-  useEffect(() => {
-    setLanguage(localStorage.getItem("language"));
-    console.log(language);
-    // setLanguage(select_language.value)
-  }, [language]);
+  if (!localStorage.getItem("language")) {
+    localStorage.setItem("language", "en");
+  }
 
   function handleLanguage() {
     localStorage.setItem("language", selectLanguage.value);
-    console.log(language);
+    setLanguage(selectLanguage.value);
+    window.location.reload();
   }
 
   function displayUserBox() {
-    console.log("ASDSAD")
+    console.log("ASDSAD");
     const userBox = document.getElementById("userBox");
     userBox.classList.toggle("active");
   }
@@ -67,10 +69,11 @@ export default function Header() {
               id="selectLanguage"
               name="selectLanguage"
               onChange={handleLanguage}
+              value={language}
             >
-              <option value={"english"}>English</option>
-              <option value={"portuguese"}>Português</option>
-              <option value={"french"}>Français</option>
+              <option value={"en"}>English</option>
+              <option value={"pt-BR"}>Português</option>
+              <option value={"fr"}>Français</option>
             </select>
           </div>
           {idUser ? (
@@ -81,11 +84,13 @@ export default function Header() {
                     <Link to="/user">Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="/settings">Settings</Link>
+                    <Link to="/settings">
+                      {LanguageFile.header[language].config}
+                    </Link>
                   </li>
                   <li>
                     <Link to="/" onClick={handleLogout}>
-                      Logout
+                      {LanguageFile.header[language].logout}
                     </Link>
                   </li>
                 </ul>
@@ -95,10 +100,10 @@ export default function Header() {
           ) : (
             <div className="user">
               <Link to="/login" className="login">
-                Login
+                {LanguageFile.header[language].login}
               </Link>
               <a href="/register" className="register">
-                Register
+                {LanguageFile.header[language].register}
               </a>
             </div>
           )}

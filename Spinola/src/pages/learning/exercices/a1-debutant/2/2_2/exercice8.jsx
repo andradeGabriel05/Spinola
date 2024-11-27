@@ -4,13 +4,15 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice8() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="88.88%" prevProgressExercice="77.77%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Choose the translation that matches what’s in the video</p>
+        <p>{LanguageFile.exerciseTitles[language].listenAndChoose}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -19,11 +21,11 @@ export default function Exercice8() {
         />
 
         <ExerciceWithoutVideo
-          answer_1="I'm good"
-          answer_2="Good morning"
-          answer_3="Very well"
-          answer_4="How are you?"
-          correctAnswer="Very well"
+          answer_1={LanguageFile.exercise2_2[language].e8.options.a}
+          answer_2={LanguageFile.exercise2_2[language].e8.options.b}
+          answer_3={LanguageFile.exercise2_2[language].e8.options.c}
+          answer_4={LanguageFile.exercise2_2[language].e8.options.d}
+          correctAnswer={LanguageFile.exercise2_2[language].e8.options.c}
           nextExercise="/learning/exercices/first-lessons/2/2_2/exercice9"
         />
       </div>

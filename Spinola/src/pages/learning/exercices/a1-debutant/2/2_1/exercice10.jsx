@@ -4,15 +4,16 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import ExplainWord from "../../../../../../components/Exercices/ExplainWord/explainWord";
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice10() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="100%" />
 
-
       <div className="exercice_title page_exercice_text">
-        <p>Listen and choose the correct answer.</p>
+        <p>{LanguageFile.exerciseTitles[language].listenAndChoose}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -22,13 +23,12 @@ export default function Exercice10() {
         />
       </div>
 
-      
       <ExerciceWithoutVideo
-        answer_1="Rachid dit 'enchantée'."
-        answer_2="Rachid dit 'enchanté'."
-        answer_3="Mathilde dit 'enchanté'."
-        answer_4="Sophie dit 'enchanté'."
-        correctAnswer="Rachid dit 'enchanté'."
+        answer_1={LanguageFile.exercise2_1[language].e10.options.a}
+        answer_2={LanguageFile.exercise2_1[language].e10.options.b}
+        answer_3={LanguageFile.exercise2_1[language].e10.options.c}
+        answer_4={LanguageFile.exercise2_1[language].e10.options.d}
+        correctAnswer={LanguageFile.exercise2_1[language].e10.options.b}
         nextExercise={"/premiere-lecon"}
         last={true}
         chapter={2}

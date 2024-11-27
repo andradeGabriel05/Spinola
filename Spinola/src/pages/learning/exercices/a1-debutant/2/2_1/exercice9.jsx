@@ -3,8 +3,10 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import ExplainWord from "../../../../../../components/Exercices/ExplainWord/explainWord";
 import "../exercice.scss";
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice9() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="90%" />
@@ -14,9 +16,9 @@ export default function Exercice9() {
       </div>
 
       <ExplainWord
-        text1="To say 'nice to meet you' men use 'enchanté'👨 and women use "
-        text2="'enchantée'👩 (with an extra final 'e'). "
-        text3="They are pronounced in the same way! "
+        text1={LanguageFile.exercise2_1[language].e9.text1}
+        text2={LanguageFile.exercise2_1[language].e9.text2}
+        text3={LanguageFile.exercise2_1[language].e9.text3}
       />
 
       <FooterExercices

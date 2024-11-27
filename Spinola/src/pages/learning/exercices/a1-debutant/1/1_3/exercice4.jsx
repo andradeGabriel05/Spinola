@@ -2,15 +2,17 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
 import "../exercice.scss";
 
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="57.14%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>How can we reply to the question: "Ça va ?"</p>
+        <p>{LanguageFile.exercise1_3[language].e4.text}</p>
       </div>
 
       <ExerciceWithoutVideo

@@ -159,14 +159,17 @@ import Exercice8_4_4 from "./pages/learning/exercices/a1-debutant/4/4_4/exercice
 
 import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import PremiereLecon from "./pages/PremiereLecon/premiere-lecon";
-import MessagePersonnel from "./pages/LearnWithMusic/MessagePersonnel/messagePersonnel";
-import LeCielLeSoleilEtLaMer from "./pages/LearnWithMusic/EnChantant/enChantant";
-import EnChantant from "./pages/LearnWithMusic/EnChantant/enChantant"
+import MessagePersonnel from "./pages/LearnWithMedia/Music/MessagePersonnel/messagePersonnel";
+import LeCielLeSoleilEtLaMer from "./pages/LearnWithMedia/Music/LeCielLeSoleilEtLaMer/leCielLeSoleilEtLaMer";
+import EnChantant from "./pages/LearnWithMedia/Music/EnChantant/enChantant";
 import Login from "./pages/auth/Login/login";
 import Register from "./pages/auth/Register/register";
 import User from "./pages/user/user";
 import { useEffect, useState } from "react";
 import MusicFinish from "./components/LearnWithMusic/MusicFinish";
+import RFI from "./pages/LearnWithMedia/Podcast/RFI/rfi";
+import PodcastFinish from "./components/PodcastFinish/podcastFinish";
+import LaTourEiffel from "./pages/LearnWithMedia/Podcast/LaTourEiffel/laTourEiffel";
 
 export let timeSpentSeconds = 0;
 
@@ -181,11 +184,13 @@ function App() {
 function AppContent() {
   const location = useLocation();
   const isExercice = location.pathname.includes("/learning/exercices/");
+  const isMediaLearning = location.pathname.includes("/media-learning");
+  const userId = localStorage.getItem("user");
   const isAuth =
     location.pathname.includes("/register") ||
     location.pathname.includes("/login");
   const isUserPage = location.pathname.includes("/user");
-  const isExerciceFinished = location.pathname.includes("exercise-finish") || location.pathname.includes("music-finish");
+  const isExerciceFinished = location.pathname.includes("-finish");
   const [timeSpent, setTimeSpent] = useState(0);
 
   useEffect(() => {
@@ -200,6 +205,13 @@ function AppContent() {
     return () => clearInterval(interval);
   }, [isExercice, timeSpent]);
 
+  if (
+    (isExercice || isExerciceFinished || isUserPage || isMediaLearning) &&
+    !userId
+  ) {
+    window.location.href = "/login";
+  }
+
   return (
     <div className="main-content">
       {!isExercice && !isAuth && !isUserPage && !isExerciceFinished && (
@@ -211,14 +223,24 @@ function AppContent() {
         <Route path="/a2" element={<HomepageA2 />} />
         <Route path="premiere-lecon" element={<PremiereLecon />} />
         <Route path="download-books" element={<DownloadBooks />} />
-        <Route path="music-learning/message-personnel" element={<MessagePersonnel />} />
-        <Route path="music-learning/le-ciel-le-soleil-la-mer" element={<LeCielLeSoleilEtLaMer />} />
-        <Route path="music-learning/en-chantant" element={<EnChantant />} />
+        <Route
+          path="media-learning/message-personnel"
+          element={<MessagePersonnel />}
+        />
+        <Route
+          path="media-learning/le-ciel-le-soleil-la-mer"
+          element={<LeCielLeSoleilEtLaMer />}
+        />
+        <Route path="media-learning/rfi" element={<RFI />} />
+        <Route path="media-learning/la-tour-eiffel" element={<LaTourEiffel />} />
+
+        <Route path="media-learning/en-chantant" element={<EnChantant />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="user" element={<User />} />
         <Route path="exercise-finish" element={<ExerciceFinish />} />
         <Route path="music-finish" element={<MusicFinish />} />
+        <Route path="podcast-finish" element={<PodcastFinish />} />
         <Route
           path="/learning/exercices/first-lessons/1/1_1/exercice1"
           element={<Exercice1 />}

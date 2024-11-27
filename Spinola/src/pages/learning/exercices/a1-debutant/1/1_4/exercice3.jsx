@@ -3,14 +3,15 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
-
+import LanguageFile from "../../../../../../language";
 export default function Exercice3() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="42.85%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>What does Seb ask Élise?</p>
+        <p>{LanguageFile.exercise1_4[language].e3.text}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -20,13 +21,12 @@ export default function Exercice3() {
         />
       </div>
 
-      
       <ExerciceWithoutVideo
-        answer_1="How she is doing"
-        answer_2="Nothing"
-        answer_3="Saying goodbye"
-        answer_4="Asking her name"
-        correctAnswer="How she is doing"
+        answer_1={LanguageFile.exercise1_4[language].e3.options.a}
+        answer_2={LanguageFile.exercise1_4[language].e3.options.b}
+        answer_3={LanguageFile.exercise1_4[language].e3.options.c}
+        answer_4={LanguageFile.exercise1_4[language].e3.options.d}
+        correctAnswer={LanguageFile.exercise1_4[language].e3.options.a}
         nextExercise={"/learning/exercices/first-lessons/1/1_4/exercice4"}
       />
     </div>

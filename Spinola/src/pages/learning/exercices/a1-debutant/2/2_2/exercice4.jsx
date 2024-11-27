@@ -5,20 +5,22 @@ import ExplainWord from "../../../../../../components/Exercices/ExplainWord/expl
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="44.44%" prevProgressExercice="33.33%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Explaining Ça va.</p>
+        <p>{LanguageFile.exercise2_2[language].e4.title}</p>
       </div>
 
       <ExplainWord
-        text1="Ça va"
-        text2='You can use "ça va" to ask someone how they are doing.'
-        text3='If someone asks you, you can simply respond with "Ça va" (It′s fine).'
-        text4='You can also use it to indicate that something is acceptable or to agree with a situation.'
+        text1={LanguageFile.exercise2_2[language].e4.text1}
+        text2={LanguageFile.exercise2_2[language].e4.text2}
+        text3={LanguageFile.exercise2_2[language].e4.text3}
       />
 
       <FooterExercices nextExercise={"/learning/exercices/first-lessons/2/2_2/exercice5"} />

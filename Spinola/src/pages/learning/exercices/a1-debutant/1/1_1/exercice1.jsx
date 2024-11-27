@@ -2,6 +2,7 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import { exerciceCounter } from "../../../../../../global";
+import LanguageFile from "../../../../../../language.json"
 import "../exercice.scss";
 
 export default function Exercice1() {
@@ -10,12 +11,13 @@ export default function Exercice1() {
 
   console.log(exerciceCounter);
 
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="12.5%" prevProgressExercice="0%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>New word!</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -23,7 +25,7 @@ export default function Exercice1() {
 
         <div className="exercice_text page_exercice_text">
           <p>Bonjour</p>
-          <p>Hello</p>
+          <p>{LanguageFile.exercise1_1[language].e1.text}</p>
         </div>
       </div>
       <FooterExercices

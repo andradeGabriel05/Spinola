@@ -4,14 +4,15 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
-
+import LanguageFile from "../../../../../../language";
 export default function Exercice6() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="85.71%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p> {LanguageFile.exerciseTitles[language].trueOrFalse}</p>
       </div>
 
       <VideoExercices
@@ -24,10 +25,10 @@ export default function Exercice6() {
       </div>
 
       <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="True"
-        question={`"Et vous ?" means "And you? (singular formal)".`}
+        answer_1={LanguageFile.trueOrFalse[language].true}
+        answer_2={LanguageFile.trueOrFalse[language].false}
+        correctAnswer={LanguageFile.trueOrFalse[language].true}
+        question={LanguageFile.exercise1_3[language].e6.text}
         nextExercise={"/learning/exercices/first-lessons/1/1_3/exercice7"}
       />
     </div>

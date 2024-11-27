@@ -4,14 +4,16 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice7() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="70%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
       <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/cd02cfc0-258c-43e1-a4f0-da809a82afae_small.mp4" />

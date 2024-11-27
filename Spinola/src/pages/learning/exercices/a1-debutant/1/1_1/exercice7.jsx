@@ -4,18 +4,20 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import "../exercice.scss";
 import { exerciceCounter } from "../../../../../../global";
 import { useEffect } from "react";
+import LanguageFile from "../../../../../../language.json";
 
 export default function Exercice7() {
   useEffect(() => {
     exerciceCounter.push("correct");
     console.log(exerciceCounter);
   }, []);
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="87.5%" prevProgressExercice={"75%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>New word!</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -26,7 +28,7 @@ export default function Exercice7() {
 
         <div className="exercice_text page_exercice_text">
           <p>Oui</p>
-          <p>Yes</p>
+          <p>{LanguageFile.exercise1_1[language].e7.text}</p>
         </div>
       </div>
       <FooterExercices

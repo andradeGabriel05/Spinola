@@ -3,14 +3,15 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
-
+import LanguageFile from "../../../../../../language";
 export default function Exercice3() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="42.85%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false</p>
+        <p> {LanguageFile.exerciseTitles[language].trueOrFalse}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -24,12 +25,11 @@ export default function Exercice3() {
         </div>
       </div>
 
-      
       <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="True"
-        question={`"Bien, merci" means "Fine, thanks."`}
+        answer_1={LanguageFile.trueOrFalse[language].true}
+        answer_2={LanguageFile.trueOrFalse[language].false}
+        correctAnswer={LanguageFile.trueOrFalse[language].true}
+        question={LanguageFile.exercise1_3[language].e3.text}
         nextExercise={"/learning/exercices/first-lessons/1/1_3/exercice4"}
       />
     </div>

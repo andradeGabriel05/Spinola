@@ -5,6 +5,7 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import { exerciceCounter } from "../../../../../../global";
 import { useEffect } from "react";
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice8() {
   useEffect(() => {
@@ -12,19 +13,20 @@ export default function Exercice8() {
     console.log(exerciceCounter);
   }, []);
 
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="80%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>New Word!</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/b207ad9e-dd24-4eda-b825-f9d021064a97_small.mp4" />
 
       <div className="exercice_text page_exercice_text">
         <p>Enchanté. / Enchantée.</p>
-        <p>Nice to meet you.</p>
+        <p>{LanguageFile.exercise2_1[language].e8.text}</p>
       </div>
 
       <FooterExercices

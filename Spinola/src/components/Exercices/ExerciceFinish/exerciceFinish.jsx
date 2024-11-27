@@ -4,6 +4,7 @@ import imageMonument from "Spinola/src/assets/vectors/monuments.png";
 import FooterExercices from "../FooterExercices/footerExercices";
 import axios from "axios";
 import { exerciceCounter } from "../../../global";
+import LanguageFile from "../../../language.json";
 // import HeaderExercices from "../HeaderExercices/headerExercices";
 
 export default function exerciceFinish() {
@@ -14,6 +15,7 @@ export default function exerciceFinish() {
   const chapter = localStorage.getItem("chapter");
   const exerciseMade = localStorage.getItem("exerciseMade");
   const userId = localStorage.getItem("user");
+  const language = localStorage.getItem("language");
 
   console.log(exercices);
 
@@ -92,16 +94,16 @@ export default function exerciceFinish() {
         </div>
 
         <div className="wrapper_text">
-          <h1 className="text_finish">Congratulations, {username}!</h1>
+          <h1 className="text_finish">{LanguageFile.exerciseTitles[language].congratulations}, {username}!</h1>
         </div>
 
         <div className="wrapper_boxes">
           <div className="score box">
-            <p>Score</p>
+            <p>{LanguageFile.exerciseTitles[language].score}</p>
             <h3>{score}%</h3>
           </div>
           <div className="points box">
-            <p>Points</p>
+            <p>{LanguageFile.exerciseTitles[language].points}</p>
             <h3>+{correctAnswer}</h3>
           </div>
         </div>

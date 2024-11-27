@@ -4,13 +4,15 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice9() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="100%" prevProgressExercice="88.88%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>What is she saying?</p>
+        <p>{LanguageFile.exerciseTitles[language].whatSaying}</p>
       </div>
 
       <div className="wrapper_video_enunciate">

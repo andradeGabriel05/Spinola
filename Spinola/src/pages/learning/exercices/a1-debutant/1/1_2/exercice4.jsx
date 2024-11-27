@@ -2,15 +2,19 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
-
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
-      <HeaderExercices progressExercice="44.44%" prevProgressExercice="33.33%" />
+      <HeaderExercices
+        progressExercice="44.44%"
+        prevProgressExercice="33.33%"
+      />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
       <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/ec3bf57e-928b-4626-944f-74befa345046_small.mp4" />
