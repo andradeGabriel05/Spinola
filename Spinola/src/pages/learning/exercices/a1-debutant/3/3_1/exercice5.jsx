@@ -5,13 +5,16 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite"
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice5() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="55.55%" prevProgressExercice={"44.44%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>What is he saying?</p>
+        <p>{LanguageFile.exerciseTitles[language].whatSaying}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -20,7 +23,7 @@ export default function Exercice5() {
 
       <ExerciceWrite 
       correctAnswer="fatiguée"
-      sentenceText1="Oui, je suis ."
+      sentenceText1="Oui, je suis"
       sentenceText2="."
       nextExercise={"/learning/exercices/first-lessons/3/3_1/exercice6"}
       />

@@ -5,11 +5,15 @@ import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice3() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="42.85%" prevProgressExercice={"28.57%"} />
-
+      <div className="exercice_title page_exercice_text">
+      <p>{LanguageFile.exerciseTitles[language].write}</p>
+      </div>
 
       <VideoExercices audio={"https://cdn.busuu.com/media-resources/audio/3c1262c4-5111-4f20-9085-c3b347ac0cd1.mp3"} miniature={" "} />
 

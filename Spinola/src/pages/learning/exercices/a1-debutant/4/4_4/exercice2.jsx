@@ -5,13 +5,16 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice2() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="11.11%" prevProgressExercice={"0%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence</p>
+      <p>{LanguageFile.exerciseTitles[language].write}</p>
+
       </div>
 
       <ExerciceWrite

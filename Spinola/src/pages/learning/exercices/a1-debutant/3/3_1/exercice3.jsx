@@ -5,13 +5,16 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice3() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="33.33%" prevProgressExercice={"22.22%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>What is he saying to Monia?</p>
+        <p>{LanguageFile.exercise3_1[language].e3.title}</p>
       </div>
 
       <VideoExercices miniature={" "} audio="https://cdn.busuu.com/media/resized/audio/a1l841662459982_1662459982.mp3" />

@@ -6,7 +6,10 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import "../exercice.scss";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
 import audio from "Spinola/public/recordsExercices/nousSommesAubergeEspagnole.mp3";
+
+import LanguageFile from "../../../../../../language";
 export default function Exercice7() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -19,8 +22,8 @@ export default function Exercice7() {
       </div>
 
       <ExplainWordWithAudio
-        text={`It's common now to use the expression "auberge espagnole" when talking about a group of friends living together from very different cultural backgrounds who feel enriched by this experience. `}
-        textAudio1={`Nous sommes une vraie auberge espagnole ! (We are a true "auberge espagnole".)`}
+        text={LanguageFile.exercise4_2[language].e7.text}
+        textAudio1={LanguageFile.exercise4_2[language].e7.text2}
         audioSrc1={audio}
       />
 

@@ -7,6 +7,7 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import "../exercice.scss";
 import { exerciceCounter } from "../../../../../../global";
 
+import LanguageFile from "../../../../../../Language";
 
 export default function Exercice3() {
   useEffect(() => {
@@ -14,13 +15,13 @@ export default function Exercice3() {
     console.log(exerciceCounter);
   }, []);
 
-
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
-      <HeaderExercices progressExercice="22.22%" prevProgressExercice={"11.11%"} />
+      <HeaderExercices progressExercice="27.27%" prevProgressExercice={"18.18%%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>New word</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -28,7 +29,7 @@ export default function Exercice3() {
 
         <div className="exercice_text page_exercice_text">
           <p>Vous êtes américains ?</p>
-          <p>Are you Americans?</p>
+          <p>{LanguageFile.exercise4_1[language].e3.text}</p>
         </div>
       </div>
       <FooterExercices

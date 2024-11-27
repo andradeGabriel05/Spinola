@@ -6,7 +6,10 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice5() {
+
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -15,14 +18,14 @@ export default function Exercice5() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the statement that describes Andy best.</p>
+        <p>{LanguageFile.exercise4_2[language].e5.text}</p>
       </div>
 
       <ExerciceWithoutVideo
-        answer_1="He is tired."
-        answer_2="He is happy."
-        answer_3="He is impatient."
-        correctAnswer="He is impatient."
+        answer_1={LanguageFile.exercise4_2[language].e5.text2}
+        answer_2={LanguageFile.exercise4_2[language].e5.text3}
+        answer_3={LanguageFile.exercise4_2[language].e5.text4}
+        correctAnswer={LanguageFile.exercise4_2[language].e5.text4}
         nextExercise="/learning/exercices/first-lessons/4/4_2/exercice6"
       />
     </div>

@@ -6,11 +6,15 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import { useEffect } from "react";
 import { exerciceCounter } from "../../../../../../global";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice6() {
   useEffect(() => {
     exerciceCounter.push("correct");
     console.log(exerciceCounter);
   }, []);
+
+  const language = localStorage.getItem("language");
 
   return (
     <div className="container_exercise">
@@ -20,7 +24,7 @@ export default function Exercice6() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>New Word!</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <VideoExercices
@@ -30,7 +34,7 @@ export default function Exercice6() {
       />
       <div className="exercice_text page_exercice_text text_left">
         <p>anglais / anglaise</p>
-        <p> English</p>
+        <p> {LanguageFile.exercise3_2[language].e6.text}</p>
       </div>
 
       <FooterExercices

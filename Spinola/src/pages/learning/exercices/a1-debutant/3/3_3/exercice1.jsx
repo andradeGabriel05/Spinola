@@ -6,18 +6,21 @@ import "../exercice.scss";
 import { exerciceCounter } from "../../../../../../global";
 import { useEffect } from "react";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice1() {
   useEffect(() => {
     exerciceCounter.push("correct");
     console.log(exerciceCounter);
   }, []);
 
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="14.28%" prevProgressExercice={"0%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>New word!</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <div className="wrapper_video_enunciate">

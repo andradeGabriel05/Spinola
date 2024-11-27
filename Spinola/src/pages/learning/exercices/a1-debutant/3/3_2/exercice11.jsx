@@ -8,29 +8,33 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import { useEffect } from "react";
 import { exerciceCounter } from "../../../../../../global";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice11() {
   useEffect(() => {
     exerciceCounter.push("correct");
     console.log(exerciceCounter);
   }, []);
 
+  const language = localStorage.getItem("language");
+
   return (
-    <div className="container_exercise">
+    <div className="container_exercise bigger_page">
       <HeaderExercices
         progressExercice="100%"
         prevProgressExercice={"90.90%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>{LanguageFile.exerciseTitles[language].trueOrFalse}</p>
       </div>
 
       <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/b8bb4bb7-3cd6-40ee-b080-122cf03792bc_small.mp4" />
       <div className="exercice_text page_exercice_text text_left">
         <p>américain / américaine</p>
-        <p>American</p>
-        <p>(example)Tu es américain ?</p>
-        <p>Are you American?</p>
+        <p>{LanguageFile.exercise3_2[language].e11.text1}</p>
+        <p>{LanguageFile.exercise3_2[language].e11.text2}</p>
+        <p>{LanguageFile.exercise3_2[language].e11.text3}</p>
       </div>
       <FooterExercices
         nextExercise={"/premiere-lecon"}

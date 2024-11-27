@@ -39,6 +39,7 @@ export default function VideoInputExercices({
       console.log(exerciceCounter);
 
       setAnsweredOnce(true);
+      document.getElementById(buttonId).disabled = true;
 
       if (correctAnswer2 == null) {
         document.getElementById("answer1").disabled = true;
@@ -62,6 +63,7 @@ export default function VideoInputExercices({
       }
 
       setAnsweredTwice(true);
+      document.getElementById(buttonId).disabled = true;
 
       if (correctAnswer3 == null) {
         document.getElementById("answer1").disabled = true;
@@ -80,6 +82,7 @@ export default function VideoInputExercices({
       } else {
         element.style.backgroundColor = "#CA2F0A";
       }
+      document.getElementById(buttonId).disabled = true;
 
       document.getElementById("answer1").disabled = true;
       document.getElementById("answer2").disabled = true;

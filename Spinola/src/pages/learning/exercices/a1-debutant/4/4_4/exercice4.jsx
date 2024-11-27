@@ -7,7 +7,9 @@ import ExplainWordWithAudio from "../../../../../../components/Exercices/Explain
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -16,7 +18,8 @@ export default function Exercice4() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence</p>
+          <p>{LanguageFile.exerciseTitles[language].write}</p>
+
       </div>
 
       <div className="wrapper_video_enunciate">

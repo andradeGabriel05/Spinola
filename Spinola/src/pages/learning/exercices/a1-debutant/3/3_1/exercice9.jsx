@@ -6,13 +6,16 @@ import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice9() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="100%" prevProgressExercice={"88.88%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>{LanguageFile.exerciseTitles[language].trueOrFalse}</p>
       </div>
 
       <VideoExercices

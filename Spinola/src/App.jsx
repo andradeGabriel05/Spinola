@@ -121,8 +121,8 @@ import Exercice10_3_4 from "./pages/learning/exercices/a1-debutant/3/3_4/exercic
 import Exercice11_3_4 from "./pages/learning/exercices/a1-debutant/3/3_4/exercice11";
 
 import Exercice1_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice1";
-import Exercice2_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice3";
-import Exercice3_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice2";
+import Exercice2_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice2";
+import Exercice3_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice3";
 import Exercice4_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice4";
 import Exercice5_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice5";
 import Exercice6_4_1 from "./pages/learning/exercices/a1-debutant/4/4_1/exercice6";

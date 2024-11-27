@@ -6,16 +6,18 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
+import LanguageFile from "../../../../../../language.json";
 export default function Exercice11() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
-        progressExercice="66.66%"
-        prevProgressExercice={"55.55%"}
+        progressExercice="100%"
+        prevProgressExercice={"90.0%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the sentence that means: "We are French!"</p>
+        <p>{LanguageFile.exercise4_1[language].e11.text}</p>
       </div>
 
       <VideoExercices

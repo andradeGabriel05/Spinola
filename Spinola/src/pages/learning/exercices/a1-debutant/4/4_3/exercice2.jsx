@@ -8,7 +8,10 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../Language";
+
 export default function Exercice2() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
@@ -17,12 +20,12 @@ export default function Exercice2() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Have you noticed? 🔍</p>
+        <p>{LanguageFile.exercise4_3[language].e2.title}</p>
       </div>
 
       <ExplainWordWithAudio
-        text={`In French, adjectives for nationalities, like "français" or "mexicain", are spelled in lowercase.`}
-        textAudio1="Paul est américain. (Paul is American.)"
+        text={LanguageFile.exercise4_3[language].e2.text1}
+        textAudio1={LanguageFile.exercise4_3[language].e2.text2}
         audioSrc1={audio}
       />
 

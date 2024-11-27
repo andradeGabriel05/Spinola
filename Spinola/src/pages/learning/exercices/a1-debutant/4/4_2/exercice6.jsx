@@ -5,16 +5,15 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice6() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
-      <HeaderExercices
-        progressExercice="84%"
-        prevProgressExercice={"70%"}
-      />
+      <HeaderExercices progressExercice="84%" prevProgressExercice={"70%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
       <VideoExercices
@@ -23,18 +22,18 @@ export default function Exercice6() {
         }
       />
 
-        <VideoInputExercices
-          answer_1="impatient"
-          answer_2="content"
-          answer_3="fatigués"
-          answer_4="contente"
-          sentenceText1="Lison est toujours "
-          sentenceText2="et Tina et Oskar sont souvent "
-          sentenceText3="."
-          correctAnswer="contente"
-          correctAnswer2="fatigués"
-          nextExercise="/learning/exercices/first-lessons/4/4_2/exercice7"
-        />
+      <VideoInputExercices
+        answer_1="impatient"
+        answer_2="content"
+        answer_3="fatigués"
+        answer_4="contente"
+        sentenceText1="Lison est toujours "
+        sentenceText2="et Tina et Oskar sont souvent "
+        sentenceText3="."
+        correctAnswer="contente"
+        correctAnswer2="fatigués"
+        nextExercise="/learning/exercices/first-lessons/4/4_2/exercice7"
+      />
     </div>
   );
 }

@@ -8,21 +8,24 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import { useEffect } from "react";
 import { exerciceCounter } from "../../../../../../global";
 
+import LanguageFile from "../../../../../../language.json";
 export default function Exercice7() {
   useEffect(() => {
     exerciceCounter.push("correct");
     console.log(exerciceCounter);
   }, []);
 
+  const language = localStorage.getItem("language");
+
   return (
     <div className="container_exercise">
       <HeaderExercices
-        progressExercice="77.77%"
-        prevProgressExercice={"66.66%"}
+        progressExercice="63.63%"
+        prevProgressExercice={"54.54%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].newWord}</p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -30,7 +33,7 @@ export default function Exercice7() {
 
         <div className="exercice_text page_exercice_text">
           <p>Ils sont allemands.</p>
-          <p>They are German.</p>
+          <p>{LanguageFile.exercise4_1[language].e7.text}</p>
         </div>
       </div>
       <FooterExercices

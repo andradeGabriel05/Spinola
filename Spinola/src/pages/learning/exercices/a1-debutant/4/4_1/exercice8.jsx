@@ -4,16 +4,19 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 
+
+import LanguageFile from "../../../../../../language.json";
 export default function Exercice8() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
-        progressExercice="88.88%"
-        prevProgressExercice={"77.77%"}
+        progressExercice="72.72%"
+        prevProgressExercice={"63.63%"}
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>{LanguageFile.exerciseTitles[language].trueOrFalse}</p>
       </div>
 
       <VideoExercices
@@ -23,10 +26,10 @@ export default function Exercice8() {
 
       <VideoBoolExercices
         title={"Christoph et Daniel ? Ils sont allemands !"}
-        question="Ella says that Christoph and Daniel are English. "
-        answer_1="True"
-        answer_2="False"
-        correctAnswer="False"
+        question={LanguageFile.exercise4_1[language].e8.text}
+        answer_1={LanguageFile.trueOrFalse[language].true}
+        answer_2={LanguageFile.trueOrFalse[language].false}
+        correctAnswer={LanguageFile.trueOrFalse[language].false}
         nextExercise="/learning/exercices/first-lessons/4/4_1/exercice9"
       />
     </div>

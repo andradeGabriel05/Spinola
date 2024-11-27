@@ -335,7 +335,6 @@
       "lookingBack": "Voltando um pouco...",
       "howDoYouSay": "Como se diz...?",
 
-
       "congratulations": "Parabéns",
       "score": "Acertos",
       "points": "Pontos"
@@ -1100,6 +1099,802 @@
       },
       "e8": {
         "text": "Je suis contente, et il est content aussi."
+      }
+    }
+  },
+  "exercise3_1": {
+    "pt-BR": {
+      "e1": {
+        "title": "Encontre Fed, Mounia e Sophie no escritório."
+      },
+      "e2": {
+        "title": "O que Fed pergunta a Mounia?",
+        "options": {
+          "a": "Seu nome",
+          "b": "Como Sophie está",
+          "c": "Como ela está"
+        }
+      },
+      "e3": {
+        "title": "O que ele está dizendo a Monia?"
+      },
+      "e4": {
+        "title": "Hoje Mounia está..."
+      },
+      "e5": {
+        "text": "O que você está fazendo?"
+      },
+      "e6": {
+        "text": "Fed está cansado hoje."
+      },
+      "e7": {
+        "text": "O que você está fazendo?"
+      },
+      "e8": {
+        "text": "Sophie não conhece Fed e Mounia."
+      },
+      "e9": {
+        "text": "O que você está fazendo?"
+      },
+      "e10": {
+        "text": "Estou indo para a universidade"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "title": "Meet Fed, Mounia and Sophie in the office.",
+        "text1": "Mounia: Hello Fed!",
+        "text2": "Fed: Hi Mounia, how are you? Are you tired?",
+        "text3": "Mounia: Pff ... Yes, I'm tired! And you, how are you?",
+        "text4": "Fed: Fine thank you, I'm happy today.",
+        "text5": "Sophie: Hi, my name is Sophie. Nice to meet you!",
+        "text6": "Mounia: Hi Sophie, my name is Mounia.",
+        "text7": "Fed: Hello Sophie, my name is Fed. Nice to meet you!"
+      },
+      "e2": {
+        "title": "What does Fed ask Mounia?",
+        "options": {
+          "a": "Her name",
+          "b": "How Sophie is doing",
+          "c": "How she's doing"
+        }
+      },
+      "e3": {
+        "title": "What is he saying to Monia?"
+      },
+      "e4": {
+        "title": "Today Mounia is..."
+      },
+      "e5": {
+        "text": "What are you doing?"
+      },
+      "e6": {
+        "text": "Fed is tired today."
+      },
+      "e7": {
+        "text": "What are you doing?"
+      },
+      "e8": {
+        "text": "Sophie doesn't know Fed and Mounia. "
+      },
+      "e9": {
+        "text": "What are you doing?"
+      },
+      "e10": {
+        "text": "I'm going to university"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "title": "Rencontrez Fed, Mounia et Sophie au bureau.",
+        "text1": "Mounia: Bonjour Fed !",
+        "text2": "Fed: Salut Mounia, ça va ? Tu es fatiguée ?",
+        "text3": "Mounia: Pff ... Oui, je suis fatiguée ! Et toi, ça va ?",
+        "text4": "Fed: Bien merci, je suis content aujourd'hui.",
+        "text5": "Sophie: Salut, je m'appelle Sophie. Enchantée !",
+        "text6": "Mounia: Salut Sophie, je m'appelle Mounia.",
+        "text7": "Fed: Bonjour Sophie, je m'appelle Fed. Enchanté !"
+      },
+      "e2": {
+        "title": "Que demande Fed à Mounia?",
+        "options": {
+          "a": "Son nom",
+          "b": "Comment va Sophie",
+          "c": "Comment elle va"
+        }
+      },
+      "e3": {
+        "title": "Que lui dit-il?"
+      },
+      "e4": {
+        "title": "Aujourd'hui Mounia est..."
+      },
+      "e5": {
+        "text": "Qu'est-ce que tu fais?"
+      },
+      "e6": {
+        "text": "Fed est fatigué aujourd'hui."
+      },
+      "e7": {
+        "text": "Qu'est-ce que tu fais?"
+      },
+      "e8": {
+        "text": "Sophie ne connaît pas Fed et Mounia."
+      },
+      "e9": {
+        "text": "Qu'est-ce que tu fais?"
+      },
+      "e10": {
+        "text": "Je vais à l'université"
+      }
+    }
+  },
+
+  "exercise3_2": {
+    "pt-BR": {
+      "e1": {
+        "text1": "Qual é a sua nacionalidade?",
+        "text2": "(literal) Você é de qual nacionalidade?"
+      },
+      "e2": {
+        "text": "Tu es de quelle nationalité ? significa: De qual nacionalidade você é?"
+      },
+      "e3": {
+        "text1": "Francês (masculino) / Francesa (feminino)",
+        "text2": "(exemplo) Mathilde est française => Mathilde é francesa."
+      },
+      "e4": {
+        "text1": "👨 Masculino ou feminino 👩?",
+        "text2": "Adicionamos um -e no final do adjetivo para palavras que descrevem pessoas e coisas na forma feminina:",
+        "text3": "Je suis français. - uma pessoa do sexo masculino",
+        "text4": "Je suis française. - uma pessoa do sexo feminino"
+      },
+      "e6": {
+        "text": "Inglês"
+      },
+      "e7": {
+        "text": "Hannah e Miles são uma mulher e um homem da Inglaterra. Selecione a nacionalidade correta para eles."
+      },
+      "e8": {
+        "text": "Lisa diz que ela é francesa."
+      },
+      "e9": {
+        "text1": "Mexicana",
+        "text2": "(exemplo)Je suis mexicaine, et toi ?",
+        "text3": "Eu sou mexicana, e você?"
+      },
+      "e10": {
+        "text": "Eu sou italiana"
+      },
+      "e11": {
+        "text1": "Americano",
+        "text2": "(exemplo)Tu es américain ?",
+        "text3": "Você é americano?"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text1": "What is your nationality?",
+        "text2": "(literal)You are of which nationality?"
+      },
+      "e2": {
+        "text": "Tu es de quelle nationalité ? means: What nationality are you?"
+      },
+      "e3": {
+        "text1": "French (masculine) / French (feminine)",
+        "text2": "(example)Mathilde est française => Mathilde is French. "
+      },
+      "e4": {
+        "text1": "👨 Masculine or feminine 👩?",
+        "text2": "We add an -e at the end of the adjective for words that describe people and things in the feminine form:",
+        "text3": "Je suis français. - a male person ",
+        "text4": "Je suis française. - a female person "
+      },
+      "e6": {
+        "text": "English"
+      },
+      "e7": {
+        "text": "Hannah and Miles are a woman and a man from England. Select the correct nationality for them."
+      },
+      "e8": {
+        "text": "Lisa says that she is French."
+      },
+      "e9": {
+        "text1": "Mexican",
+        "text2": "(example)Je suis mexicaine, et toi ?",
+        "text3": "I am Mexican, and you?"
+      },
+      "e10": {
+        "text": "I am Italian"
+      },
+      "e11": {
+        "text1": "American",
+        "text2": "(example)Tu es américain ?",
+        "text3": "Are you American?"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text1": "Quelle est votre nationalité?",
+        "text2": "(littéral) Vous êtes de quelle nationalité?"
+      },
+      "e2": {
+        "text": "Tu es de quelle nationalité ? signifie: De quelle nationalité es-tu?"
+      },
+      "e3": {
+        "text1": "Français (masculin) / Française (féminin)",
+        "text2": "(exemple) Mathilde est française => Mathilde est française."
+      },
+      "e4": {
+        "text1": "👨 Masculin ou féminin 👩?",
+        "text2": "Nous ajoutons un -e à la fin de l'adjectif pour les mots qui décrivent les personnes et les choses au féminin:",
+        "text3": "Je suis français. - une personne de sexe masculin",
+        "text4": "Je suis française. - une personne de sexe féminin"
+      },
+      "e6": {
+        "text": "Anglais"
+      },
+      "e7": {
+        "text": "Hannah et Miles sont une femme et un homme d'Angleterre. Sélectionnez la nationalité correcte pour eux."
+      },
+      "e8": {
+        "text": "Lisa dit qu'elle est française."
+      },
+      "e9": {
+        "text1": "Mexicaine",
+        "text2": "(exemple)Je suis mexicaine, et toi ?",
+        "text3": "Je suis mexicaine, et toi?"
+      },
+      "e10": {
+        "text": "Je suis italienne"
+      },
+      "e11": {
+        "text1": "Américain",
+        "text2": "(exemple)Tu es américain ?",
+        "text3": "Tu es américain?"
+      }
+    }
+  },
+  "exercise3_3": {
+    "pt-BR": {
+      "e2": {
+        "text1": "Ele é mexicano e ela é americana.",
+        "text2": "Ele é americano e ela é mexicana.",
+        "text3": "Ambos são mexicanos."
+      },
+      "e3": {
+        "title": "Selecione a nacionalidade que descreve um homem."
+      },
+      "e4": {
+        "text1": "👨 Masculino ou feminino 👩?",
+        "text2": "Adicionamos um -e no final do adjetivo para palavras que descrevem pessoas e coisas na forma feminina:",
+        "text3": "Je suis français. - uma pessoa do sexo masculino",
+        "text4": "Je suis française. - uma pessoa do sexo feminino"
+      },
+      "e6": {
+        "text": "Selecione as nacionalidades na ordem em que você as ouve."
+      },
+      "e7": {
+        "text": "Hannah e Miles são uma mulher e um homem da Inglaterra. Selecione a nacionalidade correta para eles."
+      }
+    },
+
+    "en": {
+      "e2": {
+        "text1": "He is Mexican and she is American.",
+        "text2": "He is American and she is Mexican.",
+        "text3": "They are both Mexican."
+      },
+      "e3": {
+        "title": "Select the nationality that describe a man."
+      },
+      "e4": {
+        "text1": "👨 Masculine or feminine 👩?",
+        "text2": "We add an -e at the end of the adjective for words that describe people and things in the feminine form:",
+        "text3": "Je suis français. - a male person ",
+        "text4": "Je suis française. - a female person "
+      },
+      "e6": {
+        "text": "Select the nationalities in the order you hear them. "
+      },
+      "e7": {
+        "text": "Hannah and Miles are a woman and a man from England. Select the correct nationality for them."
+      }
+    },
+
+    "fr": {
+      "e2": {
+        "text1": "Il est mexicain et elle est américaine.",
+        "text2": "Il est américain et elle est mexicaine.",
+        "text3": "Ils sont tous les deux mexicains."
+      },
+      "e3": {
+        "title": "Sélectionnez la nationalité qui décrit un homme."
+      },
+      "e4": {
+        "text1": "👨 Masculin ou féminin 👩?",
+        "text2": "Nous ajoutons un -e à la fin de l'adjectif pour les mots qui décrivent les personnes et les choses au féminin:",
+        "text3": "Je suis français. - une personne de sexe masculin",
+        "text4": "Je suis française. - une personne de sexe féminin"
+      },
+      "e6": {
+        "text": "Sélectionnez les nationalités dans l'ordre où vous les entendez."
+      },
+      "e7": {
+        "text": "Hannah et Miles sont une femme et un homme d'Angleterre. Sélectionnez la nationalité correcte pour eux."
+      }
+    }
+  },
+  "exercise3_4": {
+    "pt-BR": {
+      "e1": {
+        "title": "Vamos revisar rapidamente as formas singulares de 'être'",
+        "text1": "- Je suis fatiguée. (Eu estou cansada.)",
+        "text2": "- Tu es français ? (Você é francês?)",
+        "text3": "- Il est impatient. (Ele está impaciente.)"
+      },
+      "e4": {
+        "text": "Não pronunciamos o -s final nas palavras 'nous' e 'sommes'."
+      },
+      "e5": {
+        "text": "Ele está cansado"
+      },
+      "e6": {
+        "text": "Ele está com calor"
+      },
+      "e7": {
+        "text": "Ele está com frio"
+      },
+      "e8": {
+        "title": "Quando usamos 'ils'?",
+        "text1": "Usamos 'ils' quando falamos sobre um grupo de homens. Também o usamos para nos referir a um grupo misto de homens e mulheres.",
+        "text2": "Marie et Sophie = Elles sont françaises.",
+        "text3": "Pierre et Thomas = Ils sont français.",
+        "text4": "Marie, Pierre, Sophie et Thomas = Ils sont français."
+      },
+      "e9": {
+        "text": "Victor está falando sobre um homem e uma mulher."
+      }
+    },
+
+    "en": {
+      "e1": {
+        "title": "Let's quickly review the singular forms of 'être'",
+        "text1": "- Je suis fatiguée. (I am tired.)",
+        "text2": "- Tu es français ? (Are you French?)",
+        "text3": "- Il est impatient. (He is impatient.)"
+      },
+      "e2": {
+        "text": "She is French"
+      },
+      "e3": {
+        "text": "What does Seb ask Élise?",
+        "options": {
+          "a": "How she is doing",
+          "b": "Nothing",
+          "c": "Saying goodbye",
+          "d": "Asking her name"
+        }
+      },
+      "e4": {
+        "text": "We don't pronounce the final -s in the words 'nous' and 'sommes'."
+      },
+      "e5": {
+        "text": "He is tired"
+      },
+      "e6": {
+        "text": "He is hot"
+      },
+      "e7": {
+        "text": "He is cold"
+      },
+      "e8": {
+        "title": "When do we use 'ils'?",
+        "text1": "We use 'ils' when we talk about a group of men. We also use it to refer to a mixed group of men and women.",
+        "text2": "Marie et Sophie = Elles sont françaises.",
+        "text3": "Pierre et Thomas = Ils sont français.",
+        "text4": "Marie, Pierre, Sophie et Thomas = Ils sont français."
+      },
+      "e9": {
+        "text": "Victor is talking about a man and a woman."
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "title": "Revoyons rapidement les formes singulières de 'être'",
+        "text1": "- Je suis fatiguée. (Je suis fatiguée.)",
+        "text2": "- Tu es français ? (Tu es français ?)",
+        "text3": "- Il est impatient. (Il est impatient.)"
+      },
+      "e2": {
+        "text": "Elle est française"
+      },
+      "e3": {
+        "text": "Que demande Seb à Élise?",
+        "options": {
+          "a": "Comment elle va",
+          "b": "Rien",
+          "c": "En disant au revoir",
+          "d": "En demandant son nom"
+        }
+      },
+      "e4": {
+        "text": "Nous ne prononçons pas le -s final dans les mots 'nous' et 'sommes'."
+      },
+      "e5": {
+        "text": "Il est fatigué"
+      },
+      "e6": {
+        "text": "Il a chaud"
+      },
+      "e7": {
+        "text": "Il a froid"
+      },
+      "e8": {
+        "title": "Quand utilisons-nous 'ils'?",
+        "text1": "Nous utilisons 'ils' lorsque nous parlons d'un groupe d'hommes. Nous l'utilisons également pour nous référer à un groupe mixte d'hommes et de femmes.",
+        "text2": "Marie et Sophie = Elles sont françaises.",
+        "text3": "Pierre et Thomas = Ils sont français.",
+        "text4": "Marie, Pierre, Sophie et Thomas = Ils sont français."
+      },
+      "e9": {
+        "text": "Victor parle d'un homme et d'une femme."
+      }
+    }
+  },
+
+  "exercise4_1": {
+    "pt-BR": {
+      "e1": {
+        "text": "Nós somos inglês."
+      },
+      "e3": {
+        "text": "Vocês são americanos?"
+      },
+      "e4": {
+        "text": "Nós pronunciamos o -s final de 'américains'."
+      },
+      "e5": {
+        "title": "Formas plurais de adjetivos",
+        "text": "Quando falamos sobre mais de uma pessoa, adicionamos um -s final ao adjetivo (a palavra que descreve pessoas e coisas). Se já houver um -s no final da palavra, não adicionamos nada. Mas de qualquer forma - não pronuncie o -s!"
+      },
+      "e6": {
+        "text": "Estou com pressa"
+      },
+      "e7": {
+        "text": "Eles são alemão."
+      },
+      "e8": {
+        "text": "Ella diz que Christoph e Daniel são inglês."
+      },
+      "e9": {
+        "text": "Elas são alemãs."
+      },
+      "e11": {
+        "text": "Selecione a frase que significa: 'Nós somos francês!'"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "We are English."
+      },
+      "e2": {
+        "title": "Are you Americans?"
+      },
+      "e3": {
+        "text": "I'm hot"
+      },
+      "e4": {
+        "text": "We pronounce the final -s of 'américains'."
+      },
+      "e5": {
+        "title": "Plural forms of adjectives",
+        "text": "When we talk about more than one person, we add a final -s to the adjective (the word that describes people and things). If there is already an -s at the end of the word we don't add anything. But either way - don't pronounce the -s!"
+      },
+      "e6": {
+        "text": "I'm in a hurry"
+      },
+      "e7": {
+        "text": "They are German."
+      },
+      "e8": {
+        "text": "Ella says that Christoph and Daniel are English. "
+      },
+      "e9": {
+        "text": "They are German."
+      },
+      "e11": {
+        "text": "Select the sentence that means: 'We are French!'"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "Nous sommes anglais."
+      },
+      "e2": {
+        "title": "Que lui dit-il?"
+      },
+      "e3": {
+        "text": "Vous êtes américains?"
+      },
+      "e4": {
+        "text": "Nous prononçons le -s final de 'américains'."
+      },
+      "e5": {
+        "title": "Formes plurielles des adjectifs",
+        "text": "Lorsque nous parlons de plus d'une personne, nous ajoutons un -s final à l'adjectif (le mot qui décrit les personnes et les choses). S'il y a déjà un -s à la fin du mot, nous n'ajoutons rien. Mais de toute façon - ne prononcez pas le -s!"
+      },
+      "e6": {
+        "text": "Je suis pressé"
+      },
+      "e7": {
+        "text": "Ils sont allemands."
+      },
+      "e8": {
+        "text": "Elle dit que Christoph et Daniel sont anglais."
+      },
+      "e9": {
+        "text": "Elles sont allemandes."
+      },
+      "e11": {
+        "text": "Sélectionnez la phrase qui signifie: 'Nous sommes français!'"
+      }
+    }
+  },
+  "exercise4_2": {
+    "pt-BR": {
+      "e1": {
+        "text1": "Vamos conhecer Lison e seus amigos com quem ela divide um apartamento em Paris. Mas primeiro vamos dar uma olhada em algumas palavras-chave que precisaremos para esta lição.",
+        "text2": "les amis: amigos",
+        "text3": "un peu: um pouco",
+        "text4": "souvent: frequentemente",
+        "text5": "l'auberge espagnole: o albergue ou lugar onde as culturas são misturadas"
+      },
+      "e2": {
+        "text": "Eles são alemães."
+      },
+      "e3": {
+        "text": "Quais são as nacionalidades mencionadas no post do blog de Lison?"
+      },
+      "e4": {
+        "text": "Elas são alemão."
+      },
+      "e5": {
+        "text": "Selecione a afirmação que descreve melhor Andy.",
+        "text2": "Ele está cansado.",
+        "text3": "Ele está feliz.",
+        "text4": "Ele está impaciente."
+      },
+      "e6": {
+        "text": "Elas são alemãs."
+      },
+      "e7": {
+        "text": "É comum agora usar a expressão 'auberge espagnole' ao falar sobre um grupo de amigos que vivem juntos de origens culturais muito diferentes e que se sentem enriquecidos por essa experiência.",
+        "text2": "Nous sommes une vraie auberge espagnole ! (Nós somos uma verdadeira 'auberge espagnole'.)"
+      },
+      "e8": {
+        "text": "Eles são alemães."
+      },
+      "e9": {
+        "text": "Elas são alemãs."
+      },
+      "e10": {
+        "text": "Elas são alemão."
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text1": "Let's meet Lison and her friends who she shares a flat in Paris with. But first we'll have a look at some key words we'll need for this lesson. ",
+        "text2": "les amis: friends",
+        "text3": "un peu: a little",
+        "text4": "souvent: often",
+        "text5": "l'auberge espagnole: the hostel or place where cultures are mixed together "
+      },
+      "e2": {
+        "text": "They are German."
+      },
+      "e3": {
+        "text": "What are the nationalities mentioned in Lison's blog post?"
+      },
+      "e4": {
+        "text": "They are German."
+      },
+      "e5": {
+        "text": "Select the statement that describes Andy best.",
+        "text2": "He is tired.",
+        "text3": "He is happy.",
+        "text4": "He is impatient."
+      },
+      "e6": {
+        "text": "They are German."
+      },
+      "e7": {
+        "text": "It's common now to use the expression 'auberge espagnole' when talking about a group of friends living together from very different cultural backgrounds who feel enriched by this experience. ",
+        "text2": "Nous sommes une vraie auberge espagnole ! (We are a true 'auberge espagnole'.)"
+      },
+      "e8": {
+        "text": "They are German."
+      },
+      "e9": {
+        "text": "They are German."
+      },
+      "e10": {
+        "text": "They are German."
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text1": "Rencontrons Lison et ses amis avec qui elle partage un appartement à Paris. Mais d'abord, jetons un coup d'œil à quelques mots clés dont nous aurons besoin pour cette leçon.",
+        "text2": "les amis: amis",
+        "text3": "un peu: un peu",
+        "text4": "souvent: souvent",
+        "text5": "l'auberge espagnole: l'auberge ou l'endroit où les cultures se mélangent"
+      },
+      "e2": {
+        "text": "Ils sont allemands."
+      },
+      "e3": {
+        "text": "Quelles sont les nationalités mentionnées dans le blog de Lison?"
+      },
+      "e4": {
+        "text": "Elles sont allemandes."
+      },
+      "e5": {
+        "text": "Sélectionnez l'affirmation qui décrit le mieux Andy.",
+        "text2": "Il est fatigué.",
+        "text3": "Il est content.",
+        "text4": "Il est impatient."
+      },
+      "e6": {
+        "text": "Elles sont allemandes."
+      },
+      "e7": {
+        "text": "Il est maintenant courant d'utiliser l'expression 'auberge espagnole' pour parler d'un groupe d'amis vivant ensemble de cultures très différentes et qui se sentent enrichis par cette expérience.",
+        "text2": "Nous sommes une vraie auberge espagnole ! (Nous sommes une vrai 'auberge espagnole'.)"
+      },
+      "e8": {
+        "text": "Elles sont allemandes."
+      },
+      "e9": {
+        "text": "Ils sont allemands."
+      },
+      "e10": {
+        "text": "Elles sont allemandes."
+      }
+    }
+  },
+  "exercise4_3": {
+    "pt-BR": {
+      "e1": {
+        "title": "Qual é a nacionalidade de Jorge?"
+      },
+      "e2": {
+        "title": "Você notou? 🔍",
+        "text1": "Em francês, os adjetivos de nacionalidades, como 'français' ou 'mexicain', são escritos em minúsculas.",
+        "text2": "Paul est américain. (Paul é americano.)"
+      },
+      "e3": {
+        "text": "Eles são alemães."
+      },
+      "e4": {
+        "text": "Eles são alemães."
+      },
+      "e5": {
+        "text": "Tom está sempre feliz."
+      }
+    },
+
+    "en": {
+      "e1": {
+        "title": "Where is Jorge from?"
+      },
+      "e2": {
+        "title": "Have you noticed? 🔍",
+        "text1": "In French, adjectives for nationalities, like 'français' or 'mexicain', are spelled in lowercase.",
+        "text2": "Paul est américain. (Paul is American.)"
+      },
+      "e3": {
+        "text": "They are German."
+      },
+      "e4": {
+        "text": "They are German."
+      },
+      "e5": {
+        "text": "Tom is always happy."
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "title": "D'où vient Jorge?"
+      },
+      "e2": {
+        "title": "Avez-vous remarqué? 🔍",
+        "text1": "En français, les adjectifs de nationalité, comme 'français' ou 'mexicain', sont écrits en minuscules.",
+        "text2": "Paul est américain. (Paul est américain.)"
+      },
+      "e3": {
+        "text": "Ils sont allemands."
+      },
+      "e4": {
+        "text": "Ils sont allemands."
+      },
+      "e5": {
+        "text": "Tom est toujours heureux."
+      }
+    }
+  },
+
+  "exercise4_4": {
+    "pt-BR": {
+      "e5": {
+        "text": "Victor está falando sobre um homem e uma mulher. "
+      },
+      "e6": {
+        "text": "Eles são alemães."
+      },
+      "e7": {
+        "text": "Eles são alemães."
+      },
+      "e8": {
+        "text": "Eles são alemães."
+      },
+      "e9": {
+        "text": "Eles são alemães."
+      },
+      "e10": {
+        "text": "Eles são alemães."
+      }
+    },
+
+    "en": {
+      "e5": {
+        "text": "Victor is talking about a man and a woman. "
+      },
+      "e6": {
+        "text": "They are German."
+      },
+      "e7": {
+        "text": "They are German."
+      },
+      "e8": {
+        "text": "They are German."
+      },
+      "e9": {
+        "text": "They are German."
+      },
+      "e10": {
+        "text": "They are German."
+      }
+    },
+
+    "fr": {
+      "e5": {
+        "text": "Victor parle d'un homme et d'une femme. "
+      },
+      "e6": {
+        "text": "Ils sont allemands."
+      },
+      "e7": {
+        "text": "Ils sont allemands."
+      },
+      "e8": {
+        "text": "Ils sont allemands."
+      },
+      "e9": {
+        "text": "Ils sont allemands."
+      },
+      "e10": {
+        "text": "Ils sont allemands."
       }
     }
   }

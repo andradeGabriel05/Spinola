@@ -5,8 +5,10 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../Language";
 
 export default function Exercice7() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -15,7 +17,7 @@ export default function Exercice7() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the nationalities in the order you hear them. </p>
+        <p>{LanguageFile.exerciseTitles[language].write}</p>
       </div>
 
       <VideoExercices

@@ -10,12 +10,16 @@ import ExplainWordWithAudio from "../../../../../../components/Exercices/Explain
 import { useEffect } from "react";
 import { exerciceCounter } from "../../../../../../global";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice1() {
   useEffect(() => {
     exerciceCounter.length = 0
 
     console.log(exerciceCounter);
   }, []);
+
+  const language = localStorage.getItem("language");
 
   return (
     <div className="container_exercise bigger_page">
@@ -26,14 +30,14 @@ export default function Exercice1() {
       </div>
 
       <ExplainWordWithAudio
-        text="Let's meet Lison and her friends who she shares a flat in Paris with. But first we'll have a look at some key words we'll need for this lesson. "
-        textAudio1="les amis: friends"
+        text={LanguageFile.exercise4_2[language].e1.text1}
+        textAudio1={LanguageFile.exercise4_2[language].e1.text2}
         audioSrc1={audio1}
-        textAudio2="un peu: a little"
+        textAudio2={LanguageFile.exercise4_2[language].e1.text3}
         audioSrc2={audio2}
-        textAudio3="souvent: often"
+        textAudio3={LanguageFile.exercise4_2[language].e1.text4}
         audioSrc3={audio3}
-        textAudio4="l'auberge espagnole: the hostel or place where cultures are mixed together "
+        textAudio4={LanguageFile.exercise4_2[language].e1.text5}
         audioSrc4={audio4}
       />
 

@@ -5,20 +5,22 @@ import ExplainWord from "../../../../../../components/Exercices/ExplainWord/expl
 import "../exercice.scss";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="36.36%" prevProgressExercice={"27.27%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>👨 Masculine or feminine 👩?</p>
+        <p>{LanguageFile.exercise3_2[language].e4.text1}</p>
       </div>
 
       <ExplainWordWithAudio
-        text={`We add an -e at the end of the adjective for words that describe people and things in the feminine form: `}
-        textAudio1={`Je suis français. - a male person `}
+        text={LanguageFile.exercise3_2[language].e4.text2}
+        textAudio1={LanguageFile.exercise3_2[language].e4.text3}
         audioSrc1={`https://cdn.busuu.com/media-resources/video/mp4/03bd6c72-fcbc-4431-b0c5-44dfc488432b_small.mp4`}
-        textAudio2={`Je suis française. - a female person `}
+        textAudio2={LanguageFile.exercise3_2[language].e4.text4}
         audioSrc2={`https://cdn.busuu.com/media-resources/video/mp4/e9fc00f7-a17b-4479-8ae2-7664e56257cc_small.mp4`}
       />
 

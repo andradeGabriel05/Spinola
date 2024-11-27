@@ -6,7 +6,9 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice7() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
@@ -15,7 +17,8 @@ export default function Exercice7() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>What is he saying?</p>
+      <p>{LanguageFile.exerciseTitles[language].trueOrFalse} </p>
+
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -28,11 +31,11 @@ export default function Exercice7() {
       </div>
 
       <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
+        answer_1={LanguageFile.trueOrFalse[language].true}
+        answer_2={LanguageFile.trueOrFalse[language].false}
         title="Tom est souvent impatient et moi je suis toujours contente !"
-        correctAnswer="False"
-        question="Tom is always happy."
+        correctAnswer={LanguageFile.trueOrFalse[language].false}
+        question={LanguageFile.exercise4_3[language].e5.text}
         nextExercise="/learning/exercices/first-lessons/4/4_4/exercice8"
       />
     </div>

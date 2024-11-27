@@ -5,7 +5,10 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice7() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -14,7 +17,7 @@ export default function Exercice7() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Hannah and Miles are a woman and a man from England. Select the correct nationality for them.</p>
+        <p>{LanguageFile.exercise3_2[language].e7.text}</p>
       </div>
 
 

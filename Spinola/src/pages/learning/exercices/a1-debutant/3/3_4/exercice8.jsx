@@ -1,14 +1,17 @@
 import HeaderExercices from "../../../../../../components/Exercices/HeaderExercices/headerExercices";
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
-import audio from "Spinola/public/recordsExercices/marieEtSophieFr.mp3"
-import audio2 from "Spinola/public/recordsExercices/pierreEtThomasFr.mp3"
-import audio3 from "Spinola/public/recordsExercices/mariePierreSophieThomasFr.mp3"
+import audio from "Spinola/public/recordsExercices/marieEtSophieFr.mp3";
+import audio2 from "Spinola/public/recordsExercices/pierreEtThomasFr.mp3";
+import audio3 from "Spinola/public/recordsExercices/mariePierreSophieThomasFr.mp3";
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
 
+import LanguageFile from "../../../../../../Language";
+
 export default function Exercice8() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -17,16 +20,16 @@ export default function Exercice8() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>When do we use "ils"?</p>
+        <p> {LanguageFile.exercise3_4[language].e8.title}</p>
       </div>
 
       <ExplainWordWithAudio
-        text={`We use "ils" when we talk about a group of men. We also use it to refer to a mixed group of men and women.`}
-        textAudio1="Marie et Sophie = Elles sont françaises."
+        text={LanguageFile.exercise3_4[language].e8.text1}
+        textAudio1={LanguageFile.exercise3_4[language].e8.text2}
         audioSrc1={audio}
-        textAudio2="Pierre et Thomas = Ils sont français."
+        textAudio2={LanguageFile.exercise3_4[language].e8.text3}
         audioSrc2={audio2}
-        textAudio3="Marie, Pierre, Sophie et Thomas = Ils sont français."
+        textAudio3={LanguageFile.exercise3_4[language].e8.text4}
         audioSrc3={audio3}
       />
 

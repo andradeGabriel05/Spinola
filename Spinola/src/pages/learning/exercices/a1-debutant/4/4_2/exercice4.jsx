@@ -6,13 +6,15 @@ import "../exercice.scss";
 import ExplainWordWithAudio from "../../../../../../components/Exercices/ExplainWordWithAudio/explainWordWithAudio";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="56%" prevProgressExercice={"42%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].write}</p>
       </div>
 
       <VideoExercices

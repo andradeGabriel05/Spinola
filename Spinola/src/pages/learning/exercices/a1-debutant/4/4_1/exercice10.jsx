@@ -5,13 +5,15 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
+import LanguageFile from "../../../../../../language.json";
 export default function Exercice10() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
-      <HeaderExercices progressExercice="66.66%" prevProgressExercice={"55.55%"} />
+      <HeaderExercices progressExercice="90.9%" prevProgressExercice={"81.81%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>True or false?</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
       <VideoExercices

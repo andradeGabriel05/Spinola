@@ -5,13 +5,19 @@ import ExerciceWithoutVideo from "../../../../../../components/Exercices/Exercic
 
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../Language";
+
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
-      <HeaderExercices progressExercice="44.44%" prevProgressExercice={"33.33%"} />
+      <HeaderExercices
+        progressExercice="36.36%"
+        prevProgressExercice={"27.27%"}
+      />
 
       <div className="exercice_title page_exercice_text">
-        <p>Today Mounia is...</p>
+        <p>{LanguageFile.exerciseTitles[language].trueOrFalse}</p>
       </div>
 
       <VideoExercices
@@ -20,13 +26,13 @@ export default function Exercice4() {
       />
 
       <VideoBoolExercices
-          answer_1="True"
-          answer_2="False"
-          title="Vous êtes américains ?"
-          correctAnswer="False"
-          question={`We pronounce the final -s of "américains".`}
-          nextExercise="/learning/exercices/first-lessons/4/4_1/exercice5"
-          last=""
+        answer_1={LanguageFile.trueOrFalse[language].true}
+        answer_2={LanguageFile.trueOrFalse[language].false}
+        title="Vous êtes américains ?"
+        correctAnswer={LanguageFile.trueOrFalse[language].false}
+        question={LanguageFile.exercise4_1[language].e4.text}
+        nextExercise="/learning/exercices/first-lessons/4/4_1/exercice5"
+        last=""
       />
     </div>
   );

@@ -3,18 +3,20 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 import { exerciceCounter } from "../../../../../../global";
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice1() {
   exerciceCounter.length = 0;
   exerciceCounter.push("correct");
 
+  const language = localStorage.getItem("language");
   console.log(exerciceCounter);
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="11.11%" prevProgressExercice={"0%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>Meet Fed, Mounia and Sophie in the office.</p>
+        <p>{LanguageFile.exercise3_1[language].e1.title}</p>
       </div>
 
       <div className="wrapper_video_enunciate">

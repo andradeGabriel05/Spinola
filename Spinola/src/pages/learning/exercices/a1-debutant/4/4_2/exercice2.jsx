@@ -22,9 +22,9 @@ export default function Exercice2() {
         prevProgressExercice={"14.28%"}
       />
 
-      <div className="exercice_title page_exercice_text">
+      {/* <div className="exercice_title page_exercice_text">
         <p>Tu es de quelle nationalité ? </p>
-      </div>
+      </div> */}
 
       <VideoExercices
         miniature={

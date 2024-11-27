@@ -4,13 +4,15 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice3() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="42%" prevProgressExercice={"28%"} />
 
       <div className="exercice_title page_exercice_text">
-        <p>What are the nationalities mentioned in Lison's blog post?</p>
+        <p>{LanguageFile.exercise4_2[language].e3.text}</p>
       </div>
 
       <div className="wrapper_video_enunciate">

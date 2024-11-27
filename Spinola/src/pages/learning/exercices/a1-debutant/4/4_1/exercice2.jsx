@@ -5,13 +5,16 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice2() {
+
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
-      <HeaderExercices progressExercice="33.33%" prevProgressExercice={"22.22%"}/>
+      <HeaderExercices progressExercice="18.18%" prevProgressExercice={"9.09%"}/>
 
       <div className="exercice_title page_exercice_text">
-        <p>What is he saying to Monia?</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
       <VideoExercices videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/95d515a0-7a6c-40fc-8c11-2c515f84c9b2_small.mp4"} />
@@ -21,7 +24,6 @@ export default function Exercice2() {
         answer_2="anglaises"
         sentenceText1="Nous sommes "
         sentenceText2="."
-        sentenceText3="? Tu es fatiguée ?"
         correctAnswer="anglaises"
         nextExercise="/learning/exercices/first-lessons/4/4_1/exercice3"
       />

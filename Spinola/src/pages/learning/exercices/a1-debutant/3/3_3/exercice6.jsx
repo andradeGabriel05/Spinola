@@ -5,7 +5,10 @@ import ExerciceWithoutVideo from "../../../../../../components/Exercices/Exercic
 import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice6() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -14,7 +17,7 @@ export default function Exercice6() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the nationalities in the order you hear them. </p>
+        <p>{LanguageFile.exercise3_3[language].e6.text}</p>
       </div>
 
       <VideoExercices

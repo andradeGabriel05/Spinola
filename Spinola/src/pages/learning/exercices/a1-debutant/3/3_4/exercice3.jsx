@@ -18,9 +18,9 @@ export default function Exercice3() {
         prevProgressExercice={"22.22%"}
       />
 
-      <div className="exercice_title page_exercice_text">
+      {/* <div className="exercice_title page_exercice_text">
         <p>New word!</p>
-      </div>
+      </div> */}
 
       <div className="wrapper_video_enunciate">
         <VideoExercices videoSrc="https://cdn.busuu.com/media-resources/video/mp4/752cfce8-45e0-4d36-a916-f2ca37625de3_small.mp4" />

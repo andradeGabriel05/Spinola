@@ -4,7 +4,9 @@ import FooterExercices from "../../../../../../components/Exercices/FooterExerci
 import "../exercice.scss";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice3() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
@@ -13,7 +15,8 @@ export default function Exercice3() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+      <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
+
       </div>
 
       <div className="wrapper_video_enunciate">

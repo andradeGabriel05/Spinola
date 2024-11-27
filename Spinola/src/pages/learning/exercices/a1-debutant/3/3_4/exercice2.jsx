@@ -5,7 +5,10 @@ import VideoExercices from "../../../../../../components/Exercices/VideoExercice
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
 
+import LanguageFile from "../../../../../../Language";
+
 export default function Exercice2() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise bigger_page">
       <HeaderExercices
@@ -14,7 +17,7 @@ export default function Exercice2() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>Tu es de quelle nationalité ? </p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
       <VideoExercices

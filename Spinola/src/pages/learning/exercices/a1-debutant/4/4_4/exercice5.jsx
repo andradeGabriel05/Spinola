@@ -6,7 +6,9 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import "../exercice.scss";
 import VideoBoolExercices from "../../../../../../components/Exercices/VideoBoolExercices/videoBoolExercices";
 
+import LanguageFile from "../../../../../../Language";
 export default function Exercice5() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices
@@ -15,7 +17,7 @@ export default function Exercice5() {
       />
 
       <div className="exercice_title page_exercice_text">
-        <p>What is he saying?</p>
+        <p>{LanguageFile.exerciseTitles[language].trueOrFalse} </p>
       </div>
 
       <div className="wrapper_video_enunciate">
@@ -27,15 +29,14 @@ export default function Exercice5() {
 
       <div className="exercice_text page_exercice_text">
         <p></p>
-
       </div>
 
       <VideoBoolExercices
-        answer_1="True"
-        answer_2="False"
+        answer_1={LanguageFile.trueOrFalse[language].true}
+        answer_2={LanguageFile.trueOrFalse[language].false}
         title="Lisa et Marc ? Ils sont impatients !"
-        correctAnswer="True"
-        question="Victor is talking about a man and a woman. "
+        correctAnswer={LanguageFile.trueOrFalse[language].true}
+        question={LanguageFile.exercise4_4[language].e5.text}
         nextExercise="/learning/exercices/first-lessons/4/4_4/exercice6"
       />
     </div>
