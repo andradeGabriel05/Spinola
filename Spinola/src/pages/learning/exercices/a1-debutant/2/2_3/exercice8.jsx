@@ -5,13 +5,15 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice8() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="72.72%" prevProgressExercice="63.63" />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
       <div className="wrapper_video_enunciate">
         <VideoExercices
@@ -22,7 +24,7 @@ export default function Exercice8() {
       </div>
 
       <div className="exercice_text page_exercice_text">
-        <p>I am happy, and he is happy too.</p>
+        <p>{LanguageFile.exercise2_3[language].e8.text}</p>
       </div>
 
       <ExerciceWithoutVideo

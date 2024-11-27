@@ -5,13 +5,16 @@ import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/
 import "../exercice.scss";
 import ExerciceWithoutVideo from "../../../../../../components/Exercices/ExerciceWithoutVideo/exerciceWithoutVideo";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice11() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="100%" prevProgressExercice="90.90%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Select the sentence you hear. </p>
+        <p>{LanguageFile.exerciseTitles[language].listenAndChoose}</p>
       </div>
       <div className="wrapper_video_enunciate">
         <VideoExercices miniature={" "}

@@ -4,10 +4,12 @@ import HeaderExercices from "../../../../../../components/Exercices/HeaderExerci
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 import "../exercice.scss";
+import LanguageFile from "../../../../../../language";
 
 export default function Exercice2() {
+  const language = localStorage.getItem("language");
   return (
-    <div className="container_exercise">
+    <div className="container_exercise bigger_page">
       <HeaderExercices progressExercice="18.18%" prevProgressExercice="9.09%" />
 
       <div className="exercice_title page_exercice_text">
@@ -15,13 +17,11 @@ export default function Exercice2() {
       </div>
 
       <ExplainWord
-        text1={`'Être' means to be. It helps us talk about who we are or how we feel. `}
-        text2="It is an essential verb used to describe identity, existence, and describe emotions."
-        text3="Singular: je suis (I am), tu es (You are, informal), Il/elle/on est (He is/She is/we are),
-
-"
-        text4={`Plural: nous sommes (We are), vous êtes (You are, formal or plural), ils/elles sont (They are, masculine/feminine)`}
-        text5={`"on" is often used informally to mean "we" or to refer to people in general.`}
+        text1={LanguageFile.exercise2_3[language].e2.text1}
+        text2={LanguageFile.exercise2_3[language].e2.text2}
+        text3={LanguageFile.exercise2_3[language].e2.text3}
+        text4={LanguageFile.exercise2_3[language].e2.text4}
+        text5={LanguageFile.exercise2_3[language].e2.text5}
       />
 
       <FooterExercices

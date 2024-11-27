@@ -6,18 +6,21 @@ import VideoInputExercices from "../../../../../../components/Exercices/VideoInp
 import "../exercice.scss";
 import { exerciceCounter } from "../../../../../../global";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice4() {
   useEffect(() => {
     exerciceCounter.push("correct");
     console.log(exerciceCounter);
   }, []);
 
+  const language = localStorage.getItem("language");
+
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="36.36%" prevProgressExercice="27.27%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>singular forms of être</p>
+        <p>{LanguageFile.exercise2_3[language].e4.title}</p>
       </div>
 
       <VideoExercices videoSrc="https://cdn.busuu.com/media/resized/video/mp4/small/singulier1661806716_1661806716.mp4" />

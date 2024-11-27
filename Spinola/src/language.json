@@ -333,6 +333,8 @@
       "listenAndChoose": "Escute e escolha a resposta correta.",
       "correctTranslation": "Digite a tradução correta de:",
       "lookingBack": "Voltando um pouco...",
+      "howDoYouSay": "Como se diz...?",
+
 
       "congratulations": "Parabéns",
       "score": "Acertos",
@@ -348,6 +350,7 @@
       "listenAndChoose": "Listen and choose the correct answer.",
       "correctTranslation": "Type the correct translation of:",
       "lookingBack": "Looking back...",
+      "howDoYouSay": "How do we say...?",
 
       "congratulations": "Congratulations",
       "score": "Score",
@@ -363,6 +366,7 @@
       "listenAndChoose": "Écoutez et choisissez la bonne réponse.",
       "correctTranslation": "Tapez la traduction correcte de:",
       "lookingBack": "Regarder en arrière...",
+      "howDoYouSay": "Comment dit-on...?",
 
       "congratulations": "Félicitations",
       "score": "Score",
@@ -986,6 +990,116 @@
       },
       "e9": {
         "text": "Je suis pressé"
+      }
+    }
+  },
+
+  "exercise2_3": {
+    "pt-BR": {
+      "e1": {
+        "text": "verbo Ser"
+      },
+      "e2": {
+        "text1": "'Être' significa ser. Ele nos ajuda a falar sobre quem somos ou como nos sentimos.",
+        "text2": "É um verbo essencial usado para descrever identidade, existência e descrever emoções.",
+        "text3": "Singular: je suis (Eu sou), tu es (Você é, informal), Il/elle/on est (Ele é/Ela é/Nós somos), ",
+        "text4": "Plural: nous sommes (Nós somos), vous êtes (Vocês são, formal ou plural), ils/elles sont (Eles são, masculino/feminino)",
+        "text5": "'on' é frequentemente usado informalmente para significar 'nós' ou para se referir a pessoas em geral."
+      },
+      "e3": {
+        "text1": "Vamos ver que todas as formas conjugadas no singular do 'être' no presente terminam com 's' ou 't'. No entanto, quando falamos, não pronunciamos essas últimas letras!",
+        "text2": "Je suis contente. (Eu estou feliz.)",
+        "text3": "Tu es fatigué ? (Você está cansado?)",
+        "text4": "Elle est impatiente. (Ela está impaciente.)"
+      },
+      "e4": {
+        "title": "formas singulares de être"
+      },
+      "e5": {
+        "text": "Estou indo de carro"
+      },
+      "e6": {
+        "text": "Estou indo de ônibus"
+      },
+      "e8": {
+        "text": "Estou feliz, e ele está feliz também."
+      },
+      "e9": {
+        "text": "Estou indo de trem"
+      },
+      "e10": {
+        "text": "Estou indo de avião"
+      }
+    },
+
+    "en": {
+      "e1": {
+        "text": "verb to be"
+      },
+      "e2": {
+        "text1": "'Être' means to be. It helps us talk about who we are or how we feel. ",
+        "text2": "It is an essential verb used to describe identity, existence, and describe emotions.",
+        "text3": "Singular: je suis (I am), tu es (You are, informal), Il/elle/on est (He is/She is/we are), ",
+        "text4": "Plural: nous sommes (We are), vous êtes (You are, formal or plural), ils/elles sont (They are, masculine/feminine)",
+        "text5": "'on' is often used informally to mean 'we' or to refer to people in general."
+      },
+      "e3": {
+        "text1": "We are going to see that all the singular conjugated forms of 'être' in the present tense end with either 's' or 't'. However, when we speak, we don't pronounce these last letters! ",
+        "text2": "Je suis contente. (I am happy.)",
+        "text3": "Tu es fatigué ? (Are you tired?)",
+        "text4": "Elle est impatiente. (She is impatient.)"
+      },
+      "e4": {
+        "title": "singular forms of être"
+      },
+      "e5": {
+        "text": "I'm going by car"
+      },
+      "e6": {
+        "text": "I'm going by bus"
+      },
+      "e7": {
+        "text": "I'm going on foot"
+      },
+      "e8": {
+        "text": "I am happy, and he is happy too."
+      },
+      "e9": {
+        "text": "I'm going by train"
+      },
+      "e10": {
+        "text": "I'm going by plane"
+      }
+    },
+
+    "fr": {
+      "e1": {
+        "text": "etrê"
+      },
+      "e2": {
+        "text1": "'Être' signifie être. Il nous aide à parler de qui nous sommes ou comment nous nous sentons.",
+        "text2": "C'est un verbe essentiel utilisé pour décrire l'identité, l'existence et décrire les émotions.",
+        "text3": "Singulier: je suis (Je suis), tu es (Tu es, informel), Il/elle/on est (Il est/Elle est/Nous sommes), ",
+        "text4": "Pluriel: nous sommes (Nous sommes), vous êtes (Vous êtes, formel ou pluriel), ils/elles sont (Ils sont/Elles sont, masculin/féminin)",
+        "text5": "'on' est souvent utilisé de manière informelle pour signifier 'nous' ou pour se référer aux gens en général."
+      },
+      "e3": {
+        "text1": "Nous allons voir que toutes les formes conjuguées au singulier du 'être' au présent se terminent par 's' ou 't'. Cependant, quand nous parlons, nous ne prononçons pas ces dernières lettres!",
+        "text2": "Je suis contente. (Je suis heureuse.)",
+        "text3": "Tu es fatigué ? (Tu es fatigué ?)",
+        "text4": "Elle est impatiente. (Elle est impatiente.)"
+      },
+      "e4": {
+        "title": "formes singulières de être"
+      },
+      "e5": {
+        "text": "Je vais en voiture"
+      },
+      "e6": {
+        "text": "Je vais en bus"
+      },
+      "e8": {
+        "text": "Je suis contente, et il est content aussi."
       }
     }
   }

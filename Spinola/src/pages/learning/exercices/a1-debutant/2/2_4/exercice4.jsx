@@ -6,14 +6,17 @@ import VideoBoolExercices from "../../../../../../components/Exercices/VideoBool
 import VideoExercices from "../../../../../../components/Exercices/VideoExercices/videoExercices";
 import ExerciceWrite from "../../../../../../components/Exercices/ExerciceWrite/exerciceWrite";
 
+import LanguageFile from "../../../../../../language";
+
 export default function Exercice4() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
     <div className="container_exercise">
       <HeaderExercices progressExercice="80%" prevProgressExercice="60%" />
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
 
 

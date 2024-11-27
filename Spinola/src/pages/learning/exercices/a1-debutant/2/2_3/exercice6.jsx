@@ -7,13 +7,15 @@ import "../exercice.scss";
 import FooterExercices from "../../../../../../components/Exercices/FooterExercices/footerExercices";
 import VideoInputExercices from "../../../../../../components/Exercices/VideoInputExercices/videoInputExercices";
 
+import LanguageFile from "../../../../../../language";
 export default function Exercice6() {
+  const language = localStorage.getItem("language");
   return (
     <div className="container_exercise">
       <HeaderExercices progressExercice="54.54%" prevProgressExercice="45.45%"/>
 
       <div className="exercice_title page_exercice_text">
-        <p>Complete the sentence.</p>
+        <p>{LanguageFile.exerciseTitles[language].completeSentence}</p>
       </div>
       <div className="wrapper_video_enunciate">
         <VideoExercices videoSrc={"https://cdn.busuu.com/media-resources/video/mp4/e8c6e15b-2228-4969-b60d-c7f883069fe2_small.mp4"} />
