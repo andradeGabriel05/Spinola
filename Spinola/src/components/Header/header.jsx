@@ -50,16 +50,16 @@ export default function Header() {
           <div className="header_links">
             <ul>
               <li>
-                <a href="/">Home</a>
+                <a href="/">{LanguageFile.header[language].home}</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="#bookSection">{LanguageFile.header[language].downloadBooks}</a>
               </li>
               <li>
-                <a href="/services">Services</a>
+                <a href="/services">{LanguageFile.header[language].mediaTitle}</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact">{LanguageFile.homepage[language].collection}</a>
               </li>
             </ul>
           </div>

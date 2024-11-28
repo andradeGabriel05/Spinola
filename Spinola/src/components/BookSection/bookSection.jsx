@@ -4,7 +4,7 @@ import LanguageFile from "../../language.json";
 export default function BookSection() {
   const language = localStorage.getItem("language");
   return (
-    <section className="books_section">
+    <section className="books_section" id="bookSection">
       <div className="books_container">
         <div className="content">
           <div className="usilles-text">

@@ -3,6 +3,9 @@
     "pt-BR": {
       "login": "Entrar",
       "register": "Registrar",
+      "home": "Página inicial",
+      "downloadBooks": "Baixar livros",
+      "mediaTitle": "Conteúdos",
 
       "config": "Configurações",
       "logout": "Sair"
@@ -11,6 +14,9 @@
     "en": {
       "login": "Login",
       "register": "Register",
+      "home": "Home",
+      "downloadBooks": "Download books",
+      "mediaTitle": "Media",
 
       "config": "Settings",
       "logout": "Logout"
@@ -19,6 +25,9 @@
     "fr": {
       "login": "Connexion",
       "register": "Inscription",
+      "home": "Principal",
+      "downloadBooks": "Télécharger des livres",
+      "mediaTitle": "Des médias",
 
       "config": "Paramétres",
       "logout": "Déconnexion"
@@ -186,7 +195,7 @@
 
       "activity": {
         "title": "Activité",
-        "dayStrike": "Journée de grève",
+        "dayStrike": "Jours consécutifs",
         "thisWeek": "Cette semaine",
         "timeSpent": "passé sur les exercices cette semaine",
         "timeOnExercises": "Temps sur les exercices",
