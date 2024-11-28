@@ -57,39 +57,41 @@ export default function homepage() {
             <div className="media_flex">
               <h3>{LanguageFile.homepage[language].mediaVideo}</h3>
               <div className="content_wrapper">
-                <div className="media_box video_box1">
-                  <div className="video_text">
-                    <p>
-                      Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                    </p>
-                    <h4>Coffee Break Languages</h4>
+                <Link to={"media-learning/comment-allez-vous"} className="box1">
+                  <div className="media_box video_box1">
+                    <div className="video_text">
+                      <p>
+                        Comment vas-tu ? / Comment allez-vous ? - "How are you?"
+                      </p>
+                      <h4>Coffee Break Languages</h4>
+                    </div>
                   </div>
-                </div>
-                <div className="media_box video_box2">
-                  <div className="video_text">
-                    <p>
-                      Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                    </p>
-                    <h4>Coffee Break Languages</h4>
+                </Link>
+                <Link to={"media-learning/les-enfants"} className="box2">
+                  <div className="media_box video_box2">
+                    <div className="video_text">
+                      <p>Je me présente</p>
+                      <h4>Les enfants parlent français </h4>
+                    </div>
                   </div>
-                </div>
-                <div className="media_box video_box3">
-                  <div className="video_text">
-                    <p>
-                      Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                    </p>
-                    <h4>Coffee Break Languages</h4>
+                </Link>
+
+                <Link to={"media-learning/french-comprehensible"} className="box3">
+                  <div className="media_box video_box3">
+                    <div className="video_text">
+                      <p>
+                        Comment vas-tu ? / Comment allez-vous ? - "How are you?"
+                      </p>
+                      <h4>Coffee Break Languages</h4>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             <div className="media_flex">
               <h3>{LanguageFile.homepage[language].mediaMusic}</h3>
               <div className="content_wrapper">
-                <Link
-                  to={"media-learning/message-personnel"}
-                  className="musique_box1_link"
-                >
+                <Link to={"media-learning/message-personnel"} className="box1">
                   <div className="media_box musique_box1">
                     <div className="video_text">
                       <p>Message Personnel</p>
@@ -100,7 +102,7 @@ export default function homepage() {
 
                 <Link
                   to={"media-learning/le-ciel-le-soleil-la-mer"}
-                  className="musique_box2_link"
+                  className="box2"
                 >
                   <div className="media_box musique_box2">
                     <div className="video_text">
@@ -110,10 +112,7 @@ export default function homepage() {
                   </div>
                 </Link>
 
-                <Link
-                  to={"media-learning/en-chantant"}
-                  className="musique_box3_link"
-                >
+                <Link to={"media-learning/en-chantant"} className="box3">
                   <div className="media_box musique_box3">
                     <div className="video_text">
                       <p>En chantant</p>
@@ -126,7 +125,7 @@ export default function homepage() {
             <div className="media_flex">
               <h3>Podcasts</h3>
               <div className="content_wrapper">
-                <Link to={"media-learning/rfi"} className="podcast_box1_link">
+                <Link to={"media-learning/rfi"} className="box1">
                   <div className="media_box podcast_box1">
                     <div className="video_text">
                       <p>
@@ -138,10 +137,7 @@ export default function homepage() {
                   </div>
                 </Link>
 
-                <Link
-                  to={"media-learning/la-tour-eiffel"}
-                  className="podcast_box2_link"
-                >
+                <Link to={"media-learning/la-tour-eiffel"} className="box2">
                   <div className="media_box podcast_box2">
                     <div className="video_text">
                       <p>La tour Eiffel.</p>
@@ -150,16 +146,11 @@ export default function homepage() {
                   </div>
                 </Link>
 
-                <Link
-                  to={"media-learning/le-ciel-le-soleil-la-mer"}
-                  className="podcast_box3_link"
-                >
+                <Link to={"media-learning/marie-curie"} className="box3">
                   <div className="media_box podcast_box3">
                     <div className="video_text">
-                      <p>
-                        Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                      </p>
-                      <h4>Coffee Break Languages</h4>
+                      <p>Marie Curie, une femme française</p>
+                      <h4>Le French Podcast </h4>
                     </div>
                   </div>
                 </Link>

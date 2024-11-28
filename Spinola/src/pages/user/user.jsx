@@ -6,10 +6,12 @@ import "./user.scss";
 import { Link } from "react-router-dom";
 import { getBarChartConfig } from "./columnGraph";
 import { getPieConfig } from "./mediaGraph";
+import LanguageFile from "Spinola/src/language.json";
 
 import "./statisticsUser";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ChangeLanguage from "../../components/ChangeLanguage/changeLanguage";
 
 export default function User() {
   const userId = localStorage.getItem("user");
@@ -26,9 +28,9 @@ export default function User() {
 
   const [percProgress, setPercProgress] = useState(0);
 
-  const [timeOnMusic, setTimeOnMusic] = useState(0.0001)
-  const [timeOnPodcast, setTimeOnPodcast] = useState(0.0001)
-  const [timeOnVideo, setTimeOnVideo] = useState(0.0001)
+  const [timeOnMusic, setTimeOnMusic] = useState(0.0001);
+  const [timeOnPodcast, setTimeOnPodcast] = useState(0.0001);
+  const [timeOnVideo, setTimeOnVideo] = useState(0.0001);
 
   const [dataRanking, setDataRanking] = useState([]);
 
@@ -80,45 +82,43 @@ export default function User() {
         `http://localhost:3300/api/verify-exercises-user-week/user?userId=${userId}`
       );
 
-      if (typeof (getTimeSpentWeek.data[0]) != "undefined") {
+      if (typeof getTimeSpentWeek.data[0] != "undefined") {
         setMonday(
           (Number(getTimeSpentWeek.data[0].time_spent) / 3600).toFixed(2)
         );
       }
 
-      if (typeof (getTimeSpentWeek.data[1]) != "undefined") {
+      if (typeof getTimeSpentWeek.data[1] != "undefined") {
         setTuesday(
           (Number(getTimeSpentWeek.data[1].time_spent) / 3600).toFixed(2)
         );
       }
 
-      if (typeof (getTimeSpentWeek.data[2]) != "undefined") {
+      if (typeof getTimeSpentWeek.data[2] != "undefined") {
         setWednesday(
           (Number(getTimeSpentWeek.data[2].time_spent) / 3600).toFixed(2)
         );
       }
 
-      if (typeof (getTimeSpentWeek.data[3]) != "undefined") {
-
+      if (typeof getTimeSpentWeek.data[3] != "undefined") {
         setThursday(
           (Number(getTimeSpentWeek.data[3].time_spent) / 3600).toFixed(2)
         );
       }
 
-      if (typeof (getTimeSpentWeek.data[4]) != "undefined") {
-
+      if (typeof getTimeSpentWeek.data[4] != "undefined") {
         setFriday(
           (Number(getTimeSpentWeek.data[4].time_spent) / 3600).toFixed(2)
         );
       }
 
-      if (typeof (getTimeSpentWeek.data[5]) != "undefined") {
+      if (typeof getTimeSpentWeek.data[5] != "undefined") {
         setSaturday(
           (Number(getTimeSpentWeek.data[5].time_spent) / 3600).toFixed(2)
         );
       }
 
-      if (typeof (getTimeSpentWeek.data[6]) != "undefined") {
+      if (typeof getTimeSpentWeek.data[6] != "undefined") {
         setSunday(
           (Number(getTimeSpentWeek.data[6].time_spent) / 3600).toFixed(2)
         );
@@ -138,29 +138,33 @@ export default function User() {
       const percentageProgress = await axios.get(
         `http://localhost:3300/api/verify-user-percentage?userId=${userId}`
       );
-      setPercProgress(Number((percentageProgress.data[0].completed_percentage)).toFixed(1));
+      setPercProgress(
+        Number(percentageProgress.data[0].completed_percentage).toFixed(1)
+      );
       console.log(percentageProgress);
-
 
       const timeOnMedia = await axios.get(
         `http://localhost:3300/api/get-time-on-media?userId=${userId}`
-      )
-      console.log(timeOnMedia)
+      );
+      console.log(timeOnMedia);
 
-
-      if (typeof (timeOnMedia.data[0]) != "undefined") {
-        setTimeOnVideo((Number(timeOnMedia.data[0].time_spent)/60000).toFixed(2))
+      if (typeof timeOnMedia.data[0] != "undefined") {
+        setTimeOnVideo(
+          (Number(timeOnMedia.data[0].time_spent) / 60000).toFixed(2)
+        );
       }
 
-      if (typeof (timeOnMedia.data[1]) != "undefined") {
-        setTimeOnMusic((Number(timeOnMedia.data[1].time_spent)/60000).toFixed(2))
-      }
-      
-      if (typeof (timeOnMedia.data[2]) != "undefined") {
-        setTimeOnPodcast((Number(timeOnMedia.data[2].time_spent)/60000).toFixed(2))
+      if (typeof timeOnMedia.data[1] != "undefined") {
+        setTimeOnMusic(
+          (Number(timeOnMedia.data[1].time_spent) / 60000).toFixed(2)
+        );
       }
 
-
+      if (typeof timeOnMedia.data[2] != "undefined") {
+        setTimeOnPodcast(
+          (Number(timeOnMedia.data[2].time_spent) / 60000).toFixed(2)
+        );
+      }
     } catch (error) {
       console.error("Error:", error);
     }
@@ -187,7 +191,7 @@ export default function User() {
 
   const timeSpentHourYesterday = Number(timeSpentYesterday / 3600).toFixed(2);
 
-  const percentage = 100 - percProgress
+  const percentage = 100 - percProgress;
 
   useEffect(() => {
     getAllPosts();
@@ -222,20 +226,13 @@ export default function User() {
   // Configuração do gráfico
   const chartConfigColumn = getBarChartConfig(dataColumn, labelsColumn);
 
+  const dataPie = [timeOnMusic, timeOnVideo, timeOnPodcast];
 
-
-  const dataPie = [
-    timeOnMusic,
-    timeOnVideo,
-    timeOnPodcast
-  ];
-  const labelsPie = [
-    "Music",
-    "Videos",
-    "Podcast",
-  ];
+  const labelsPie = ["Music", "Videos", "Podcast"];
 
   const chartConfigPie = getPieConfig(dataPie, labelsPie);
+
+  const language = localStorage.getItem("language");
 
   return (
     <div className="container_user">
@@ -274,17 +271,16 @@ export default function User() {
             Spínola
           </Link>
 
-          <h1>Language</h1>
+          <ChangeLanguage />
         </header>
 
         <div className="sections_dashboard">
           <div className="wrapper_sections_left_dashboard">
             <section className="welcome_user_dashboard">
               <div className="welcome_user_dashboard_text">
-                <h1>Welcome back, {username}!</h1>
+                <h1>{LanguageFile.userDashboard[language].welcome} {username}!</h1>
                 <p>
-                  Great to see you again. Keep up the great work and continue
-                  refining your French skills!
+                {LanguageFile.userDashboard[language].description}
                 </p>
               </div>
               <div className="image_welcome"></div>
@@ -293,7 +289,7 @@ export default function User() {
             <div className="four_cards">
               <div className="user_statistics">
                 <section className="progress_user_dashboard">
-                  <h1>Progress statistics</h1>
+                  <h1>{LanguageFile.userDashboard[language].progressTitle}</h1>
                   <div className="grid_graph">
                     <div className="doughnut_graph">
                       <Doughnut
@@ -303,17 +299,21 @@ export default function User() {
                       <span className="perc_progress">{percProgress}%</span>
                     </div>
                   </div>
-                  <p>You are {percentage}% away of complete all the lessons</p>
+                  {percentage === 0 ? (
+                    <p>{LanguageFile.userDashboard[language].progressText.congrats}</p>
+                  ) : (
+                  <p>{LanguageFile.userDashboard[language].progressText.you} {percentage}% {LanguageFile.userDashboard[language].progressText.away} </p>
+                  )}
                 </section>
 
                 <section className="section_statistics_dashboard">
-                  <h1>Statistics:</h1>
+                  <h1>{LanguageFile.userDashboard[language].statistics.title}</h1>
                   <div className="statistics_text">
-                    <h2>Lessons completed</h2>
+                    <h2>{LanguageFile.userDashboard[language].statistics.lessons}</h2>
                     <h2>{lessons}</h2>
                   </div>
                   <div className="statistics_text">
-                    <h2>Total points</h2>
+                    <h2>{LanguageFile.userDashboard[language].statistics.points}</h2>
                     <h2>{points}</h2>
                   </div>
                 </section>
@@ -322,13 +322,16 @@ export default function User() {
               <div className="points_card_dashboard">
                 <section className="time_on_medias">
                   <span>
-                    <h1>Time on medias (minutes)</h1>
+                    <h1>{LanguageFile.userDashboard[language].media.title}</h1>
                   </span>
-                  <Pie data={chartConfigPie.data} options={chartConfigPie.options} />
+                  <Pie
+                    data={chartConfigPie.data}
+                    options={chartConfigPie.options}
+                  />
                 </section>
 
                 <section className="section_ranking_dashboard">
-                  <h1>Ranking of points</h1>
+                  <h1>{LanguageFile.userDashboard[language].ranking.title}</h1>
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className="user_division">
                       <div className="user_division_details">
@@ -343,7 +346,7 @@ export default function User() {
                           {dataRanking[i] ? (
                             <>
                               <h2>{dataRanking[i].username}</h2>
-                              <span>{dataRanking[i].points} points</span>
+                              <span>{dataRanking[i].points} {LanguageFile.userDashboard[language].ranking.points}</span>
                             </>
                           ) : (
                             <>
@@ -363,36 +366,36 @@ export default function User() {
             </div>
           </div>
           <section className="time_dashboard">
-            <h1>Activity</h1>
+            <h1>{LanguageFile.userDashboard[language].activity.title}</h1>
             <div className="day_strike">
               <div className="circle_day_strike">
                 <div className="circle_day_strike_text">
                   <span>{daystrike}</span>
-                  <p>Day strike</p>
+                  <p>{LanguageFile.userDashboard[language].activity.dayStrike}</p>
                 </div>
               </div>
             </div>
             <div className="time_spent">
-              <h2>This week</h2>
+              <h2>{LanguageFile.userDashboard[language].activity.thisWeek}</h2>
               <div className="column_graph">
                 <Bar
                   data={chartConfigColumn.data}
                   options={chartConfigColumn.options}
                 />
-                <p>{timeSpentWeekTotal}h spent on exercises this week</p>
+                <p>{timeSpentWeekTotal}h {LanguageFile.userDashboard[language].activity.timeSpent}</p>
               </div>
               <div className="time_spent_statistics">
-                <h2>Time on exercises</h2>
+                <h2>{LanguageFile.userDashboard[language].activity.timeOnExercises}</h2>
                 <div className="time_spent_statistics_text">
-                  <h2>Today</h2>
+                  <h2>{LanguageFile.userDashboard[language].activity.today}</h2>
                   <span>{timeSpentHourToday}h</span>
                 </div>
                 <div className="time_spent_statistics_text">
-                  <h2>Yesterday</h2>
+                  <h2>{LanguageFile.userDashboard[language].activity.yesterday}</h2>
                   <span>{timeSpentHourYesterday}h</span>
                 </div>
                 <div className="time_spent_statistics_text">
-                  <h2>All time</h2>
+                  <h2>{LanguageFile.userDashboard[language].activity.allTime}</h2>
                   <span>{timeSpentHour}h</span>
                 </div>
               </div>

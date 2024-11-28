@@ -4,6 +4,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import { FaQuinscape } from "react-icons/fa";
 import LanguageFile from "../../language.json";
+import ChangeLanguage from "../ChangeLanguage/changeLanguage";
 
 export default function Header() {
   const idUser = localStorage.getItem("user");
@@ -65,16 +66,7 @@ export default function Header() {
         </div>
         <div className="right_side">
           <div className="lang">
-            <select
-              id="selectLanguage"
-              name="selectLanguage"
-              onChange={handleLanguage}
-              value={language}
-            >
-              <option value={"en"}>English</option>
-              <option value={"pt-BR"}>Português</option>
-              <option value={"fr"}>Français</option>
-            </select>
+            <ChangeLanguage />
           </div>
           {idUser ? (
             <div className="user logged" onClick={displayUserBox}>

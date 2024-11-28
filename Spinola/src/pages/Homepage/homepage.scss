@@ -365,7 +365,7 @@
         }
 
         .video_box2 {
-          background-image: url("https://i.ytimg.com/vi/OGkbK9-_BRE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDY-Hzei-NPxVsWHJzlbxWInjmkaQ");
+          background-image: url("https://i.ytimg.com/vi/y8trQNgkVPk/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIFQoTDAP&rs=AOn4CLAaXYsTcjm3qVGhHSxVdN-QZry3zQ") !important;
         }
 
         .video_box3 {
@@ -408,7 +408,7 @@
         }
 
         .podcast_box3 {
-          background-image: url("https://i.ytimg.com/vi/9IBa2MESVP4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBetjRpwrxozIZIjuTyLgkZZm2t5Q");
+          background-image: url("https://i.ytimg.com/vi/p9bFsxXga8s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_vLZGL0pXI7UAuIDX27Ckz1KgLQ") !important;
         }
       }
     }
@@ -416,15 +416,15 @@
 }
 
 .content_wrapper {
-  .musique_box1_link, .podcast_box1_link {
+  .box1 {
     margin-right: 30px !important;
   }
 
-  .musique_box2_link, .podcast_box2_link {
+  .box2 {
     margin: 0 30px;
   }
 
-  .musique_box3_link, .podcast_box3_link {
+  .box3 {
     margin-left: 30px;
   }
 }

@@ -68,6 +68,8 @@ export default function messagePersonnel() {
         window.location.href = "/music-finish"
         localStorage.setItem("typeOfMedia", 2) // music
         localStorage.setItem("timeSpent", 213034)
+        return
+
       }
     }, 100); // Verifica a cada 100ms
 

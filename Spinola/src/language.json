@@ -75,6 +75,128 @@
     }
   },
 
+  "userDashboard": {
+    "pt-BR": {
+      "welcome": "Bem-vindo de volta,",
+      "description": "Ótimo te ver novamente. Continue com o ótimo trabalho e continue aprimorando suas habilidades em francês!",
+
+      "progressTitle": "Estatísticas de progresso",
+      "progressText": {
+        "you": "Você está",
+        "away": "longe de completar todas as lições",
+        "congrats": "Parabéns! Você completou todas as lições!"
+      },
+
+      "statistics": {
+        "title": "Estatísticas:",
+        "lessons": "Lições completadas",
+        "points": "Pontos totais"
+      },
+
+      "media": {
+        "title": "Tempo em mídias (minutos)",
+        "videos": "Vídeos",
+        "music": "Música"
+      },
+
+      "ranking": {
+        "title": "Ranking de pontos",
+        "points": "Pontos"
+      },
+
+      "activity": {
+        "title": "Atividade",
+        "dayStrike": "Dias consecutivos",
+        "thisWeek": "Esta semana",
+        "timeSpent": "gasto em exercícios esta semana",
+        "timeOnExercises": "Tempo em exercícios",
+        "today": "Hoje",
+        "yesterday": "Ontem",
+        "allTime": "Todo o tempo"
+      }
+    },
+
+    "en": {
+      "welcome": "Welcome back,",
+      "description": "Great to see you again. Keep up the great work and continue refining your French skills!",
+
+      "progressTitle": "Progress statistics",
+      "progressText": {
+        "you": "You are",
+        "away": "away of complete all the lessons",
+        "congrats": "Congratulations! You have completed all the lessons!"
+      },
+
+      "statistics": {
+        "title": "Statistics:",
+        "lessons": "Lessons completed",
+        "points": "Total points"
+      },
+
+      "media": {
+        "title": "Time on medias (minutes)",
+        "videos": "Videos",
+        "music": "Music"
+      },
+
+      "ranking": {
+        "title": "Ranking of points",
+        "points": "Points"
+      },
+
+      "activity": {
+        "title": "Activity",
+        "dayStrike": "Day strike",
+        "thisWeek": "This week",
+        "timeSpent": "spent on exercises this week",
+        "timeOnExercises": "Time on exercises",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "allTime": "All time"
+      }
+    },
+
+    "fr": {
+      "welcome": "Bienvenue de retour,",
+      "description": "Ravi de vous revoir. Continuez le bon travail et continuez à perfectionner vos compétences en français!",
+
+      "progressTitle": "Statistiques de progression",
+      "progressText": {
+        "you": "Vous êtes",
+        "away": "loin de terminer toutes les leçons",
+        "congrats": "Félicitations! Vous avez terminé toutes les leçons!"
+      },
+
+      "statistics": {
+        "title": "Statistiques:",
+        "lessons": "Leçons terminées",
+        "points": "Points totaux"
+      },
+
+      "media": {
+        "title": "Temps sur les médias (minutes)",
+        "videos": "Vidéos",
+        "music": "Musique"
+      },
+
+      "ranking": {
+        "title": "Classement des points",
+        "points": "Points"
+      },
+
+      "activity": {
+        "title": "Activité",
+        "dayStrike": "Journée de grève",
+        "thisWeek": "Cette semaine",
+        "timeSpent": "passé sur les exercices cette semaine",
+        "timeOnExercises": "Temps sur les exercices",
+        "today": "Aujourd'hui",
+        "yesterday": "Hier",
+        "allTime": "Tout le temps"
+      }
+    }
+  },
+
   "exercisesA1": {
     "pt-BR": {
       "title": "Comece gratuitamente em francês",

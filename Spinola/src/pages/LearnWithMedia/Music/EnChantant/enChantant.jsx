@@ -69,6 +69,8 @@ export default function EnChantant() {
         window.location.href = "/music-finish"
         localStorage.setItem("typeOfMedia", 2) // music
         localStorage.setItem("timeSpent", 220.000)
+        return
+
       }
     }, 100); // Verifica a cada 100ms
 

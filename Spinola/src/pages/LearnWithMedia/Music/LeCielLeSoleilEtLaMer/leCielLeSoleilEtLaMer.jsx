@@ -72,6 +72,8 @@ export default function LeCielLeSoleilEtLaMer() {
         window.location.href = "/music-finish";
         localStorage.setItem("typeOfMedia", 2); // music
         localStorage.setItem("timeSpent", 148.92);
+        return
+
       }
     }, 100); // Verifica a cada 100ms
 

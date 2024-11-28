@@ -69,6 +69,8 @@ export default function LaTourEiffel() {
         window.location.href = "/podcast-finish"
         localStorage.setItem("typeOfMedia", 3) // pod
         localStorage.setItem("timeSpent", 294120)
+        return
+
       }
     }, 100); // Verifica a cada 100ms
 

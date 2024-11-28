@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage/homepage";
 import HomepageA2 from "./pages/HomepageA2/homepageA2";
 import DownloadBooks from "./pages/DownloadBooks/downloadBooks";
 import ExerciceFinish from "./components/Exercices/ExerciceFinish/exerciceFinish";
+import VideoFinish from "./components/VideoFinish/videoFinish";
 
 import Exercice1 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice1";
 import Exercice2 from "./pages/learning/exercices/a1-debutant/1/1_1/exercice2";
@@ -170,6 +171,10 @@ import MusicFinish from "./components/LearnWithMusic/MusicFinish";
 import RFI from "./pages/LearnWithMedia/Podcast/RFI/rfi";
 import PodcastFinish from "./components/PodcastFinish/podcastFinish";
 import LaTourEiffel from "./pages/LearnWithMedia/Podcast/LaTourEiffel/laTourEiffel";
+import MarieCurie from "./pages/LearnWithMedia/Podcast/MarieCurie/marieCurie";
+import CommentAllezVous from "./pages/LearnWithMedia/Videos/CommentAllezVous/commentAllezVous";
+import LesEnfants from "./pages/LearnWithMedia/Videos/LesEnfants/lesEnfants";
+import FrenchComprehensible from "./pages/LearnWithMedia/Videos/FrenchComprehensible/frenchComprehensible";
 
 export let timeSpentSeconds = 0;
 
@@ -223,6 +228,7 @@ function AppContent() {
         <Route path="/a2" element={<HomepageA2 />} />
         <Route path="premiere-lecon" element={<PremiereLecon />} />
         <Route path="download-books" element={<DownloadBooks />} />
+
         <Route
           path="media-learning/message-personnel"
           element={<MessagePersonnel />}
@@ -231,16 +237,29 @@ function AppContent() {
           path="media-learning/le-ciel-le-soleil-la-mer"
           element={<LeCielLeSoleilEtLaMer />}
         />
-        <Route path="media-learning/rfi" element={<RFI />} />
-        <Route path="media-learning/la-tour-eiffel" element={<LaTourEiffel />} />
-
         <Route path="media-learning/en-chantant" element={<EnChantant />} />
+
+        <Route path="media-learning/rfi" element={<RFI />} />
+        <Route
+          path="media-learning/la-tour-eiffel"
+          element={<LaTourEiffel />}
+        />
+        <Route path="media-learning/marie-curie" element={<MarieCurie />} />
+
+        <Route
+          path="media-learning/comment-allez-vous"
+          element={<CommentAllezVous />}
+        />
+        <Route path="media-learning/les-enfants" element={<LesEnfants />} />
+        <Route path="media-learning/french-comprehensible" element={<FrenchComprehensible />} />
+
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="user" element={<User />} />
         <Route path="exercise-finish" element={<ExerciceFinish />} />
         <Route path="music-finish" element={<MusicFinish />} />
         <Route path="podcast-finish" element={<PodcastFinish />} />
+        <Route path="video-finish" element={<VideoFinish />} />
         <Route
           path="/learning/exercices/first-lessons/1/1_1/exercice1"
           element={<Exercice1 />}
