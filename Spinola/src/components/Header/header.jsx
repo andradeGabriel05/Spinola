@@ -56,10 +56,10 @@ export default function Header() {
                 <a href="#bookSection">{LanguageFile.header[language].downloadBooks}</a>
               </li>
               <li>
-                <a href="/services">{LanguageFile.header[language].mediaTitle}</a>
+                <a href="#mediaSection">{LanguageFile.header[language].mediaTitle}</a>
               </li>
               <li>
-                <a href="/contact">{LanguageFile.homepage[language].collection}</a>
+                <a href="/premiere-lecon">{LanguageFile.homepage[language].collection}</a>
               </li>
             </ul>
           </div>

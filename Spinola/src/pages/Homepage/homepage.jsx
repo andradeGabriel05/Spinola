@@ -48,7 +48,7 @@ export default function homepage() {
 
       <BookSection />
 
-      <section className="media_section">
+      <section className="media_section" id="mediaSection">
         <div className="media_container">
           <div className="content">
             <div className="text">
