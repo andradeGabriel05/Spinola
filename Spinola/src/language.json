@@ -84,6 +84,67 @@
     }
   },
 
+  "login":{
+    "pt-BR": {
+      "title": "Entrar",
+      "email": "E-mail",
+      "password": "Senha",
+      "button": "Entrar",
+      "register": "Não tem uma conta? Registre-se",
+      "error": "E-mail ou senha incorretos"
+    },
+
+    "en": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "button": "Login",
+      "register": "Don't have an account? Register",
+      "error": "Incorrect email or password"
+    },
+
+    "fr": {
+      "title": "Connexion",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "button": "Connexion",
+      "register": "Vous n'avez pas de compte? S'inscrire",
+      "error": "E-mail ou mot de passe incorrect"
+    }
+  },
+
+  "register": {
+    "pt-BR": {
+      "title": "Registrar",
+      "name": "Nome",
+      "email": "E-mail",
+      "password": "Senha",
+      "button": "Registrar",
+      "login": "Já tem uma conta? Entrar",
+      "error": "E-mail já cadastrado"
+    },
+
+    "en": {
+      "title": "Register",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "button": "Register",
+      "login": "Already have an account? Login",
+      "error": "Email already registered"
+    },
+
+    "fr": {
+      "title": "S'inscrire",
+      "name": "Nom",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "button": "S'inscrire",
+      "login": "Vous avez déjà un compte? Connexion",
+      "error": "E-mail déjà enregistré"
+    }
+  },
+
   "userDashboard": {
     "pt-BR": {
       "welcome": "Bem-vindo de volta,",

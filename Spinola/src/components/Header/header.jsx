@@ -75,11 +75,7 @@ export default function Header() {
                   <li>
                     <Link to="/user">Dashboard</Link>
                   </li>
-                  <li>
-                    <Link to="/settings">
-                      {LanguageFile.header[language].config}
-                    </Link>
-                  </li>
+
                   <li>
                     <Link to="/" onClick={handleLogout}>
                       {LanguageFile.header[language].logout}

@@ -2,7 +2,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../auth.scss";
 
+import LanguageFile from "../../../language";
+
 export default function Login() {
+  const language = localStorage.getItem("language");
   async function handleLogin(event) {
     event.preventDefault();
 
@@ -59,7 +62,7 @@ export default function Login() {
             <h1>Spínola</h1>
           </Link>
           <div className="register_form">
-            <h2 style={{ color: "#000" }}>Se connecter</h2>
+            <h2 style={{ color: "#000" }}>{LanguageFile.login[language].title}</h2>
             <form onSubmit={handleLogin}>
               <p
                 id="textEmailField"
@@ -82,13 +85,13 @@ export default function Login() {
                 type="text"
                 name="password"
                 id="passwordId"
-                placeholder="Password"
+                placeholder={LanguageFile.login[language].password}
               />
-              <button type="submit">Se connecter</button>
+              <button type="submit">{LanguageFile.login[language].title}</button>
             </form>
 
             <div className="already_have_login">
-              <Link to={"/register"}>Créer nouveau compte</Link>
+              <Link to={"/register"}>{LanguageFile.login[language].register}</Link>
             </div>
           </div>
         </div>

@@ -246,11 +246,6 @@ export default function User() {
                 </Link>
               </li>
 
-              <li>
-                <Link to="/settings">
-                  <FaCog />
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="aside_nav_below">

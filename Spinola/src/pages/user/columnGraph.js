@@ -5,6 +5,7 @@ Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 export const getBarChartConfig = (data, labels) => ({
   type: 'bar',
   data: {
+    label: '', 
     labels: labels,
     datasets: [
       {
@@ -23,6 +24,7 @@ export const getBarChartConfig = (data, labels) => ({
     responsive: true,
     plugins: {
       legend: {
+        display: false,
         position: 'top',
       },
     },

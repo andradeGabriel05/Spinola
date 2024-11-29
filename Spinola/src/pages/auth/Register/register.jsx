@@ -2,7 +2,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../auth.scss";
 
+import LanguageFile from "../../../language.json";
+
 export default function Register() {
+  const language = localStorage.getItem("language");
   function handleRegister(event) {
     event.preventDefault();
 
@@ -18,6 +21,11 @@ export default function Register() {
       })
       .catch((error) => {
         console.error("Error:", error);
+        if (error.response.status === 500) {
+          console.log("ASDASD");
+          document.getElementById("textEmailField").innerHTML = "Email already exists";
+          emailId.style.border = "1px solid red";
+        }
       });
 
     if (emailId.value == "" && passwordId.value == "" && usernameId.value == "") {
@@ -40,6 +48,8 @@ export default function Register() {
         "Password is required";
     } 
 
+
+
     document.addEventListener("keyup", () => {
       emailId.style.border = "1px solid #dadada";
       passwordId.style.border = "1px solid #dadada";
@@ -61,7 +71,7 @@ export default function Register() {
             <h1>Spínola</h1>
           </Link>
           <div className="register_form">
-            <h2 style={{color: "#000"}}>Créer un compte</h2>
+            <h2 style={{color: "#000"}}>{LanguageFile.register[language].title}</h2>
             <form onSubmit={handleRegister}>
               <p id="textEmailField"></p>
               <input
@@ -84,13 +94,13 @@ export default function Register() {
                 type="text"
                 name="password"
                 id="passwordId"
-                placeholder="Password"
+                placeholder={LanguageFile.register[language].password}
               />
-              <button type="submit">Se connecter</button>
+              <button type="submit">{LanguageFile.register[language].button}</button>
             </form>
 
             <div className="already_have_login">
-              <Link to={"/login"}>Vous avez déjà un compte ?</Link>
+              <Link to={"/login"}>{LanguageFile.register[language].login}</Link>
             </div>
           </div>
         </div>
