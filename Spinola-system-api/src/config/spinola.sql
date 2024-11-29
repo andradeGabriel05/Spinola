@@ -49,6 +49,18 @@
     -- Inserts de exemplo para a tabela 'exercise'
     INSERT INTO exercise (exercise, chapter, level)
     VALUES
+    (1, 1, 'A2');
+        INSERT INTO exercise (exercise, chapter, level)
+    VALUES
+    (2, 1, 'A2');
+        INSERT INTO exercise (exercise, chapter, level)
+    VALUES
+    (3, 1, 'A2');
+    INSERT INTO exercise (exercise, chapter, level)
+    VALUES
+    (4, 1, 'A2');
+    INSERT INTO exercise (exercise, chapter, level)
+    VALUES
     (1, 1, 'A1'),
     (2, 1, 'A1'),
     (3, 1, 'A1'),
@@ -68,6 +80,8 @@
     (2, 4, 'A1'),
     (3, 4, 'A1'),
     (4, 4, 'A1');
+    
+    select * from exercise;
 
     -- Inserts de exemplo para a tabela 'user_exercise_details'
     INSERT INTO user_exercise_details (id_user, points, lessons, day_strike)

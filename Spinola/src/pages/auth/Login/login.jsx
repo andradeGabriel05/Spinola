@@ -7,10 +7,13 @@ export default function Login() {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`http://localhost:3300/api/login-user`, {
-        email: emailId.value,
-        password: passwordId.value,
-      });
+      const response = await axios.post(
+        `http://localhost:3300/api/login-user`,
+        {
+          email: emailId.value,
+          password: passwordId.value,
+        }
+      );
 
       localStorage.setItem("user", response.data.id_user);
       localStorage.setItem("username", response.data.username);
@@ -20,17 +23,19 @@ export default function Login() {
 
       if (emailId.value == "" && passwordId.value == "") {
         emailId.style.border = "1px solid red";
+        passwordId.style.border = "1px solid red";
+
         document.getElementById("textEmailField").innerHTML =
           "Email and password is required";
-      } else if (emailId.value == "" ) {
+      } else if (emailId.value == "") {
         emailId.style.border = "1px solid red";
         document.getElementById("textEmailField").innerHTML =
           "Email is required";
-      } else if(passwordId.value == "") {
+      } else if (passwordId.value == "") {
         passwordId.style.border = "1px solid red";
         document.getElementById("textPasswordField").innerHTML =
           "Password is required";
-      } else if (error.response.status === 404) {
+      } else if (error.response.status === 403) {
         document.getElementById("textEmailField").innerHTML =
           "Email ou mot de passe incorrect";
         passwordId.style.border = "1px solid red";
@@ -42,7 +47,7 @@ export default function Login() {
         passwordId.style.border = "1px solid #dadada";
         document.getElementById("textEmailField").innerHTML = "";
         document.getElementById("textPasswordField").innerHTML = "";
-      })
+      });
     }
   }
 

@@ -11,6 +11,7 @@ export default function FooterExercices({
   last,
   chapter,
   exercise,
+  level
 }) {
   console.log(exerciceCounter.length);
   async function handleExerciceResponse(event) {
@@ -28,6 +29,7 @@ export default function FooterExercices({
     localStorage.setItem("exercices", exerciceCounter.length);
     localStorage.setItem("chapter", chapter);
     localStorage.setItem("exerciseMade", exercise);
+    level == null ? localStorage.setItem("level", "A1") : localStorage.setItem("level", level);
     window.location.href = "/exercise-finish";
 
   }
@@ -43,6 +45,7 @@ export default function FooterExercices({
               </button>
             </form>
           ) : (
+            
             <Link to={nextExercise}>
               <button className="btn-continue">Continue</button>
             </Link>

@@ -1,13 +1,13 @@
 const timeSpentModel = require("../models/userTimeSpentModel");
 
 function timeSpentExercise(req, res) {
-  const { userId, timeSpent, chapter, exercise } = req.body;
+  const { userId, timeSpent, chapter, exercise, level } = req.body;
 
   if (!userId) {
     res.status(400).send("Seu ID está undefined!");
   } else {
     timeSpentModel
-      .timeSpentExercise(userId, timeSpent, chapter, exercise)
+      .timeSpentExercise(userId, timeSpent, chapter, exercise, level)
       .then((resultado) => {
         res.json(resultado);
       })
@@ -138,7 +138,10 @@ function verifyExercisesMade(req, res) {
         res.json(resultado);
       })
       .catch((erro) => {
-        console.error("Houve um erro ao buscar os exercícios!", erro.sqlMessage);
+        console.error(
+          "Houve um erro ao buscar os exercícios!",
+          erro.sqlMessage
+        );
         res.status(500).json(erro.sqlMessage);
       });
   }

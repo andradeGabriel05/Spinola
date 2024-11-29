@@ -75,7 +75,13 @@
 
       h1 {
         font-size: 3em;
+        color: #fff;
       }
     }
   }
+}
+
+
+#textEmailField, #textPasswordField, #textUsernameField {
+  color: #000;
 }

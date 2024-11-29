@@ -1,6 +1,62 @@
 @use "../../styles/global" as *;
 
 .container_homepage {
+  &_navigation_levels {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
+    width: 100%;
+    @include wm-centered;
+
+    display: flex;
+
+    .levels {
+      display: flex;
+      flex: 1;
+      background-color: #fff;
+      border-radius: 4px;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: #000;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        padding: 15px;
+      }
+    }
+
+    .nav-active {
+      background-color: $bg-blue-primary;
+      color: #fff;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      font-size: 1.5em;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: #0000007b;
+      }
+    }
+
+    .nav-not-active {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      font-size: 1.5em;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .homepage_main {
     background-color: $bg-blue-primary;
     padding: 20px 0;
@@ -19,15 +75,13 @@
         flex-direction: column;
         justify-content: flex-end;
         color: #000;
-        z-index: 10;
+        z-index: 3;
         width: 100%;
-        height: fit-content;
-        position: absolute;
-        bottom: 0;
       }
 
       .left_side {
         margin-right: 20px;
+        width: 90%;
 
         .card1 {
           display: flex;
@@ -35,22 +89,19 @@
           height: 100%;
           position: relative;
 
-          .image_card_background_a2 {
-            background-image: url("https://media.graphassets.com/YlIbU9WORyCdM8s9jEvo");
+          .image_card_a2 {
+            // background-image: url("https://media.graphassets.com/YlIbU9WORyCdM8s9jEvo");
             // background-image: url("https://img.freepik.com/premium-vector/learning-french-language-education-online-studying-foreign-languages-flat-vector-illustration_442961-107.jpg");
+            background-image: url("https://thumbs.dreamstime.com/b/concept-travel-studying-french-to-france-flag-landmarks-open-suitcase-tourism-france-flat-design-vector-86015661.jpg");
             background-repeat: no-repeat;
-            background-size: cover;
             background-position: center;
+            background-size: contain;
+            background-color: #fcfafb;
             width: 100%;
             height: 100%;
             position: absolute;
-            z-index: 1;
-
-            
-          &:hover {
+            border-radius: 4px;
             transition: all 0.3s ease;
-            opacity: .9;
-          }
           }
         }
       }
@@ -59,18 +110,39 @@
         position: relative;
         display: flex;
         justify-content: center;
-
-        .image_card {
-          background-image: url("https://www.shutterstock.com/image-vector/learning-french-language-flat-vector-260nw-1908466663.jpg");
-          background-image: url("https://www.touteleurope.eu/wp-content/uploads/2023/05/bonjour-23-langues-1-1024x683.jpg");
-          background-size: cover;
+        .image_card_a2 {
+          background-image: url("https://t4.ftcdn.net/jpg/09/61/10/45/360_F_961104502_5zNPNZexMrlLh6YhJzDNvjSVEIA46SNl.jpg");
+          background-size: contain;
           background-repeat: no-repeat;
-          width: 50%;
+
+          width: 100%;
           height: 100%;
           position: absolute;
-
         }
       }
+
+      .card3 {
+        width: 100%;
+        height: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image_card_3_a2 {
+          background-image: url("https://img.freepik.com/premium-vector/young-student-online-learning-french-language-tiny-male-character-sitting-book-stack-cartoon-vector_109722-3799.jpg?w=360");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position-x: center;
+
+          width: 100%;
+          height: 100%;
+        }
+
+        .text {
+          width: 50%;
+        }
+      }
+
       .left_side,
       .right_side {
         flex: 1;
@@ -80,7 +152,11 @@
         .card3 {
           background-color: #fff;
           border-radius: 4px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            transition: all 0.3s ease;
+            filter: brightness(0.7);
+          }
 
           h2 {
             font-size: 1.5em;
@@ -99,14 +175,113 @@
       .right_side {
         display: flex;
         flex-direction: column;
+        width: 50%;
 
         .card2,
         .card3 {
           flex: 1;
         }
 
-        .card2 {
-          margin-bottom: 40px;
+        .card3 {
+          height: 50%;
+          margin-top: 20px;
+
+        }
+
+        .first_exercice_link {
+          height: 50%;
+          margin-bottom: 20px;
+
+          .card2 {
+            height: 100%;
+
+          }
+        }
+      }
+    }
+  }
+
+  .books_section {
+    .division_border_div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .division_border {
+        border-bottom: 3.5px solid #000;
+        margin: 40px 0;
+        transform: rotate(90deg);
+        width: 40px;
+      }
+    }
+
+    .books_container {
+      padding: 40px 0;
+      @include wm-centered;
+
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .usilles-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+          }
+        }
+
+        .wrapper-content {
+          display: flex;
+          justify-content: space-between;
+          height: 70vh;
+
+          .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h1 {
+              font-size: 2.5em;
+              color: #333;
+              margin-bottom: 10px;
+            }
+
+            p {
+              font-size: 1em;
+              color: #333;
+              width: 500px;
+              margin-bottom: 10px;
+            }
+
+            a {
+              button {
+                text-align: center;
+                font-size: 14px;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px;
+                width: 40%;
+                border: none;
+                background-color: #000;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .image {
+            display: flex;
+            justify-content: flex-end;
+            background-image: url("src/assets/vectors/reading-book.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 46%;
+          }
         }
       }
     }
@@ -149,32 +324,43 @@
         justify-content: space-between;
         width: 100%;
 
-        .media_box {
-          background-color: #ddd;
-          width: 30%;
-          height: 32vh;
-          border-radius: 4px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          display: flex;
-          align-items: flex-end;
+        a {
+          transition: all 0.3s;
 
-          .video_text {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            background-color: #000000cd;
-            height: fit-content;
+          .media_box {
+            background-color: #ddd;
             width: 100%;
-            margin-bottom: 20px;
+            height: 32vh;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-end;
+            transition: all 0.3s;
 
-            * {
-              margin-left: 10px;
-            }
+            .video_text {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              background-color: #000000cd;
+              height: fit-content;
+              width: 100%;
+              margin-bottom: 20px;
+              transition: all 0.3s;
 
-            h4 {
-              font-size: 1em;
-              color: #fff;
-              margin-bottom: 5px;
+              * {
+                margin-left: 10px;
+              }
+
+              p {
+                color: #fff;
+
+              }
+
+              h4 {
+                font-size: 1em;
+                color: #fff;
+                margin-bottom: 5px;
+              }
             }
           }
         }
@@ -201,7 +387,7 @@
         }
 
         .video_box2 {
-          background-image: url("https://i.ytimg.com/vi/OGkbK9-_BRE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDY-Hzei-NPxVsWHJzlbxWInjmkaQ");
+          background-image: url("https://i.ytimg.com/vi/y8trQNgkVPk/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIFQoTDAP&rs=AOn4CLAaXYsTcjm3qVGhHSxVdN-QZry3zQ") !important;
         }
 
         .video_box3 {
@@ -210,30 +396,57 @@
 
         .musique_box1 {
           background-image: url("https://i.ytimg.com/vi/ylGrEipMWkY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLIkIxobDNm1DU3jnw_Ie0LxrlEw");
+
+          a {
+            margin-right: 30px;
+          }
         }
 
         .musique_box2 {
           background-image: url("https://i.ytimg.com/vi/uuHzruD8byc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8r3mpX3JEnKxw6W-Te9DM-UTjvA");
+
+          a {
+            margin: 0 30px;
+          }
         }
 
         .musique_box3 {
           background-image: url("https://i.ytimg.com/vi/Y052xCD-mNU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmIW1xg1c4mTiMM-HG798kbgP6DA");
+
+          a {
+            margin-left: 30px;
+
+          }
         }
 
         .podcast_box1 {
-          background-image: url("https://i.ytimg.com/vi/uyhNQh5Qhbs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBD9ayks73AJ75Akdq4S9Z8P1slQ");
+          background-image: url("https://i.scdn.co/image/ab6765630000ba8abd69ca14a6d766dc2f47adc1") !important;
         }
 
         .podcast_box2 {
-          background-image: url("https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/7/70af2cf4-3bf3-4c87-a090-4ae601a15527/cover_medium.jpg");
+          background-image: url("https://i.ytimg.com/vi/y0dPCvtJzEI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDKSMSIMsDIKr1IdxKx6_YhkFvgA") !important;
           background-size: contain;
           background-position: center;
         }
 
         .podcast_box3 {
-          background-image: url("https://i.ytimg.com/vi/9IBa2MESVP4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBetjRpwrxozIZIjuTyLgkZZm2t5Q");
+          background-image: url("https://i.ytimg.com/vi/p9bFsxXga8s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_vLZGL0pXI7UAuIDX27Ckz1KgLQ") !important;
         }
       }
     }
+  }
+}
+
+.content_wrapper {
+  .box1 {
+    margin-right: 30px !important;
+  }
+
+  .box2 {
+    margin: 0 30px;
+  }
+
+  .box3 {
+    margin-left: 30px;
   }
 }

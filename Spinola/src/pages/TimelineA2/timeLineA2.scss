@@ -1,0 +1,59 @@
+@use "../../styles/global" as *;
+
+.container_premiere_lecon_a2 {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  .wrapper_welcome_a2 {
+    height: 65vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include wm-centered;
+
+    .image_welcome_a2 {
+      background-image: url("https://static.vecteezy.com/system/resources/previews/001/759/779/non_2x/french-learning-books-vector.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 65.3%;
+      position: absolute;
+      height: 100%;
+      right: 0;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 400px;
+      z-index: 3;
+      a {
+        text-align: center;
+        padding: 10px;
+        background-color: #000;
+        color: #fff;        
+        border-radius: 8px;
+        width: 30%;
+      }
+    }
+  }
+}
+
+.lessons {
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .lesson_wrapper {
+    width: 100%;
+  }
+
+  .chapters {
+    @include wm-centered;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

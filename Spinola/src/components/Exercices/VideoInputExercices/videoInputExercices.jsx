@@ -19,7 +19,8 @@ export default function VideoInputExercices({
   nextExercise,
   last,
   chapter,
-  exercise
+  exercise,
+  level
 }) {
   const [answeredOnce, setAnsweredOnce] = useState(false);
   const [answeredTwice, setAnsweredTwice] = useState(false);
@@ -178,7 +179,7 @@ export default function VideoInputExercices({
         id="footerExercicePage"
         style={{ display: "none" }}
       >
-        <FooterExercices nextExercise={nextExercise} last={last} chapter={chapter} exercise={exercise} />
+        <FooterExercices nextExercise={nextExercise} last={last} chapter={chapter} exercise={exercise} level={level} />
       </div>
     </>
   );

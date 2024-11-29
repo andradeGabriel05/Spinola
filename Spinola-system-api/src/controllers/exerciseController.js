@@ -57,7 +57,10 @@ function incrementDayStrikeVerification(req, res) {
         res.json(resultado);
       })
       .catch((erro) => {
-        console.error("Houve um erro ao realizar o cadastro!", erro.sqlMessage);
+        console.error(
+          "Houve um erro ao realizar o cadastro!11",
+          erro.sqlMessage
+        );
         res.status(500).json(erro.sqlMessage);
       });
   }
@@ -92,8 +95,6 @@ function rankingPoints(req, res) {
       res.status(500).json({ erro: "Erro ao obter ranking de pontos." });
     });
 }
-
-
 
 module.exports = {
   incrementUserDetails,

@@ -54,12 +54,11 @@ export default function FrenchComprehensible() {
   const [clickedWordState, setClickedWordState] = useState(getClickedWord);
 
   useEffect(() => {
-    // Atualiza o estado sempre que clickedWord muda
     const interval = setInterval(() => {
       const newClickedWord = getClickedWord();
       if (newClickedWord != clickedWordState) {
         setClickedWordState(newClickedWord);
-        console.log(newClickedWord); // Mostra o valor atualizado
+        console.log(newClickedWord);
       }
 
       if (videoRef.current.currentTime > 209.800) {
@@ -69,9 +68,9 @@ export default function FrenchComprehensible() {
         return
 
       }
-    }, 100); // Verifica a cada 100ms
+    }, 100);
 
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar
+    return () => clearInterval(interval);
   }, [clickedWordState]);
 
   useEffect(() => {
@@ -109,7 +108,6 @@ export default function FrenchComprehensible() {
         }
       );
 
-      // Atualiza o estado com o texto traduzido
       setTranslatedText(response.data.translations[0].text);
       console.log(translatedText)
       console.log(response)

@@ -19,7 +19,39 @@ export default function Register() {
       .catch((error) => {
         console.error("Error:", error);
       });
+
+    if (emailId.value == "" && passwordId.value == "" && usernameId.value == "") {
+      emailId.style.border = "1px solid red";
+      passwordId.style.border = "1px solid red";
+      usernameId.style.border = "1px solid red";
+
+      document.getElementById("textEmailField").innerHTML =
+        "Email, password and username is required";
+    } else if (emailId.value == "") {
+      emailId.style.border = "1px solid red";
+      document.getElementById("textEmailField").innerHTML = "Email is required";
+    } else if (usernameId.value == "") {
+      usernameId.style.border = "1px solid red";
+      document.getElementById("textUsernameField").innerHTML =
+        "Username is required";
+    } else if (passwordId.value == "") {
+      passwordId.style.border = "1px solid red";
+      document.getElementById("textPasswordField").innerHTML =
+        "Password is required";
+    } 
+
+    document.addEventListener("keyup", () => {
+      emailId.style.border = "1px solid #dadada";
+      passwordId.style.border = "1px solid #dadada";
+      usernameId.style.border = "1px solid #dadada";
+      document.getElementById("textEmailField").innerHTML = "";
+      document.getElementById("textPasswordField").innerHTML = "";
+      document.getElementById("textUsernameField").innerHTML = "";
+    })
+
   }
+
+
 
   return (
     <div className="container_register">
@@ -31,18 +63,23 @@ export default function Register() {
           <div className="register_form">
             <h2 style={{color: "#000"}}>Créer un compte</h2>
             <form onSubmit={handleRegister}>
+              <p id="textEmailField"></p>
               <input
                 type="text"
                 name="email"
                 id="emailId"
                 placeholder="Email"
               />
+
+              <p id="textUsernameField"></p>
               <input
                 type="text"
                 name="username"
                 id="usernameId"
                 placeholder="Username"
               />
+
+              <p id="textPasswordField"></p>
               <input
                 type="text"
                 name="password"

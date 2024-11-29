@@ -1,12 +1,12 @@
 const database = require("../config/config"); // Certifique-se de que o caminho está correto
 
-async function timeSpentExercise(userId, timeSpent, chapter, exercise) {
+async function timeSpentExercise(userId, timeSpent, chapter, exercise, level) {
   const currentDate = new Date().toISOString().split("T")[0];
 
   const selectInstrucaoSql = `
   SELECT id_exercise 
   FROM exercise 
-  WHERE chapter = ${chapter} AND exercise = ${exercise};`;
+  WHERE chapter = ${chapter} AND exercise = ${exercise} AND level = '${level}';`;
   console.log("Executando a instrução SQL para SELECT:\n" + selectInstrucaoSql);
 
   const result = await database.executar(selectInstrucaoSql);

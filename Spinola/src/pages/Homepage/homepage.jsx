@@ -38,10 +38,15 @@ export default function homepage() {
               </div>
             </Link>
 
-            <div className="card3">
-              <h2>Titre de la carte 3</h2>
-              <p>Description de la carte 3</p>
-            </div>
+            <Link to="/a2" className="first_exercice_link">
+              <div className="card3">
+                <div className="image_card_3"></div>
+                <div className="text">
+                  <p>Better than A1?</p>
+                  <h2>You could go to the next level (A2)</h2>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -76,13 +81,15 @@ export default function homepage() {
                   </div>
                 </Link>
 
-                <Link to={"media-learning/french-comprehensible"} className="box3">
+                <Link
+                  to={"media-learning/french-comprehensible"}
+                  className="box3"
+                >
                   <div className="media_box video_box3">
                     <div className="video_text">
-                      <p>
-                        Comment vas-tu ? / Comment allez-vous ? - "How are you?"
-                      </p>
-                      <h4>Coffee Break Languages</h4>
+                      <p>Learn French Absolute Beginners</p>
+
+                      <h4>French Comprehensible Input</h4>
                     </div>
                   </div>
                 </Link>

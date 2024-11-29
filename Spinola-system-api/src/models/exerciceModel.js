@@ -22,23 +22,24 @@ function getUserExercicesDetails(userId) {
 
 function incrementDayStrikeVerification(userId) {
   const currentDate = new Date().toISOString().split("T")[0];
-
+  if (!userId || isNaN(userId)) {
+    res.status(400).send("ID inválido ou não fornecido!");
+    return;
+  }
   const query = `
     SELECT activity_date FROM register_exercise WHERE id_user = ${userId} AND activity_date = '${currentDate}';`;
 
-  console.log("Executando a instrução SQL: \n" + query);
+
+
+  console.log("Executando a instrução SQL11: \n" + query);
   return database.executar(query);
 }
 
 function incrementDayStrike(userId) {
-  const currentDate = new Date().toISOString().split("T")[0];
-
-  const query = `
-    SELECT activity_date FROM register_exercise WHERE id_user = ${userId} AND activity_date = '${currentDate}';`;
   const instrucaoSql = `
     UPDATE user_exercise_details SET day_strike = day_strike + 1 WHERE id_user = ${userId};
 `;
-  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  console.log("Executando a instrução SQL111: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
 

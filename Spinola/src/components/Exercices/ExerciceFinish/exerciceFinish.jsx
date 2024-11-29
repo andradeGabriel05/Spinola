@@ -7,7 +7,7 @@ import { exerciceCounter } from "../../../global";
 import LanguageFile from "../../../language.json";
 // import HeaderExercices from "../HeaderExercices/headerExercices";
 
-export default function exerciceFinish() {
+export default function ExerciceFinish() {
   const username = localStorage.getItem("username");
   const exercices = localStorage.getItem("exercices");
   const timeSpent = localStorage.getItem("timeSpent");
@@ -16,7 +16,8 @@ export default function exerciceFinish() {
   const exerciseMade = localStorage.getItem("exerciseMade");
   const userId = localStorage.getItem("user");
   const language = localStorage.getItem("language");
-
+  const level = localStorage.getItem("level");
+  console.log(level);
   console.log(exercices);
 
   const score = Number((correctAnswer / exercices) * 100).toFixed(2);
@@ -60,6 +61,7 @@ export default function exerciceFinish() {
             timeSpent,
             chapter,
             exercise: exerciseMade,
+            level
           })
           .then((response) => {
             console.log(response);
@@ -108,7 +110,12 @@ export default function exerciceFinish() {
           </div>
         </div>
       </div>
-      <FooterExercices nextExercise={"/premiere-lecon"} />
+      {level && level == "A1" ? (
+        <FooterExercices nextExercise={"/premiere-lecon"} />
+       ) : (
+          <FooterExercices nextExercise={"/timeline/a2"} />
+       )}
+      
     </>
   );
 }

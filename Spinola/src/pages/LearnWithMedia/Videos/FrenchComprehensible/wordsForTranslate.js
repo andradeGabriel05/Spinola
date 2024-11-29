@@ -80,7 +80,7 @@ export function wordsForTranslate() {
       console.log(timestamp);
       console.log(startFrom);
       console.log(timestamp >= startFrom);
-      // Só cria novos timeouts para timestamps maiores que startFrom
+
       if (timestamp >= startFrom) {
         const timeout = setTimeout(() => {
           lyricsPageId.innerHTML = "";
@@ -91,11 +91,9 @@ export function wordsForTranslate() {
             span.textContent = word;
 
             span.addEventListener("click", () => {
-              // Pausa a reprodução
               isPaused = true;
               lastTimestamp = timestamp;
 
-              // Limpa timeouts futuros
               currentTimeouts.forEach((times) => clearTimeout(times));
 
               setValorKey(timestamp);
@@ -115,7 +113,6 @@ export function wordsForTranslate() {
               closeX.textContent = "X";
               closeX.onclick = () => {
                 teste();
-                // Retoma a reprodução do último timestamp
                 resume();
               };
 
@@ -146,10 +143,8 @@ export function wordsForTranslate() {
     }
   }
 
-  // Inicia a reprodução
   playLyrics(0);
 
-  // Retorna os controles
   return {
     pause,
     resume,
